@@ -82,6 +82,7 @@ function Header() {
         </a>
         <nav className="hidden items-center gap-7 text-sm font-medium text-muted-foreground md:flex">
           <a href="#san-pham" className="hover:text-foreground">Sản phẩm</a>
+          <a href="#bang-mau" className="hover:text-foreground">Bảng màu</a>
           <a href="#chon-he-son" className="hover:text-foreground">Chọn hệ sơn</a>
           <a href="#hang-muc" className="hover:text-foreground">Hạng mục</a>
           <a href="#du-an" className="hover:text-foreground">Dự án</a>
