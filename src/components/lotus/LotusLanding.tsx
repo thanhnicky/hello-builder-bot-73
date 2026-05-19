@@ -26,8 +26,18 @@ import {
 import { ContactForm } from "./ContactForm";
 import { StickyBar } from "./StickyBar";
 import { ColorChart } from "./ColorChart";
-import { HOTLINE, HOTLINE_TEL, ZALO_URL, BRAND, PRODUCT_LINE } from "./constants";
+import {
+  HOTLINE,
+  HOTLINE_TEL,
+  ZALO_URL,
+  BRAND,
+  PRODUCT_LINE,
+  COMPANY_NAME,
+  COMPANY_TAX_ID,
+  COMPANY_ADDRESS,
+} from "./constants";
 
+import logoImg from "@/assets/lotus-logo.png";
 import heroImg from "@/assets/lotus-hero.jpg";
 import appRailing from "@/assets/app-railing.jpg";
 import appFence from "@/assets/app-fence.jpg";
@@ -69,12 +79,13 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
-          <div className="grid size-9 place-items-center rounded-md bg-steel text-steel-foreground">
-            <PaintBucket className="size-5" />
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-base font-bold">LOTUS</div>
+        <a href="#top" className="flex items-center gap-2.5">
+          <img
+            src={logoImg}
+            alt="Lotus Paint logo"
+            className="h-9 w-auto sm:h-10"
+          />
+          <div className="hidden leading-tight sm:block">
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
               Metal Coat
             </div>
@@ -972,12 +983,9 @@ function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="container-x grid gap-10 py-12 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-2">
-            <div className="grid size-10 place-items-center rounded-md bg-steel text-steel-foreground">
-              <PaintBucket className="size-5" />
-            </div>
+          <div className="flex items-center gap-3">
+            <img src={logoImg} alt={`${BRAND} logo`} className="h-12 w-auto" />
             <div className="leading-tight">
-              <div className="font-display text-lg font-bold">{BRAND}</div>
               <div className="text-xs uppercase tracking-widest text-muted-foreground">
                 {PRODUCT_LINE}
               </div>
@@ -986,6 +994,15 @@ function Footer() {
           <p className="mt-4 max-w-md text-sm text-muted-foreground">
             Giải pháp sơn kim loại gốc nước cho cổng, hàng rào, lan can, khung thép và nhiều hạng mục kim loại khác — trong nhà và ngoài trời.
           </p>
+          <div className="mt-5 space-y-1.5 text-sm">
+            <div className="font-semibold text-foreground">{COMPANY_NAME}</div>
+            <div className="text-muted-foreground">
+              MST: <span className="text-foreground">{COMPANY_TAX_ID}</span>
+            </div>
+            <div className="text-muted-foreground">
+              Đ/c: <span className="text-foreground">{COMPANY_ADDRESS}</span>
+            </div>
+          </div>
         </div>
 
         <div>
