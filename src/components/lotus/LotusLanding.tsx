@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 import { StickyBar } from "./StickyBar";
+import { ColorChart } from "./ColorChart";
 import { HOTLINE, HOTLINE_TEL, ZALO_URL, BRAND, PRODUCT_LINE } from "./constants";
 
 import heroImg from "@/assets/lotus-hero.jpg";
@@ -45,6 +46,7 @@ export function LotusLanding() {
         <Problem />
         <Solution />
         <Products />
+        <ColorChart />
         <Decision />
         <Applications />
         <Benefits />
