@@ -617,10 +617,14 @@ function ProcessCard({
 function Combos() {
   const combos = [
     {
-      name: "Gói lót chống gỉ",
-      tag: "Cơ bản",
-      desc: "Lotus Metal Coat Primer",
-      bullets: ["Chống gỉ chuyên dụng", "Tăng độ bám cho lớp phủ", "Phù hợp bề mặt sắt, thép mới"],
+      name: "Gói hoàn thiện cao cấp",
+      tag: "Cao cấp",
+      desc: "Primer + Finish + Phủ bóng bảo vệ ngoài trời",
+      bullets: [
+        "Lớp 1: Lotus Metal Coat Primer — chống gỉ",
+        "Lớp 2: Lotus Metal Coat Finish — màu hoàn thiện",
+        "Lớp 3: Phủ bóng bảo vệ — chống tia UV, bền ngoài trời",
+      ],
     },
     {
       name: "Gói hoàn thiện tiêu chuẩn",
