@@ -1107,7 +1107,7 @@ function Enterprise() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-[#0068FF] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0055CC]"
             >
-              💬 Zalo: {HOTLINE_DISPLAY}
+              💬 Zalo: {HOTLINE}
             </a>
           </div>
         </div>
