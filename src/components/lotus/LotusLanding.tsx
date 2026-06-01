@@ -161,20 +161,18 @@ function Hero() {
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <a
-              href={ZALO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-zalo px-6 py-4 text-base font-semibold text-zalo-foreground transition hover:opacity-95"
-            >
-              <MessageCircle className="size-5" />
-              Nhắn Zalo để chọn đúng hệ sơn
-            </a>
-            <a
               href="#san-pham"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition hover:opacity-95 ring-glow"
             >
               Xem sản phẩm & đặt hàng
               <ArrowRight className="size-5" />
+            </a>
+            <a
+              href="#enterprise"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#1A1A1A] px-6 py-4 text-base font-semibold text-white transition hover:bg-[#333333]"
+              style={{ transitionDuration: "200ms" }}
+            >
+              Tôi là nhà máy / xưởng lớn
             </a>
           </div>
 
