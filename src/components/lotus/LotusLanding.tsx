@@ -66,6 +66,7 @@ export function LotusLanding() {
         <QuickSpec />
         <FormSection />
         <Projects />
+        <Enterprise />
         <FAQ />
         <FinalCTA />
       </main>
