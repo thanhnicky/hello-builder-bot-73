@@ -23,6 +23,7 @@ import {
   PackageCheck,
   Wrench,
 } from "lucide-react";
+import { useState } from "react";
 import { ContactForm } from "./ContactForm";
 import { StickyBar } from "./StickyBar";
 import { ColorChart } from "./ColorChart";
