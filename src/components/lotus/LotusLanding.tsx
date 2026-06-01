@@ -98,6 +98,7 @@ function Header() {
           <a href="#bang-mau" className="hover:text-foreground">Bảng màu</a>
           <a href="#chon-he-son" className="hover:text-foreground">Chọn hệ sơn</a>
           <a href="#hang-muc" className="hover:text-foreground">Hạng mục</a>
+          <a href="#enterprise" className="hover:text-foreground">Doanh nghiệp</a>
           <a href="#du-an" className="hover:text-foreground">Dự án</a>
           <a href="#faq" className="hover:text-foreground">FAQ</a>
         </nav>
