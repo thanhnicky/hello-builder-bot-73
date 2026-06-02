@@ -24,6 +24,12 @@ import {
   Wrench,
   Home,
   Building2,
+  FileText,
+  FileCheck2,
+  Factory,
+  Download,
+  Leaf,
+  FlaskConical,
 } from "lucide-react";
 import { useState } from "react";
 import { ContactForm } from "./ContactForm";
