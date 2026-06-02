@@ -60,6 +60,7 @@ export function LotusLanding() {
         <Problem />
         <Solution />
         <Products />
+        <Enterprise />
         <ColorChart />
         <Decision />
         <Applications />
@@ -69,7 +70,6 @@ export function LotusLanding() {
         <QuickSpec />
         <FormSection />
         <Projects />
-        <Enterprise />
         <FAQ />
         <FinalCTA />
       </main>
