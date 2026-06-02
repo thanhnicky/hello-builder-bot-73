@@ -316,27 +316,6 @@ function AudienceSelector() {
   );
 }
 
-/* ---------------- TRUST BAR ---------------- */
-function TrustBar() {
-  const items = [
-    { icon: Droplets, label: "Gốc nước, một thành phần" },
-    { icon: ShieldCheck, label: "Chống ăn mòn, chống gỉ" },
-    { icon: Layers, label: "Bám dính tốt trên kim loại" },
-    { icon: Sun, label: "Dùng nội thất & ngoài trời" },
-  ];
-  return (
-    <section className="border-y border-border bg-surface">
-      <div className="container-x grid grid-cols-2 gap-6 py-6 sm:grid-cols-4 sm:py-8">
-        {items.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center gap-3">
-            <Icon className="size-5 shrink-0 text-primary" />
-            <span className="text-sm font-medium text-foreground">{label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 /* ---------------- SECTION HEADER ---------------- */
 function SectionHead({
