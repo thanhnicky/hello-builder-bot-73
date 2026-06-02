@@ -22,6 +22,8 @@ import {
   Clock,
   PackageCheck,
   Wrench,
+  Home,
+  Building2,
 } from "lucide-react";
 import { useState } from "react";
 import { ContactForm } from "./ContactForm";
