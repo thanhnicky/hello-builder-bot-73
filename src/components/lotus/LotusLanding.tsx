@@ -219,111 +219,97 @@ function Hero() {
   );
 }
 
+/* ---------------- TRUST BAR ---------------- */
+function TrustBar() {
+  const items = [
+    { icon: Layers, label: "3 hệ sơn · Primer / Finish / 2in1" },
+    { icon: Droplets, label: "Gốc nước · Nhẹ mùi · An toàn" },
+    { icon: MessageCircle, label: "Tư vấn kỹ thuật miễn phí" },
+    { icon: PackageCheck, label: "Giao hàng toàn quốc" },
+  ];
+  return (
+    <section className="bg-[#1C2B2B]">
+      <div className="container-x grid grid-cols-1 gap-4 py-5 sm:grid-cols-2 lg:grid-cols-4">
+        {items.map(({ icon: Icon, label }, i) => (
+          <div
+            key={label}
+            className={`flex items-center justify-center gap-2.5 px-2 ${
+              i < items.length - 1 ? "lg:border-r lg:border-white/15" : ""
+            }`}
+          >
+            <Icon className="size-4 shrink-0 text-white/60" />
+            <span className="text-sm font-medium text-white">{label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 /* ---------------- AUDIENCE SELECTOR ---------------- */
 function AudienceSelector() {
   return (
-    <section
-      style={{
-        background: "#F5F4F1",
-        paddingTop: 64,
-        paddingBottom: 64,
-        borderTop: "1px solid #E8E4DC",
-        borderBottom: "1px solid #E8E4DC",
-      }}
-    >
+    <section style={{ background: "#F7F5F2", paddingTop: 80, paddingBottom: 80 }}>
       <div className="mx-auto max-w-5xl px-6">
-        <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.12em] text-[#9CA3AF]">
-          Chọn đúng giải pháp cho bạn
-        </p>
+        <div className="mb-3 flex items-center justify-center gap-3">
+          <div className="h-px w-8 bg-primary" />
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">
+            BẠN LÀ AI?
+          </p>
+          <div className="h-px w-8 bg-primary" />
+        </div>
+        <h2 className="mb-10 text-center font-display text-[clamp(26px,6vw,36px)] font-bold leading-tight text-[#1A1A1A]">
+          Chọn đúng giải pháp cho nhu cầu của bạn.
+        </h2>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {/* —— CARD LEFT — Khách lẻ —— */}
-          <a
-            href="#san-pham"
-            className="group cursor-pointer rounded-[20px] border border-[#E2DDD4] bg-white p-9 transition-all duration-[220ms] ease-out hover:-translate-y-0.5 hover:border-[#1E6B31]"
-            style={{
-              padding: 36,
-              borderWidth: 1.5,
-            }}
-          >
-            <div className="mb-5 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#F0F9F2]">
-                <span className="text-xl">🔨</span>
-              </div>
-              <span className="rounded-full bg-[#F0F9F2] px-3 py-1 text-xs font-bold text-[#1E6B31]">
-                Mua lẻ / Thi công
-              </span>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {/* Card 1 — Cá nhân / Thợ sơn */}
+          <div className="group rounded-2xl bg-white p-8 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#F0FDF4] text-[#22C55E]">
+              <Home className="size-6" />
             </div>
-
-            <h3 className="mb-2 text-[22px] font-extrabold text-[#1A1A1A]">
-              Thợ thi công & chủ nhà
+            <span className="mb-3 inline-block rounded-full bg-[#F0FDF4] px-3 py-1 text-xs font-bold text-[#16A34A]">
+              Cá nhân / Thợ sơn
+            </span>
+            <h3 className="mb-2 text-xl font-bold text-[#1A1A1A]">
+              Sơn cổng, lan can, hàng rào tại nhà
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-[#6B7280]">
-              Mua theo lon, theo thùng. Đặt online giao tận nơi 2–5 ngày. Hỗ trợ chọn màu &amp; hệ sơn qua Zalo.
+              Chọn đúng hệ, thi công gọn — tư vấn nhanh qua Zalo
             </p>
+            <a
+              href={ZALO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#22C55E] py-3.5 text-sm font-bold text-white transition hover:bg-[#16A34A]"
+            >
+              Nhắn Zalo để được tư vấn
+              <ArrowRight className="size-4" />
+            </a>
+          </div>
 
-            <ul className="mb-8 space-y-2">
-              {[
-                "Đóng gói 1kg / 5kg / 20kg",
-                "Đặt hàng online, thanh toán linh hoạt",
-                "Giao hàng toàn quốc 2–5 ngày",
-                "Tư vấn miễn phí qua Zalo",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#1E6B31]" />
-                  <span className="text-[13px] text-[#374151]">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="rounded-xl bg-[#1E6B31] py-3.5 text-center text-sm font-bold text-white transition-colors hover:bg-[#175A2A]">
-              Xem sản phẩm &amp; đặt hàng →
+          {/* Card 2 — Doanh nghiệp / Xưởng */}
+          <div className="group rounded-2xl bg-white p-8 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)]">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#F3F4F6] text-[#4B5563]">
+              <Building2 className="size-6" />
             </div>
-          </a>
-
-          {/* —— CARD RIGHT — Nhà máy / B2B —— */}
-          <a
-            href="#enterprise"
-            className="group cursor-pointer rounded-[20px] border border-[#1A1A1A] bg-[#1A1A1A] p-9 transition-all duration-[220ms] ease-out hover:-translate-y-0.5"
-            style={{
-              padding: 36,
-              borderWidth: 1.5,
-            }}
-          >
-            <div className="mb-5 flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                <span className="text-xl">🏭</span>
-              </div>
-              <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white">
-                B2B / Nhà máy
-              </span>
-            </div>
-
-            <h3 className="mb-2 text-[22px] font-extrabold text-white">
-              Nhà máy &amp; xưởng cơ khí
+            <span className="mb-3 inline-block rounded-full bg-[#F3F4F6] px-3 py-1 text-xs font-bold text-[#4B5563]">
+              Doanh nghiệp / Xưởng
+            </span>
+            <h3 className="mb-2 text-xl font-bold text-[#1A1A1A]">
+              Chuyển đổi hệ sơn cho xưởng, nhà máy
             </h3>
-            <p className="mb-6 text-sm leading-relaxed text-white/60">
-              Chuyển đổi hệ sơn toàn xưởng. Cung cấp thùng 200L, hỗ trợ pilot miễn phí, TDS/MSDS đầy đủ theo lô hàng.
+            <p className="mb-6 text-sm leading-relaxed text-[#6B7280]">
+              Sơn gốc nước an toàn hơn — giảm VOC, đáp ứng kiểm định
             </p>
-
-            <ul className="mb-8 space-y-2">
-              {[
-                "Đóng gói 200L / IBC theo yêu cầu",
-                "Hỗ trợ thử nghiệm pilot miễn phí",
-                "Cung cấp TDS · MSDS · COA theo lô",
-                "Kỹ thuật viên hỗ trợ tại xưởng",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#86EFAC]" />
-                  <span className="text-[13px] text-white/80">{item}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="rounded-xl bg-white py-3.5 text-center text-sm font-bold text-[#1A1A1A] transition-colors hover:bg-[#F5F5F5]">
-              Liên hệ tư vấn &amp; xin báo giá →
-            </div>
-          </a>
+            <a
+              href="#enterprise"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#1A1A1A] bg-transparent py-3.5 text-sm font-bold text-[#1A1A1A] transition hover:bg-[#1A1A1A] hover:text-white"
+            >
+              Nhận báo giá &amp; tài liệu kỹ thuật
+              <ArrowRight className="size-4" />
+            </a>
+          </div>
         </div>
       </div>
     </section>
