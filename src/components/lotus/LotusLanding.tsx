@@ -947,203 +947,102 @@ function Chip({ children }: { children: React.ReactNode }) {
 /* ---------------- ENTERPRISE ---------------- */
 function Enterprise() {
   const steps = [
-    {
-      n: "01",
-      title: "Gửi thông tin hạng mục",
-      desc: "Mô tả bề mặt cần sơn, môi trường sử dụng và sản lượng dự kiến. Kỹ thuật viên phản hồi trong 2 giờ.",
-    },
-    {
-      n: "02",
-      title: "Nhận tư vấn + mẫu thử miễn phí",
-      desc: "Lotus gửi mẫu sơn phù hợp để test thực tế tại xưởng. Kèm TDS, MSDS, hướng dẫn thi công chi tiết.",
-    },
-    {
-      n: "03",
-      title: "Chạy pilot → đánh giá → ký hợp đồng",
-      desc: "Triển khai thử 1 hạng mục, đánh giá kết quả thực tế. Báo giá sỉ theo sản lượng cam kết hàng tháng.",
-    },
+    { icon: FileText, title: "Gửi thông tin hạng mục" },
+    { icon: FileCheck2, title: "Nhận TDS / MSDS + báo giá" },
+    { icon: Factory, title: "Sơn thử nghiệm & triển khai" },
   ];
 
   const benefits = [
-    { icon: "📄", title: "Hồ sơ kỹ thuật đầy đủ", desc: "TDS · MSDS · COA theo từng lô hàng. Đáp ứng audit nhà máy FDI." },
-    { icon: "📦", title: "Đóng gói công nghiệp", desc: "Thùng 200L, IBC 1000L. Giao hàng theo lịch sản xuất của xưởng." },
-    { icon: "🔬", title: "Đạt chuẩn xuất khẩu", desc: "EN71-3 · ROHS · ASTM F963. Phù hợp hàng xuất EU, Mỹ, Nhật." },
-    { icon: "🤝", title: "Hỗ trợ kỹ thuật tại chỗ", desc: "Kỹ thuật viên đến xưởng hỗ trợ thử nghiệm và tập huấn thợ." },
-  ];
-
-  const stats = [
-    { n: "200+", l: "Công trình đã triển khai" },
-    { n: "12+", l: "Năm kinh nghiệm" },
-    { n: "50+", l: "Nhà máy & xưởng lớn" },
+    {
+      icon: Leaf,
+      title: "Giảm VOC & mùi",
+      desc: "An toàn cho công nhân, thân thiện môi trường làm việc.",
+    },
+    {
+      icon: FileCheck2,
+      title: "Tài liệu kỹ thuật đầy đủ",
+      desc: "TDS, MSDS, chứng nhận sẵn sàng cung cấp.",
+    },
+    {
+      icon: FlaskConical,
+      title: "Hỗ trợ pilot & định mức",
+      desc: "Sơn thử nghiệm trước khi triển khai đại trà.",
+    },
   ];
 
   return (
     <section
       id="enterprise"
-      className="border-t border-[#E8E4DC] bg-[#F5F4F1]"
+      className="bg-[#1A2E2E] text-white"
       style={{ padding: "96px 0", scrollMarginTop: "80px" }}
     >
-      <div className="mx-auto max-w-5xl px-6">
-        {/* Header */}
-        <div className="mb-16">
-          <div className="mb-4 flex items-center gap-3">
-            <div className="h-px w-8 bg-[#9CA3AF]" />
-            <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#9CA3AF]">
-              Dành cho doanh nghiệp
-            </span>
-          </div>
-          <h2
-            className="mb-4 font-extrabold text-[#1A1A1A]"
-            style={{
-              fontSize: "clamp(26px, 6vw, 42px)",
-              lineHeight: 1.1,
-              letterSpacing: "-0.03em",
-            }}
-          >
-            Chuyển đổi hệ sơn toàn nhà máy —
-            <br />
-            <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 400, fontStyle: "italic" }}>
-              Lotus đồng hành từ thử nghiệm đến triển khai.
-            </span>
+      <div className="container-x">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+            DÀNH CHO DOANH NGHIỆP
+          </p>
+          <h2 className="font-display text-3xl font-bold leading-[1.15] text-balance sm:text-4xl lg:text-[42px]">
+            Chuyển đổi sang sơn gốc nước — an toàn hơn, đáp ứng kiểm định.
           </h2>
-          <p className="max-w-lg text-[15px] text-[#6B7280]" style={{ lineHeight: 1.65 }}>
-            Phù hợp cho nhà máy cơ khí kết cấu thép, xưởng gia công, doanh nghiệp có yêu cầu chuyển đổi từ sơn dung môi sang gốc nước.
+          <p className="mt-5 text-base leading-relaxed text-white/70 sm:text-lg">
+            Lotus Metal Coat phù hợp cho xưởng cơ khí, nhà máy, kết cấu thép công nghiệp — giảm VOC, không mùi nồng, đáp ứng yêu cầu môi trường và kiểm định.
           </p>
         </div>
 
-        {/* Two columns */}
-        <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* LEFT: process */}
-          <div>
-            <div className="mb-8 text-xs font-bold uppercase tracking-[0.12em] text-[#9CA3AF]">
-              Quy trình hợp tác
-            </div>
-            <div className="space-y-8">
-              {steps.map((s, i) => (
-                <div key={s.n} className="flex items-start gap-5">
-                  <div className="flex flex-col items-center">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-[#1E6B31]">
-                      <span className="text-[13px] font-extrabold text-[#1E6B31]">{s.n}</span>
-                    </div>
-                    {i < steps.length - 1 && <div className="mt-2 h-8 w-px bg-[#E2DDD4]" />}
-                  </div>
-                  <div>
-                    <div className="mb-1 text-[16px] font-bold text-[#1A1A1A]">{s.title}</div>
-                    <p className="text-[14px] text-[#6B7280]" style={{ lineHeight: 1.6 }}>{s.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* RIGHT: benefits + form */}
-          <div>
-            <div className="mb-6 text-xs font-bold uppercase tracking-[0.12em] text-[#9CA3AF]">
-              Tại sao chọn Lotus cho nhà máy
-            </div>
-            <div className="mb-10 space-y-4">
-              {benefits.map((b, i) => (
-                <div
-                  key={b.title}
-                  className={`flex items-start gap-4 ${i < benefits.length - 1 ? "border-b border-[#E8E4DC] pb-4" : ""}`}
-                >
-                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg border border-[#E2DDD4] bg-white text-base">
-                    {b.icon}
-                  </div>
-                  <div>
-                    <div className="text-[14px] font-bold text-[#1A1A1A]">{b.title}</div>
-                    <p className="text-[13px] text-[#6B7280]">{b.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <EnterpriseForm />
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="mt-16 flex flex-col flex-wrap items-center justify-between gap-6 border-t border-[#E8E4DC] pt-8 text-center md:flex-row md:text-left">
-          <div className="flex flex-wrap justify-center gap-10 md:justify-start">
-            {stats.map((s) => (
-              <div key={s.n}>
-                <div className="text-[28px] font-extrabold text-[#1A1A1A]">{s.n}</div>
-                <div className="text-[12px] uppercase tracking-wider text-[#9CA3AF]">{s.l}</div>
+        {/* 3-step process */}
+        <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
+          {steps.map((s, i) => (
+            <div key={s.title} className="flex flex-col items-center text-center">
+              <div className="relative mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-white/15 bg-white/5 text-primary">
+                <s.icon className="size-6" />
+                <span className="absolute -top-2 -right-2 grid size-6 place-items-center rounded-full bg-primary text-[11px] font-bold text-primary-foreground">
+                  {i + 1}
+                </span>
               </div>
-            ))}
-          </div>
-          <div className="flex flex-col items-center gap-4 sm:flex-row">
-            <span className="text-[14px] text-[#6B7280]">Cần trao đổi trực tiếp?</span>
-            <a
-              href={ZALO_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0068FF] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0055CC]"
-            >
-              💬 Zalo: {HOTLINE}
-            </a>
-          </div>
+              <p className="text-[15px] font-semibold text-white">{s.title}</p>
+            </div>
+          ))}
         </div>
+
+        {/* Benefit cards */}
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {benefits.map((b) => (
+            <div
+              key={b.title}
+              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-white/25 hover:bg-white/[0.06]"
+            >
+              <div className="mb-4 grid size-10 place-items-center rounded-lg bg-primary/15 text-primary">
+                <b.icon className="size-5" />
+              </div>
+              <h3 className="text-lg font-bold text-white">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA row */}
+        <div className="mx-auto mt-12 flex max-w-2xl flex-col items-center justify-center gap-3 sm:flex-row">
+          <a
+            href="#form"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-4 text-base font-semibold text-primary-foreground transition hover:opacity-95 sm:w-auto"
+          >
+            Nhận báo giá doanh nghiệp
+            <ArrowRight className="size-5" />
+          </a>
+          <a
+            href={`mailto:info@lotuspaint.vn?subject=Yêu cầu TDS/MSDS Lotus Metal Coat`}
+            className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/30 bg-transparent px-6 py-4 text-base font-semibold text-white transition hover:bg-white/10 sm:w-auto"
+          >
+            <Download className="size-5" />
+            Tải TDS / MSDS
+          </a>
+        </div>
+
+        <p className="mx-auto mt-6 max-w-3xl text-center text-xs text-white/55 sm:text-sm">
+          Đã hỗ trợ xưởng cơ khí · Kết cấu thép · Nhà máy sản xuất tại TP.HCM, Bình Dương, Long An
+        </p>
       </div>
     </section>
-  );
-}
-
-function EnterpriseForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const inputCls =
-    "w-full rounded-[10px] border border-[#E2DDD4] bg-white px-[14px] py-[11px] text-[14px] text-[#1A1A1A] placeholder:text-[#C4C0B8] focus:border-[#1E6B31] focus:outline-none focus:ring-[3px] focus:ring-[rgba(30,107,49,0.08)]";
-
-  if (submitted) {
-    return (
-      <div className="rounded-2xl border border-[#E2DDD4] bg-white p-7 text-center">
-        <div className="mb-2 text-[18px] font-extrabold text-[#1A1A1A]">Đã nhận yêu cầu ✓</div>
-        <p className="text-[14px] text-[#6B7280]">
-          Cảm ơn bạn. Kỹ thuật viên Lotus sẽ liên hệ trong vòng 2 giờ làm việc.
-        </p>
-      </div>
-    );
-  }
-
-  return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="rounded-2xl border border-[#E2DDD4] bg-white p-7"
-    >
-      <div className="mb-1 text-[18px] font-extrabold text-[#1A1A1A]">Gửi yêu cầu tư vấn</div>
-      <p className="mb-5 text-[13px] text-[#9CA3AF]">Phản hồi trong 2 giờ trong giờ hành chính</p>
-
-      <div className="space-y-4">
-        <input required maxLength={120} placeholder="Tên công ty / xưởng *" className={inputCls} />
-        <input required maxLength={80} placeholder="Họ tên người liên hệ *" className={inputCls} />
-        <input required maxLength={20} placeholder="Số điện thoại *" className={inputCls} />
-        <select required defaultValue="" className={inputCls}>
-          <option value="" disabled>Quy mô sản lượng hàng tháng *</option>
-          <option>Dưới 500L</option>
-          <option>500L – 2,000L</option>
-          <option>2,000L – 10,000L</option>
-          <option>Trên 10,000L</option>
-        </select>
-        <textarea
-          rows={3}
-          maxLength={800}
-          placeholder="VD: Kết cấu thép nhà xưởng, thép hộp mạ kẽm, máy móc cơ khí ngoài trời..."
-          className={inputCls}
-        />
-        <button
-          type="submit"
-          className="mt-2 w-full rounded-[12px] bg-[#1A1A1A] py-[14px] text-[15px] font-bold text-white transition-colors duration-200 hover:bg-[#333333]"
-        >
-          Gửi yêu cầu tư vấn →
-        </button>
-        <p className="mt-4 text-center text-[12px] text-[#9CA3AF]">
-          🔒 Thông tin của bạn được bảo mật. Không spam.
-        </p>
-      </div>
-    </form>
   );
 }
 
