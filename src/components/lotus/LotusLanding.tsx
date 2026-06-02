@@ -55,8 +55,8 @@ export function LotusLanding() {
       <Header />
       <main>
         <Hero />
-        <AudienceSelector />
         <TrustBar />
+        <AudienceSelector />
         <Problem />
         <Solution />
         <Products />
