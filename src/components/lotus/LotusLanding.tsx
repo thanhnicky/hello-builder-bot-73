@@ -38,6 +38,13 @@ const LABEL_CLS =
   "text-[12px] font-semibold uppercase tracking-[0.12em]";
 
 export function LotusLanding() {
+  const [c1q1, setC1q1] = useState(0); // Combo tiết kiệm nhỏ
+  const [c1q2, setC1q2] = useState(0); // Combo tiết kiệm lớn
+  const [c2q1, setC2q1] = useState(0); // Combo thông dụng nhỏ
+  const [c2q2, setC2q2] = useState(0); // Combo thông dụng lớn
+  const [c3q1, setC3q1] = useState(0); // Hũ 1kg 2in1
+  const [c3q2, setC3q2] = useState(0); // Thùng 5kg 2in1
+
   return (
     <div className="min-h-screen bg-white pb-20 md:pb-0" style={{ color: TEXT }}>
       <Header />
@@ -50,8 +57,22 @@ export function LotusLanding() {
         <Decision />
         <Applications />
         <Process />
-        <Combos />
-        <FormSection />
+        <Combos
+          c1q1={c1q1} setC1q1={setC1q1}
+          c1q2={c1q2} setC1q2={setC1q2}
+          c2q1={c2q1} setC2q1={setC2q1}
+          c2q2={c2q2} setC2q2={setC2q2}
+          c3q1={c3q1} setC3q1={setC3q1}
+          c3q2={c3q2} setC3q2={setC3q2}
+        />
+        <FormSection
+          c1q1={c1q1}
+          c1q2={c1q2}
+          c2q1={c2q1}
+          c2q2={c2q2}
+          c3q1={c3q1}
+          c3q2={c3q2}
+        />
         <Projects />
         <FAQ />
       </main>
@@ -520,13 +541,21 @@ function ProcessCard({
 }
 
 /* ---------------- COMBOS ---------------- */
-function Combos() {
-  const [c1q1, setC1q1] = useState(0); // Card 1, Row 1 (375,000đ)
-  const [c1q2, setC1q2] = useState(0); // Card 1, Row 2 (1,680,000đ)
-  const [c2q1, setC2q1] = useState(0); // Card 2, Row 1 (751,000đ)
-  const [c2q2, setC2q2] = useState(0); // Card 2, Row 2 (3,420,000đ)
-  const [c3q1, setC3q1] = useState(0); // Card 3, Row 1 (210,000đ)
-  const [c3q2, setC3q2] = useState(0); // Card 3, Row 2 (890,000đ)
+function Combos({
+  c1q1, setC1q1,
+  c1q2, setC1q2,
+  c2q1, setC2q1,
+  c2q2, setC2q2,
+  c3q1, setC3q1,
+  c3q2, setC3q2,
+}: {
+  c1q1: number; setC1q1: (v: number) => void;
+  c1q2: number; setC1q2: (v: number) => void;
+  c2q1: number; setC2q1: (v: number) => void;
+  c2q2: number; setC2q2: (v: number) => void;
+  c3q1: number; setC3q1: (v: number) => void;
+  c3q2: number; setC3q2: (v: number) => void;
+}) {
 
   const total1 = c1q1 * 375000 + c1q2 * 1680000;
   const total2 = c2q1 * 751000 + c2q2 * 3420000;
@@ -740,7 +769,21 @@ function Combos() {
 }
 
 /* ---------------- FORM SECTION ---------------- */
-function FormSection() {
+function FormSection({
+  c1q1,
+  c1q2,
+  c2q1,
+  c2q2,
+  c3q1,
+  c3q2,
+}: {
+  c1q1: number;
+  c1q2: number;
+  c2q1: number;
+  c2q2: number;
+  c3q1: number;
+  c3q2: number;
+}) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
@@ -748,6 +791,22 @@ function FormSection() {
   const [paymentMethod, setPaymentMethod] = useState("cod");
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const orderItems = [
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000 },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000 },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000 },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000 },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000 },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000 },
+  ];
+
+  const activeItems = orderItems.filter((it) => it.qty > 0);
+  const grandTotal = orderItems.reduce((sum, it) => sum + it.qty * it.price, 0);
+
+  function formatVND(val: number) {
+    return val.toLocaleString("vi-VN") + "đ";
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -881,16 +940,23 @@ function FormSection() {
                 Thông tin đơn hàng
               </p>
               <div className="mt-3 space-y-1.5 text-sm text-neutral-800">
-                <p>— Combo tiết kiệm nhỏ x1: 375.000đ</p>
-                <p className="text-xs italic text-neutral-500">
-                  "Sản phẩm được xác nhận lại qua Zalo sau khi đặt hàng."
-                </p>
+                {activeItems.length > 0 ? (
+                  activeItems.map((it) => (
+                    <p key={it.name}>
+                      — {it.name} x{it.qty}: {formatVND(it.qty * it.price)}
+                    </p>
+                  ))
+                ) : (
+                  <p className="text-sm italic text-neutral-500">
+                    Chưa chọn sản phẩm — vui lòng chọn combo ở trên.
+                  </p>
+                )}
               </div>
               <div className="my-4 border-t border-[#E8E4DC]" />
               <div className="flex items-center justify-between">
                 <span className="text-sm font-semibold text-neutral-700">Thành tiền:</span>
                 <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
-                  1.266.000đ
+                  {formatVND(grandTotal)}
                 </span>
               </div>
               <p className="mt-3 text-[11px] leading-relaxed text-neutral-400">

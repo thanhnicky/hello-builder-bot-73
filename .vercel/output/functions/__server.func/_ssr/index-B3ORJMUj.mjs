@@ -1,4 +1,4 @@
-import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
+import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
@@ -193,6 +193,12 @@ const DARK = "#1C2B2B";
 const TEXT = "#1A1A1A";
 const LABEL_CLS = "text-[12px] font-semibold uppercase tracking-[0.12em]";
 function LotusLanding() {
+  const [c1q1, setC1q1] = reactExports.useState(0);
+  const [c1q2, setC1q2] = reactExports.useState(0);
+  const [c2q1, setC2q1] = reactExports.useState(0);
+  const [c2q2, setC2q2] = reactExports.useState(0);
+  const [c3q1, setC3q1] = reactExports.useState(0);
+  const [c3q2, setC3q2] = reactExports.useState(0);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-white pb-20 md:pb-0", style: { color: TEXT }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
@@ -204,8 +210,34 @@ function LotusLanding() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Decision, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Applications, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Process, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Combos, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(FormSection, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        Combos,
+        {
+          c1q1,
+          setC1q1,
+          c1q2,
+          setC1q2,
+          c2q1,
+          setC2q1,
+          c2q2,
+          setC2q2,
+          c3q1,
+          setC3q1,
+          c3q2,
+          setC3q2
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        FormSection,
+        {
+          c1q1,
+          c1q2,
+          c2q1,
+          c2q2,
+          c3q1,
+          c3q2
+        }
+      ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Projects, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(FAQ, {})
     ] }),
@@ -625,13 +657,20 @@ function ProcessCard({
     ] }, i)) })
   ] });
 }
-function Combos() {
-  const [c1q1, setC1q1] = reactExports.useState(0);
-  const [c1q2, setC1q2] = reactExports.useState(0);
-  const [c2q1, setC2q1] = reactExports.useState(0);
-  const [c2q2, setC2q2] = reactExports.useState(0);
-  const [c3q1, setC3q1] = reactExports.useState(0);
-  const [c3q2, setC3q2] = reactExports.useState(0);
+function Combos({
+  c1q1,
+  setC1q1,
+  c1q2,
+  setC1q2,
+  c2q1,
+  setC2q1,
+  c2q2,
+  setC2q2,
+  c3q1,
+  setC3q1,
+  c3q2,
+  setC3q2
+}) {
   const total1 = c1q1 * 375e3 + c1q2 * 168e4;
   const total2 = c2q1 * 751e3 + c2q2 * 342e4;
   const total3 = c3q1 * 21e4 + c3q2 * 89e4;
@@ -822,7 +861,14 @@ function Combos() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-xs text-neutral-500", children: "Hơn 500+ đơn hàng đã giao thành công · Nhắn Zalo gửi ảnh hạng mục để được tư vấn nhanh." })
   ] }) });
 }
-function FormSection() {
+function FormSection({
+  c1q1,
+  c1q2,
+  c2q1,
+  c2q2,
+  c3q1,
+  c3q2
+}) {
   const [name, setName] = reactExports.useState("");
   const [phone, setPhone] = reactExports.useState("");
   const [address, setAddress] = reactExports.useState("");
@@ -830,6 +876,19 @@ function FormSection() {
   const [paymentMethod, setPaymentMethod] = reactExports.useState("cod");
   const [submitted, setSubmitted] = reactExports.useState(false);
   const [errors, setErrors] = reactExports.useState({});
+  const orderItems = [
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3 },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4 },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3 },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4 },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4 },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4 }
+  ];
+  const activeItems = orderItems.filter((it) => it.qty > 0);
+  const grandTotal = orderItems.reduce((sum, it) => sum + it.qty * it.price, 0);
+  function formatVND(val) {
+    return val.toLocaleString("vi-VN") + "đ";
+  }
   const handleSubmit = (e) => {
     e.preventDefault();
     const errs = {};
@@ -946,14 +1005,18 @@ function FormSection() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold uppercase tracking-wide", style: { color: ORANGE }, children: "Thông tin đơn hàng" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-1.5 text-sm text-neutral-800", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "— Combo tiết kiệm nhỏ x1: 375.000đ" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs italic text-neutral-500", children: '"Sản phẩm được xác nhận lại qua Zalo sau khi đặt hàng."' })
-          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-3 space-y-1.5 text-sm text-neutral-800", children: activeItems.length > 0 ? activeItems.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
+            "— ",
+            it.name,
+            " x",
+            it.qty,
+            ": ",
+            formatVND(it.qty * it.price)
+          ] }, it.name)) : /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-neutral-500", children: "Chưa chọn sản phẩm — vui lòng chọn combo ở trên." }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "my-4 border-t border-[#E8E4DC]" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-700", children: "Thành tiền:" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: "1.266.000đ" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[11px] leading-relaxed text-neutral-400", children: "* Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-[11px] leading-relaxed text-neutral-400", children: "Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²" })
