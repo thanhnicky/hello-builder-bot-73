@@ -28,7 +28,6 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 
 /* Brand tokens */
-const GREEN = "#2D7A4F";
 const ORANGE = "#E8541A";
 const OFFWHITE = "#F7F5F2";
 const DARK = "#1C2B2B";
@@ -94,8 +93,8 @@ function Header() {
             href={ZALO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:opacity-95"
-            style={{ background: GREEN }}
+            className="inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
+            style={{ background: DARK }}
           >
             Nhắn Zalo
           </a>
@@ -192,8 +191,7 @@ function Problem() {
             >
               <div className="flex gap-4">
                 <span
-                  className="font-display text-sm font-semibold tabular-nums"
-                  style={{ color: ORANGE }}
+                  className="font-display text-sm font-semibold tabular-nums text-[#1C2B2B]"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -247,8 +245,7 @@ function Solution() {
             >
               <div className="flex items-baseline gap-4">
                 <span
-                  className="font-display text-3xl font-bold tabular-nums"
-                  style={{ color: ORANGE }}
+                  className="font-display text-3xl font-bold tabular-nums text-[#1C2B2B]"
                 >
                   0{i + 1}
                 </span>
@@ -308,7 +305,7 @@ function Products() {
               key={p.name}
               className="relative flex flex-col rounded-xl border bg-white p-8"
               style={{
-                borderColor: p.featured ? ORANGE : "#E8E4DC",
+                borderColor: "#E8E4DC",
               }}
             >
               {p.featured && (
@@ -330,8 +327,8 @@ function Products() {
               </div>
               <a
                 href="#form"
-                className="mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:opacity-95"
-                style={{ background: GREEN }}
+                className="mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E8541A]/90"
+                style={{ background: ORANGE }}
               >
                 Chọn sản phẩm này →
               </a>
@@ -409,8 +406,8 @@ function Decision() {
                   href={ZALO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white"
-                  style={{ background: GREEN }}
+                  className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#E8541A]/90 transition"
+                  style={{ background: ORANGE }}
                 >
                   Gửi ảnh hạng mục qua Zalo →
                 </a>
@@ -513,7 +510,7 @@ function ProcessCard({
         <h3 className="font-display text-lg font-bold">{title}</h3>
         <span
           className="rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
-          style={{ background: accent ? ORANGE : DARK }}
+          style={{ background: DARK }}
         >
           {tag}
         </span>
@@ -523,7 +520,7 @@ function ProcessCard({
           <li key={i} className="flex gap-4 px-6 py-5">
             <span
               className="font-display text-base font-bold tabular-nums"
-              style={{ color: accent ? ORANGE : TEXT, minWidth: 22 }}
+              style={{ color: TEXT, minWidth: 22 }}
             >
               {i + 1}.
             </span>
@@ -585,7 +582,7 @@ function Combos() {
             <div
               key={c.name}
               className="relative flex flex-col rounded-xl border bg-white p-8"
-              style={{ borderColor: c.featured ? ORANGE : "#E8E4DC" }}
+              style={{ borderColor: "#E8E4DC" }}
             >
               {c.featured && (
                 <div
@@ -610,8 +607,8 @@ function Combos() {
               </ul>
               <a
                 href="#form"
-                className="mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:opacity-95"
-                style={{ background: GREEN }}
+                className="mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E8541A]/90"
+                style={{ background: ORANGE }}
               >
                 Chọn gói này →
               </a>
@@ -645,14 +642,13 @@ function FormSection() {
               href={ZALO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl px-6 py-5 text-white transition hover:opacity-95"
-              style={{ background: GREEN }}
+              className="flex items-center justify-between rounded-xl border border-white/15 bg-white/[0.04] px-6 py-5 transition hover:bg-white/[0.08]"
             >
               <div>
-                <div className="font-semibold">Nhắn Zalo gửi ảnh hạng mục</div>
-                <div className="text-sm text-white/85">Tư vấn đúng hệ sơn Lotus trong vài phút.</div>
+                <div className="font-semibold text-white">Nhắn Zalo gửi ảnh hạng mục</div>
+                <div className="text-sm text-white/65">Tư vấn đúng hệ sơn Lotus trong vài phút.</div>
               </div>
-              <span className="text-xl">→</span>
+              <span className="text-xl text-white">→</span>
             </a>
             <a
               href={`tel:${HOTLINE_TEL}`}
@@ -799,8 +795,8 @@ function FAQ() {
             href={ZALO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white"
-            style={{ background: GREEN }}
+            className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
+            style={{ background: DARK }}
           >
             Hỏi nhanh qua Zalo →
           </a>

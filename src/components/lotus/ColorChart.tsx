@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { ChevronDown, MessageCircle, Palette } from "lucide-react";
+import { MessageCircle, Palette } from "lucide-react";
 import { ZALO_URL } from "./constants";
-import colorChartImg from "@/assets/lotus-color-chart.png";
 
 type Swatch = { code: string; name: string; hex: string };
 
@@ -37,91 +35,65 @@ const COLORS: Swatch[] = [
 ];
 
 export function ColorChart() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <section id="bang-mau" className="bg-surface section-y">
+    <section id="bang-mau" className="bg-[#F7F5F2] section-y">
       <div className="container-x">
         <div className="max-w-3xl">
-          <div className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          <div className="mb-3 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]">
             <Palette className="size-3.5" /> Bảng màu chính hãng
           </div>
-          <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1]">
+          <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-[#1C2B2B]">
             Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Mỗi mã màu đều có sẵn cho hệ <strong className="text-foreground">2in1 / DTM</strong> và{" "}
-            <strong className="text-foreground">Finish</strong>. Màu hiển thị trên màn hình có thể
+            Mỗi mã màu đều có sẵn cho hệ <strong className="text-[#1C2B2B]">2in1 / DTM</strong> và{" "}
+            <strong className="text-[#1C2B2B]">Finish</strong>. Màu hiển thị trên màn hình có thể
             chênh lệch nhẹ so với thực tế — vui lòng yêu cầu mẫu màu thật trước khi đặt số lượng lớn.
           </p>
         </div>
 
-        <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card ring-soft">
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="block w-full text-left"
-            aria-expanded={open}
-            aria-controls="bang-mau-chi-tiet"
-          >
-            <img
-              src={colorChartImg}
-              alt="Bảng màu chính hãng Sơn Kim Loại Hệ Nước Lotus — đầy đủ mã LDTM"
-              className="w-full"
-            />
-            <div className="flex items-center justify-center gap-2 border-t border-border bg-card px-4 py-4 text-sm font-semibold text-primary transition hover:bg-accent">
-              <span>{open ? "Thu gọn bảng màu chi tiết" : "Bấm để xem và chọn màu chi tiết"}</span>
-              <ChevronDown
-                className={`size-4 transition-transform ${open ? "rotate-180" : ""}`}
-              />
-            </div>
-          </button>
-        </div>
-
-        {open && (
-          <div id="bang-mau-chi-tiet" className="mt-6">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-              {COLORS.map((c) => (
+        <div className="mt-10">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+            {COLORS.map((c) => (
+              <div
+                key={c.code}
+                className="group overflow-hidden rounded-xl border border-border bg-white ring-soft transition hover:-translate-y-0.5 hover:ring-glow"
+              >
                 <div
-                  key={c.code}
-                  className="group overflow-hidden rounded-xl border border-border bg-card ring-soft transition hover:-translate-y-0.5 hover:ring-glow"
-                >
-                  <div
-                    className="aspect-[5/3] w-full"
-                    style={{ backgroundColor: c.hex }}
-                    aria-label={`${c.code} ${c.name}`}
-                  />
-                  <div className="flex items-center justify-between gap-2 px-3 py-2.5">
-                    <div className="min-w-0">
-                      <div className="truncate font-display text-sm font-bold text-foreground">
-                        {c.code}
-                      </div>
-                      <div className="truncate text-xs text-muted-foreground">{c.name}</div>
+                  className="aspect-[5/3] w-full"
+                  style={{ backgroundColor: c.hex }}
+                  aria-label={`${c.code} ${c.name}`}
+                />
+                <div className="flex items-center justify-between gap-2 px-3 py-2.5">
+                  <div className="min-w-0">
+                    <div className="truncate font-display text-sm font-bold text-foreground">
+                      {c.code}
                     </div>
+                    <div className="truncate text-xs text-muted-foreground">{c.name}</div>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-border bg-card p-5 sm:p-6 text-center">
-              <h3 className="font-display text-xl font-bold sm:text-2xl">
-                Cần xem mã màu thật trước khi đặt hàng?
-              </h3>
-              <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
-                Nhắn Zalo gửi mã màu (ví dụ <span className="font-semibold text-foreground">LDTM-201</span>)
-                — Lotus sẽ gửi ảnh thực tế, báo giá và tư vấn lượng sơn cần dùng.
-              </p>
-              <a
-                href={ZALO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-zalo px-5 py-3 text-sm font-semibold text-zalo-foreground transition hover:opacity-95"
-              >
-                <MessageCircle className="size-4" /> Nhắn Zalo xem mã màu thật
-              </a>
-            </div>
+              </div>
+            ))}
           </div>
-        )}
+
+          <div className="mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-5 sm:p-6 text-center">
+            <h3 className="font-display text-xl font-bold sm:text-2xl text-[#1C2B2B]">
+              Cần xem mã màu thật trước khi đặt hàng?
+            </h3>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
+              Nhắn Zalo gửi mã màu (ví dụ <span className="font-semibold text-foreground">LDTM-201</span>)
+              — Lotus sẽ gửi ảnh thực tế, báo giá và tư vấn lượng sơn cần dùng.
+            </p>
+            <a
+              href={ZALO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] hover:bg-[#1C2B2B]/90 px-5 py-3 text-sm font-semibold text-white transition"
+            >
+              <MessageCircle className="size-4" /> Nhắn Zalo xem mã màu thật
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export function StickyBar() {
           href={ZALO_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-zalo px-4 py-3 text-sm font-semibold text-zalo-foreground active:scale-[0.98]"
+          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] px-4 py-3 text-sm font-semibold text-white active:scale-[0.98]"
         >
           <MessageCircle className="size-4" />
           Nhắn Zalo

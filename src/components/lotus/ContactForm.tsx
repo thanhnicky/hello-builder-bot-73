@@ -39,7 +39,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div className="rounded-2xl border border-[#E8E4DC] bg-white p-8 text-center">
-        <CheckCircle2 className="mx-auto size-12 text-[#2D7A4F]" />
+        <CheckCircle2 className="mx-auto size-12 text-[#1C2B2B]" />
         <h3 className="mt-4 text-xl font-semibold">Đã gửi yêu cầu!</h3>
         <p className="mt-2 text-sm text-neutral-600">
           Lotus sẽ liên hệ lại trong giờ làm việc. Để được tư vấn nhanh, bạn có thể nhắn Zalo kèm ảnh hạng mục.
@@ -48,8 +48,8 @@ export function ContactForm() {
           href={ZALO_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center rounded-lg px-5 py-3 text-sm font-semibold text-white hover:opacity-95"
-          style={{ background: "#2D7A4F" }}
+          className="mt-5 inline-flex items-center rounded-lg px-5 py-3 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
+          style={{ background: "#1C2B2B" }}
         >
           Gửi ảnh qua Zalo ngay →
         </a>
@@ -112,7 +112,7 @@ export function ContactForm() {
 }
 
 const inputCls =
-  "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#2D7A4F] focus:ring-2 focus:ring-[#2D7A4F]/20";
+  "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
 
 function Field({
   label,
