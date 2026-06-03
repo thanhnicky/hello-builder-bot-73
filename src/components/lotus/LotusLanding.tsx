@@ -173,7 +173,7 @@ function Problem() {
     "Không rõ sơn nào dùng được cho nhôm và mạ kẽm",
   ];
   return (
-    <section className="bg-white py-24 sm:py-28">
+    <section className="bg-white py-[72px]">
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>VẤN ĐỀ THƯỜNG GẶP</p>
         <h2
@@ -224,7 +224,7 @@ function Solution() {
     },
   ];
   return (
-    <section className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
+    <section className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>GIẢI PHÁP LOTUS</p>
         <h2
@@ -286,7 +286,7 @@ function Products() {
     },
   ];
   return (
-    <section id="san-pham" className="bg-white py-24 sm:py-28">
+    <section id="san-pham" className="bg-white py-[72px]">
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>SẢN PHẨM</p>
         <h2
@@ -360,7 +360,7 @@ function Decision() {
     },
   ];
   return (
-    <section id="chon-he-son" className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
+    <section id="chon-he-son" className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>CHỌN HỆ SƠN</p>
         <h2
@@ -413,7 +413,7 @@ function Applications() {
     { img: appAluminum, label: "Nhôm / mạ kẽm" },
   ];
   return (
-    <section id="hang-muc" className="bg-white py-24 sm:py-28">
+    <section id="hang-muc" className="bg-white py-[72px]">
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>HẠNG MỤC ỨNG DỤNG</p>
         <h2
@@ -457,7 +457,7 @@ function Process() {
     "Hoàn thiện nhanh gọn, tiết kiệm bước, vẫn chống gỉ tốt.",
   ];
   return (
-    <section className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
+    <section className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>QUY TRÌNH THI CÔNG</p>
         <h2
@@ -550,7 +550,7 @@ function Combos() {
     },
   ];
   return (
-    <section className="bg-white py-24 sm:py-28">
+    <section className="bg-white py-[72px]">
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>COMBO DỄ CHỌN</p>
         <h2
@@ -605,7 +605,7 @@ function Combos() {
 /* ---------------- FORM SECTION ---------------- */
 function FormSection() {
   return (
-    <section id="form" className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
+    <section id="form" className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-12">
         <div>
           <p className={LABEL_CLS} style={{ color: ORANGE }}>ĐẶT HÀNG & TƯ VẤN</p>
@@ -685,7 +685,7 @@ function Projects() {
     },
   ];
   return (
-    <section id="du-an" className="bg-white py-24 sm:py-28">
+    <section id="du-an" className="bg-white py-[72px]">
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>DỰ ÁN THỰC TẾ</p>
         <h2
@@ -760,7 +760,7 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
+    <section id="faq" className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x grid gap-10 lg:grid-cols-3 lg:gap-12">
         <div className="lg:col-span-1">
           <p className={LABEL_CLS} style={{ color: ORANGE }}>FAQ</p>

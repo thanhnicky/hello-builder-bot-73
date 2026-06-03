@@ -36,11 +36,11 @@ const COLORS: Swatch[] = [
 
 export function ColorChart() {
   return (
-    <section id="bang-mau" className="bg-[#F7F5F2] section-y">
+    <section id="bang-mau" className="bg-[#F7F5F2] py-[72px]">
       <div className="container-x">
         <div className="max-w-3xl">
           <div className="mb-3 block text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]">
-            Bảng màu chính hãng
+            BẢNG MÀU
           </div>
           <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-[#1C2B2B]">
             Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn

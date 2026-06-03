@@ -122,7 +122,7 @@
 @layer utilities {
   .font-display { font-family: var(--font-display); }
   .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
-  .section-y { @apply py-16 sm:py-20 lg:py-28; }
+  .section-y { @apply py-[72px]; }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
   .ring-soft {

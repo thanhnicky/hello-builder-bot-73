@@ -216,9 +216,9 @@ const COLORS = [
   { code: "LDTM-228", name: "Lemon Twist", hex: "#f4ed9e" }
 ];
 function ColorChart() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "bang-mau", className: "bg-[#F7F5F2] section-y", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "bang-mau", className: "bg-[#F7F5F2] py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-3xl", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3 block text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]", children: "Bảng màu chính hãng" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3 block text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]", children: "BẢNG MÀU" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-[#1C2B2B]", children: "Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-4 text-base text-muted-foreground sm:text-lg", children: [
         "Mỗi mã màu đều có sẵn cho hệ ",
@@ -413,7 +413,7 @@ function Problem() {
     "Muốn được tư vấn nhanh theo đúng hạng mục thực tế",
     "Không rõ sơn nào dùng được cho nhôm và mạ kẽm"
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-24 sm:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "VẤN ĐỀ THƯỜNG GẶP" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -460,7 +460,7 @@ function Solution() {
       desc: "Sơn trực tiếp lên kim loại, không cần lớp lót riêng — gọn nhanh."
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 sm:py-28", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "GIẢI PHÁP LOTUS" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -519,7 +519,7 @@ function Products() {
       featured: true
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "san-pham", className: "bg-white py-24 sm:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "san-pham", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "SẢN PHẨM" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -587,7 +587,7 @@ function Decision() {
       zalo: true
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "chon-he-son", className: "py-24 sm:py-28", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "chon-he-son", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "CHỌN HỆ SƠN" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -632,7 +632,7 @@ function Applications() {
     { img: appSteel, label: "Khung thép, kết cấu" },
     { img: appAluminum, label: "Nhôm / mạ kẽm" }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "hang-muc", className: "bg-white py-24 sm:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "hang-muc", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "HẠNG MỤC ỨNG DỤNG" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -669,7 +669,7 @@ function Process() {
     "Sơn lại lớp 2 sau thời gian khô khuyến nghị.",
     "Hoàn thiện nhanh gọn, tiết kiệm bước, vẫn chống gỉ tốt."
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 sm:py-28", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "QUY TRÌNH THI CÔNG" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -753,7 +753,7 @@ function Combos() {
       ]
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-24 sm:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "COMBO DỄ CHỌN" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -800,7 +800,7 @@ function Combos() {
   ] }) });
 }
 function FormSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "py-24 sm:py-28", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-2 lg:gap-12", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-2 lg:gap-12", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "ĐẶT HÀNG & TƯ VẤN" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -878,7 +878,7 @@ function Projects() {
       author: "Anh Phong — Chủ xưởng"
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "du-an", className: "bg-white py-24 sm:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "du-an", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "DỰ ÁN THỰC TẾ" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
@@ -956,7 +956,7 @@ function FAQ() {
       a: `Có. Bạn liên hệ Zalo ${HOTLINE} để được tư vấn nhanh trong giờ làm việc.`
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "faq", className: "py-24 sm:py-28", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-3 lg:gap-12", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "faq", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-3 lg:gap-12", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-1", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "FAQ" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
