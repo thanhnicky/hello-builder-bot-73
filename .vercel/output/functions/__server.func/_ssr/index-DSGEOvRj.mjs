@@ -858,7 +858,7 @@ function Projects() {
       item: "Cổng sắt 2 cánh",
       system: "Primer + Finish",
       area: "TP.HCM",
-      quote: "Bề mặt mịn, màu đều, không có mùi mạnh khi thi công. Anh em thợ làm rất nhanh.",
+      quote: "Trước giờ toàn dùng sơn dầu, lần này thử Lotus thấy khác hẳn — không có mùi xăng, sơn xong ở nhà luôn được. Bề mặt ra đẹp, mịn không thua gì.",
       author: "Anh Hùng — Chủ nhà"
     },
     {
@@ -866,7 +866,7 @@ function Projects() {
       item: "Hàng rào sắt + lan can",
       system: "2in1 / DTM",
       area: "Bình Dương",
-      quote: "Tiết kiệm được bước sơn lót, thi công nhanh hơn. Sau mưa vẫn ổn, không thấy gỉ trở lại.",
+      quote: "Dùng 2in1 cho hàng rào mạ kẽm, không cần lót riêng mà vẫn bám chắc. Tiết kiệm được một bước, thi công nhanh hơn rõ ràng. Sau mưa vẫn ổn.",
       author: "Anh Tâm — Nhà thầu"
     },
     {
@@ -874,7 +874,7 @@ function Projects() {
       item: "Khung thép xưởng",
       system: "Primer + Finish",
       area: "Long An",
-      quote: "Dùng cho khung thép xưởng — chống gỉ tốt, sơn lên đều và bám chắc trên bề mặt thép cũ.",
+      quote: "Chuyển từ sơn dầu sang Lotus cho khung thép xưởng — thợ làm dễ hơn vì không mùi, rửa cọ bằng nước là xong. Chống gỉ tốt, bám chắc trên thép cũ.",
       author: "Anh Phong — Chủ xưởng"
     }
   ];
@@ -928,24 +928,24 @@ function FAQ() {
       a: "Có, thậm chí bền hơn. Sơn dầu truyền thống dễ bị oxy hóa dẫn đến giòn và nứt nẻ khi sắt co giãn nhiệt dưới nắng. Sơn gốc nước Lotus có màng nhựa dẻo co giãn linh hoạt, chịu nhiệt và kháng UV cực tốt, không bị ố vàng hay bay màu."
     },
     {
-      q: "Sơn lên bề mặt mạ kẽm hoặc nhôm được không?",
-      a: "Hoàn toàn được. Dòng Lotus 2in1 / DTM được thiết kế chuyên biệt với độ bám dính siêu hạng trên các bề mặt khó bám như sắt hộp mạ kẽm, nhôm, inox mà không cần lót riêng."
-    },
-    {
       q: "Tôi đang dùng sơn dầu — chuyển sang Lotus có cần xử lý gì trước không?",
       a: "Bạn chỉ cần cạo sạch lớp sơn cũ bị bong tróc, chà nhám nhẹ để tạo độ nhám bề mặt, lau sạch bụi bẩn và dầu mỡ là có thể sơn trực tiếp hệ sơn gốc nước Lotus."
     },
     {
-      q: "Lotus 2in1 có thực sự không cần lót không, hay vẫn cần một bước nào đó?",
-      a: "Thực sự không cần sơn lót chống gỉ riêng. Bạn chỉ cần làm sạch bề mặt kim loại rồi sơn trực tiếp 2 lớp Lotus 2in1/DTM là hoàn thành công việc."
+      q: "Lotus 2in1 / DTM có thực sự không cần lót không, hay vẫn cần một bước nào đó?",
+      a: "Thực sự không cần sơn lót chống gỉ riêng. Bạn chỉ cần làm sạch bề mặt kim loại rồi sơn trực tiếp 2 lớp Lotus 2in1 / DTM là hoàn thành công việc."
+    },
+    {
+      q: "Sơn lên bề mặt mạ kẽm hoặc nhôm được không?",
+      a: "Hoàn toàn được. Dòng Lotus 2in1 / DTM được thiết kế chuyên biệt với độ bám dính siêu hạng trên các bề mặt khó bám như sắt hộp mạ kẽm, nhôm, inox mà không cần lót riêng."
     },
     {
       q: "Sơn gốc nước khô bao lâu? Có nhanh hơn sơn dầu không?",
       a: "Nhanh hơn rất nhiều. Sơn Lotus khô bề mặt chỉ sau 30-60 phút và có thể sơn lớp tiếp theo sau 2 giờ, giúp bạn hoàn thành toàn bộ công trình ngay trong ngày thay vì phải chờ qua đêm như sơn dầu."
     },
     {
-      q: "Rửa cọ và rulo bằng nước được không?",
-      a: "Được và cực kỳ dễ dàng. Vì là sơn gốc nước hoàn toàn, bạn chỉ cần rửa dụng cụ bằng nước sạch ngay sau khi sơn xong, không cần mua xăng thơm hay dung môi tẩy rửa độc hại."
+      q: "Rửa cọ và rulo bằng nước được không — sạch thật không?",
+      a: "Được và sạch hoàn toàn cực kỳ dễ dàng. Vì là sơn gốc nước, khi màng sơn chưa khô hoàn toàn, toàn bộ sơn bám trên chổi, rulo hay súng phun đều tan trong nước và dễ dàng rửa sạch dưới vòi nước chảy sinh hoạt."
     },
     {
       q: "Có hỗ trợ tư vấn lượng sơn theo diện tích không?",
