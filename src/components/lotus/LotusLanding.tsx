@@ -79,6 +79,7 @@ function Header() {
           <a href="#bang-mau" className="hover:text-black">Bảng màu</a>
           <a href="#chon-he-son" className="hover:text-black">Chọn hệ sơn</a>
           <a href="#combo" className="hover:text-black">Combo</a>
+          <a href="#order-form" className="hover:text-black">Đặt Hàng</a>
           <a href="#hang-muc" className="hover:text-black">Hạng mục</a>
           <a href="#du-an" className="hover:text-black">Dự án</a>
           <a href="#faq" className="hover:text-black">FAQ</a>
@@ -740,49 +741,259 @@ function Combos() {
 
 /* ---------------- FORM SECTION ---------------- */
 function FormSection() {
-  return (
-    <section id="order-form" className="py-[72px]" style={{ background: OFFWHITE }}>
-      <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-12">
-        <div>
-          <p className={LABEL_CLS} style={{ color: ORANGE }}>ĐẶT HÀNG & TƯ VẤN</p>
-          <h2
-            className="mt-4 font-display font-bold text-balance text-[#1C2B2B]"
-            style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
-          >
-            Nói cho Lotus biết hạng mục của bạn — tư vấn đúng ngay.
-          </h2>
-          <p className="mt-5 text-[17px] leading-relaxed text-neutral-600">
-            Không cần phải tự chọn sản phẩm nếu chưa chắc. Điền form hoặc gửi ảnh qua Zalo — Lotus xem và tư vấn đúng hệ sơn, đúng lượng, đúng cách thi công.
-          </p>
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [note, setNote] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState("cod");
+  const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-          <div className="mt-8 space-y-3">
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const errs: Record<string, string> = {};
+    if (!name.trim()) errs.name = "Vui lòng nhập họ tên";
+    if (!phone.trim()) {
+      errs.phone = "Vui lòng nhập số điện thoại";
+    } else if (!/^(0|\+84)\d{8,10}$/.test(phone.trim())) {
+      errs.phone = "Số điện thoại chưa hợp lệ";
+    }
+    if (!address.trim()) errs.address = "Vui lòng nhập địa chỉ giao hàng";
+
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+    setErrors({});
+    setSubmitted(true);
+  };
+
+  const inputCls =
+    "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
+
+  if (submitted) {
+    return (
+      <section id="order-form" className="py-[72px]" style={{ background: OFFWHITE }}>
+        <div className="container-x max-w-xl text-center">
+          <div className="rounded-2xl border border-[#E8E4DC] bg-white p-8 shadow-sm">
+            <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#1C2B2B] text-white text-xl">
+              ✓
+            </span>
+            <h3 className="mt-4 text-xl font-bold text-neutral-900">Đặt hàng thành công!</h3>
+            <p className="mt-2 text-sm text-neutral-600 font-medium">
+              Cảm ơn {name}. Lotus đã nhận được đơn hàng của bạn và sẽ liên hệ xác nhận qua Zalo hoặc số điện thoại trong vòng 30 phút.
+            </p>
+            <p className="mt-4 text-xs italic text-neutral-400">
+              Hình thức thanh toán đã chọn: {paymentMethod === "cod" ? "Thanh toán khi nhận hàng (COD)" : "Chuyển khoản Online"}
+            </p>
             <a
               href={ZALO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-lg py-3 text-sm font-semibold text-white transition hover:opacity-95"
+              style={{ background: "#E8541A" }}
             >
-              <div>
-                <div className="font-semibold text-[#1C2B2B]">Nhắn Zalo gửi ảnh hạng mục</div>
-                <div className="text-sm text-neutral-600">Tư vấn trong vài phút — miễn phí.</div>
-              </div>
-              <span className="text-xl text-[#1C2B2B]">→</span>
-            </a>
-            <a
-              href={`tel:${HOTLINE_TEL}`}
-              className="flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft"
-            >
-              <div>
-                <div className="font-semibold text-[#1C2B2B]">Gọi {HOTLINE}</div>
-                <div className="text-sm text-neutral-600">Giờ làm việc 8:00–18:00, T2–T7.</div>
-              </div>
-              <span className="text-xl text-[#1C2B2B]">→</span>
+              Nhắn Zalo Lotus ngay để xác nhận nhanh →
             </a>
           </div>
         </div>
+      </section>
+    );
+  }
 
-        <div className="text-foreground">
-          <ContactForm />
+  return (
+    <section id="order-form" className="py-[72px]" style={{ background: OFFWHITE }}>
+      <div className="container-x grid gap-10 lg:grid-cols-12 lg:gap-12">
+        {/* LEFT COLUMN — ORDER FORM */}
+        <div className="lg:col-span-7">
+          <p className={LABEL_CLS} style={{ color: ORANGE }}>ĐẶT HÀNG NGAY</p>
+          <h2
+            className="mt-4 font-display font-bold text-balance text-[#1C2B2B]"
+            style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
+          >
+            Hoàn tất đơn hàng — Lotus giao hàng tận nơi.
+          </h2>
+          <p className="mt-5 text-[17px] leading-relaxed text-neutral-600">
+            Đặt ngay hôm nay — Nhận sơn tại nhà, bắt đầu thi công cuối tuần này. Giao hàng 24–48h tại TP.HCM và các tỉnh lân cận.
+          </p>
+
+          <form onSubmit={handleSubmit} noValidate className="mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8 shadow-sm">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block">
+                <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                  Họ và tên *
+                </span>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Nguyễn Văn A"
+                  className={inputCls}
+                />
+                {errors.name && <span className="mt-1 block text-xs text-red-600">{errors.name}</span>}
+              </label>
+
+              <label className="block">
+                <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                  Số điện thoại *
+                </span>
+                <input
+                  type="text"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="09xx xxx xxx"
+                  className={inputCls}
+                />
+                {errors.phone && <span className="mt-1 block text-xs text-red-600">{errors.phone}</span>}
+              </label>
+            </div>
+
+            <label className="mt-4 block">
+              <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                Địa chỉ giao hàng *
+              </span>
+              <input
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                placeholder="Số nhà, đường, phường/xã, quận/huyện, thành phố"
+                className={inputCls}
+              />
+              {errors.address && <span className="mt-1 block text-xs text-red-600">{errors.address}</span>}
+            </label>
+
+            <label className="mt-4 block">
+              <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                Ghi chú
+              </span>
+              <textarea
+                rows={3}
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                placeholder="Màu sơn muốn chọn, yêu cầu kỹ thuật đặc biệt..."
+                className={inputCls}
+              />
+            </label>
+
+            {/* ORDER SUMMARY BOX */}
+            <div className="mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5">
+              <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ORANGE }}>
+                Thông tin đơn hàng
+              </p>
+              <div className="mt-3 space-y-1.5 text-sm text-neutral-800">
+                <p>— Combo tiết kiệm nhỏ x1: 375.000đ</p>
+                <p className="text-xs italic text-neutral-500">
+                  "Sản phẩm được xác nhận lại qua Zalo sau khi đặt hàng."
+                </p>
+              </div>
+              <div className="my-4 border-t border-[#E8E4DC]" />
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-semibold text-neutral-700">Thành tiền:</span>
+                <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
+                  1.266.000đ
+                </span>
+              </div>
+              <p className="mt-3 text-[11px] leading-relaxed text-neutral-400">
+                * Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế.
+              </p>
+              <p className="mt-1 text-[11px] leading-relaxed text-neutral-400">
+                Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²
+              </p>
+            </div>
+
+            {/* PAYMENT METHOD */}
+            <div className="mt-6 border-t border-[#E8E4DC] pt-6">
+              <p className="text-base font-bold text-neutral-900">Hình thức thanh toán</p>
+              <div className="mt-3 space-y-3">
+                <label className="flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                    checked={paymentMethod === "cod"}
+                    onChange={() => setPaymentMethod("cod")}
+                    className="mt-1 accent-[#E8541A]"
+                  />
+                  <div>
+                    <span className="text-sm font-semibold text-neutral-800">COD — Thanh toán khi nhận hàng</span>
+                  </div>
+                </label>
+                <label className="flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer">
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="online"
+                    checked={paymentMethod === "online"}
+                    onChange={() => setPaymentMethod("online")}
+                    className="mt-1 accent-[#E8541A]"
+                  />
+                  <div>
+                    <span className="text-sm font-semibold text-neutral-800">Chuyển khoản Online</span>
+                    <span className="mt-0.5 block text-xs font-semibold" style={{ color: ORANGE }}>
+                      Miễn phí giao hàng và giảm 10%
+                    </span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="mt-6 flex w-full items-center justify-center rounded-lg py-4 text-base font-bold text-white transition hover:opacity-95 shadow-sm"
+              style={{ background: "#E8541A" }}
+            >
+              Xác nhận đặt hàng →
+            </button>
+
+            <p className="mt-4 text-center text-xs leading-relaxed text-neutral-500">
+              Bằng cách đặt hàng, bạn đồng ý để Lotus liên hệ xác nhận đơn hàng và giao hàng. Đổi trả/hoàn tiền trong vòng 7 ngày nếu sơn không đúng màu đã chọn.
+            </p>
+          </form>
+        </div>
+
+        {/* RIGHT COLUMN — ZALO CARD */}
+        <div className="lg:col-span-5">
+          <div className="rounded-xl bg-[#1C2B2B] p-8 text-white lg:sticky lg:top-24 shadow-md">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-400">
+              TƯ VẤN NHANH NHẤT
+            </p>
+            <h3 className="mt-2 text-2xl font-bold text-white">Nhắn Zalo Lotus</h3>
+            <p className="mt-3 text-[15px] leading-relaxed text-neutral-300">
+              Gửi ảnh hạng mục qua Zalo để được tư vấn đúng hệ sơn, đúng combo và bảng màu phù hợp.
+            </p>
+
+            <ul className="mt-6 space-y-3 text-sm text-neutral-200">
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-400 font-bold text-base">✓</span>
+                <span>Phản hồi nhanh trong vòng 15 phút</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-400 font-bold text-base">✓</span>
+                <span>Tư vấn đúng hệ theo từng hạng mục</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <span className="text-emerald-400 font-bold text-base">✓</span>
+                <span>Báo giá rõ ràng, hướng dẫn kỹ thuật chi tiết</span>
+              </li>
+            </ul>
+
+            <a
+              href="https://zalo.me/0943966662"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 flex w-full items-center justify-center rounded-lg py-4 text-base font-bold text-white transition hover:opacity-95 shadow-sm"
+              style={{ background: "#E8541A" }}
+            >
+              Gửi ảnh qua Zalo →
+            </a>
+
+            <div className="my-6 border-t border-neutral-700" />
+
+            <div className="leading-tight">
+              <p className="font-bold text-white text-lg">Hotline: 0943 966 662</p>
+              <p className="mt-1 text-xs text-neutral-400">Giờ làm việc: 8:00 – 18:00, Thứ 2 – Thứ 7</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

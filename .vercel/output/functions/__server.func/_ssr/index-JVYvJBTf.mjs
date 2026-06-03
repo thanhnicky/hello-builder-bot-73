@@ -2,8 +2,7 @@ import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { M as MessageCircle, P as Phone, C as CircleCheck, a as ChevronDown } from "../_libs/lucide-react.mjs";
-import { o as objectType, e as enumType, s as stringType } from "../_libs/zod.mjs";
+import { M as MessageCircle, P as Phone, C as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -62,101 +61,6 @@ const PRODUCT_LINE = "Lotus Metal Coat";
 const COMPANY_NAME = "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG";
 const COMPANY_TAX_ID = "0313351528";
 const COMPANY_ADDRESS = "99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM";
-const schema = objectType({
-  name: stringType().trim().min(2, "Vui lòng nhập họ tên").max(80),
-  phone: stringType().trim().regex(/^(0|\+84)\d{8,10}$/, "Số điện thoại chưa hợp lệ"),
-  item: stringType().trim().min(2, "Vui lòng mô tả hạng mục").max(200),
-  surface: enumType(["sat", "thep", "nhom", "ma-kem", "khac"]),
-  location: enumType(["trong-nha", "ngoai-troi", "ca-hai"]),
-  product: enumType(["primer", "finish", "2in1", "chua-ro"])
-});
-function ContactForm() {
-  const [submitted, setSubmitted] = reactExports.useState(false);
-  const [errors, setErrors] = reactExports.useState({});
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const data = Object.fromEntries(fd.entries());
-    const parsed = schema.safeParse(data);
-    if (!parsed.success) {
-      const errs = {};
-      parsed.error.issues.forEach((i) => {
-        errs[i.path[0]] = i.message;
-      });
-      setErrors(errs);
-      return;
-    }
-    setErrors({});
-    setSubmitted(true);
-  };
-  if (submitted) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-[#E8E4DC] bg-white p-8 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheck, { className: "mx-auto size-12 text-[#1C2B2B]" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 text-xl font-semibold", children: "Đã gửi yêu cầu!" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600", children: "Lotus sẽ liên hệ lại trong giờ làm việc. Để được tư vấn nhanh, bạn có thể nhắn Zalo kèm ảnh hạng mục." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: ZALO_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "mt-5 inline-flex items-center rounded-lg px-5 py-3 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition",
-          style: { background: "#1C2B2B" },
-          children: "Gửi ảnh qua Zalo ngay →"
-        }
-      )
-    ] });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit, noValidate: true, className: "rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold sm:text-2xl", children: "Nhận tư vấn + báo giá phù hợp" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Lotus sẽ liên hệ lại trong vòng 30 phút trong giờ làm việc." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 grid gap-4 sm:grid-cols-2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", error: errors.name, children: /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: "name", maxLength: 80, placeholder: "Nguyễn Văn A", className: inputCls }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại", error: errors.phone, children: /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: "phone", inputMode: "tel", maxLength: 15, placeholder: "09xx xxx xxx", className: inputCls }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Hạng mục cần sơn", error: errors.item, className: "sm:col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: "item", maxLength: 200, placeholder: "VD: Cổng sắt 2 cánh, lan can ban công...", className: inputCls }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Loại bề mặt", error: errors.surface, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("select", { name: "surface", defaultValue: "sat", className: inputCls, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "sat", children: "Sắt" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "thep", children: "Thép" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "nhom", children: "Nhôm" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "ma-kem", children: "Mạ kẽm" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "khac", children: "Khác / chưa rõ" })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Vị trí sử dụng", error: errors.location, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("select", { name: "location", defaultValue: "ngoai-troi", className: inputCls, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "trong-nha", children: "Trong nhà" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "ngoai-troi", children: "Ngoài trời" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "ca-hai", children: "Cả trong và ngoài" })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Muốn chọn", error: errors.product, className: "sm:col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("select", { name: "product", defaultValue: "chua-ro", className: inputCls, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "primer", children: "Lotus Metal Coat Primer" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "finish", children: "Lotus Metal Coat Finish" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "2in1", children: "Lotus Metal Coat 2in1 / DTM" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "chua-ro", children: "Chưa rõ — cần tư vấn" })
-      ] }) })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "button",
-      {
-        type: "submit",
-        className: "mt-6 flex w-full items-center justify-center rounded-lg px-6 py-4 text-base font-semibold text-white transition hover:opacity-95",
-        style: { background: "#E8541A" },
-        children: "Đặt hàng / Nhận tư vấn →"
-      }
-    )
-  ] });
-}
-const inputCls = "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
-function Field({
-  label,
-  children,
-  error,
-  className = ""
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: `block ${className}`, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-medium uppercase tracking-wide text-neutral-500", children: label }),
-    children,
-    error && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: error })
-  ] });
-}
 function StickyBar() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-3 py-2 backdrop-blur md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -320,6 +224,7 @@ function Header() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black", children: "Bảng màu" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black", children: "Chọn hệ sơn" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black", children: "Combo" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#order-form", className: "hover:text-black", children: "Đặt Hàng" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black", children: "Hạng mục" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black", children: "Dự án" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black", children: "FAQ" })
@@ -918,55 +823,224 @@ function Combos() {
   ] }) });
 }
 function FormSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-2 lg:gap-12", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "ĐẶT HÀNG & TƯ VẤN" }),
+  const [name, setName] = reactExports.useState("");
+  const [phone, setPhone] = reactExports.useState("");
+  const [address, setAddress] = reactExports.useState("");
+  const [note, setNote] = reactExports.useState("");
+  const [paymentMethod, setPaymentMethod] = reactExports.useState("cod");
+  const [submitted, setSubmitted] = reactExports.useState(false);
+  const [errors, setErrors] = reactExports.useState({});
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errs = {};
+    if (!name.trim()) errs.name = "Vui lòng nhập họ tên";
+    if (!phone.trim()) {
+      errs.phone = "Vui lòng nhập số điện thoại";
+    } else if (!/^(0|\+84)\d{8,10}$/.test(phone.trim())) {
+      errs.phone = "Số điện thoại chưa hợp lệ";
+    }
+    if (!address.trim()) errs.address = "Vui lòng nhập địa chỉ giao hàng";
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+    setErrors({});
+    setSubmitted(true);
+  };
+  const inputCls = "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
+  if (submitted) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container-x max-w-xl text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-[#E8E4DC] bg-white p-8 shadow-sm", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mx-auto flex size-12 items-center justify-center rounded-full bg-[#1C2B2B] text-white text-xl", children: "✓" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 text-xl font-bold text-neutral-900", children: "Đặt hàng thành công!" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-2 text-sm text-neutral-600 font-medium", children: [
+        "Cảm ơn ",
+        name,
+        ". Lotus đã nhận được đơn hàng của bạn và sẽ liên hệ xác nhận qua Zalo hoặc số điện thoại trong vòng 30 phút."
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-4 text-xs italic text-neutral-400", children: [
+        "Hình thức thanh toán đã chọn: ",
+        paymentMethod === "cod" ? "Thanh toán khi nhận hàng (COD)" : "Chuyển khoản Online"
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: ZALO_URL,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "mt-6 inline-flex w-full items-center justify-center rounded-lg py-3 text-sm font-semibold text-white transition hover:opacity-95",
+          style: { background: "#E8541A" },
+          children: "Nhắn Zalo Lotus ngay để xác nhận nhanh →"
+        }
+      )
+    ] }) }) });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-12 lg:gap-12", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "ĐẶT HÀNG NGAY" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "h2",
         {
           className: "mt-4 font-display font-bold text-balance text-[#1C2B2B]",
           style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-          children: "Nói cho Lotus biết hạng mục của bạn — tư vấn đúng ngay."
+          children: "Hoàn tất đơn hàng — Lotus giao hàng tận nơi."
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[17px] leading-relaxed text-neutral-600", children: "Không cần phải tự chọn sản phẩm nếu chưa chắc. Điền form hoặc gửi ảnh qua Zalo — Lotus xem và tư vấn đúng hệ sơn, đúng lượng, đúng cách thi công." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: ZALO_URL,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft",
-            children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[17px] leading-relaxed text-neutral-600", children: "Đặt ngay hôm nay — Nhận sơn tại nhà, bắt đầu thi công cuối tuần này. Giao hàng 24–48h tại TP.HCM và các tỉnh lân cận." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, noValidate: true, className: "mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8 shadow-sm", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-4 sm:grid-cols-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "block", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Họ và tên *" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "input",
+              {
+                type: "text",
+                value: name,
+                onChange: (e) => setName(e.target.value),
+                placeholder: "Nguyễn Văn A",
+                className: inputCls
+              }
+            ),
+            errors.name && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.name })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "block", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Số điện thoại *" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "input",
+              {
+                type: "text",
+                value: phone,
+                onChange: (e) => setPhone(e.target.value),
+                placeholder: "09xx xxx xxx",
+                className: inputCls
+              }
+            ),
+            errors.phone && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.phone })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "mt-4 block", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Địa chỉ giao hàng *" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "input",
+            {
+              type: "text",
+              value: address,
+              onChange: (e) => setAddress(e.target.value),
+              placeholder: "Số nhà, đường, phường/xã, quận/huyện, thành phố",
+              className: inputCls
+            }
+          ),
+          errors.address && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.address })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "mt-4 block", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Ghi chú" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "textarea",
+            {
+              rows: 3,
+              value: note,
+              onChange: (e) => setNote(e.target.value),
+              placeholder: "Màu sơn muốn chọn, yêu cầu kỹ thuật đặc biệt...",
+              className: inputCls
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold uppercase tracking-wide", style: { color: ORANGE }, children: "Thông tin đơn hàng" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-1.5 text-sm text-neutral-800", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "— Combo tiết kiệm nhỏ x1: 375.000đ" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs italic text-neutral-500", children: '"Sản phẩm được xác nhận lại qua Zalo sau khi đặt hàng."' })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "my-4 border-t border-[#E8E4DC]" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-700", children: "Thành tiền:" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: "1.266.000đ" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[11px] leading-relaxed text-neutral-400", children: "* Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-[11px] leading-relaxed text-neutral-400", children: "Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 border-t border-[#E8E4DC] pt-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-base font-bold text-neutral-900", children: "Hình thức thanh toán" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  type: "radio",
+                  name: "payment",
+                  value: "cod",
+                  checked: paymentMethod === "cod",
+                  onChange: () => setPaymentMethod("cod"),
+                  className: "mt-1 accent-[#E8541A]"
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-800", children: "COD — Thanh toán khi nhận hàng" }) })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "input",
+                {
+                  type: "radio",
+                  name: "payment",
+                  value: "online",
+                  checked: paymentMethod === "online",
+                  onChange: () => setPaymentMethod("online"),
+                  className: "mt-1 accent-[#E8541A]"
+                }
+              ),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-[#1C2B2B]", children: "Nhắn Zalo gửi ảnh hạng mục" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Tư vấn trong vài phút — miễn phí." })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl text-[#1C2B2B]", children: "→" })
-            ]
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-800", children: "Chuyển khoản Online" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 block text-xs font-semibold", style: { color: ORANGE }, children: "Miễn phí giao hàng và giảm 10%" })
+              ] })
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            type: "submit",
+            className: "mt-6 flex w-full items-center justify-center rounded-lg py-4 text-base font-bold text-white transition hover:opacity-95 shadow-sm",
+            style: { background: "#E8541A" },
+            children: "Xác nhận đặt hàng →"
           }
         ),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: `tel:${HOTLINE_TEL}`,
-            className: "flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "font-semibold text-[#1C2B2B]", children: [
-                  "Gọi ",
-                  HOTLINE
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Giờ làm việc 8:00–18:00, T2–T7." })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl text-[#1C2B2B]", children: "→" })
-            ]
-          }
-        )
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-xs leading-relaxed text-neutral-500", children: "Bằng cách đặt hàng, bạn đồng ý để Lotus liên hệ xác nhận đơn hàng và giao hàng. Đổi trả/hoàn tiền trong vòng 7 ngày nếu sơn không đúng màu đã chọn." })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-foreground", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactForm, {}) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-xl bg-[#1C2B2B] p-8 text-white lg:sticky lg:top-24 shadow-md", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-400", children: "TƯ VẤN NHANH NHẤT" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 text-2xl font-bold text-white", children: "Nhắn Zalo Lotus" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[15px] leading-relaxed text-neutral-300", children: "Gửi ảnh hạng mục qua Zalo để được tư vấn đúng hệ sơn, đúng combo và bảng màu phù hợp." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-6 space-y-3 text-sm text-neutral-200", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-400 font-bold text-base", children: "✓" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Phản hồi nhanh trong vòng 15 phút" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-400 font-bold text-base", children: "✓" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Tư vấn đúng hệ theo từng hạng mục" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-emerald-400 font-bold text-base", children: "✓" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Báo giá rõ ràng, hướng dẫn kỹ thuật chi tiết" })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "https://zalo.me/0943966662",
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "mt-8 flex w-full items-center justify-center rounded-lg py-4 text-base font-bold text-white transition hover:opacity-95 shadow-sm",
+          style: { background: "#E8541A" },
+          children: "Gửi ảnh qua Zalo →"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "my-6 border-t border-neutral-700" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-bold text-white text-lg", children: "Hotline: 0943 966 662" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-xs text-neutral-400", children: "Giờ làm việc: 8:00 – 18:00, Thứ 2 – Thứ 7" })
+      ] })
+    ] }) })
   ] }) });
 }
 function Projects() {
