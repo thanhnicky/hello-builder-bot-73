@@ -108,8 +108,8 @@ function ContactForm() {
     ] });
   }
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit, noValidate: true, className: "rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold sm:text-2xl", children: "Nhận tư vấn hệ sơn phù hợp" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Điền thông tin — Lotus sẽ tư vấn đúng sản phẩm cho hạng mục của bạn." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold sm:text-2xl", children: "Nhận tư vấn + báo giá phù hợp" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Lotus sẽ liên hệ lại trong vòng 30 phút trong giờ làm việc." }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 grid gap-4 sm:grid-cols-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", error: errors.name, children: /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: "name", maxLength: 80, placeholder: "Nguyễn Văn A", className: inputCls }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại", error: errors.phone, children: /* @__PURE__ */ jsxRuntimeExports.jsx("input", { name: "phone", inputMode: "tel", maxLength: 15, placeholder: "09xx xxx xxx", className: inputCls }) }),
@@ -347,7 +347,7 @@ function Header() {
   ] }) });
 }
 function Hero() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "top", className: "relative overflow-hidden", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-28", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "top", className: "relative overflow-hidden", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-[72px]", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "SƠN KIM LOẠI GỐC NƯỚC — LOTUS METAL COAT" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -361,14 +361,13 @@ function Hero() {
             letterSpacing: "-0.025em"
           },
           children: [
-            "Sơn kim loại gốc nước Lotus —",
-            " ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: ORANGE }, children: "chống gỉ, bám tốt" }),
-            ", đẹp bền cho nhiều bề mặt kim loại."
+            "Không mùi xăng. ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: ORANGE }, children: "Không cần pha dung môi." }),
+            " Sơn sắt đẹp và bền hơn."
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-[17px] leading-relaxed text-neutral-600 sm:text-[18px]", children: "Hệ nước nhẹ mùi · Tư vấn miễn phí · Giao hàng toàn quốc" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-[17px] leading-relaxed text-neutral-600 sm:text-[18px]", children: "Gốc nước hoàn toàn · Thi công sạch, an toàn trong nhà · Giao hàng toàn quốc" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-col gap-3 sm:flex-row", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "a",
@@ -406,12 +405,12 @@ function Hero() {
 }
 function Problem() {
   const pains = [
-    "Sợ sơn có mùi mạnh khi thi công trong nhà",
-    "Không biết có cần sơn lót hay không",
-    "Phân vân giữa hệ Primer + Finish và dòng 2in1",
-    "Lo ngại bong tróc, gỉ sét quay lại sau vài tháng",
-    "Muốn được tư vấn nhanh theo đúng hạng mục thực tế",
-    "Không rõ sơn nào dùng được cho nhôm và mạ kẽm"
+    "Mùi xăng nồng nặc — thợ phải đeo khẩu trang, chủ nhà phải bỏ đi mấy ngày",
+    "Phải pha xăng hoặc dung môi — lỉnh kỉnh, nguy cơ cháy nổ, khó kiểm soát độ loãng",
+    "Sơn lên mạ kẽm hoặc nhôm không bám — bong tróc sau vài tháng dù đã lót",
+    "Khô chậm — phải chờ lớp 1 qua ngày mới sơn lớp 2 được",
+    "Dư sơn đổ đi — không pha nước được, để lâu đóng cứng lãng phí",
+    "Vệ sinh cọ, rulo phải dùng xăng — hôi tay, hại da, khó rửa sạch"
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "VẤN ĐỀ THƯỜNG GẶP" }),
@@ -420,9 +419,10 @@ function Problem() {
       {
         className: "mt-4 max-w-4xl font-display font-bold text-balance",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Sơn kim loại không chỉ cần đẹp — cần đúng hệ và phù hợp môi trường sử dụng."
+        children: "Sơn dầu đang cho bạn kết quả tốt — hay chỉ quen dùng từ lâu?"
       }
     ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Nhiều người chuyển sang sơn gốc nước rồi mới nhận ra mình đã chịu đựng những vấn đề không đáng có." }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-0 sm:grid-cols-2 lg:grid-cols-3", children: pains.map((p, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
       "div",
       {
@@ -445,19 +445,19 @@ function Problem() {
 function Solution() {
   const lines = [
     {
-      tag: "Lớp lót",
+      tag: "LỚP LÓT",
       name: "Lotus Metal Coat Primer",
-      desc: "Lớp lót chống gỉ và tăng độ bám dính cho hệ sơn hoàn thiện."
+      desc: "Lớp nền chống gỉ gốc nước — bám chắc lên sắt mới, sắt cũ, cả nhôm và mạ kẽm. Lót trước khi sơn màu để hệ sơn bền lâu hơn đáng kể."
     },
     {
-      tag: "Lớp phủ",
+      tag: "LỚP PHỦ",
       name: "Lotus Metal Coat Finish",
-      desc: "Lớp phủ màu hoàn thiện cho bề mặt kim loại sau lớp lót."
+      desc: "Sơn màu hoàn thiện gốc nước — phủ lên lớp lót để có bề mặt đẹp, đồng màu, bền thời tiết. Không mùi, dễ sơn lại nếu cần."
     },
     {
-      tag: "Đa năng",
+      tag: "ĐA NĂNG — KHUYÊN DÙNG",
       name: "Lotus Metal Coat 2in1 / DTM",
-      desc: "Sơn trực tiếp lên kim loại, không cần lớp lót riêng — gọn nhanh."
+      desc: "Sơn thẳng lên sắt hộp mạ kẽm mà không cần lót riêng — lý tưởng cho thợ thi công cần tiết kiệm bước mà vẫn chống gỉ đạt yêu cầu."
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
@@ -467,10 +467,10 @@ function Solution() {
       {
         className: "mt-4 max-w-3xl font-display font-bold text-balance",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Đầy đủ giải pháp sơn kim loại gốc nước theo từng nhu cầu."
+        children: "Một bộ sản phẩm. Ba lựa chọn rõ ràng."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Một hệ sản phẩm — ba lựa chọn rõ ràng. Bạn có thể chọn hệ chuẩn nhiều lớp hoặc dòng 2in1 thi công gọn nhẹ tùy theo hạng mục." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Gốc nước hoàn toàn — pha nước, rửa nước, không xăng dung môi. Chọn đúng hệ theo hạng mục là xong." }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: lines.map((l, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
       {
@@ -501,21 +501,21 @@ function Products() {
   const products = [
     {
       name: "Lotus Metal Coat Primer",
-      tag: "Sơn lót chống gỉ",
-      desc: "Sơn lót kim loại gốc nước giúp chống gỉ và tăng độ bám dính cho hệ sơn hoàn thiện.",
-      uses: "Dùng cho sắt, thép, kim loại mới chưa sơn — luôn là bước đầu của hệ chuẩn."
+      tag: "SƠN LÓT CHỐNG GỈ",
+      desc: "Lót gốc nước bám chắc trên sắt, thép, nhôm, mạ kẽm — ngay cả bề mặt khó bám mà sơn dầu thường trượt.",
+      uses: "Bước đầu tiên của hệ chuẩn 2 lớp — cổng, lan can, hàng rào cần độ bền cao."
     },
     {
       name: "Lotus Metal Coat Finish",
-      tag: "Sơn phủ màu",
-      desc: "Sơn phủ màu hoàn thiện cho bề mặt kim loại sau lớp lót, giúp bề mặt đẹp và đồng đều.",
-      uses: "Đi cùng Primer để tạo hệ chuẩn 2 lớp — phù hợp cổng, lan can, kết cấu cần độ bền cao."
+      tag: "SƠN PHỦ MÀU",
+      desc: "Màu hoàn thiện đẹp, đều, không loang — sơn lên sau lớp lót khi khô. Rửa cọ bằng nước, không mùi, thi công trong nhà được.",
+      uses: "Đi cùng Primer tạo hệ 2 lớp chuẩn — cho cổng, cửa sắt, lan can, khung thép."
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
-      tag: "Đa năng",
-      desc: "Sơn kim loại đa năng gốc nước, thi công trực tiếp lên kim loại mà không cần lớp lót riêng.",
-      uses: "Phù hợp hạng mục cần thi công nhanh, gọn — vẫn đảm bảo chống gỉ và bám dính tốt.",
+      tag: "ĐA NĂNG — KHUYÊN DÙNG",
+      desc: "Sơn trực tiếp lên sắt mạ kẽm, nhôm, sắt hộp — không cần lót. Một bước, tiết kiệm thời gian, vẫn chống gỉ và bám dính đạt yêu cầu.",
+      uses: "Thi công nhanh, hạng mục không quá khắc nghiệt — cổng, hàng rào, nội thất sắt trong nhà.",
       featured: true
     }
   ];
@@ -529,7 +529,7 @@ function Products() {
         children: "Chọn đúng sản phẩm cho hạng mục của bạn."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Mỗi sản phẩm có công dụng và quy trình thi công riêng. Bạn có thể đặt từng sản phẩm hoặc chọn theo combo." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Mỗi sản phẩm phục vụ một bước khác nhau trong quy trình — hoặc gộp làm một nếu chọn 2in1." }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: products.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
       {
@@ -572,18 +572,18 @@ function Decision() {
   const rows = [
     {
       title: "Hệ chuẩn Primer + Finish",
-      desc: "Hệ sơn chuẩn nhiều lớp, tăng độ bám và chống gỉ tốt hơn cho hạng mục yêu cầu độ bền cao.",
-      tag: "Bền lâu"
+      desc: "Chọn khi hạng mục ngoài trời, tiếp xúc thời tiết, hoặc cần bề mặt thật đẹp. Hai lớp — lót trước, phủ màu sau. Bền hơn đáng kể so với chỉ sơn phủ đơn.",
+      tag: "BỀN LÂU"
     },
     {
       title: "Hệ 2in1 / DTM",
-      desc: "Thi công gọn hơn, tiết kiệm bước, sơn trực tiếp lên kim loại mà vẫn chống gỉ tốt.",
-      tag: "Thi công nhanh"
+      desc: "Chọn khi sơn sắt hộp mạ kẽm, nhôm, hoặc hạng mục trong nhà không cần quá nhiều lớp. Một sản phẩm làm cả hai việc — không cần lót riêng.",
+      tag: "THI CÔNG NHANH"
     },
     {
-      title: "Chưa chắc chọn loại nào?",
-      desc: "Nhắn Zalo gửi ảnh hạng mục — Lotus tư vấn đúng hệ sơn phù hợp trong vài phút.",
-      tag: "Tư vấn",
+      title: "Chưa chắc nên chọn loại nào?",
+      desc: "Nhắn Zalo gửi ảnh hạng mục thực tế — Lotus tư vấn đúng hệ sơn trong vài phút, miễn phí, không ép mua.",
+      tag: "TƯ VẤN MIỄN PHÍ",
       zalo: true
     }
   ];
@@ -594,10 +594,10 @@ function Decision() {
       {
         className: "mt-4 max-w-3xl font-display font-bold text-balance text-[#1C2B2B]",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Nên chọn hệ sơn nào cho hạng mục của bạn?"
+        children: "Hai hệ sơn — chọn theo hạng mục, không phải theo thói quen."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Hai con đường — một mục tiêu: bảo vệ kim loại bền đẹp. Chọn đúng ngay từ đầu để tiết kiệm chi phí và công sức." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Hệ chuẩn cho độ bền tối ưu. Hệ 2in1 cho thi công nhanh. Cả hai đều gốc nước — không xăng dung môi." }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: rows.map((r) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
       {
@@ -658,16 +658,16 @@ function Applications() {
 }
 function Process() {
   const A = [
-    "Làm sạch bề mặt kim loại — loại bỏ gỉ, dầu mỡ, bụi bẩn.",
-    "Sơn lót Lotus Metal Coat Primer để chống gỉ và tăng bám dính.",
-    "Sơn phủ màu Lotus Metal Coat Finish để hoàn thiện bề mặt.",
-    "Kiểm tra — hoàn thiện bề mặt đẹp, đều màu, bền lâu."
+    "Vệ sinh bề mặt — tẩy gỉ, lau sạch dầu mỡ và bụi bẩn.",
+    "Sơn lớp lót Primer — chống gỉ, tăng bám dính. Khô sau 1–2 giờ (không cần chờ qua đêm như sơn dầu).",
+    "Sơn lớp phủ Finish — màu hoàn thiện đẹp, đều.",
+    "Rửa cọ bằng nước — không cần xăng, sạch tay, xong việc."
   ];
   const B = [
-    "Làm sạch bề mặt kim loại — loại bỏ gỉ, dầu mỡ, bụi bẩn.",
-    "Thi công Lotus Metal Coat 2in1 / DTM trực tiếp lên kim loại.",
-    "Sơn lại lớp 2 sau thời gian khô khuyến nghị.",
-    "Hoàn thiện nhanh gọn, tiết kiệm bước, vẫn chống gỉ tốt."
+    "Vệ sinh bề mặt — tẩy gỉ, lau sạch.",
+    "Sơn lớp 1 Lotus 2in1 / DTM trực tiếp lên kim loại — không cần lót riêng.",
+    "Khô sau 1–2 giờ, sơn lớp 2 để màu đều và chắc hơn.",
+    "Rửa cọ bằng nước. Gọn, nhanh, không mùi."
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "QUY TRÌNH THI CÔNG" }),
@@ -676,12 +676,12 @@ function Process() {
       {
         className: "mt-4 max-w-3xl font-display font-bold text-balance",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Hai cách thi công — chọn theo hạng mục."
+        children: "Hai cách thi công — đơn giản hơn sơn dầu nhiều."
       }
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid gap-6 lg:grid-cols-2", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ProcessCard, { title: "Hệ chuẩn — Primer + Finish", tag: "Bền tối ưu", steps: A }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ProcessCard, { title: "Hệ gọn — 2in1 / DTM", tag: "Thi công nhanh", steps: B, accent: true })
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ProcessCard, { title: "Hệ chuẩn Primer + Finish", tag: "BỀN TỐI ƯU", steps: A }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ProcessCard, { title: "Hệ 2in1 / DTM", tag: "THI CÔNG NHANH", steps: B, accent: true })
     ] })
   ] }) });
 }
@@ -722,34 +722,34 @@ function ProcessCard({
 function Combos() {
   const combos = [
     {
-      name: "Gói hoàn thiện cao cấp",
-      tag: "Cao cấp",
-      desc: "Primer + Finish + Phủ bóng bảo vệ ngoài trời",
+      name: "Gói 3 lớp — bền ngoài trời",
+      tag: "CAO CẤP",
+      desc: "Primer + Finish + Phủ bóng UV",
       bullets: [
-        "Lớp 1: Lotus Metal Coat Primer — chống gỉ",
-        "Lớp 2: Lotus Metal Coat Finish — màu hoàn thiện",
-        "Lớp 3: Phủ bóng bảo vệ — chống tia UV, bền ngoài trời"
+        "Lớp 1: Primer chống gỉ nền",
+        "Lớp 2: Finish màu hoàn thiện",
+        "Lớp 3: Phủ bóng kháng UV, chịu mưa nắng dài lâu"
       ]
     },
     {
-      name: "Gói hoàn thiện tiêu chuẩn",
-      tag: "Khuyên dùng",
-      desc: "Lotus Metal Coat Primer + Finish",
+      name: "Gói tiêu chuẩn — đủ dùng, đủ bền",
+      tag: "KHUYÊN DÙNG",
+      desc: "Primer + Finish",
       bullets: [
-        "Hệ chuẩn 2 lớp bền lâu",
-        "Chống gỉ + màu hoàn thiện",
-        "Lựa chọn an toàn cho cổng, lan can"
+        "Hệ 2 lớp chuẩn, bám chắc",
+        "Chống gỉ + màu hoàn thiện đẹp",
+        "Phù hợp hầu hết hạng mục cổng, lan can, hàng rào"
       ],
       featured: true
     },
     {
-      name: "Gói 2in1 tiện lợi",
-      tag: "Thi công nhanh",
+      name: "Gói 2in1 — một sản phẩm, đủ việc",
+      tag: "THI CÔNG NHANH",
       desc: "Lotus Metal Coat 2in1 / DTM",
       bullets: [
-        "Không cần sơn lót riêng",
-        "Tiết kiệm thời gian thi công",
-        "Vẫn chống gỉ và bám dính tốt"
+        "Không cần lót riêng — tiết kiệm bước",
+        "Bám tốt trên mạ kẽm, nhôm, sắt hộp",
+        "Lý tưởng khi cần thi công nhanh, gọn"
       ]
     }
   ];
@@ -760,7 +760,7 @@ function Combos() {
       {
         className: "mt-4 max-w-3xl font-display font-bold text-balance",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "3 gói sơn — chọn đúng theo cách bạn muốn thi công."
+        children: "3 gói sơn — chọn theo cách bạn muốn thi công."
       }
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: combos.map((c) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -808,10 +808,10 @@ function FormSection() {
         {
           className: "mt-4 font-display font-bold text-balance text-[#1C2B2B]",
           style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-          children: "Gửi thông tin — Lotus sẽ tư vấn đúng hệ sơn cho hạng mục của bạn."
+          children: "Nói cho Lotus biết hạng mục của bạn — tư vấn đúng ngay."
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[17px] leading-relaxed text-neutral-600", children: "Form ngắn gọn dưới đây giúp Lotus hiểu nhanh nhu cầu của bạn. Nếu cần tư vấn sâu hơn, hãy nhắn Zalo kèm ảnh hạng mục." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[17px] leading-relaxed text-neutral-600", children: "Không cần phải tự chọn sản phẩm nếu chưa chắc. Điền form hoặc gửi ảnh qua Zalo — Lotus xem và tư vấn đúng hệ sơn, đúng lượng, đúng cách thi công." }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-3", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
@@ -823,7 +823,7 @@ function FormSection() {
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-semibold text-[#1C2B2B]", children: "Nhắn Zalo gửi ảnh hạng mục" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Tư vấn đúng hệ sơn Lotus trong vài phút." })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Tư vấn trong vài phút — miễn phí." })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl text-[#1C2B2B]", children: "→" })
             ]
@@ -837,10 +837,10 @@ function FormSection() {
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "font-semibold text-[#1C2B2B]", children: [
-                  "Gọi hotline ",
+                  "Gọi ",
                   HOTLINE
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Tư vấn nhanh trong giờ làm việc." })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm text-neutral-600", children: "Giờ làm việc 8:00–18:00, T2–T7." })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xl text-[#1C2B2B]", children: "→" })
             ]
@@ -924,36 +924,36 @@ function Chip({ children }) {
 function FAQ() {
   const qa = [
     {
-      q: "Sơn kim loại Lotus là hệ nước hay dung môi?",
-      a: "Lotus Metal Coat là hệ sơn gốc nước — nhẹ mùi, an toàn hơn khi thi công, đặc biệt phù hợp cho không gian trong nhà."
+      q: "Sơn gốc nước có bền bằng sơn dầu không?",
+      a: "Có, thậm chí bền hơn. Sơn dầu truyền thống dễ bị oxy hóa dẫn đến giòn và nứt nẻ khi sắt co giãn nhiệt dưới nắng. Sơn gốc nước Lotus có màng nhựa dẻo co giãn linh hoạt, chịu nhiệt và kháng UV cực tốt, không bị ố vàng hay bay màu."
     },
     {
-      q: "Lotus Metal Coat Primer dùng cho bề mặt nào?",
-      a: "Dùng cho sắt, thép và các bề mặt kim loại cần chống gỉ. Đây là lớp lót giúp tăng độ bám cho lớp sơn phủ phía sau."
+      q: "Sơn lên bề mặt mạ kẽm hoặc nhôm được không?",
+      a: "Hoàn toàn được. Dòng Lotus 2in1 / DTM được thiết kế chuyên biệt với độ bám dính siêu hạng trên các bề mặt khó bám như sắt hộp mạ kẽm, nhôm, inox mà không cần lót riêng."
     },
     {
-      q: "Lotus Metal Coat 2in1 có cần sơn lót không?",
-      a: "Dòng 2in1 / DTM được thiết kế để sơn trực tiếp lên kim loại mà không cần lớp lót riêng, giúp thi công gọn hơn."
+      q: "Tôi đang dùng sơn dầu — chuyển sang Lotus có cần xử lý gì trước không?",
+      a: "Bạn chỉ cần cạo sạch lớp sơn cũ bị bong tróc, chà nhám nhẹ để tạo độ nhám bề mặt, lau sạch bụi bẩn và dầu mỡ là có thể sơn trực tiếp hệ sơn gốc nước Lotus."
     },
     {
-      q: "Nên chọn hệ Primer + Finish hay 2in1 / DTM?",
-      a: "Hệ Primer + Finish cho độ bền tối ưu và bám dính cao. Hệ 2in1 thi công nhanh, tiết kiệm bước. Nếu chưa chắc, hãy gửi ảnh hạng mục qua Zalo để được tư vấn."
+      q: "Lotus 2in1 có thực sự không cần lót không, hay vẫn cần một bước nào đó?",
+      a: "Thực sự không cần sơn lót chống gỉ riêng. Bạn chỉ cần làm sạch bề mặt kim loại rồi sơn trực tiếp 2 lớp Lotus 2in1/DTM là hoàn thành công việc."
     },
     {
-      q: "Sơn Lotus có dùng ngoài trời được không?",
-      a: "Có. Sản phẩm Lotus Metal Coat phù hợp cho cả nội thất và ngoại thất, chịu được nắng mưa và kháng UV."
+      q: "Sơn gốc nước khô bao lâu? Có nhanh hơn sơn dầu không?",
+      a: "Nhanh hơn rất nhiều. Sơn Lotus khô bề mặt chỉ sau 30-60 phút và có thể sơn lớp tiếp theo sau 2 giờ, giúp bạn hoàn thành toàn bộ công trình ngay trong ngày thay vì phải chờ qua đêm như sơn dầu."
     },
     {
-      q: "Có dùng được trên bề mặt đã sơn cũ không?",
-      a: "Có thể, nếu bề mặt cũ còn bám tốt và đã được vệ sinh sạch. Trường hợp bong tróc nặng cần xử lý bề mặt trước khi thi công."
+      q: "Rửa cọ và rulo bằng nước được không?",
+      a: "Được và cực kỳ dễ dàng. Vì là sơn gốc nước hoàn toàn, bạn chỉ cần rửa dụng cụ bằng nước sạch ngay sau khi sơn xong, không cần mua xăng thơm hay dung môi tẩy rửa độc hại."
     },
     {
-      q: "Có thể gửi ảnh công trình để được tư vấn không?",
-      a: "Hoàn toàn được. Bạn chỉ cần nhắn Zalo kèm ảnh hạng mục, Lotus sẽ tư vấn đúng hệ sơn phù hợp."
+      q: "Có hỗ trợ tư vấn lượng sơn theo diện tích không?",
+      a: "Có. Bạn chỉ cần gửi kích thước hoặc ảnh chụp hạng mục qua Zalo, đội ngũ kỹ thuật của Lotus sẽ tính toán chính xác lượng sơn cần dùng để tránh lãng phí."
     },
     {
-      q: "Có hỗ trợ tư vấn qua Zalo không?",
-      a: `Có. Bạn liên hệ Zalo ${HOTLINE} để được tư vấn nhanh trong giờ làm việc.`
+      q: "Đặt hàng và giao hàng như thế nào?",
+      a: "Rất đơn giản. Bạn chỉ cần điền form liên hệ hoặc nhắn Zalo. Lotus hỗ trợ tư vấn miễn phí, giao hàng tận nơi trên toàn quốc, thanh toán khi nhận hàng."
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "faq", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-3 lg:gap-12", children: [
@@ -964,10 +964,10 @@ function FAQ() {
         {
           className: "mt-4 font-display font-bold text-balance",
           style: { fontSize: "clamp(26px, 4vw, 40px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-          children: "Câu hỏi thường gặp về sơn kim loại Lotus."
+          children: "Câu hỏi hay gặp khi chuyển từ sơn dầu sang sơn gốc nước."
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-neutral-600", children: "Không thấy câu trả lời bạn cần? Nhắn Zalo để được tư vấn trực tiếp." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-neutral-600", children: "Còn thắc mắc khác? Nhắn Zalo để được giải đáp trực tiếp." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "a",
         {

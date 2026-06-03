@@ -6,18 +6,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Sơn kim loại gốc nước Lotus — Chống gỉ, bám tốt, đẹp bền | Lotus Metal Coat",
+        title: "Sơn kim loại gốc nước Lotus — Không mùi xăng, chống gỉ tốt, thi công sạch hơn",
       },
       {
         name: "description",
         content:
-          "Sơn kim loại gốc nước Lotus — hệ Primer, Finish và 2in1/DTM cho cổng, hàng rào, lan can, khung thép. Chống gỉ, nhẹ mùi, bền thời tiết. Tư vấn nhanh qua Zalo 0943 966 662.",
+          "Lotus Metal Coat — sơn kim loại hệ nước thay thế sơn dầu. Không mùi xăng, an toàn trong nhà, chống gỉ tốt trên sắt, mạ kẽm, nhôm. Có hệ 2in1 thi công nhanh, không cần lót riêng.",
       },
-      { property: "og:title", content: "Sơn kim loại gốc nước Lotus — Chống gỉ, bám tốt, đẹp bền" },
+      { property: "og:title", content: "Sơn kim loại gốc nước Lotus — Không mùi xăng, chống gỉ tốt, thi công sạch hơn" },
       {
         property: "og:description",
         content:
-          "Giải pháp sơn kim loại hệ nước: sơn lót chống gỉ, sơn phủ màu hoàn thiện và dòng 2in1 không cần lót. Phù hợp nội ngoại thất.",
+          "Lotus Metal Coat — sơn kim loại hệ nước thay thế sơn dầu. Không mùi xăng, an toàn trong nhà, chống gỉ tốt trên sắt, mạ kẽm, nhôm. Có hệ 2in1 thi công nhanh, không cần lót riêng.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

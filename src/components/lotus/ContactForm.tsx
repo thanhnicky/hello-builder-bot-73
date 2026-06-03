@@ -59,9 +59,9 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} noValidate className="rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8">
-      <h3 className="text-xl font-semibold sm:text-2xl">Nhận tư vấn hệ sơn phù hợp</h3>
+      <h3 className="text-xl font-semibold sm:text-2xl">Nhận tư vấn + báo giá phù hợp</h3>
       <p className="mt-1 text-sm text-neutral-600">
-        Điền thông tin — Lotus sẽ tư vấn đúng sản phẩm cho hạng mục của bạn.
+        Lotus sẽ liên hệ lại trong vòng 30 phút trong giờ làm việc.
       </p>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">

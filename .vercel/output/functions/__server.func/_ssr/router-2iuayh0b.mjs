@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-DftRLQOX.css";
+const appCss = "/assets/styles-AB8tYYec.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -103,21 +103,21 @@ function RootComponent() {
   const { queryClient } = Route$1.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter = () => import("./index-BzR1jXph.mjs");
+const $$splitComponentImporter = () => import("./index-C_tkm2Kd.mjs");
 const Route = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component"),
   head: () => ({
     meta: [{
-      title: "Sơn kim loại gốc nước Lotus — Chống gỉ, bám tốt, đẹp bền | Lotus Metal Coat"
+      title: "Sơn kim loại gốc nước Lotus — Không mùi xăng, chống gỉ tốt, thi công sạch hơn"
     }, {
       name: "description",
-      content: "Sơn kim loại gốc nước Lotus — hệ Primer, Finish và 2in1/DTM cho cổng, hàng rào, lan can, khung thép. Chống gỉ, nhẹ mùi, bền thời tiết. Tư vấn nhanh qua Zalo 0943 966 662."
+      content: "Lotus Metal Coat — sơn kim loại hệ nước thay thế sơn dầu. Không mùi xăng, an toàn trong nhà, chống gỉ tốt trên sắt, mạ kẽm, nhôm. Có hệ 2in1 thi công nhanh, không cần lót riêng."
     }, {
       property: "og:title",
-      content: "Sơn kim loại gốc nước Lotus — Chống gỉ, bám tốt, đẹp bền"
+      content: "Sơn kim loại gốc nước Lotus — Không mùi xăng, chống gỉ tốt, thi công sạch hơn"
     }, {
       property: "og:description",
-      content: "Giải pháp sơn kim loại hệ nước: sơn lót chống gỉ, sơn phủ màu hoàn thiện và dòng 2in1 không cần lót. Phù hợp nội ngoại thất."
+      content: "Lotus Metal Coat — sơn kim loại hệ nước thay thế sơn dầu. Không mùi xăng, an toàn trong nhà, chống gỉ tốt trên sắt, mạ kẽm, nhôm. Có hệ 2in1 thi công nhanh, không cần lót riêng."
     }, {
       property: "og:type",
       content: "website"
