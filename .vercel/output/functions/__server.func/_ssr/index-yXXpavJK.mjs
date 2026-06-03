@@ -319,6 +319,7 @@ function Header() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#san-pham", className: "hover:text-black", children: "Sản phẩm" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black", children: "Bảng màu" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black", children: "Chọn hệ sơn" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black", children: "Combo" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black", children: "Hạng mục" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black", children: "Dự án" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black", children: "FAQ" })
@@ -720,87 +721,204 @@ function ProcessCard({
   ] });
 }
 function Combos() {
-  const combos = [
-    {
-      name: "Gói 3 lớp — bền ngoài trời",
-      tag: "CAO CẤP",
-      desc: "Primer + Finish + Phủ bóng UV",
-      bullets: [
-        "Lớp 1: Primer chống gỉ nền",
-        "Lớp 2: Finish màu hoàn thiện",
-        "Lớp 3: Phủ bóng kháng UV, chịu mưa nắng dài lâu"
-      ]
-    },
-    {
-      name: "Gói tiêu chuẩn — đủ dùng, đủ bền",
-      tag: "KHUYÊN DÙNG",
-      desc: "Primer + Finish",
-      bullets: [
-        "Hệ 2 lớp chuẩn, bám chắc",
-        "Chống gỉ + màu hoàn thiện đẹp",
-        "Phù hợp hầu hết hạng mục cổng, lan can, hàng rào"
-      ],
-      featured: true
-    },
-    {
-      name: "Gói 2in1 — một sản phẩm, đủ việc",
-      tag: "THI CÔNG NHANH",
-      desc: "Lotus Metal Coat 2in1 / DTM",
-      bullets: [
-        "Không cần lót riêng — tiết kiệm bước",
-        "Bám tốt trên mạ kẽm, nhôm, sắt hộp",
-        "Lý tưởng khi cần thi công nhanh, gọn"
-      ]
-    }
-  ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "COMBO DỄ CHỌN" }),
+  const [c1q1, setC1q1] = reactExports.useState(0);
+  const [c1q2, setC1q2] = reactExports.useState(0);
+  const [c2q1, setC2q1] = reactExports.useState(0);
+  const [c2q2, setC2q2] = reactExports.useState(0);
+  const [c3q1, setC3q1] = reactExports.useState(0);
+  const [c3q2, setC3q2] = reactExports.useState(0);
+  const total1 = c1q1 * 375e3 + c1q2 * 168e4;
+  const total2 = c2q1 * 751e3 + c2q2 * 342e4;
+  const total3 = c3q1 * 21e4 + c3q2 * 89e4;
+  const grandTotal = total1 + total2 + total3;
+  function formatVND(val) {
+    return val.toLocaleString("vi-VN") + "đ";
+  }
+  function Stepper({ value, onChange }) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center rounded-lg border border-[#E8E4DC] bg-[#F9F8F6]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "button",
+        {
+          type: "button",
+          onClick: () => onChange(Math.max(0, value - 1)),
+          className: "flex size-8 items-center justify-center font-semibold text-neutral-600 transition hover:bg-neutral-200/50 disabled:opacity-30 disabled:hover:bg-transparent",
+          disabled: value <= 0,
+          children: "—"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-8 text-center text-sm font-semibold tabular-nums text-neutral-950", children: value }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "button",
+        {
+          type: "button",
+          onClick: () => onChange(value + 1),
+          className: "flex size-8 items-center justify-center font-semibold text-neutral-600 transition hover:bg-neutral-200/50",
+          children: "+"
+        }
+      )
+    ] });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "combo", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "COMBO SẢN PHẨM" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
       {
         className: "mt-4 max-w-3xl font-display font-bold text-balance",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "3 gói sơn — chọn theo cách bạn muốn thi công."
+        children: "Chọn combo phù hợp với hạng mục của bạn."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: combos.map((c) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Thi công được bằng chổi quét, rulo lăn hoặc súng phun — tùy hạng mục và sở thích." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid gap-8 lg:grid-cols-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "relative flex flex-col rounded-xl border bg-white p-8",
+          style: { borderColor: "#E8E4DC" },
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "CƠ BẢN" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo tiết kiệm" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót chống gỉ + Sơn phủ màu hoàn thiện" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex flex-wrap gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat Primer" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat Finish" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 2 hũ 1kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "375.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q1, onChange: setC1q1 })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 2 thùng 5kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "1.680.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q2, onChange: setC1q2 })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-medium text-neutral-500", children: "Tạm tính" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-display text-lg font-bold text-neutral-800", children: [
+                "Tổng: ",
+                formatVND(total1)
+              ] })
+            ] })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "relative flex flex-col rounded-xl border-2 bg-white p-8 shadow-md",
+          style: { borderColor: ORANGE },
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "div",
+              {
+                className: "absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white",
+                style: { background: ORANGE },
+                children: "Khuyên dùng"
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "PHỔ BIẾN NHẤT" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo thông dụng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex flex-wrap gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Primer" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Finish" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Sơn phủ trong suốt bảo vệ ngoài trời" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 3 hũ 1kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "751.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q1, onChange: setC2q1 })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 3 thùng 5kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "3.420.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q2, onChange: setC2q2 })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-medium text-neutral-500", children: "Tạm tính" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-display text-lg font-bold text-neutral-800", children: [
+                "Tổng: ",
+                formatVND(total2)
+              ] })
+            ] })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "relative flex flex-col rounded-xl border bg-white p-8",
+          style: { borderColor: "#E8E4DC" },
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "THI CÔNG NHANH" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Gói 2in1 / DTM" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat 2in1 / DTM" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Hũ 1kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "210.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q1, onChange: setC3q1 })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Thùng 5kg" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "890.000đ" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q2, onChange: setC3q2 })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-medium text-neutral-500", children: "Tạm tính" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-display text-lg font-bold text-neutral-800", children: [
+                "Tổng: ",
+                formatVND(total3)
+              ] })
+            ] })
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 rounded-xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6", style: { background: OFFWHITE }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-bold text-neutral-900", children: "Tổng giá trị đơn hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-neutral-500 mt-1", children: "Định mức: hũ 1kg ~ 5m²; thùng 5kg ~ 25m²" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:text-right", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-3xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) }) })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "a",
       {
-        className: "relative flex flex-col rounded-xl border bg-white p-8",
-        style: { borderColor: "#E8E4DC" },
-        children: [
-          c.featured && /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white",
-              style: { background: ORANGE },
-              children: "Khuyên dùng"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: c.tag }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: c.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm font-medium text-neutral-600", children: c.desc }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-5 space-y-2.5", children: c.bullets.map((b) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-2 text-[15px] leading-snug text-neutral-800", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "select-none text-neutral-400", children: "—" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: b })
-          ] }, b)) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "#form",
-              className: "mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E8541A]/90",
-              style: { background: ORANGE },
-              children: "Chọn gói này →"
-            }
-          )
-        ]
-      },
-      c.name
-    )) })
+        href: "#order-form",
+        onClick: (e) => {
+          e.preventDefault();
+          document.getElementById("order-form")?.scrollIntoView({ behavior: "smooth" });
+        },
+        className: "inline-flex w-full items-center justify-center rounded-xl py-4 text-base font-bold text-white transition hover:opacity-95 shadow-md",
+        style: { background: ORANGE },
+        children: "Tiếp tục điền thông tin đặt hàng →"
+      }
+    ) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-xs text-neutral-500", children: "Hơn 500+ đơn hàng đã giao thành công · Nhắn Zalo gửi ảnh hạng mục để được tư vấn nhanh." })
   ] }) });
 }
 function FormSection() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-2 lg:gap-12", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-2 lg:gap-12", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "ĐẶT HÀNG & TƯ VẤN" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
