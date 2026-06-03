@@ -360,29 +360,29 @@ function Decision() {
     },
   ];
   return (
-    <section id="chon-he-son" className="py-24 sm:py-28" style={{ background: DARK, color: "#fff" }}>
+    <section id="chon-he-son" className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
       <div className="container-x">
         <p className={LABEL_CLS} style={{ color: ORANGE }}>CHỌN HỆ SƠN</p>
         <h2
-          className="mt-4 max-w-3xl font-display font-bold text-balance"
+          className="mt-4 max-w-3xl font-display font-bold text-balance text-[#1C2B2B]"
           style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
         >
           Nên chọn hệ sơn nào cho hạng mục của bạn?
         </h2>
-        <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-white/70">
+        <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600">
           Hai con đường — một mục tiêu: bảo vệ kim loại bền đẹp. Chọn đúng ngay từ đầu để tiết kiệm chi phí và công sức.
         </p>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {rows.map((r) => (
             <div
               key={r.title}
-              className="rounded-xl border border-white/10 bg-white/[0.04] p-8"
+              className="rounded-xl border border-[#E8E4DC] bg-white p-8 ring-soft"
             >
               <div className="text-xs font-semibold uppercase tracking-[0.12em]" style={{ color: ORANGE }}>
                 {r.tag}
               </div>
-              <h3 className="mt-3 font-display text-xl font-bold">{r.title}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-white/75">{r.desc}</p>
+              <h3 className="mt-3 font-display text-xl font-bold text-[#1C2B2B]">{r.title}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">{r.desc}</p>
               {r.zalo && (
                 <a
                   href={ZALO_URL}
@@ -605,17 +605,17 @@ function Combos() {
 /* ---------------- FORM SECTION ---------------- */
 function FormSection() {
   return (
-    <section id="form" className="py-24 sm:py-28" style={{ background: DARK, color: "#fff" }}>
+    <section id="form" className="py-24 sm:py-28" style={{ background: OFFWHITE }}>
       <div className="container-x grid gap-10 lg:grid-cols-2 lg:gap-12">
         <div>
           <p className={LABEL_CLS} style={{ color: ORANGE }}>ĐẶT HÀNG & TƯ VẤN</p>
           <h2
-            className="mt-4 font-display font-bold text-balance"
+            className="mt-4 font-display font-bold text-balance text-[#1C2B2B]"
             style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
           >
             Gửi thông tin — Lotus sẽ tư vấn đúng hệ sơn cho hạng mục của bạn.
           </h2>
-          <p className="mt-5 text-[17px] leading-relaxed text-white/75">
+          <p className="mt-5 text-[17px] leading-relaxed text-neutral-600">
             Form ngắn gọn dưới đây giúp Lotus hiểu nhanh nhu cầu của bạn. Nếu cần tư vấn sâu hơn, hãy nhắn Zalo kèm ảnh hạng mục.
           </p>
 
@@ -624,23 +624,23 @@ function FormSection() {
               href={ZALO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between rounded-xl border border-white/15 bg-white/[0.04] px-6 py-5 transition hover:bg-white/[0.08]"
+              className="flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft"
             >
               <div>
-                <div className="font-semibold text-white">Nhắn Zalo gửi ảnh hạng mục</div>
-                <div className="text-sm text-white/65">Tư vấn đúng hệ sơn Lotus trong vài phút.</div>
+                <div className="font-semibold text-[#1C2B2B]">Nhắn Zalo gửi ảnh hạng mục</div>
+                <div className="text-sm text-neutral-600">Tư vấn đúng hệ sơn Lotus trong vài phút.</div>
               </div>
-              <span className="text-xl text-white">→</span>
+              <span className="text-xl text-[#1C2B2B]">→</span>
             </a>
             <a
               href={`tel:${HOTLINE_TEL}`}
-              className="flex items-center justify-between rounded-xl border border-white/15 bg-white/[0.04] px-6 py-5 transition hover:bg-white/[0.08]"
+              className="flex items-center justify-between rounded-xl border border-[#E8E4DC] bg-white px-6 py-5 transition hover:bg-neutral-50 ring-soft"
             >
               <div>
-                <div className="font-semibold">Gọi hotline {HOTLINE}</div>
-                <div className="text-sm text-white/65">Tư vấn nhanh trong giờ làm việc.</div>
+                <div className="font-semibold text-[#1C2B2B]">Gọi hotline {HOTLINE}</div>
+                <div className="text-sm text-neutral-600">Tư vấn nhanh trong giờ làm việc.</div>
               </div>
-              <span className="text-xl">→</span>
+              <span className="text-xl text-[#1C2B2B]">→</span>
             </a>
           </div>
         </div>
