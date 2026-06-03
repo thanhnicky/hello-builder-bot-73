@@ -1,4 +1,4 @@
-import { MessageCircle, Palette } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { ZALO_URL } from "./constants";
 
 type Swatch = { code: string; name: string; hex: string };
@@ -39,8 +39,8 @@ export function ColorChart() {
     <section id="bang-mau" className="bg-[#F7F5F2] section-y">
       <div className="container-x">
         <div className="max-w-3xl">
-          <div className="mb-3 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]">
-            <Palette className="size-3.5" /> Bảng màu chính hãng
+          <div className="mb-3 block text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]">
+            Bảng màu chính hãng
           </div>
           <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-[#1C2B2B]">
             Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn

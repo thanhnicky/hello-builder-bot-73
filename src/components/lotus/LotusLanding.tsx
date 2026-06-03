@@ -45,7 +45,6 @@ export function LotusLanding() {
         <Problem />
         <Solution />
         <Products />
-        <ColorIntro />
         <ColorChart />
         <Decision />
         <Applications />
@@ -93,8 +92,8 @@ function Header() {
             href={ZALO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
-            style={{ background: DARK }}
+            className="inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:bg-[#E8541A]/90 transition"
+            style={{ background: ORANGE }}
           >
             Nhắn Zalo
           </a>
@@ -335,23 +334,6 @@ function Products() {
             </div>
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* ---------------- COLOR INTRO ---------------- */
-function ColorIntro() {
-  return (
-    <section className="py-20 sm:py-24" style={{ background: OFFWHITE }}>
-      <div className="container-x">
-        <p className={LABEL_CLS} style={{ color: ORANGE }}>BẢNG MÀU</p>
-        <h2
-          className="mt-4 max-w-3xl font-display font-bold text-balance"
-          style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
-        >
-          Bảng màu Lotus Metal Coat — chọn đúng tông cho hạng mục của bạn.
-        </h2>
       </div>
     </section>
   );
