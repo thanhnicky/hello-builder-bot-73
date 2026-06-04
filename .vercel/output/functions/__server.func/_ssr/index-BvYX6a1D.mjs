@@ -205,6 +205,12 @@ function LotusLanding() {
   const [c2q2Color, setC2q2Color] = reactExports.useState("");
   const [c3q1Color, setC3q1Color] = reactExports.useState("");
   const [c3q2Color, setC3q2Color] = reactExports.useState("");
+  const [c1q1Custom, setC1q1Custom] = reactExports.useState("");
+  const [c1q2Custom, setC1q2Custom] = reactExports.useState("");
+  const [c2q1Custom, setC2q1Custom] = reactExports.useState("");
+  const [c2q2Custom, setC2q2Custom] = reactExports.useState("");
+  const [c3q1Custom, setC3q1Custom] = reactExports.useState("");
+  const [c3q2Custom, setC3q2Custom] = reactExports.useState("");
   const [paymentMethod, setPaymentMethod] = reactExports.useState("cod");
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-white pb-20 md:pb-0", style: { color: TEXT }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
@@ -252,16 +258,34 @@ function LotusLanding() {
         {
           c1q1,
           c1q1Color,
+          setC1q1Color,
+          c1q1Custom,
+          setC1q1Custom,
           c1q2,
           c1q2Color,
+          setC1q2Color,
+          c1q2Custom,
+          setC1q2Custom,
           c2q1,
           c2q1Color,
+          setC2q1Color,
+          c2q1Custom,
+          setC2q1Custom,
           c2q2,
           c2q2Color,
+          setC2q2Color,
+          c2q2Custom,
+          setC2q2Custom,
           c3q1,
           c3q1Color,
+          setC3q1Color,
+          c3q1Custom,
+          setC3q1Custom,
           c3q2,
           c3q2Color,
+          setC3q2Color,
+          c3q2Custom,
+          setC3q2Custom,
           paymentMethod,
           setPaymentMethod
         }
@@ -1041,16 +1065,34 @@ function Combos({
 function FormSection({
   c1q1,
   c1q1Color,
+  setC1q1Color,
+  c1q1Custom,
+  setC1q1Custom,
   c1q2,
   c1q2Color,
+  setC1q2Color,
+  c1q2Custom,
+  setC1q2Custom,
   c2q1,
   c2q1Color,
+  setC2q1Color,
+  c2q1Custom,
+  setC2q1Custom,
   c2q2,
   c2q2Color,
+  setC2q2Color,
+  c2q2Custom,
+  setC2q2Custom,
   c3q1,
   c3q1Color,
+  setC3q1Color,
+  c3q1Custom,
+  setC3q1Custom,
   c3q2,
   c3q2Color,
+  setC3q2Color,
+  c3q2Custom,
+  setC3q2Custom,
   paymentMethod,
   setPaymentMethod
 }) {
@@ -1058,18 +1100,19 @@ function FormSection({
   const [phone, setPhone] = reactExports.useState("");
   const [address, setAddress] = reactExports.useState("");
   const [note, setNote] = reactExports.useState("");
-  const [submitted, setSubmitted] = reactExports.useState(false);
   const [errors, setErrors] = reactExports.useState({});
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3, color: c1q1Color },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4, color: c1q2Color },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3, color: c2q1Color },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4, color: c2q2Color },
-    { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4, color: c3q1Color },
-    { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4, color: c3q2Color }
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3, color: c1q1Color, custom: c1q1Custom },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4, color: c1q2Color, custom: c1q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4, color: c2q2Color, custom: c2q2Custom },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4, color: c3q1Color, custom: c3q1Custom },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4, color: c3q2Color, custom: c3q2Custom }
   ];
   const activeItems = orderItems.filter((it) => it.qty > 0);
   const grandTotal = orderItems.reduce((sum, it) => sum + it.qty * it.price, 0);
+  const discount = paymentMethod === "online" ? Math.round(grandTotal * 0.1) : 0;
+  const finalTotal = grandTotal - discount;
   function formatVND(val) {
     return val.toLocaleString("vi-VN") + "đ";
   }
@@ -1077,46 +1120,47 @@ function FormSection({
     e.preventDefault();
     const errs = {};
     if (!name.trim()) errs.name = "Vui lòng nhập họ tên";
+    const cleanPhone = phone.trim().replace(/\s/g, "");
     if (!phone.trim()) {
       errs.phone = "Vui lòng nhập số điện thoại";
-    } else if (!/^(0|\+84)\d{8,10}$/.test(phone.trim())) {
-      errs.phone = "Số điện thoại chưa hợp lệ";
+    } else if (!/^\d{10}$/.test(cleanPhone)) {
+      errs.phone = "Số điện thoại phải gồm đúng 10 chữ số";
     }
     if (!address.trim()) errs.address = "Vui lòng nhập địa chỉ giao hàng";
+    if (activeItems.length === 0) {
+      errs.combos = "Vui lòng chọn ít nhất 1 combo ở phía trên";
+    }
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
     setErrors({});
-    setSubmitted(true);
+    const activeItemsData = activeItems.map((it) => {
+      const chosenColor = it.color === "Tùy chỉnh" ? it.custom || "Màu tùy chỉnh" : it.color || "Chưa chọn";
+      return {
+        name: it.name,
+        quantity: it.qty,
+        unitPrice: it.price,
+        color: chosenColor
+      };
+    });
+    const orderData = {
+      name: name.trim(),
+      phone: phone.trim(),
+      address: address.trim(),
+      note: note.trim(),
+      paymentMethod,
+      items: activeItemsData,
+      subtotal: grandTotal,
+      discount,
+      total: finalTotal,
+      timestamp: Date.now()
+    };
+    sessionStorage.setItem("lotusOrder", JSON.stringify(orderData));
+    window.location.href = `/thank-you?phone=${encodeURIComponent(phone.trim())}`;
   };
   const inputCls = "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
-  if (submitted) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container-x max-w-xl text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-[#E8E4DC] bg-white p-8 shadow-sm", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mx-auto flex size-12 items-center justify-center rounded-full bg-[#1C2B2B] text-white text-xl", children: "✓" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 text-xl font-bold text-neutral-900", children: "Đặt hàng thành công!" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-2 text-sm text-neutral-600 font-medium", children: [
-        "Cảm ơn ",
-        name,
-        ". Lotus đã nhận được đơn hàng của bạn và sẽ liên hệ xác nhận qua Zalo hoặc số điện thoại trong vòng 30 phút."
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-4 text-xs italic text-neutral-400", children: [
-        "Hình thức thanh toán đã chọn: ",
-        paymentMethod === "cod" ? "Thanh toán khi nhận hàng (COD)" : "Chuyển khoản Online"
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: ZALO_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "mt-6 inline-flex w-full items-center justify-center rounded-lg py-3 text-sm font-semibold text-white transition hover:opacity-95",
-          style: { background: "#E8541A" },
-          children: "Nhắn Zalo Lotus ngay để xác nhận nhanh →"
-        }
-      )
-    ] }) }) });
-  }
+  const errorInputCls = "border-red-500 ring-2 ring-red-500/20 focus:border-red-500";
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "order-form", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid gap-10 lg:grid-cols-12 lg:gap-12", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "ĐẶT HÀNG NGAY" }),
@@ -1131,7 +1175,7 @@ function FormSection({
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[17px] leading-relaxed text-neutral-600", children: "Đặt ngay hôm nay — Nhận sơn tại nhà, bắt đầu thi công cuối tuần này. Giao hàng 24–48h tại TP.HCM và các tỉnh lân cận." }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, noValidate: true, className: "mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8 shadow-sm", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-4 sm:grid-cols-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "block", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "block relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Họ và tên *" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "input",
@@ -1140,12 +1184,12 @@ function FormSection({
                 value: name,
                 onChange: (e) => setName(e.target.value),
                 placeholder: "Nguyễn Văn A",
-                className: inputCls
+                className: `${inputCls} ${errors.name ? errorInputCls : ""}`
               }
             ),
-            errors.name && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.name })
+            errors.name && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500", children: errors.name })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "block", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "block relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Số điện thoại *" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "input",
@@ -1154,13 +1198,13 @@ function FormSection({
                 value: phone,
                 onChange: (e) => setPhone(e.target.value),
                 placeholder: "09xx xxx xxx",
-                className: inputCls
+                className: `${inputCls} ${errors.phone ? errorInputCls : ""}`
               }
             ),
-            errors.phone && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.phone })
+            errors.phone && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500", children: errors.phone })
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "mt-4 block", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 block relative", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Địa chỉ giao hàng *" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "input",
@@ -1169,10 +1213,10 @@ function FormSection({
               value: address,
               onChange: (e) => setAddress(e.target.value),
               placeholder: "Số nhà, đường, phường/xã, quận/huyện, thành phố",
-              className: inputCls
+              className: `${inputCls} ${errors.address ? errorInputCls : ""}`
             }
           ),
-          errors.address && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1 block text-xs text-red-600", children: errors.address })
+          errors.address && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500", children: errors.address })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "mt-4 block", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Ghi chú" }),
@@ -1187,65 +1231,165 @@ function FormSection({
             }
           )
         ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 border-t border-[#E8E4DC] pt-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Phương thức thanh toán" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-3 sm:grid-cols-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                onClick: () => setPaymentMethod("cod"),
+                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "cod" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "radio",
+                      name: "payment",
+                      value: "cod",
+                      checked: paymentMethod === "cod",
+                      onChange: () => setPaymentMethod("cod"),
+                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Thanh toán khi nhận hàng (COD)" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-neutral-500 mt-0.5", children: "Không giảm giá" })
+                  ] })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                onClick: () => setPaymentMethod("online"),
+                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "online" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "radio",
+                      name: "payment",
+                      value: "online",
+                      checked: paymentMethod === "online",
+                      onChange: () => setPaymentMethod("online"),
+                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-1", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Chuyển khoản Online" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]", children: "Tiết kiệm 10%" })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-[#2D7A3A] font-semibold mt-0.5", children: "Giảm ngay 10%" })
+                  ] })
+                ]
+              }
+            )
+          ] })
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold uppercase tracking-wide", style: { color: ORANGE }, children: "Thông tin đơn hàng" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-3 space-y-1.5 text-sm text-neutral-800", children: activeItems.length > 0 ? activeItems.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { children: [
-            "— ",
-            it.name,
-            " x",
-            it.qty,
-            ": ",
-            formatVND(it.qty * it.price),
-            " — Màu: ",
-            it.color || "Chưa chọn"
-          ] }, it.name)) : /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-neutral-500", children: "Chưa chọn sản phẩm — vui lòng chọn combo ở trên." }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-3.5 text-sm text-neutral-800", children: [
+            activeItems.length > 0 ? activeItems.map((it) => {
+              let colorVal = "";
+              let setColorVal = () => {
+              };
+              let customVal = "";
+              let setCustomVal = () => {
+              };
+              if (it.name === "Combo tiết kiệm nhỏ") {
+                colorVal = c1q1Color;
+                setColorVal = setC1q1Color;
+                customVal = c1q1Custom;
+                setCustomVal = setC1q1Custom;
+              } else if (it.name === "Combo tiết kiệm lớn") {
+                colorVal = c1q2Color;
+                setColorVal = setC1q2Color;
+                customVal = c1q2Custom;
+                setCustomVal = setC1q2Custom;
+              } else if (it.name === "Combo thông dụng nhỏ") {
+                colorVal = c2q1Color;
+                setColorVal = setC2q1Color;
+                customVal = c2q1Custom;
+                setCustomVal = setC2q1Custom;
+              } else if (it.name === "Combo thông dụng lớn") {
+                colorVal = c2q2Color;
+                setColorVal = setC2q2Color;
+                customVal = c2q2Custom;
+                setCustomVal = setC2q2Custom;
+              } else if (it.name === "Hũ 1kg 2in1") {
+                colorVal = c3q1Color;
+                setColorVal = setC3q1Color;
+                customVal = c3q1Custom;
+                setCustomVal = setC3q1Custom;
+              } else if (it.name === "Thùng 5kg 2in1") {
+                colorVal = c3q2Color;
+                setColorVal = setC3q2Color;
+                customVal = c3q2Custom;
+                setCustomVal = setC3q2Custom;
+              }
+              return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-2.5 border-b border-neutral-100/50 last:border-none", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between text-sm font-semibold text-neutral-800", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+                  "— ",
+                  it.name,
+                  " x",
+                  it.qty,
+                  ": ",
+                  formatVND(it.qty * it.price)
+                ] }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2.5 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between bg-white p-2 rounded-lg border border-neutral-100 shadow-2xs", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-neutral-500 font-medium", children: "Chọn màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: colorVal,
+                      onChange: (e) => setColorVal(e.target.value),
+                      className: "rounded-md border border-[#E8E4DC] bg-white px-2 py-1 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A] min-w-[160px] font-medium cursor-pointer",
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Đen tuyền", children: "Đen tuyền" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xám đậm", children: "Xám đậm" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xám ánh bạc", children: "Xám ánh bạc" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xanh navy", children: "Xanh navy" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Nâu đồng", children: "Nâu đồng" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Trắng kem", children: "Trắng kem" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Tùy chỉnh", children: "Tùy chỉnh (ghi chú)" })
+                      ]
+                    }
+                  )
+                ] }),
+                colorVal === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2 pl-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "input",
+                  {
+                    type: "text",
+                    value: customVal,
+                    onChange: (e) => setCustomVal(e.target.value),
+                    placeholder: "Mô tả màu bạn muốn...",
+                    className: "w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                  }
+                ) })
+              ] }, it.name);
+            }) : /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-neutral-500", children: "Chưa chọn sản phẩm — vui lòng chọn combo ở trên." }),
+            paymentMethod === "online" && grandTotal > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[#2D7A3A] font-semibold text-sm pt-2.5 border-t border-dashed border-neutral-200", children: [
+              "— Giảm giá Online (10%): -",
+              formatVND(discount)
+            ] })
+          ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "my-4 border-t border-[#E8E4DC]" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-700", children: "Thành tiền:" }),
             paymentMethod === "online" ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-neutral-400 line-through font-medium", children: formatVND(grandTotal) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(Math.round(grandTotal * 0.9)) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(finalTotal) })
             ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[11px] leading-relaxed text-neutral-400", children: "* Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-[11px] leading-relaxed text-neutral-400", children: "Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 border-t border-[#E8E4DC] pt-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-base font-bold text-neutral-900", children: "Hình thức thanh toán" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "input",
-                {
-                  type: "radio",
-                  name: "payment",
-                  value: "cod",
-                  checked: paymentMethod === "cod",
-                  onChange: () => setPaymentMethod("cod"),
-                  className: "mt-1 accent-[#E8541A]"
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-800", children: "COD — Thanh toán khi nhận hàng" }) })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("label", { className: "flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "input",
-                {
-                  type: "radio",
-                  name: "payment",
-                  value: "online",
-                  checked: paymentMethod === "online",
-                  onChange: () => setPaymentMethod("online"),
-                  className: "mt-1 accent-[#E8541A]"
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-800", children: "Chuyển khoản Online" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 block text-xs font-semibold", style: { color: ORANGE }, children: "Miễn phí giao hàng và giảm 10%" })
-              ] })
-            ] })
-          ] })
-        ] }),
+        errors.combos && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 rounded-xl bg-red-50 border border-red-200 p-4 text-xs text-red-600 font-semibold flex items-center gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+          "⚠️ ",
+          errors.combos
+        ] }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "button",
           {

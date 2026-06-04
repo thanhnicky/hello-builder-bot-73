@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-P4mPMCiD.css";
+const appCss = "/assets/styles-CkmZqoYB.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -60,7 +60,7 @@ function ErrorComponent({ error, reset }) {
     ] })
   ] }) });
 }
-const Route$1 = createRootRouteWithContext()({
+const Route$2 = createRootRouteWithContext()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -100,10 +100,14 @@ function RootShell({ children }) {
   ] });
 }
 function RootComponent() {
-  const { queryClient } = Route$1.useRouteContext();
+  const { queryClient } = Route$2.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter = () => import("./index-C3fQlJQq.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-DxVCd3ys.mjs");
+const Route$1 = createFileRoute("/thank-you")({
+  component: lazyRouteComponent($$splitComponentImporter$1, "component")
+});
+const $$splitComponentImporter = () => import("./index-BvYX6a1D.mjs");
 const Route = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component"),
   head: () => ({
@@ -127,15 +131,21 @@ const Route = createFileRoute("/")({
     }]
   })
 });
+const ThankYouRoute = Route$1.update({
+  id: "/thank-you",
+  path: "/thank-you",
+  getParentRoute: () => Route$2
+});
 const IndexRoute = Route.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$1
+  getParentRoute: () => Route$2
 });
 const rootRouteChildren = {
-  IndexRoute
+  IndexRoute,
+  ThankYouRoute
 };
-const routeTree = Route$1._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
   const queryClient = new QueryClient();
   const router = createRouter({

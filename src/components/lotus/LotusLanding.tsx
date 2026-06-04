@@ -52,6 +52,13 @@ export function LotusLanding() {
   const [c3q1Color, setC3q1Color] = useState("");
   const [c3q2Color, setC3q2Color] = useState("");
 
+  const [c1q1Custom, setC1q1Custom] = useState("");
+  const [c1q2Custom, setC1q2Custom] = useState("");
+  const [c2q1Custom, setC2q1Custom] = useState("");
+  const [c2q2Custom, setC2q2Custom] = useState("");
+  const [c3q1Custom, setC3q1Custom] = useState("");
+  const [c3q2Custom, setC3q2Custom] = useState("");
+
   const [paymentMethod, setPaymentMethod] = useState("cod");
 
   return (
@@ -84,16 +91,34 @@ export function LotusLanding() {
         <FormSection
           c1q1={c1q1}
           c1q1Color={c1q1Color}
+          setC1q1Color={setC1q1Color}
+          c1q1Custom={c1q1Custom}
+          setC1q1Custom={setC1q1Custom}
           c1q2={c1q2}
           c1q2Color={c1q2Color}
+          setC1q2Color={setC1q2Color}
+          c1q2Custom={c1q2Custom}
+          setC1q2Custom={setC1q2Custom}
           c2q1={c2q1}
           c2q1Color={c2q1Color}
+          setC2q1Color={setC2q1Color}
+          c2q1Custom={c2q1Custom}
+          setC2q1Custom={setC2q1Custom}
           c2q2={c2q2}
           c2q2Color={c2q2Color}
+          setC2q2Color={setC2q2Color}
+          c2q2Custom={c2q2Custom}
+          setC2q2Custom={setC2q2Custom}
           c3q1={c3q1}
           c3q1Color={c3q1Color}
+          setC3q1Color={setC3q1Color}
+          c3q1Custom={c3q1Custom}
+          setC3q1Custom={setC3q1Custom}
           c3q2={c3q2}
           c3q2Color={c3q2Color}
+          setC3q2Color={setC3q2Color}
+          c3q2Custom={c3q2Custom}
+          setC3q2Custom={setC3q2Custom}
           paymentMethod={paymentMethod}
           setPaymentMethod={setPaymentMethod}
         />
@@ -969,31 +994,67 @@ function Combos({
 function FormSection({
   c1q1,
   c1q1Color,
+  setC1q1Color,
+  c1q1Custom,
+  setC1q1Custom,
   c1q2,
   c1q2Color,
+  setC1q2Color,
+  c1q2Custom,
+  setC1q2Custom,
   c2q1,
   c2q1Color,
+  setC2q1Color,
+  c2q1Custom,
+  setC2q1Custom,
   c2q2,
   c2q2Color,
+  setC2q2Color,
+  c2q2Custom,
+  setC2q2Custom,
   c3q1,
   c3q1Color,
+  setC3q1Color,
+  c3q1Custom,
+  setC3q1Custom,
   c3q2,
   c3q2Color,
+  setC3q2Color,
+  c3q2Custom,
+  setC3q2Custom,
   paymentMethod,
   setPaymentMethod,
 }: {
   c1q1: number;
   c1q1Color: string;
+  setC1q1Color: (v: string) => void;
+  c1q1Custom: string;
+  setC1q1Custom: (v: string) => void;
   c1q2: number;
   c1q2Color: string;
+  setC1q2Color: (v: string) => void;
+  c1q2Custom: string;
+  setC1q2Custom: (v: string) => void;
   c2q1: number;
   c2q1Color: string;
+  setC2q1Color: (v: string) => void;
+  c2q1Custom: string;
+  setC2q1Custom: (v: string) => void;
   c2q2: number;
   c2q2Color: string;
+  setC2q2Color: (v: string) => void;
+  c2q2Custom: string;
+  setC2q2Custom: (v: string) => void;
   c3q1: number;
   c3q1Color: string;
+  setC3q1Color: (v: string) => void;
+  c3q1Custom: string;
+  setC3q1Custom: (v: string) => void;
   c3q2: number;
   c3q2Color: string;
+  setC3q2Color: (v: string) => void;
+  c3q2Custom: string;
+  setC3q2Custom: (v: string) => void;
   paymentMethod: string;
   setPaymentMethod: (v: string) => void;
 }) {
@@ -1001,20 +1062,21 @@ function FormSection({
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [note, setNote] = useState("");
-  const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000, color: c1q1Color },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000, color: c1q2Color },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000, color: c2q1Color },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000, color: c2q2Color },
-    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color },
-    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color },
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000, color: c1q1Color, custom: c1q1Custom },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000, color: c2q2Color, custom: c2q2Custom },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color, custom: c3q1Custom },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color, custom: c3q2Custom },
   ];
 
   const activeItems = orderItems.filter((it) => it.qty > 0);
   const grandTotal = orderItems.reduce((sum, it) => sum + it.qty * it.price, 0);
+  const discount = paymentMethod === "online" ? Math.round(grandTotal * 0.1) : 0;
+  const finalTotal = grandTotal - discount;
 
   function formatVND(val: number) {
     return val.toLocaleString("vi-VN") + "đ";
@@ -1024,53 +1086,60 @@ function FormSection({
     e.preventDefault();
     const errs: Record<string, string> = {};
     if (!name.trim()) errs.name = "Vui lòng nhập họ tên";
+    
+    const cleanPhone = phone.trim().replace(/\s/g, "");
     if (!phone.trim()) {
       errs.phone = "Vui lòng nhập số điện thoại";
-    } else if (!/^(0|\+84)\d{8,10}$/.test(phone.trim())) {
-      errs.phone = "Số điện thoại chưa hợp lệ";
+    } else if (!/^\d{10}$/.test(cleanPhone)) {
+      errs.phone = "Số điện thoại phải gồm đúng 10 chữ số";
     }
+    
     if (!address.trim()) errs.address = "Vui lòng nhập địa chỉ giao hàng";
+    
+    if (activeItems.length === 0) {
+      errs.combos = "Vui lòng chọn ít nhất 1 combo ở phía trên";
+    }
 
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
     setErrors({});
-    setSubmitted(true);
+
+    // Save to sessionStorage
+    const activeItemsData = activeItems.map((it) => {
+      const chosenColor = it.color === "Tùy chỉnh" ? (it.custom || "Màu tùy chỉnh") : (it.color || "Chưa chọn");
+      return {
+        name: it.name,
+        quantity: it.qty,
+        unitPrice: it.price,
+        color: chosenColor,
+      };
+    });
+
+    const orderData = {
+      name: name.trim(),
+      phone: phone.trim(),
+      address: address.trim(),
+      note: note.trim(),
+      paymentMethod,
+      items: activeItemsData,
+      subtotal: grandTotal,
+      discount,
+      total: finalTotal,
+      timestamp: Date.now(),
+    };
+
+    sessionStorage.setItem("lotusOrder", JSON.stringify(orderData));
+    
+    // Redirect to /thank-you?phone={phone}
+    window.location.href = `/thank-you?phone=${encodeURIComponent(phone.trim())}`;
   };
 
   const inputCls =
     "w-full rounded-lg border border-[#E8E4DC] bg-white px-3 py-3 text-sm text-neutral-900 outline-none transition focus:border-[#1C2B2B] focus:ring-2 focus:ring-[#1C2B2B]/20";
 
-  if (submitted) {
-    return (
-      <section id="order-form" className="py-[72px]" style={{ background: OFFWHITE }}>
-        <div className="container-x max-w-xl text-center">
-          <div className="rounded-2xl border border-[#E8E4DC] bg-white p-8 shadow-sm">
-            <span className="mx-auto flex size-12 items-center justify-center rounded-full bg-[#1C2B2B] text-white text-xl">
-              ✓
-            </span>
-            <h3 className="mt-4 text-xl font-bold text-neutral-900">Đặt hàng thành công!</h3>
-            <p className="mt-2 text-sm text-neutral-600 font-medium">
-              Cảm ơn {name}. Lotus đã nhận được đơn hàng của bạn và sẽ liên hệ xác nhận qua Zalo hoặc số điện thoại trong vòng 30 phút.
-            </p>
-            <p className="mt-4 text-xs italic text-neutral-400">
-              Hình thức thanh toán đã chọn: {paymentMethod === "cod" ? "Thanh toán khi nhận hàng (COD)" : "Chuyển khoản Online"}
-            </p>
-            <a
-              href={ZALO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex w-full items-center justify-center rounded-lg py-3 text-sm font-semibold text-white transition hover:opacity-95"
-              style={{ background: "#E8541A" }}
-            >
-              Nhắn Zalo Lotus ngay để xác nhận nhanh →
-            </a>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const errorInputCls = "border-red-500 ring-2 ring-red-500/20 focus:border-red-500";
 
   return (
     <section id="order-form" className="py-[72px]" style={{ background: OFFWHITE }}>
@@ -1090,7 +1159,7 @@ function FormSection({
 
           <form onSubmit={handleSubmit} noValidate className="mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-6 sm:p-8 shadow-sm">
             <div className="grid gap-4 sm:grid-cols-2">
-              <label className="block">
+              <div className="block relative">
                 <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
                   Họ và tên *
                 </span>
@@ -1099,12 +1168,16 @@ function FormSection({
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Nguyễn Văn A"
-                  className={inputCls}
+                  className={`${inputCls} ${errors.name ? errorInputCls : ""}`}
                 />
-                {errors.name && <span className="mt-1 block text-xs text-red-600">{errors.name}</span>}
-              </label>
+                {errors.name && (
+                  <div className="absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500">
+                    {errors.name}
+                  </div>
+                )}
+              </div>
 
-              <label className="block">
+              <div className="block relative">
                 <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
                   Số điện thoại *
                 </span>
@@ -1113,13 +1186,17 @@ function FormSection({
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="09xx xxx xxx"
-                  className={inputCls}
+                  className={`${inputCls} ${errors.phone ? errorInputCls : ""}`}
                 />
-                {errors.phone && <span className="mt-1 block text-xs text-red-600">{errors.phone}</span>}
-              </label>
+                {errors.phone && (
+                  <div className="absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500">
+                    {errors.phone}
+                  </div>
+                )}
+              </div>
             </div>
 
-            <label className="mt-4 block">
+            <div className="mt-4 block relative">
               <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
                 Địa chỉ giao hàng *
               </span>
@@ -1128,10 +1205,14 @@ function FormSection({
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Số nhà, đường, phường/xã, quận/huyện, thành phố"
-                className={inputCls}
+                className={`${inputCls} ${errors.address ? errorInputCls : ""}`}
               />
-              {errors.address && <span className="mt-1 block text-xs text-red-600">{errors.address}</span>}
-            </label>
+              {errors.address && (
+                <div className="absolute z-10 mt-1.5 rounded bg-red-500 px-2.5 py-1 text-[11px] font-bold text-white shadow-sm after:absolute after:bottom-full after:left-4 after:border-4 after:border-transparent after:border-b-red-500">
+                  {errors.address}
+                </div>
+              )}
+            </div>
 
             <label className="mt-4 block">
               <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
@@ -1146,21 +1227,156 @@ function FormSection({
               />
             </label>
 
+            {/* PAYMENT METHOD SECTION */}
+            <div className="mt-6 border-t border-[#E8E4DC] pt-6">
+              <span className="mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                Phương thức thanh toán
+              </span>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div
+                  onClick={() => setPaymentMethod("cod")}
+                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
+                    paymentMethod === "cod"
+                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
+                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                    checked={paymentMethod === "cod"}
+                    onChange={() => setPaymentMethod("cod")}
+                    className="accent-[#2D7A3A] size-4 cursor-pointer"
+                  />
+                  <div className="leading-tight">
+                    <p className="text-sm font-bold text-neutral-800">Thanh toán khi nhận hàng (COD)</p>
+                    <p className="text-xs text-neutral-500 mt-0.5">Không giảm giá</p>
+                  </div>
+                </div>
+
+                <div
+                  onClick={() => setPaymentMethod("online")}
+                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
+                    paymentMethod === "online"
+                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
+                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="online"
+                    checked={paymentMethod === "online"}
+                    onChange={() => setPaymentMethod("online")}
+                    className="accent-[#2D7A3A] size-4 cursor-pointer"
+                  />
+                  <div className="leading-tight flex-1">
+                    <div className="flex items-center justify-between gap-1">
+                      <p className="text-sm font-bold text-neutral-800">Chuyển khoản Online</p>
+                      <span className="rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]">
+                        Tiết kiệm 10%
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#2D7A3A] font-semibold mt-0.5">Giảm ngay 10%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* ORDER SUMMARY BOX */}
             <div className="mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5">
               <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ORANGE }}>
                 Thông tin đơn hàng
               </p>
-              <div className="mt-3 space-y-1.5 text-sm text-neutral-800">
+              <div className="mt-3 space-y-3.5 text-sm text-neutral-800">
                 {activeItems.length > 0 ? (
-                  activeItems.map((it) => (
-                    <p key={it.name}>
-                      — {it.name} x{it.qty}: {formatVND(it.qty * it.price)} — Màu: {it.color || "Chưa chọn"}
-                    </p>
-                  ))
+                  activeItems.map((it) => {
+                    let colorVal = "";
+                    let setColorVal: (v: string) => void = () => {};
+                    let customVal = "";
+                    let setCustomVal: (v: string) => void = () => {};
+
+                    if (it.name === "Combo tiết kiệm nhỏ") {
+                      colorVal = c1q1Color;
+                      setColorVal = setC1q1Color;
+                      customVal = c1q1Custom;
+                      setCustomVal = setC1q1Custom;
+                    } else if (it.name === "Combo tiết kiệm lớn") {
+                      colorVal = c1q2Color;
+                      setColorVal = setC1q2Color;
+                      customVal = c1q2Custom;
+                      setCustomVal = setC1q2Custom;
+                    } else if (it.name === "Combo thông dụng nhỏ") {
+                      colorVal = c2q1Color;
+                      setColorVal = setC2q1Color;
+                      customVal = c2q1Custom;
+                      setCustomVal = setC2q1Custom;
+                    } else if (it.name === "Combo thông dụng lớn") {
+                      colorVal = c2q2Color;
+                      setColorVal = setC2q2Color;
+                      customVal = c2q2Custom;
+                      setCustomVal = setC2q2Custom;
+                    } else if (it.name === "Hũ 1kg 2in1") {
+                      colorVal = c3q1Color;
+                      setColorVal = setC3q1Color;
+                      customVal = c3q1Custom;
+                      setCustomVal = setC3q1Custom;
+                    } else if (it.name === "Thùng 5kg 2in1") {
+                      colorVal = c3q2Color;
+                      setColorVal = setC3q2Color;
+                      customVal = c3q2Custom;
+                      setCustomVal = setC3q2Custom;
+                    }
+
+                    return (
+                      <div key={it.name} className="py-2.5 border-b border-neutral-100/50 last:border-none">
+                        <div className="flex items-center justify-between text-sm font-semibold text-neutral-800">
+                          <span>— {it.name} x{it.qty}: {formatVND(it.qty * it.price)}</span>
+                        </div>
+                        
+                        {/* Dropdown màu sơn */}
+                        <div className="mt-2.5 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between bg-white p-2 rounded-lg border border-neutral-100 shadow-2xs">
+                          <span className="text-xs text-neutral-500 font-medium">Chọn màu sơn:</span>
+                          <select
+                            value={colorVal}
+                            onChange={(e) => setColorVal(e.target.value)}
+                            className="rounded-md border border-[#E8E4DC] bg-white px-2 py-1 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A] min-w-[160px] font-medium cursor-pointer"
+                          >
+                            <option value="">Chưa chọn màu</option>
+                            <option value="Đen tuyền">Đen tuyền</option>
+                            <option value="Xám đậm">Xám đậm</option>
+                            <option value="Xám ánh bạc">Xám ánh bạc</option>
+                            <option value="Xanh navy">Xanh navy</option>
+                            <option value="Nâu đồng">Nâu đồng</option>
+                            <option value="Trắng kem">Trắng kem</option>
+                            <option value="Tùy chỉnh">Tùy chỉnh (ghi chú)</option>
+                          </select>
+                        </div>
+
+                        {colorVal === "Tùy chỉnh" && (
+                          <div className="mt-2 pl-1">
+                            <input
+                              type="text"
+                              value={customVal}
+                              onChange={(e) => setCustomVal(e.target.value)}
+                              placeholder="Mô tả màu bạn muốn..."
+                              className="w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })
                 ) : (
                   <p className="text-sm italic text-neutral-500">
                     Chưa chọn sản phẩm — vui lòng chọn combo ở trên.
+                  </p>
+                )}
+
+                {paymentMethod === "online" && grandTotal > 0 && (
+                  <p className="text-[#2D7A3A] font-semibold text-sm pt-2.5 border-t border-dashed border-neutral-200">
+                    — Giảm giá Online (10%): -{formatVND(discount)}
                   </p>
                 )}
               </div>
@@ -1173,7 +1389,7 @@ function FormSection({
                       {formatVND(grandTotal)}
                     </span>
                     <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
-                      {formatVND(Math.round(grandTotal * 0.9))}
+                      {formatVND(finalTotal)}
                     </span>
                   </div>
                 ) : (
@@ -1190,41 +1406,11 @@ function FormSection({
               </p>
             </div>
 
-            {/* PAYMENT METHOD */}
-            <div className="mt-6 border-t border-[#E8E4DC] pt-6">
-              <p className="text-base font-bold text-neutral-900">Hình thức thanh toán</p>
-              <div className="mt-3 space-y-3">
-                <label className="flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="payment"
-                    value="cod"
-                    checked={paymentMethod === "cod"}
-                    onChange={() => setPaymentMethod("cod")}
-                    className="mt-1 accent-[#E8541A]"
-                  />
-                  <div>
-                    <span className="text-sm font-semibold text-neutral-800">COD — Thanh toán khi nhận hàng</span>
-                  </div>
-                </label>
-                <label className="flex items-start gap-3 rounded-lg border border-[#E8E4DC] p-3 transition hover:bg-neutral-50 cursor-pointer">
-                  <input
-                    type="radio"
-                    name="payment"
-                    value="online"
-                    checked={paymentMethod === "online"}
-                    onChange={() => setPaymentMethod("online")}
-                    className="mt-1 accent-[#E8541A]"
-                  />
-                  <div>
-                    <span className="text-sm font-semibold text-neutral-800">Chuyển khoản Online</span>
-                    <span className="mt-0.5 block text-xs font-semibold" style={{ color: ORANGE }}>
-                      Miễn phí giao hàng và giảm 10%
-                    </span>
-                  </div>
-                </label>
+            {errors.combos && (
+              <div className="mt-4 rounded-xl bg-red-50 border border-red-200 p-4 text-xs text-red-600 font-semibold flex items-center gap-2">
+                <span>⚠️ {errors.combos}</span>
               </div>
-            </div>
+            )}
 
             <button
               type="submit"
