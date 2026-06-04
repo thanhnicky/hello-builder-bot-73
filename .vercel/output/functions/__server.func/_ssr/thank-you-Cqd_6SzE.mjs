@@ -53,7 +53,7 @@ function ThankYouPage() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mx-auto flex size-16 items-center justify-center rounded-full bg-[#E8F5E9] text-3xl text-[#2D7A3A]", children: "✓" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "mt-5 font-display text-2xl font-extrabold text-neutral-900 sm:text-3xl", children: "Đặt hàng thành công!" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-3 text-base text-neutral-600 font-medium", children: [
-          "Cảm ơn ",
+          "Cảm ơn khách hàng ",
           order.name,
           " đã lựa chọn sản phẩm Sơn Lotus"
         ] })

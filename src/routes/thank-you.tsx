@@ -103,7 +103,7 @@ function ThankYouPage() {
               Đặt hàng thành công!
             </h1>
             <p className="mt-3 text-base text-neutral-600 font-medium">
-              Cảm ơn {order.name} đã lựa chọn sản phẩm Sơn Lotus
+              Cảm ơn khách hàng {order.name} đã lựa chọn sản phẩm Sơn Lotus
             </p>
           </div>
 
