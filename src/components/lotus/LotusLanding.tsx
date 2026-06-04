@@ -407,6 +407,7 @@ function Products() {
       time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Mờ (Matt)",
       icon: Shield,
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Lotus Metal Coat Finish",
@@ -419,6 +420,7 @@ function Products() {
       time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ (Satin / Semi-gloss)",
       icon: Paintbrush,
+      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
@@ -432,6 +434,7 @@ function Products() {
       finish: "Bóng nhẹ sang trọng",
       featured: true,
       icon: Layers,
+      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80",
     },
   ];
 
@@ -462,10 +465,20 @@ function Products() {
                 }`}
               >
                 {p.featured && (
-                  <div className="absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs">
+                  <div className="absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10">
                     KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN
                   </div>
                 )}
+
+                {/* Product Image */}
+                <div className="overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition duration-300 hover:scale-105"
+                  />
+                </div>
                 
                 {/* Product Icon & Badge */}
                 <div className="flex items-center justify-between mb-5">
@@ -503,20 +516,10 @@ function Products() {
                   </div>
                 </div>
 
-                <div className="mt-5 text-[13px] leading-relaxed text-neutral-600 flex-1">
+                <div className="mt-5 text-[13px] leading-relaxed text-neutral-600">
                   <span className="font-bold text-neutral-800">Ứng dụng phù hợp: </span>
                   {p.uses}
                 </div>
-
-                <a
-                  href="#combo"
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition duration-200 hover:opacity-95"
-                  style={{
-                    background: p.featured ? "#2D7A3A" : ORANGE,
-                  }}
-                >
-                  Chọn mua combo có dòng này <ArrowRight className="size-4" />
-                </a>
               </div>
             );
           })}

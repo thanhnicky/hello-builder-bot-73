@@ -2,7 +2,7 @@ import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, M as MessageCircle, R as RefreshCw, D as Droplets, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
+import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, M as MessageCircle, A as ArrowRight, R as RefreshCw, D as Droplets, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -528,7 +528,8 @@ function Products() {
       coverage: "5 - 6 m²/kg/lớp",
       time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Mờ (Matt)",
-      icon: Shield
+      icon: Shield,
+      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
     },
     {
       name: "Lotus Metal Coat Finish",
@@ -540,7 +541,8 @@ function Products() {
       coverage: "6 - 7 m²/kg/lớp",
       time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ (Satin / Semi-gloss)",
-      icon: Paintbrush
+      icon: Paintbrush,
+      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80"
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
@@ -553,7 +555,8 @@ function Products() {
       time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ sang trọng",
       featured: true,
-      icon: Layers
+      icon: Layers,
+      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "san-pham", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
@@ -574,7 +577,16 @@ function Products() {
         {
           className: `relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${p.featured ? "border-[#2D7A3A] ring-2 ring-[#2D7A3A]/10 bg-emerald-50/5" : "border-[#E8E4DC]"}`,
           children: [
-            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs", children: "KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN" }),
+            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10", children: "KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "img",
+              {
+                src: p.image,
+                alt: p.name,
+                loading: "lazy",
+                className: "w-full h-full object-cover transition duration-300 hover:scale-105"
+              }
+            ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-5", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `p-2.5 rounded-xl ${p.featured ? "bg-[#E8F5E9] text-[#2D7A3A]" : "bg-[#FDFBF7] text-[#E8541A]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
@@ -603,24 +615,10 @@ function Products() {
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.finish })
               ] })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 text-[13px] leading-relaxed text-neutral-600 flex-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 text-[13px] leading-relaxed text-neutral-600", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: "Ứng dụng phù hợp: " }),
               p.uses
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "a",
-              {
-                href: "#combo",
-                className: "mt-6 inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition duration-200 hover:opacity-95",
-                style: {
-                  background: p.featured ? "#2D7A3A" : ORANGE
-                },
-                children: [
-                  "Chọn mua combo có dòng này ",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-4" })
-                ]
-              }
-            )
+            ] })
           ]
         },
         p.name
