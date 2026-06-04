@@ -648,7 +648,7 @@ function Products() {
                 loading: "lazy",
                 width: 400,
                 height: 250,
-                className: "max-w-[85%] max-h-[85%] object-contain transition duration-300 hover:scale-105"
+                className: "max-w-[100%] max-h-[100%] object-contain transition duration-300 hover:scale-105"
               }
             ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-extrabold uppercase tracking-wider text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }) }),

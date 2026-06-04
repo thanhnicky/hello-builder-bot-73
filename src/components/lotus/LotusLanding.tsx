@@ -558,7 +558,7 @@ function Products() {
                     loading="lazy"
                     width={400}
                     height={250}
-                    className="max-w-[85%] max-h-[85%] object-contain transition duration-300 hover:scale-105"
+                    className="max-w-[100%] max-h-[100%] object-contain transition duration-300 hover:scale-105"
                   />
                 </div>
                 
