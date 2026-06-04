@@ -284,14 +284,14 @@ function Header() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden leading-tight sm:block", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-widest text-neutral-500", children: "Metal Coat" }) })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#san-pham", className: "hover:text-black", children: "Sản phẩm" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black", children: "Bảng màu" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black", children: "Chọn hệ sơn" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black", children: "Combo" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#order-form", className: "hover:text-black", children: "Đặt Hàng" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black", children: "Hạng mục" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black", children: "Dự án" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black", children: "FAQ" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#san-pham", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Sản phẩm" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Bảng màu" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Chọn hệ sơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Hạng mục" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Combo" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#order-form", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Đặt Hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "Dự án" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full", children: "FAQ" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden items-center gap-2 md:flex", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -329,7 +329,7 @@ function Header() {
         {
           href: "#san-pham",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Sản phẩm"
         }
       ),
@@ -338,7 +338,7 @@ function Header() {
         {
           href: "#bang-mau",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Bảng màu"
         }
       ),
@@ -347,8 +347,17 @@ function Header() {
         {
           href: "#chon-he-son",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Chọn hệ sơn"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#hang-muc",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
+          children: "Hạng mục"
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -356,7 +365,7 @@ function Header() {
         {
           href: "#combo",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Combo"
         }
       ),
@@ -365,17 +374,8 @@ function Header() {
         {
           href: "#order-form",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Đặt Hàng"
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: "#hang-muc",
-          onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
-          children: "Hạng mục"
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -383,7 +383,7 @@ function Header() {
         {
           href: "#du-an",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "Dự án"
         }
       ),
@@ -392,7 +392,7 @@ function Header() {
         {
           href: "#faq",
           onClick: () => setMobileMenuOpen(false),
-          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full",
           children: "FAQ"
         }
       ),

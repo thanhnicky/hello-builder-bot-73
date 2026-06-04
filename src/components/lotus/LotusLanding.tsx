@@ -155,14 +155,14 @@ function Header() {
         
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex">
-          <a href="#san-pham" className="hover:text-black">Sản phẩm</a>
-          <a href="#bang-mau" className="hover:text-black">Bảng màu</a>
-          <a href="#chon-he-son" className="hover:text-black">Chọn hệ sơn</a>
-          <a href="#combo" className="hover:text-black">Combo</a>
-          <a href="#order-form" className="hover:text-black">Đặt Hàng</a>
-          <a href="#hang-muc" className="hover:text-black">Hạng mục</a>
-          <a href="#du-an" className="hover:text-black">Dự án</a>
-          <a href="#faq" className="hover:text-black">FAQ</a>
+          <a href="#san-pham" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Sản phẩm</a>
+          <a href="#bang-mau" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Bảng màu</a>
+          <a href="#chon-he-son" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Chọn hệ sơn</a>
+          <a href="#hang-muc" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Hạng mục</a>
+          <a href="#combo" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Combo</a>
+          <a href="#order-form" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Đặt Hàng</a>
+          <a href="#du-an" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Dự án</a>
+          <a href="#faq" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">FAQ</a>
         </nav>
         
         {/* Desktop Buttons */}
@@ -200,56 +200,56 @@ function Header() {
             <a
               href="#san-pham"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Sản phẩm
             </a>
             <a
               href="#bang-mau"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Bảng màu
             </a>
             <a
               href="#chon-he-son"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Chọn hệ sơn
             </a>
             <a
+              href="#hang-muc"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
+            >
+              Hạng mục
+            </a>
+            <a
               href="#combo"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Combo
             </a>
             <a
               href="#order-form"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Đặt Hàng
             </a>
             <a
-              href="#hang-muc"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
-            >
-              Hạng mục
-            </a>
-            <a
               href="#du-an"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Dự án
             </a>
             <a
               href="#faq"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               FAQ
             </a>
