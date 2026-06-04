@@ -1349,62 +1349,6 @@ function FormSection({
             }
           )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 border-t border-[#E8E4DC] pt-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Phương thức thanh toán" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-3 sm:grid-cols-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "div",
-              {
-                onClick: () => setPaymentMethod("cod"),
-                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "cod" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "input",
-                    {
-                      type: "radio",
-                      name: "payment",
-                      value: "cod",
-                      checked: paymentMethod === "cod",
-                      onChange: () => setPaymentMethod("cod"),
-                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Thanh toán khi nhận hàng (COD)" }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-neutral-500 mt-0.5", children: "Không giảm giá" })
-                  ] })
-                ]
-              }
-            ),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "div",
-              {
-                onClick: () => setPaymentMethod("online"),
-                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "online" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "input",
-                    {
-                      type: "radio",
-                      name: "payment",
-                      value: "online",
-                      checked: paymentMethod === "online",
-                      onChange: () => setPaymentMethod("online"),
-                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight flex-1", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-1", children: [
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Chuyển khoản Online" }),
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]", children: "Tiết kiệm 10%" })
-                    ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-[#2D7A3A] font-semibold mt-0.5", children: "Giảm ngay 10%" })
-                  ] })
-                ]
-              }
-            )
-          ] })
-        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold uppercase tracking-wide", style: { color: ORANGE }, children: "Thông tin đơn hàng" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-3.5 text-sm text-neutral-800", children: [
@@ -1503,6 +1447,62 @@ function FormSection({
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[11px] leading-relaxed text-neutral-400", children: "* Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-[11px] leading-relaxed text-neutral-400", children: "Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²" })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 border-t border-[#E8E4DC] pt-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500", children: "Phương thức thanh toán" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-3 sm:grid-cols-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                onClick: () => setPaymentMethod("cod"),
+                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "cod" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "radio",
+                      name: "payment",
+                      value: "cod",
+                      checked: paymentMethod === "cod",
+                      onChange: () => setPaymentMethod("cod"),
+                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Thanh toán khi nhận hàng (COD)" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-neutral-500 mt-0.5", children: "Không giảm giá" })
+                  ] })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                onClick: () => setPaymentMethod("online"),
+                className: `flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${paymentMethod === "online" ? "border-[#2D7A3A] bg-[#E8F5E9]/10" : "border-[#E8E4DC] bg-white hover:bg-neutral-50"}`,
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "radio",
+                      name: "payment",
+                      value: "online",
+                      checked: paymentMethod === "online",
+                      onChange: () => setPaymentMethod("online"),
+                      className: "accent-[#2D7A3A] size-4 cursor-pointer"
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "leading-tight flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-1", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Chuyển khoản Online" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]", children: "Tiết kiệm 10%" })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-[#2D7A3A] font-semibold mt-0.5", children: "Giảm ngay 10%" })
+                  ] })
+                ]
+              }
+            )
+          ] })
         ] }),
         errors.combos && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 rounded-xl bg-red-50 border border-red-200 p-4 text-xs text-red-600 font-semibold flex items-center gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
           "⚠️ ",

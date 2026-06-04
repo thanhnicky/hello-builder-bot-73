@@ -1417,63 +1417,6 @@ function FormSection({
               />
             </label>
 
-            {/* PAYMENT METHOD SECTION */}
-            <div className="mt-6 border-t border-[#E8E4DC] pt-6">
-              <span className="mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                Phương thức thanh toán
-              </span>
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div
-                  onClick={() => setPaymentMethod("cod")}
-                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
-                    paymentMethod === "cod"
-                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
-                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="payment"
-                    value="cod"
-                    checked={paymentMethod === "cod"}
-                    onChange={() => setPaymentMethod("cod")}
-                    className="accent-[#2D7A3A] size-4 cursor-pointer"
-                  />
-                  <div className="leading-tight">
-                    <p className="text-sm font-bold text-neutral-800">Thanh toán khi nhận hàng (COD)</p>
-                    <p className="text-xs text-neutral-500 mt-0.5">Không giảm giá</p>
-                  </div>
-                </div>
-
-                <div
-                  onClick={() => setPaymentMethod("online")}
-                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
-                    paymentMethod === "online"
-                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
-                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="payment"
-                    value="online"
-                    checked={paymentMethod === "online"}
-                    onChange={() => setPaymentMethod("online")}
-                    className="accent-[#2D7A3A] size-4 cursor-pointer"
-                  />
-                  <div className="leading-tight flex-1">
-                    <div className="flex items-center justify-between gap-1">
-                      <p className="text-sm font-bold text-neutral-800">Chuyển khoản Online</p>
-                      <span className="rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]">
-                        Tiết kiệm 10%
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#2D7A3A] font-semibold mt-0.5">Giảm ngay 10%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* ORDER SUMMARY BOX */}
             <div className="mt-6 rounded-xl border border-[#E8541A]/30 bg-[#FDFBF7] p-5">
               <p className="text-sm font-bold uppercase tracking-wide" style={{ color: ORANGE }}>
@@ -1594,6 +1537,63 @@ function FormSection({
               <p className="mt-1 text-[11px] leading-relaxed text-neutral-400">
                 Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²
               </p>
+            </div>
+
+            {/* PAYMENT METHOD SECTION */}
+            <div className="mt-6 border-t border-[#E8E4DC] pt-6">
+              <span className="mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
+                Phương thức thanh toán
+              </span>
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div
+                  onClick={() => setPaymentMethod("cod")}
+                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
+                    paymentMethod === "cod"
+                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
+                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="cod"
+                    checked={paymentMethod === "cod"}
+                    onChange={() => setPaymentMethod("cod")}
+                    className="accent-[#2D7A3A] size-4 cursor-pointer"
+                  />
+                  <div className="leading-tight">
+                    <p className="text-sm font-bold text-neutral-800">Thanh toán khi nhận hàng (COD)</p>
+                    <p className="text-xs text-neutral-500 mt-0.5">Không giảm giá</p>
+                  </div>
+                </div>
+
+                <div
+                  onClick={() => setPaymentMethod("online")}
+                  className={`flex items-center gap-3 rounded-xl border p-4 cursor-pointer transition ${
+                    paymentMethod === "online"
+                      ? "border-[#2D7A3A] bg-[#E8F5E9]/10"
+                      : "border-[#E8E4DC] bg-white hover:bg-neutral-50"
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name="payment"
+                    value="online"
+                    checked={paymentMethod === "online"}
+                    onChange={() => setPaymentMethod("online")}
+                    className="accent-[#2D7A3A] size-4 cursor-pointer"
+                  />
+                  <div className="leading-tight flex-1">
+                    <div className="flex items-center justify-between gap-1">
+                      <p className="text-sm font-bold text-neutral-800">Chuyển khoản Online</p>
+                      <span className="rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]">
+                        Tiết kiệm 10%
+                      </span>
+                    </div>
+                    <p className="text-xs text-[#2D7A3A] font-semibold mt-0.5">Giảm ngay 10%</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {errors.combos && (
