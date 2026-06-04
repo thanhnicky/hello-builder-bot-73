@@ -28,6 +28,9 @@ import appSteel from "@/assets/app-steel.jpg";
 import appAluminum from "@/assets/app-aluminum.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
+import primerImg from "@/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer.png";
+import finishImg from "@/assets/son-phu-mau-kim-loai-lotus-meta-coat-finish.png";
+import dtmImg from "@/assets/son-kim-loai-da-nang-lotus-metal-coat-2in1.png";
 
 /* Brand tokens */
 const ORANGE = "#E8541A";
@@ -491,7 +494,7 @@ function Products() {
       time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Mờ (Matt)",
       icon: Shield,
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80",
+      image: primerImg,
     },
     {
       name: "Lotus Metal Coat Finish",
@@ -504,7 +507,7 @@ function Products() {
       time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ (Satin / Semi-gloss)",
       icon: Paintbrush,
-      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80",
+      image: finishImg,
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
@@ -517,7 +520,7 @@ function Products() {
       time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ sang trọng",
       icon: Layers,
-      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80",
+      image: dtmImg,
     },
   ];
 
@@ -543,12 +546,12 @@ function Products() {
                 className="relative flex flex-col rounded-xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-[#E8E4DC]"
               >
                 {/* Product Image */}
-                <div className="overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30">
+                <div className="overflow-hidden rounded-xl mb-5 aspect-[16/10] flex items-center justify-center bg-[#F7F5F2] border border-[#E8E4DC]/30">
                   <img
                     src={p.image}
                     alt={p.name}
                     loading="lazy"
-                    className="w-full h-full object-cover transition duration-300 hover:scale-105"
+                    className="max-w-[85%] max-h-[85%] object-contain transition duration-300 hover:scale-105"
                   />
                 </div>
                 

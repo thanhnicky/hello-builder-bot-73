@@ -155,6 +155,9 @@ const appSteel = "/assets/app-steel-CWccN3Pg.jpg";
 const appAluminum = "/assets/app-aluminum-AwgzTVTa.jpg";
 const project1 = "/assets/project-1-CERSa3Z3.jpg";
 const project2 = "/assets/project-2-DJJnqbfh.jpg";
+const primerImg = "/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer-CvlkzFGr.png";
+const finishImg = "/assets/son-phu-mau-kim-loai-lotus-meta-coat-finish-Bqw05O8k.png";
+const dtmImg = "/assets/son-kim-loai-da-nang-lotus-metal-coat-2in1-DoiKRSuF.png";
 const ORANGE = "#E8541A";
 const OFFWHITE = "#F7F5F2";
 const TEXT = "#1A1A1A";
@@ -586,7 +589,7 @@ function Products() {
       time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Mờ (Matt)",
       icon: Shield,
-      image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+      image: primerImg
     },
     {
       name: "Lotus Metal Coat Finish",
@@ -599,7 +602,7 @@ function Products() {
       time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ (Satin / Semi-gloss)",
       icon: Paintbrush,
-      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80"
+      image: finishImg
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
@@ -612,7 +615,7 @@ function Products() {
       time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ sang trọng",
       icon: Layers,
-      image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
+      image: dtmImg
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "san-pham", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
@@ -632,13 +635,13 @@ function Products() {
         {
           className: "relative flex flex-col rounded-xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-[#E8E4DC]",
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl mb-5 aspect-[16/10] flex items-center justify-center bg-[#F7F5F2] border border-[#E8E4DC]/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
                 src: p.image,
                 alt: p.name,
                 loading: "lazy",
-                className: "w-full h-full object-cover transition duration-300 hover:scale-105"
+                className: "max-w-[85%] max-h-[85%] object-contain transition duration-300 hover:scale-105"
               }
             ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-extrabold uppercase tracking-wider text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }) }),
