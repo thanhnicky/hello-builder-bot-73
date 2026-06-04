@@ -69,7 +69,6 @@ export function ContactForm() {
           <select name="surface" defaultValue="sat" className={inputCls}>
             <option value="sat">Sắt</option>
             <option value="thep">Thép</option>
-            <option value="nhom">Nhôm</option>
             <option value="ma-kem">Mạ kẽm</option>
             <option value="khac">Khác / chưa rõ</option>
           </select>

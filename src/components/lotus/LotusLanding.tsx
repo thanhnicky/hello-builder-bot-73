@@ -329,7 +329,7 @@ function Problem() {
   const pains = [
     "Mùi xăng nồng nặc — thợ phải đeo khẩu trang, chủ nhà phải bỏ đi mấy ngày",
     "Phải pha xăng hoặc dung môi — lỉnh kỉnh, nguy cơ cháy nổ, khó kiểm soát độ loãng",
-    "Sơn lên mạ kẽm hoặc nhôm không bám — bong tróc sau vài tháng dù đã lót",
+    "Sơn lên mạ kẽm không bám — bong tróc sau vài tháng dù đã lót",
     "Khô chậm — phải chờ lớp 1 qua ngày mới sơn lớp 2 được",
     "Dư sơn đổ đi — không pha nước được, để lâu đóng cứng lãng phí",
     "Vệ sinh cọ, rulo phải dùng xăng — hôi tay, hại da, khó rửa sạch",
@@ -381,7 +381,7 @@ function Solution() {
     {
       criteria: "Độ bám dính kẽm",
       oil: "Rất dễ bong tróc từng mảng lớn sau vài tháng sử dụng nếu không lót hoặc xử lý bề mặt cực kỳ phức tạp.",
-      lotus: "Bám dính cực chắc nhờ công nghệ Acrylic liên kết chéo cải tiến, thách thức sắt hộp mạ kẽm, nhôm, inox.",
+      lotus: "Bám dính cực chắc nhờ công nghệ Acrylic liên kết chéo cải tiến, thách thức sắt hộp mạ kẽm.",
       highlight: true,
     },
     {
@@ -486,7 +486,7 @@ function Products() {
     {
       name: "Lotus Metal Coat Primer",
       tag: "SƠN LÓT CHỐNG GỈ",
-      desc: "Lót gốc nước chuyên dụng bám dính chắc chắn trên sắt, thép, mạ kẽm, nhôm — tạo liên kết bền vững ngăn chặn ăn mòn và gỉ sét từ lõi kim loại.",
+      desc: "Lót gốc nước chuyên dụng bám dính chắc chắn trên sắt, thép, mạ kẽm — tạo liên kết bền vững ngăn chặn ăn mòn và gỉ sét từ lõi kim loại.",
       uses: "Lớp sơn đầu tiên bắt buộc cho hệ sơn 2 lớp tiêu chuẩn. Cực kỳ khuyên dùng cho cửa cổng ngoài trời, hàng rào, giàn sắt chịu nắng mưa liên tục.",
       color: "Trắng",
       dilution: "Nước sạch ~ 10% (nếu cần thiết)",
@@ -513,7 +513,7 @@ function Products() {
       name: "Lotus Metal Coat 2in1 / DTM",
       tag: "SƠN ĐA NĂNG ĐỒNG THỜI (2-TRONG-1)",
       desc: "Sản phẩm đột phá tích hợp lót chống gỉ và phủ màu trong cùng một bước sơn. Bâm dính trực tiếp cực mạnh lên sắt mạ kẽm, sắt hộp không cần sơn lót.",
-      uses: "Giải pháp thi công siêu tốc cho các công trình sắt mạ kẽm, nhôm, inox trong nhà và ngoài trời ít chịu tác động ăn mòn trực tiếp từ thời tiết.",
+      uses: "Giải pháp thi công siêu tốc cho các công trình sắt mạ kẽm trong nhà và ngoài trời ít chịu tác động ăn mòn trực tiếp từ thời tiết.",
       color: "28 mã màu chính hãng",
       dilution: "Nước sạch ~ 10% (nếu cần thiết)",
       coverage: "5 - 6 m²/kg/lớp",
@@ -636,7 +636,7 @@ function Decision() {
     {
       step: 1,
       title: "Vệ sinh bề mặt sắt hộp",
-      desc: "Lau sạch dầu mỡ phủ chống gỉ trên bề mặt sắt hộp mạ kẽm hoặc nhôm. Đảm bảo bề mặt khô ráo hoàn toàn trước khi lăn sơn.",
+      desc: "Lau sạch dầu mỡ phủ chống gỉ trên bề mặt sắt hộp mạ kẽm. Đảm bảo bề mặt khô ráo hoàn toàn trước khi lăn sơn.",
       icon: RefreshCw,
     },
     {
@@ -812,7 +812,7 @@ function Decision() {
                       Quy trình Hệ 2in1 (Sơn 1 lớp không cần sơn lót)
                     </h3>
                     <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
-                      Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, cấu kiện nhôm kính, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng.
+                      Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng.
                     </p>
                   </div>
                   <a
@@ -901,7 +901,7 @@ function Applications() {
     { img: appRailing, label: "Lan can ban công" },
     { img: project2, label: "Cửa sắt" },
     { img: appSteel, label: "Khung thép, kết cấu" },
-    { img: appAluminum, label: "Nhôm / mạ kẽm" },
+    { img: appAluminum, label: "Mạ kẽm" },
   ];
   return (
     <section id="hang-muc" className="bg-white py-[72px]">
@@ -1270,7 +1270,7 @@ function Combos({
               THI CÔNG NHANH
             </div>
             <h3 className="mt-3 font-display text-[22px] sm:text-[24px] font-bold">Tiết kiệm lót và phủ màu chung 2in1</h3>
-            <p className="mt-1 text-[15px] sm:text-[16px] text-neutral-600">Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng.</p>
+            <p className="mt-1 text-[15px] sm:text-[16px] text-neutral-600">Sơn thẳng lên mạ kẽm, sắt hộp — không cần lót riêng.</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Lotus Metal Coat 2in1 / DTM</span>
@@ -1910,8 +1910,8 @@ function FAQ() {
       a: "Thực sự không cần sơn lót chống gỉ riêng. Bạn chỉ cần làm sạch bề mặt kim loại rồi sơn trực tiếp 2 lớp Lotus 2in1 / DTM là hoàn thành công việc.",
     },
     {
-      q: "Sơn lên bề mặt mạ kẽm hoặc nhôm được không?",
-      a: "Hoàn toàn được. Dòng Lotus 2in1 / DTM được thiết kế chuyên biệt với độ bám dính siêu hạng trên các bề mặt khó bám như sắt hộp mạ kẽm, nhôm, inox mà không cần lót riêng.",
+      q: "Sơn lên bề mặt mạ kẽm được không?",
+      a: "Hoàn toàn được. Dòng Lotus 2in1 / DTM được thiết kế chuyên biệt với độ bám dính siêu hạng trên các bề mặt khó bám như sắt hộp mạ kẽm mà không cần lót riêng.",
     },
     {
       q: "Sơn gốc nước khô bao lâu? Có nhanh hơn sơn dầu không?",
