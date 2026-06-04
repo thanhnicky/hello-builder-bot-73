@@ -901,17 +901,19 @@ function Applications() {
         >
           Dùng được cho nhiều hạng mục — trong nhà và ngoài trời.
         </h2>
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-3">
           {apps.map((a) => (
-            <figure key={a.label} className="group relative overflow-hidden rounded-xl">
-              <img
-                src={a.img}
-                alt={a.label}
-                loading="lazy"
-                className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
-                <span className="text-[16px] sm:text-[17px] font-semibold">{a.label}</span>
+            <figure key={a.label} className="group">
+              <div className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]">
+                <img
+                  src={a.img}
+                  alt={a.label}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+              </div>
+              <figcaption className="mt-3 text-center">
+                <span className="text-[15px] sm:text-[16px] font-semibold text-[#1C2B2B]">{a.label}</span>
               </figcaption>
             </figure>
           ))}

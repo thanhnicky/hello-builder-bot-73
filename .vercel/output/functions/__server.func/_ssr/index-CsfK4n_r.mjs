@@ -921,8 +921,8 @@ function Applications() {
         children: "Dùng được cho nhiều hạng mục — trong nhà và ngoài trời."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3", children: apps.map((a) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group relative overflow-hidden rounded-xl", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-3", children: apps.map((a) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         "img",
         {
           src: a.img,
@@ -930,8 +930,8 @@ function Applications() {
           loading: "lazy",
           className: "aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
         }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("figcaption", { className: "absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[16px] sm:text-[17px] font-semibold", children: a.label }) })
+      ) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("figcaption", { className: "mt-3 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[15px] sm:text-[16px] font-semibold text-[#1C2B2B]", children: a.label }) })
     ] }, a.label)) })
   ] }) });
 }
