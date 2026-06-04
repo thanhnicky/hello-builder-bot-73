@@ -442,8 +442,8 @@ function Solution() {
               <div className="grid grid-cols-12 bg-[#1C2B2B] p-4 text-xs font-bold uppercase tracking-wider text-white">
                 <div className="col-span-3">TIÊU CHÍ</div>
                 <div className="col-span-4 pl-2 text-neutral-400">SƠN DẦU TRUYỀN THỐNG</div>
-                <div className="col-span-5 pl-4 text-emerald-400 flex items-center gap-1">
-                  <Sparkles className="size-3.5 fill-emerald-400" /> SƠN GỐC NƯỚC LOTUS
+                <div className="col-span-5 pl-4 text-emerald-400">
+                  SƠN GỐC NƯỚC LOTUS
                 </div>
               </div>
 
@@ -451,19 +451,16 @@ function Solution() {
                 {comparison.map((row) => (
                   <div key={row.criteria} className="grid grid-cols-12 p-5 text-sm items-start transition hover:bg-neutral-50/50">
                     {/* Criteria */}
-                    <div className="col-span-3 font-bold text-neutral-800 pr-2">
+                    <div className="col-span-3 font-bold text-neutral-800 pr-2 text-sm">
                       {row.criteria}
                     </div>
                     {/* Oil Paint */}
-                    <div className="col-span-4 text-neutral-500 text-xs pr-4 pl-2 leading-relaxed border-l border-neutral-100">
+                    <div className="col-span-4 text-neutral-600 text-sm pr-4 pl-2 leading-relaxed border-l border-neutral-100">
                       {row.oil}
                     </div>
                     {/* Lotus Paint */}
-                    <div className="col-span-5 text-neutral-800 text-xs pl-4 leading-relaxed font-medium border-l-2 border-emerald-500/30 bg-emerald-50/10 py-1 rounded-r-lg">
-                      <div className="flex items-start gap-1.5">
-                        <Check className="size-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="text-[#1C2B2B]">{row.lotus}</span>
-                      </div>
+                    <div className="col-span-5 text-neutral-800 text-sm pl-4 leading-relaxed font-medium border-l-2 border-emerald-500/30 bg-emerald-50/10 py-1 rounded-r-lg">
+                      <span className="text-[#1C2B2B]">{row.lotus}</span>
                     </div>
                   </div>
                 ))}
@@ -540,7 +537,6 @@ function Products() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
           {products.map((p) => {
-            const IconComp = p.icon;
             return (
               <div
                 key={p.name}
@@ -556,14 +552,11 @@ function Products() {
                   />
                 </div>
                 
-                {/* Product Icon & Badge */}
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded">
+                {/* Product Badge */}
+                <div className="mb-5">
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-neutral-500 bg-neutral-100 px-2.5 py-1 rounded">
                     {p.tag}
                   </span>
-                  <div className="p-2.5 rounded-xl bg-[#FDFBF7] text-[#E8541A]">
-                    <IconComp className="size-5" />
-                  </div>
                 </div>
 
                 <h3 className="font-display text-xl font-extrabold text-neutral-900 tracking-tight">{p.name}</h3>
@@ -714,33 +707,33 @@ function Decision() {
         <div className="mt-10 flex flex-wrap gap-3 border-b border-[#E8E4DC] pb-4">
           <button
             onClick={() => setActiveTab("standard")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
               activeTab === "standard"
                 ? "bg-[#1C2B2B] text-white shadow-sm"
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            <Shield className="size-4" /> Hệ chuẩn Bền Bỉ (Lót + Phủ)
+            Hệ chuẩn Bền Bỉ (Lót + Phủ)
           </button>
           <button
             onClick={() => setActiveTab("dtm")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
               activeTab === "dtm"
                 ? "bg-[#2D7A3A] text-white shadow-sm"
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            <Layers className="size-4" /> Hệ 2in1 Siêu Tốc (DTM trực tiếp)
+            Hệ 2in1 Siêu Tốc (DTM trực tiếp)
           </button>
           <button
             onClick={() => setActiveTab("premium")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
               activeTab === "premium"
                 ? "bg-[#E8541A] text-white shadow-sm"
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            <Sparkles className="size-4" /> Hệ cao cấp (Lót + Phủ + Bóng)
+            Hệ cao cấp (Lót + Phủ + Bóng)
           </button>
         </div>
 
@@ -763,35 +756,29 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
-                    Xem Combo Hệ chuẩn <ArrowRight className="size-3.5" />
+                    Xem Combo Hệ chuẩn
                   </a>
                 </div>
 
                 <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {standardSteps.map((s) => {
-                    const StepIcon = s.icon;
-                    return (
-                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
-                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#1C2B2B] text-xs font-bold text-white font-display">
-                          {s.step}
-                        </span>
-                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
-                          <StepIcon className="size-4" />
-                        </div>
-                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
-                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
-                      </div>
-                    );
-                  })}
+                  {standardSteps.map((s) => (
+                    <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                      <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#1C2B2B] text-xs font-bold text-white font-display">
+                        {s.step}
+                      </span>
+                      <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{s.desc}</p>
+                    </div>
+                  ))}
                 </div>
 
                 <a
                   href="#combo"
-                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                 >
-                  Xem Combo Hệ chuẩn <ArrowRight className="size-3.5" />
+                  Xem Combo Hệ chuẩn
                 </a>
               </div>
             </div>
@@ -812,35 +799,29 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
-                    Xem Combo Hệ 2in1 <ArrowRight className="size-3.5" />
+                    Xem Combo Hệ 2in1
                   </a>
                 </div>
 
                 <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {dtmSteps.map((s) => {
-                    const StepIcon = s.icon;
-                    return (
-                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
-                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#2D7A3A] text-xs font-bold text-white font-display">
-                          {s.step}
-                        </span>
-                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
-                          <StepIcon className="size-4" />
-                        </div>
-                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
-                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
-                      </div>
-                    );
-                  })}
+                  {dtmSteps.map((s) => (
+                    <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                      <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#2D7A3A] text-xs font-bold text-white font-display">
+                        {s.step}
+                      </span>
+                      <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{s.desc}</p>
+                    </div>
+                  ))}
                 </div>
 
                 <a
                   href="#combo"
-                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                 >
-                  Xem Combo Hệ 2in1 <ArrowRight className="size-3.5" />
+                  Xem Combo Hệ 2in1
                 </a>
               </div>
             </div>
@@ -861,35 +842,29 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
-                    Xem Combo Hệ cao cấp <ArrowRight className="size-3.5" />
+                    Xem Combo Hệ cao cấp
                   </a>
                 </div>
 
                 <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                  {premiumSteps.map((s) => {
-                    const StepIcon = s.icon;
-                    return (
-                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
-                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#E8541A] text-xs font-bold text-white font-display">
-                          {s.step}
-                        </span>
-                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
-                          <StepIcon className="size-4" />
-                        </div>
-                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
-                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
-                      </div>
-                    );
-                  })}
+                  {premiumSteps.map((s) => (
+                    <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                      <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#E8541A] text-xs font-bold text-white font-display">
+                        {s.step}
+                      </span>
+                      <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-neutral-600">{s.desc}</p>
+                    </div>
+                  ))}
                 </div>
 
                 <a
                   href="#combo"
-                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                 >
-                  Xem Combo Hệ cao cấp <ArrowRight className="size-3.5" />
+                  Xem Combo Hệ cao cấp
                 </a>
               </div>
             </div>
@@ -930,7 +905,7 @@ function Applications() {
                 className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
               />
               <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
-                <span className="text-[15px] font-semibold">{a.label}</span>
+                <span className="text-[16px] sm:text-[17px] font-semibold">{a.label}</span>
               </figcaption>
             </figure>
           ))}
@@ -1078,23 +1053,23 @@ function Combos({
             >
               Khuyên dùng
             </div>
-            <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-neutral-500">
               CƠ BẢN
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Combo thông dụng</h3>
-            <p className="mt-1 text-sm text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện</p>
+            <h3 className="mt-3 font-display text-[22px] sm:text-[24px] font-bold">Combo thông dụng</h3>
+            <p className="mt-1 text-[15px] sm:text-[16px] text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện</p>
             
             <div className="mt-4 flex flex-wrap gap-2">
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Lotus Metal Coat Primer</span>
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Lotus Metal Coat Finish</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Lotus Metal Coat Primer</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Lotus Metal Coat Finish</span>
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>375.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>375.000đ</p>
                   </div>
                   <Stepper value={c1q1} onChange={setC1q1} />
                 </div>
@@ -1129,8 +1104,8 @@ function Combos({
               <div className="space-y-3 pt-3 border-t border-neutral-100">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Combo lớn — 2 thùng 5kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>1.680.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Combo lớn — 2 thùng 5kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>1.680.000đ</p>
                   </div>
                   <Stepper value={c1q2} onChange={setC1q2} />
                 </div>
@@ -1174,24 +1149,24 @@ function Combos({
             className="relative flex flex-col rounded-xl border bg-white p-8"
             style={{ borderColor: "#E8E4DC" }}
           >
-            <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-neutral-500">
               CHUYÊN NGHIỆP
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Combo cao cấp</h3>
-            <p className="mt-1 text-sm text-neutral-600">Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời</p>
+            <h3 className="mt-3 font-display text-[22px] sm:text-[24px] font-bold">Combo cao cấp</h3>
+            <p className="mt-1 text-[15px] sm:text-[16px] text-neutral-600">Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Primer</span>
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Finish</span>
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Sơn phủ trong suốt bảo vệ ngoài trời</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Primer</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Finish</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Sơn phủ trong suốt bảo vệ ngoài trời</span>
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 3 hũ 1kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>610.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Combo nhỏ — 3 hũ 1kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>610.000đ</p>
                   </div>
                   <Stepper value={c2q1} onChange={setC2q1} />
                 </div>
@@ -1226,8 +1201,8 @@ function Combos({
               <div className="space-y-3 pt-3 border-t border-neutral-100">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Combo lớn — 3 thùng 5kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>2.745.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Combo lớn — 3 thùng 5kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>2.745.000đ</p>
                   </div>
                   <Stepper value={c2q2} onChange={setC2q2} />
                 </div>
@@ -1271,22 +1246,22 @@ function Combos({
             className="relative flex flex-col rounded-xl border bg-white p-8"
             style={{ borderColor: "#E8E4DC" }}
           >
-            <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
+            <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-neutral-500">
               THI CÔNG NHANH
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Tiết kiệm lót và phủ màu chung 2in1</h3>
-            <p className="mt-1 text-sm text-neutral-600">Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng.</p>
+            <h3 className="mt-3 font-display text-[22px] sm:text-[24px] font-bold">Tiết kiệm lót và phủ màu chung 2in1</h3>
+            <p className="mt-1 text-[15px] sm:text-[16px] text-neutral-600">Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng.</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              <span className="rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700">✓ Lotus Metal Coat 2in1 / DTM</span>
+              <span className="rounded bg-neutral-100 px-2 py-1 text-[13px] text-neutral-700">Lotus Metal Coat 2in1 / DTM</span>
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
               <div className="space-y-3">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Hũ 1kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>210.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Hũ 1kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>210.000đ</p>
                   </div>
                   <Stepper value={c3q1} onChange={setC3q1} />
                 </div>
@@ -1321,8 +1296,8 @@ function Combos({
               <div className="space-y-3 pt-3 border-t border-neutral-100">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
-                    <p className="text-sm font-semibold text-neutral-800">Thùng 5kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>890.000đ</p>
+                    <p className="text-[15px] font-semibold text-neutral-800">Thùng 5kg</p>
+                    <p className="text-[15px] font-semibold mt-0.5" style={{ color: ORANGE }}>890.000đ</p>
                   </div>
                   <Stepper value={c3q2} onChange={setC3q2} />
                 </div>
@@ -1362,11 +1337,10 @@ function Combos({
           </div>
         </div>
 
-        {/* GRAND TOTAL BAR */}
         <div className="mt-12 rounded-xl p-6 sm:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6" style={{ background: OFFWHITE }}>
           <div>
-            <p className="text-lg font-bold text-neutral-900">Tổng giá trị đơn hàng</p>
-            <p className="text-sm text-neutral-500 mt-1">Định mức: hũ 1kg ~ 5m²; thùng 5kg ~ 25m²</p>
+            <p className="text-[18px] sm:text-[20px] font-bold text-neutral-900">Tổng giá trị đơn hàng</p>
+            <p className="text-[15px] text-neutral-500 mt-1">Định mức: hũ 1kg ~ 5m2; thùng 5kg ~ 25m2</p>
           </div>
           <div className="md:text-right">
             {paymentMethod === "online" ? (
@@ -1393,15 +1367,15 @@ function Combos({
               e.preventDefault();
               document.getElementById("order-form")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex w-full items-center justify-center rounded-xl py-4 text-base font-bold text-white transition hover:opacity-95 shadow-md"
+            className="inline-flex w-full items-center justify-center rounded-xl py-4 text-[17px] sm:text-[18px] font-bold text-white transition hover:opacity-95 shadow-md"
             style={{ background: ORANGE }}
           >
-            Tiếp tục điền thông tin đặt hàng →
+            Tiếp tục điền thông tin đặt hàng
           </a>
         </div>
 
-        <p className="mt-4 text-center text-xs text-neutral-500">
-          Hơn 500+ đơn hàng đã giao thành công · Nhắn Zalo gửi ảnh hạng mục để được tư vấn nhanh.
+        <p className="mt-4 text-center text-[13px] text-neutral-500">
+          Hơn 500+ đơn hàng đã giao thành công
         </p>
       </div>
     </section>

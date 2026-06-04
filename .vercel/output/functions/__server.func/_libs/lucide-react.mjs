@@ -75,13 +75,6 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$b = [
-  ["path", { d: "M5 12h14", key: "1ays0h" }],
-  ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
-];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$b);
-const __iconNode$a = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$a);
 const __iconNode$9 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
 const ChevronDown = createLucideIcon("chevron-down", __iconNode$9);
 const __iconNode$8 = [
@@ -197,16 +190,14 @@ const __iconNode = [
 ];
 const X = createLucideIcon("x", __iconNode);
 export {
-  ArrowRight as A,
-  Check as C,
+  ChevronDown as C,
   Droplets as D,
   Layers as L,
   Menu as M,
   Paintbrush as P,
   RefreshCw as R,
-  Sparkles as S,
+  Shield as S,
   X,
-  Shield as a,
-  ShoppingCart as b,
-  ChevronDown as c
+  Sparkles as a,
+  ShoppingCart as b
 };
