@@ -75,16 +75,16 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$9 = [
+const __iconNode$b = [
   ["path", { d: "M5 12h14", key: "1ays0h" }],
   ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$9);
-const __iconNode$8 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$8);
-const __iconNode$7 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$7);
-const __iconNode$6 = [
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$b);
+const __iconNode$a = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$a);
+const __iconNode$9 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$9);
+const __iconNode$8 = [
   [
     "path",
     {
@@ -100,8 +100,8 @@ const __iconNode$6 = [
     }
   ]
 ];
-const Droplets = createLucideIcon("droplets", __iconNode$6);
-const __iconNode$5 = [
+const Droplets = createLucideIcon("droplets", __iconNode$8);
+const __iconNode$7 = [
   [
     "path",
     {
@@ -124,8 +124,14 @@ const __iconNode$5 = [
     }
   ]
 ];
-const Layers = createLucideIcon("layers", __iconNode$5);
-const __iconNode$4 = [
+const Layers = createLucideIcon("layers", __iconNode$7);
+const __iconNode$6 = [
+  ["path", { d: "M4 5h16", key: "1tepv9" }],
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 19h16", key: "1djgab" }]
+];
+const Menu = createLucideIcon("menu", __iconNode$6);
+const __iconNode$5 = [
   ["path", { d: "m14.622 17.897-10.68-2.913", key: "vj2p1u" }],
   [
     "path",
@@ -142,15 +148,15 @@ const __iconNode$4 = [
     }
   ]
 ];
-const Paintbrush = createLucideIcon("paintbrush", __iconNode$4);
-const __iconNode$3 = [
+const Paintbrush = createLucideIcon("paintbrush", __iconNode$5);
+const __iconNode$4 = [
   ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
   ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
   ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
   ["path", { d: "M8 16H3v5", key: "1cv678" }]
 ];
-const RefreshCw = createLucideIcon("refresh-cw", __iconNode$3);
-const __iconNode$2 = [
+const RefreshCw = createLucideIcon("refresh-cw", __iconNode$4);
+const __iconNode$3 = [
   [
     "path",
     {
@@ -159,8 +165,8 @@ const __iconNode$2 = [
     }
   ]
 ];
-const Shield = createLucideIcon("shield", __iconNode$2);
-const __iconNode$1 = [
+const Shield = createLucideIcon("shield", __iconNode$3);
+const __iconNode$2 = [
   ["circle", { cx: "8", cy: "21", r: "1", key: "jimo8o" }],
   ["circle", { cx: "19", cy: "21", r: "1", key: "13723u" }],
   [
@@ -171,8 +177,8 @@ const __iconNode$1 = [
     }
   ]
 ];
-const ShoppingCart = createLucideIcon("shopping-cart", __iconNode$1);
-const __iconNode = [
+const ShoppingCart = createLucideIcon("shopping-cart", __iconNode$2);
+const __iconNode$1 = [
   [
     "path",
     {
@@ -184,15 +190,22 @@ const __iconNode = [
   ["path", { d: "M22 4h-4", key: "gwowj6" }],
   ["circle", { cx: "4", cy: "20", r: "2", key: "6kqj1y" }]
 ];
-const Sparkles = createLucideIcon("sparkles", __iconNode);
+const Sparkles = createLucideIcon("sparkles", __iconNode$1);
+const __iconNode = [
+  ["path", { d: "M18 6 6 18", key: "1bl5f8" }],
+  ["path", { d: "m6 6 12 12", key: "d8bk6v" }]
+];
+const X = createLucideIcon("x", __iconNode);
 export {
   ArrowRight as A,
   Check as C,
   Droplets as D,
   Layers as L,
+  Menu as M,
   Paintbrush as P,
   RefreshCw as R,
   Sparkles as S,
+  X,
   Shield as a,
   ShoppingCart as b,
   ChevronDown as c

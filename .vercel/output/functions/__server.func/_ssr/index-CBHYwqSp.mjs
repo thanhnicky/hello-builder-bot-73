@@ -2,7 +2,7 @@ import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, R as RefreshCw, D as Droplets, b as ShoppingCart, c as ChevronDown } from "../_libs/lucide-react.mjs";
+import { X, M as Menu, S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, R as RefreshCw, D as Droplets, b as ShoppingCart, c as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -276,43 +276,140 @@ function LotusLanding() {
   ] });
 }
 function Header() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "sticky top-0 z-40 border-b border-[#E8E4DC] bg-white/90 backdrop-blur", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x flex h-16 items-center justify-between", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#top", className: "flex items-center gap-2.5", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoImg, alt: "Lotus Paint logo", className: "h-9 w-auto sm:h-10" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden leading-tight sm:block", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-widest text-neutral-500", children: "Metal Coat" }) })
+  const [mobileMenuOpen, setMobileMenuOpen] = reactExports.useState(false);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "sticky top-0 z-40 border-b border-[#E8E4DC] bg-white/90 backdrop-blur", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x flex h-16 items-center justify-between", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#top", className: "flex items-center gap-2.5", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoImg, alt: "Lotus Paint logo", className: "h-9 w-auto sm:h-10" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden leading-tight sm:block", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-widest text-neutral-500", children: "Metal Coat" }) })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#san-pham", className: "hover:text-black", children: "Sản phẩm" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black", children: "Bảng màu" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black", children: "Chọn hệ sơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black", children: "Combo" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#order-form", className: "hover:text-black", children: "Đặt Hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black", children: "Hạng mục" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black", children: "Dự án" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black", children: "FAQ" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden items-center gap-2 md:flex", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: `tel:${HOTLINE_TEL}`,
+            className: "inline-flex items-center rounded-md border border-[#E8E4DC] px-3 py-2 text-sm font-medium hover:bg-neutral-50",
+            children: HOTLINE
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: ZALO_URL,
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:bg-[#E8541A]/90 transition",
+            style: { background: ORANGE },
+            children: "Nhắn Zalo"
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "button",
+        {
+          onClick: () => setMobileMenuOpen(!mobileMenuOpen),
+          className: "flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-100 md:hidden",
+          children: mobileMenuOpen ? /* @__PURE__ */ jsxRuntimeExports.jsx(X, { className: "size-6" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { className: "size-6" })
+        }
+      )
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#san-pham", className: "hover:text-black", children: "Sản phẩm" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#bang-mau", className: "hover:text-black", children: "Bảng màu" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#chon-he-son", className: "hover:text-black", children: "Chọn hệ sơn" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#combo", className: "hover:text-black", children: "Combo" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#order-form", className: "hover:text-black", children: "Đặt Hàng" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#hang-muc", className: "hover:text-black", children: "Hạng mục" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#du-an", className: "hover:text-black", children: "Dự án" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#faq", className: "hover:text-black", children: "FAQ" })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "hidden items-center gap-2 md:flex", children: [
+    mobileMenuOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:hidden border-t border-[#E8E4DC] bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "container-x py-4 space-y-3", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "a",
         {
-          href: `tel:${HOTLINE_TEL}`,
-          className: "inline-flex items-center rounded-md border border-[#E8E4DC] px-3 py-2 text-sm font-medium hover:bg-neutral-50",
-          children: HOTLINE
+          href: "#san-pham",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Sản phẩm"
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "a",
         {
+          href: "#bang-mau",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Bảng màu"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#chon-he-son",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Chọn hệ sơn"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#combo",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Combo"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#order-form",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Đặt Hàng"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#hang-muc",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Hạng mục"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#du-an",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "Dự án"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#faq",
+          onClick: () => setMobileMenuOpen(false),
+          className: "block py-2 text-sm font-medium text-neutral-600 hover:text-black",
+          children: "FAQ"
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pt-4 border-t border-[#E8E4DC]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
           href: ZALO_URL,
           target: "_blank",
           rel: "noopener noreferrer",
-          className: "inline-flex items-center rounded-md px-3 py-2 text-sm font-semibold text-white hover:bg-[#E8541A]/90 transition",
+          onClick: () => setMobileMenuOpen(false),
+          className: "flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95",
           style: { background: ORANGE },
           children: "Nhắn Zalo"
         }
-      )
-    ] })
-  ] }) });
+      ) })
+    ] }) })
+  ] });
 }
 function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "top", className: "relative overflow-hidden", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid items-center gap-12 py-16 lg:grid-cols-12 lg:gap-16 lg:py-[72px]", children: [

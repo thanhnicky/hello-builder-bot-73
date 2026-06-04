@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers } from "lucide-react";
+import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers, Menu, X } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -139,6 +139,8 @@ export function LotusLanding() {
 
 /* ---------------- HEADER ---------------- */
 function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-40 border-b border-[#E8E4DC] bg-white/90 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between">
@@ -150,6 +152,8 @@ function Header() {
             </div>
           </div>
         </a>
+        
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex">
           <a href="#san-pham" className="hover:text-black">Sản phẩm</a>
           <a href="#bang-mau" className="hover:text-black">Bảng màu</a>
@@ -160,6 +164,8 @@ function Header() {
           <a href="#du-an" className="hover:text-black">Dự án</a>
           <a href="#faq" className="hover:text-black">FAQ</a>
         </nav>
+        
+        {/* Desktop Buttons */}
         <div className="hidden items-center gap-2 md:flex">
           <a
             href={`tel:${HOTLINE_TEL}`}
@@ -177,7 +183,91 @@ function Header() {
             Nhắn Zalo
           </a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="flex items-center justify-center rounded-md p-2 text-neutral-600 hover:bg-neutral-100 md:hidden"
+        >
+          {mobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+        </button>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden border-t border-[#E8E4DC] bg-white">
+          <nav className="container-x py-4 space-y-3">
+            <a
+              href="#san-pham"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Sản phẩm
+            </a>
+            <a
+              href="#bang-mau"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Bảng màu
+            </a>
+            <a
+              href="#chon-he-son"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Chọn hệ sơn
+            </a>
+            <a
+              href="#combo"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Combo
+            </a>
+            <a
+              href="#order-form"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Đặt Hàng
+            </a>
+            <a
+              href="#hang-muc"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Hạng mục
+            </a>
+            <a
+              href="#du-an"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              Dự án
+            </a>
+            <a
+              href="#faq"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black"
+            >
+              FAQ
+            </a>
+            <div className="pt-4 border-t border-[#E8E4DC]">
+              <a
+                href={ZALO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-md px-4 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+                style={{ background: ORANGE }}
+              >
+                Nhắn Zalo
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
