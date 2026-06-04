@@ -716,7 +716,8 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            01. Hệ chuẩn Bền Bỉ (Lót + Phủ)
+            <span className="inline-block w-8 h-8 rounded-lg bg-[#1C2B2B]/10 text-[#1C2B2B] text-[16px] font-extrabold leading-8 text-center mr-2">01</span>
+            Hệ chuẩn Bền Bỉ (Lót + Phủ)
           </button>
           <button
             onClick={() => setActiveTab("dtm")}
@@ -726,7 +727,8 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            02. Hệ 2in1 Siêu Tốc (DTM trực tiếp)
+            <span className="inline-block w-8 h-8 rounded-lg bg-[#2D7A3A]/10 text-[#2D7A3A] text-[16px] font-extrabold leading-8 text-center mr-2">02</span>
+            Hệ 2in1 Siêu Tốc (DTM trực tiếp)
           </button>
           <button
             onClick={() => setActiveTab("premium")}
@@ -736,7 +738,8 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            03. Hệ cao cấp (Lót + Phủ + Bóng)
+            <span className="inline-block w-8 h-8 rounded-lg bg-[#E8541A]/10 text-[#E8541A] text-[16px] font-extrabold leading-8 text-center mr-2">03</span>
+            Hệ cao cấp (Lót + Phủ + Bóng)
           </button>
         </div>
 

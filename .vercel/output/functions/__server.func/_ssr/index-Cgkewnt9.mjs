@@ -778,28 +778,37 @@ function Decision() {
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Lotus mang đến quy trình thi công tối giản, tiết kiệm thời gian mà vẫn đảm bảo độ bền tối ưu nhất cho từng hạng mục công trình." }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex flex-wrap gap-3 border-b border-[#E8E4DC] pb-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
         {
           onClick: () => setActiveTab("standard"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "standard" ? "bg-[#1C2B2B] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "01. Hệ chuẩn Bền Bỉ (Lót + Phủ)"
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#1C2B2B]/10 text-[#1C2B2B] text-[16px] font-extrabold leading-8 text-center mr-2", children: "01" }),
+            "Hệ chuẩn Bền Bỉ (Lót + Phủ)"
+          ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
         {
           onClick: () => setActiveTab("dtm"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "dtm" ? "bg-[#2D7A3A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "02. Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#2D7A3A]/10 text-[#2D7A3A] text-[16px] font-extrabold leading-8 text-center mr-2", children: "02" }),
+            "Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
+          ]
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
         {
           onClick: () => setActiveTab("premium"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "03. Hệ cao cấp (Lót + Phủ + Bóng)"
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#E8541A]/10 text-[#E8541A] text-[16px] font-extrabold leading-8 text-center mr-2", children: "03" }),
+            "Hệ cao cấp (Lót + Phủ + Bóng)"
+          ]
         }
       )
     ] }),
