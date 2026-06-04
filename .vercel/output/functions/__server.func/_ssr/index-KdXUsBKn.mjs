@@ -154,9 +154,9 @@ const appFence = "/assets/son-container-lotus-DXzGK1qc.jpg";
 const appSteel = "/assets/son-ket-cau-thep-lotus-bkQlFYok.jpg";
 const appAluminum = "/assets/son-duong-ong-cuu-hoa-lotus-DxvHuIUw.jpg";
 const appGate = "/assets/son-cong-sat-son-lotus-kim-loai-Cwd17TcU.jpg";
-const appDoor = "/assets/son-thep-hop-ma-kem-lotus-wS4aBIzE.JPG";
+const appDoor = "/assets/son-thep-hop-ma-kem-lotus-wS4aBIzE.jpg";
 const project1 = "/assets/project-1-CERSa3Z3.jpg";
-const project2 = "/assets/project-2-DJJnqbfh.jpg";
+const project2 = "/assets/son-cua-sat-khong-mui-B170EHph.jpg";
 const primerImg = "/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer-CvlkzFGr.png";
 const finishImg = "/assets/son-phu-mau-kim-loai-lotus-meta-coat-finish-Bqw05O8k.png";
 const dtmImg = "/assets/son-kim-loai-da-nang-lotus-metal-coat-2in1-DoiKRSuF.png";
@@ -1727,18 +1727,21 @@ function Projects() {
         children: "Một số hạng mục đã thi công với hệ sơn Lotus Metal Coat."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: items.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-white", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "img",
-        {
-          src: it.img,
-          alt: it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An",
-          loading: "lazy",
-          width: 800,
-          height: 600,
-          className: "aspect-[4/3] w-full object-cover"
-        }
-      ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: items.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: it.img,
+            alt: it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An",
+            loading: "lazy",
+            width: 800,
+            height: 600,
+            className: "relative aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+          }
+        )
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-1.5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(Chip, { children: [

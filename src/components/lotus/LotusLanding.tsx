@@ -27,9 +27,9 @@ import appFence from "@/assets/son-container-lotus.jpg";
 import appSteel from "@/assets/son-ket-cau-thep-lotus.jpg";
 import appAluminum from "@/assets/son-duong-ong-cuu-hoa-lotus.jpg";
 import appGate from "@/assets/son-cong-sat-son-lotus-kim-loai.jpg";
-import appDoor from "@/assets/son-thep-hop-ma-kem-lotus.JPG";
+import appDoor from "@/assets/son-thep-hop-ma-kem-lotus.jpg";
 import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project2 from "@/assets/son-cua-sat-khong-mui.jpg";
 import primerImg from "@/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer.png";
 import finishImg from "@/assets/son-phu-mau-kim-loai-lotus-meta-coat-finish.png";
 import dtmImg from "@/assets/son-kim-loai-da-nang-lotus-metal-coat-2in1.png";
@@ -1879,15 +1879,18 @@ function Projects() {
         </h2>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {items.map((it) => (
-            <article key={it.item} className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-white">
-              <img 
-                src={it.img} 
-                alt={it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An"} 
-                loading="lazy" 
-                width={800}
-                height={600}
-                className="aspect-[4/3] w-full object-cover" 
-              />
+            <article key={it.item} className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group">
+              <div className="relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img 
+                  src={it.img} 
+                  alt={it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An"} 
+                  loading="lazy" 
+                  width={800}
+                  height={600}
+                  className="relative aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" 
+                />
+              </div>
               <div className="p-6">
                 <div className="flex flex-wrap gap-1.5">
                   <Chip>Hạng mục: {it.item}</Chip>
