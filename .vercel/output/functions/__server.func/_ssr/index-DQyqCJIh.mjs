@@ -1025,11 +1025,19 @@ function Combos({
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
-          className: "relative flex flex-col rounded-xl border bg-white p-8",
-          style: { borderColor: "#E8E4DC" },
+          className: "relative flex flex-col rounded-xl border-2 bg-white p-8 shadow-md",
+          style: { borderColor: ORANGE },
           children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "div",
+              {
+                className: "absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white",
+                style: { background: ORANGE },
+                children: "Khuyên dùng"
+              }
+            ),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "CƠ BẢN" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo thông dụng (khuyên dùng)" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo thông dụng" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót chống gỉ + Sơn phủ màu hoàn thiện" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex flex-wrap gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat Primer" }),
@@ -1118,17 +1126,9 @@ function Combos({
       /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
-          className: "relative flex flex-col rounded-xl border-2 bg-white p-8 shadow-md",
-          style: { borderColor: ORANGE },
+          className: "relative flex flex-col rounded-xl border bg-white p-8",
+          style: { borderColor: "#E8E4DC" },
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "div",
-              {
-                className: "absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white",
-                style: { background: ORANGE },
-                children: "Khuyên dùng"
-              }
-            ),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "CHUYÊN NGHIỆP" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo cao cấp" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời" }),

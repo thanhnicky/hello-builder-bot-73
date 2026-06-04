@@ -1002,13 +1002,19 @@ function Combos({
         <div className="mt-14 grid gap-8 lg:grid-cols-3">
           {/* CARD 1 */}
           <div
-            className="relative flex flex-col rounded-xl border bg-white p-8"
-            style={{ borderColor: "#E8E4DC" }}
+            className="relative flex flex-col rounded-xl border-2 bg-white p-8 shadow-md"
+            style={{ borderColor: ORANGE }}
           >
+            <div
+              className="absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
+              style={{ background: ORANGE }}
+            >
+              Khuyên dùng
+            </div>
             <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
               CƠ BẢN
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Combo thông dụng (khuyên dùng)</h3>
+            <h3 className="mt-3 font-display text-xl font-bold">Combo thông dụng</h3>
             <p className="mt-1 text-sm text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện</p>
             
             <div className="mt-4 flex flex-wrap gap-2">
@@ -1098,15 +1104,9 @@ function Combos({
 
           {/* CARD 2 */}
           <div
-            className="relative flex flex-col rounded-xl border-2 bg-white p-8 shadow-md"
-            style={{ borderColor: ORANGE }}
+            className="relative flex flex-col rounded-xl border bg-white p-8"
+            style={{ borderColor: "#E8E4DC" }}
           >
-            <div
-              className="absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
-              style={{ background: ORANGE }}
-            >
-              Khuyên dùng
-            </div>
             <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
               CHUYÊN NGHIỆP
             </div>
