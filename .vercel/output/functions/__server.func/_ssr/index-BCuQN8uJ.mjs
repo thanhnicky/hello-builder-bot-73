@@ -2,7 +2,7 @@ import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { M as MessageCircle, P as Phone, C as ChevronDown } from "../_libs/lucide-react.mjs";
+import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, M as MessageCircle, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -433,129 +433,200 @@ function Problem() {
   ] }) });
 }
 function Solution() {
-  const lines = [
+  const comparison = [
     {
-      tag: "LỚP LÓT",
-      name: "Lotus Metal Coat Primer",
-      desc: "Lớp nền chống gỉ gốc nước — bám chắc lên sắt mới, sắt cũ, cả nhôm và mạ kẽm. Lót trước khi sơn màu để hệ sơn bền lâu hơn đáng kể."
+      criteria: "Mùi sơn & An toàn",
+      oil: "Hôi nồng nặc mùi xăng dung môi, chứa hàm lượng chất hữu cơ dễ bay hơi (VOCs) độc hại kéo dài.",
+      lotus: "Không mùi, dung môi hoàn toàn từ nước sạch. Thi công dễ chịu, an toàn tuyệt đối cho thợ và gia đình.",
+      highlight: true
     },
     {
-      tag: "LỚP PHỦ",
-      name: "Lotus Metal Coat Finish",
-      desc: "Sơn màu hoàn thiện gốc nước — phủ lên lớp lót để có bề mặt đẹp, đồng màu, bền thời tiết. Không mùi, dễ sơn lại nếu cần."
+      criteria: "Độ bám dính kẽm",
+      oil: "Rất dễ bong tróc từng mảng lớn sau vài tháng sử dụng nếu không lót hoặc xử lý bề mặt cực kỳ phức tạp.",
+      lotus: "Bám dính cực chắc nhờ công nghệ Acrylic liên kết chéo cải tiến, thách thức sắt hộp mạ kẽm, nhôm, inox.",
+      highlight: true
     },
     {
-      tag: "ĐA NĂNG — KHUYÊN DÙNG",
-      name: "Lotus Metal Coat 2in1 / DTM",
-      desc: "Sơn thẳng lên sắt hộp mạ kẽm mà không cần lót riêng — lý tưởng cho thợ thi công cần tiết kiệm bước mà vẫn chống gỉ đạt yêu cầu."
+      criteria: "Thời gian thi công",
+      oil: "Khô rất chậm (8-12 tiếng), phải chờ qua ngày mới phủ lớp tiếp theo. Dễ bám bụi bẩn khi màng sơn chưa khô.",
+      lotus: "Khô siêu tốc chỉ trong 30 phút, sơn phủ lớp kế tiếp sau 2 giờ. Hoàn thành toàn bộ công trình trong ngày.",
+      highlight: true
+    },
+    {
+      criteria: "Độ bền thời tiết",
+      oil: "Dưới nắng nóng gắt, màng sơn dầu cứng giòn, dễ rạn nứt chân chim và bị ngả màu, ố vàng nhanh chóng.",
+      lotus: "Màng sơn dẻo dai đàn hồi cao, chống tia UV cực tốt, không bị giòn nứt hay ngả màu dưới mọi thời tiết.",
+      highlight: true
+    },
+    {
+      criteria: "Vệ sinh & Dọn dẹp",
+      oil: "Bắt buộc dùng dung môi (xăng thơm, dầu hỏa) để tẩy rửa. Gây hôi tay, hại da và nguy cơ cháy nổ cao.",
+      lotus: "Dễ dàng rửa sạch cọ, rulo, tay chân chỉ bằng nước sạch. Thân thiện với môi trường, dọn dẹp cực nhanh.",
+      highlight: true
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "GIẢI PHÁP LOTUS" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "h2",
-      {
-        className: "mt-4 max-w-3xl font-display font-bold text-balance",
-        style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Một bộ sản phẩm. Ba lựa chọn rõ ràng."
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Gốc nước hoàn toàn — pha nước, rửa nước, không xăng dung môi. Chọn đúng hệ theo hạng mục là xong." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: lines.map((l, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "rounded-xl border border-[#E8E4DC] bg-white p-8",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-baseline gap-4", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "span",
-              {
-                className: "font-display text-3xl font-bold tabular-nums text-[#1C2B2B]",
-                children: [
-                  "0",
-                  i + 1
-                ]
-              }
-            ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: l.tag })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-display text-xl font-bold", children: l.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[15px] leading-relaxed text-neutral-600", children: l.desc })
-        ]
-      },
-      l.name
-    )) })
-  ] }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container-x", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-12 lg:grid-cols-12 lg:items-start", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-4 lg:sticky lg:top-24", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "GIẢI PHÁP ĐỘT PHÁ" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "h2",
+        {
+          className: "mt-4 font-display font-bold text-balance text-[#1C2B2B]",
+          style: { fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
+          children: "Công nghệ gốc nước xóa bỏ mọi nhược điểm sơn dầu."
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 text-[16px] leading-relaxed text-neutral-600", children: "Lotus Metal Coat giải quyết triệt để những nỗi lo lớn nhất của người thợ và chủ nhà khi sơn kim loại. Không chỉ là sơn, đây là giải pháp bảo vệ tối ưu." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-6 border-t border-[#E8E4DC] pt-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-3xl font-extrabold text-[#2D7A3A] font-display", children: "0%" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-sm font-bold text-neutral-800", children: "Không mùi xăng dung môi" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-neutral-500 mt-0.5", children: "Sơn xong dọn dẹp nhẹ nhàng, dọn vào ở được ngay." })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-4", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-3xl font-extrabold text-[#2D7A3A] font-display", children: "2x" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-sm font-bold text-neutral-800", children: "Bền màu & Kháng UV gấp đôi" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-neutral-500 mt-0.5", children: "Không giòn nứt hay ố vàng dưới nắng nóng khắc nghiệt." })
+          ] })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "overflow-hidden rounded-2xl border border-[#E8E4DC] bg-white shadow-xs", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 bg-[#1C2B2B] p-4 text-xs font-bold uppercase tracking-wider text-white", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-3", children: "TIÊU CHÍ" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-4 pl-2 text-neutral-400", children: "SƠN DẦU TRUYỀN THỐNG" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-5 pl-4 text-emerald-400 flex items-center gap-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-3.5 fill-emerald-400" }),
+            " SƠN GỐC NƯỚC LOTUS"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "divide-y divide-[#E8E4DC]", children: comparison.map((row) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 p-5 text-sm items-start transition hover:bg-neutral-50/50", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-3 font-bold text-neutral-800 pr-2", children: row.criteria }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-4 text-neutral-500 text-xs pr-4 pl-2 leading-relaxed border-l border-neutral-100", children: row.oil }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-5 text-neutral-800 text-xs pl-4 leading-relaxed font-medium border-l-2 border-emerald-500/30 bg-emerald-50/10 py-1 rounded-r-lg", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-1.5", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "size-4 text-emerald-600 shrink-0 mt-0.5" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[#1C2B2B]", children: row.lotus })
+          ] }) })
+        ] }, row.criteria)) })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-xs text-neutral-400 font-medium", children: "* Khảo sát thực tế dựa trên phản hồi của thợ thi công và chủ hộ gia đình tại Việt Nam." })
+    ] })
+  ] }) }) });
 }
 function Products() {
   const products = [
     {
       name: "Lotus Metal Coat Primer",
       tag: "SƠN LÓT CHỐNG GỈ",
-      desc: "Lót gốc nước bám chắc trên sắt, thép, nhôm, mạ kẽm — ngay cả bề mặt khó bám mà sơn dầu thường trượt.",
-      uses: "Bước đầu tiên của hệ chuẩn 2 lớp — cổng, lan can, hàng rào cần độ bền cao."
+      desc: "Lót gốc nước chuyên dụng bám dính chắc chắn trên sắt, thép, mạ kẽm, nhôm — tạo liên kết bền vững ngăn chặn ăn mòn và gỉ sét từ lõi kim loại.",
+      uses: "Lớp sơn đầu tiên bắt buộc cho hệ sơn 2 lớp tiêu chuẩn. Cực kỳ khuyên dùng cho cửa cổng ngoài trời, hàng rào, giàn sắt chịu nắng mưa liên tục.",
+      color: "Xám (Grey)",
+      dilution: "Nước sạch (5 - 10%)",
+      coverage: "5 - 6 m²/kg/lớp",
+      time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Mờ (Matt)",
+      icon: Shield
     },
     {
       name: "Lotus Metal Coat Finish",
-      tag: "SƠN PHỦ MÀU",
-      desc: "Màu hoàn thiện đẹp, đều, không loang — sơn lên sau lớp lót khi khô. Rửa cọ bằng nước, không mùi, thi công trong nhà được.",
-      uses: "Đi cùng Primer tạo hệ 2 lớp chuẩn — cho cổng, cửa sắt, lan can, khung thép."
+      tag: "SƠN PHỦ MÀU HOÀN THIỆN",
+      desc: "Sơn màu cao cấp phủ bảo vệ và trang trí. Tạo màng sơn mịn đẹp vượt trội, bóng nhẹ sang trọng, giữ màu tối ưu dưới thời tiết nắng nóng khắc nghiệt.",
+      uses: "Sơn phủ màu trang trí (lớp thứ 2) sau khi đã lót Primer. Thích hợp cho tất cả bề mặt kim loại nội và ngoại thất cần độ thẩm mỹ và độ bền màu cao.",
+      color: "28 mã màu chính hãng",
+      dilution: "Nước sạch (5 - 10%)",
+      coverage: "6 - 7 m²/kg/lớp",
+      time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Bóng nhẹ (Satin / Semi-gloss)",
+      icon: Paintbrush
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
-      tag: "ĐA NĂNG — KHUYÊN DÙNG",
-      desc: "Sơn trực tiếp lên sắt mạ kẽm, nhôm, sắt hộp — không cần lót. Một bước, tiết kiệm thời gian, vẫn chống gỉ và bám dính đạt yêu cầu.",
-      uses: "Thi công nhanh, hạng mục không quá khắc nghiệt — cổng, hàng rào, nội thất sắt trong nhà.",
-      featured: true
+      tag: "SƠN ĐA NĂNG ĐỒNG THỜI (2-TRONG-1)",
+      desc: "Sản phẩm đột phá tích hợp lót chống gỉ và phủ màu trong cùng một bước sơn. Bám dính trực tiếp cực mạnh lên sắt mạ kẽm, sắt hộp không cần sơn lót.",
+      uses: "Giải pháp thi công siêu tốc cho các công trình sắt mạ kẽm, nhôm, inox trong nhà và ngoài trời ít chịu tác động ăn mòn trực tiếp từ thời tiết.",
+      color: "28 mã màu chính hãng",
+      dilution: "Nước sạch (tối đa 5%)",
+      coverage: "5 - 6 m²/kg/lớp",
+      time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Bóng nhẹ sang trọng",
+      featured: true,
+      icon: Layers
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "san-pham", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "SẢN PHẨM" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "CHI TIẾT SẢN PHẨM" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
       "h2",
       {
-        className: "mt-4 max-w-3xl font-display font-bold text-balance",
+        className: "mt-4 max-w-3xl font-display font-bold text-balance text-[#1C2B2B]",
         style: { fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" },
-        children: "Chọn đúng sản phẩm cho hạng mục của bạn."
+        children: "Thông số kỹ thuật & Hướng dẫn sử dụng chi tiết."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Mỗi sản phẩm phục vụ một bước khác nhau trong quy trình — hoặc gộp làm một nếu chọn 2in1." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: products.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "relative flex flex-col rounded-xl border bg-white p-8",
-        style: {
-          borderColor: "#E8E4DC"
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600", children: "Mỗi dòng sản phẩm được Lotus thiết kế chuyên biệt để mang lại hiệu quả bảo vệ bền vững nhất cho từng loại công trình." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-8 lg:grid-cols-3", children: products.map((p) => {
+      const IconComp = p.icon;
+      return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: `relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${p.featured ? "border-[#2D7A3A] ring-2 ring-[#2D7A3A]/10 bg-emerald-50/5" : "border-[#E8E4DC]"}`,
+          children: [
+            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs", children: "KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-5", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `p-2.5 rounded-xl ${p.featured ? "bg-[#E8F5E9] text-[#2D7A3A]" : "bg-[#FDFBF7] text-[#E8541A]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl font-extrabold text-neutral-900 tracking-tight", children: p.name }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm leading-relaxed text-neutral-600 min-h-[72px]", children: p.desc }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 rounded-xl bg-neutral-50 p-4 border border-neutral-100/50 space-y-2.5 text-xs text-neutral-700", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between py-1 border-b border-neutral-200/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-400 uppercase tracking-wide", children: "Màu sơn:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.color })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between py-1 border-b border-neutral-200/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-400 uppercase tracking-wide", children: "Định mức phủ:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.coverage })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between py-1 border-b border-neutral-200/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-400 uppercase tracking-wide", children: "Thời gian khô:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.time })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between py-1 border-b border-neutral-200/40", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-400 uppercase tracking-wide", children: "Pha loãng:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.dilution })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-400 uppercase tracking-wide", children: "Bề mặt màng sơn:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: p.finish })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-5 text-[13px] leading-relaxed text-neutral-600 flex-1", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-800", children: "Ứng dụng phù hợp: " }),
+              p.uses
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: "#combo",
+                className: "mt-6 inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition duration-200 hover:opacity-95",
+                style: {
+                  background: p.featured ? "#2D7A3A" : ORANGE
+                },
+                children: [
+                  "Chọn mua combo có dòng này ",
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-4" })
+                ]
+              }
+            )
+          ]
         },
-        children: [
-          p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white",
-              style: { background: ORANGE },
-              children: "Khuyên dùng"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: p.tag }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: p.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[15px] leading-relaxed text-neutral-600", children: p.desc }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 text-[14px] leading-relaxed text-neutral-700", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold", children: "Phù hợp: " }),
-            p.uses
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "#form",
-              className: "mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E8541A]/90",
-              style: { background: ORANGE },
-              children: "Chọn sản phẩm này →"
-            }
-          )
-        ]
-      },
-      p.name
-    )) })
+        p.name
+      );
+    }) })
   ] }) });
 }
 function Decision() {

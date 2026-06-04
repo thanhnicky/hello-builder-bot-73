@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -281,56 +282,112 @@ function Problem() {
 
 /* ---------------- SOLUTION ---------------- */
 function Solution() {
-  const lines = [
+  const comparison = [
     {
-      tag: "LỚP LÓT",
-      name: "Lotus Metal Coat Primer",
-      desc: "Lớp nền chống gỉ gốc nước — bám chắc lên sắt mới, sắt cũ, cả nhôm và mạ kẽm. Lót trước khi sơn màu để hệ sơn bền lâu hơn đáng kể.",
+      criteria: "Mùi sơn & An toàn",
+      oil: "Hôi nồng nặc mùi xăng dung môi, chứa hàm lượng chất hữu cơ dễ bay hơi (VOCs) độc hại kéo dài.",
+      lotus: "Không mùi, dung môi hoàn toàn từ nước sạch. Thi công dễ chịu, an toàn tuyệt đối cho thợ và gia đình.",
+      highlight: true,
     },
     {
-      tag: "LỚP PHỦ",
-      name: "Lotus Metal Coat Finish",
-      desc: "Sơn màu hoàn thiện gốc nước — phủ lên lớp lót để có bề mặt đẹp, đồng màu, bền thời tiết. Không mùi, dễ sơn lại nếu cần.",
+      criteria: "Độ bám dính kẽm",
+      oil: "Rất dễ bong tróc từng mảng lớn sau vài tháng sử dụng nếu không lót hoặc xử lý bề mặt cực kỳ phức tạp.",
+      lotus: "Bám dính cực chắc nhờ công nghệ Acrylic liên kết chéo cải tiến, thách thức sắt hộp mạ kẽm, nhôm, inox.",
+      highlight: true,
     },
     {
-      tag: "ĐA NĂNG — KHUYÊN DÙNG",
-      name: "Lotus Metal Coat 2in1 / DTM",
-      desc: "Sơn thẳng lên sắt hộp mạ kẽm mà không cần lót riêng — lý tưởng cho thợ thi công cần tiết kiệm bước mà vẫn chống gỉ đạt yêu cầu.",
+      criteria: "Thời gian thi công",
+      oil: "Khô rất chậm (8-12 tiếng), phải chờ qua ngày mới phủ lớp tiếp theo. Dễ bám bụi bẩn khi màng sơn chưa khô.",
+      lotus: "Khô siêu tốc chỉ trong 30 phút, sơn phủ lớp kế tiếp sau 2 giờ. Hoàn thành toàn bộ công trình trong ngày.",
+      highlight: true,
+    },
+    {
+      criteria: "Độ bền thời tiết",
+      oil: "Dưới nắng nóng gắt, màng sơn dầu cứng giòn, dễ rạn nứt chân chim và bị ngả màu, ố vàng nhanh chóng.",
+      lotus: "Màng sơn dẻo dai đàn hồi cao, chống tia UV cực tốt, không bị giòn nứt hay ngả màu dưới mọi thời tiết.",
+      highlight: true,
+    },
+    {
+      criteria: "Vệ sinh & Dọn dẹp",
+      oil: "Bắt buộc dùng dung môi (xăng thơm, dầu hỏa) để tẩy rửa. Gây hôi tay, hại da và nguy cơ cháy nổ cao.",
+      lotus: "Dễ dàng rửa sạch cọ, rulo, tay chân chỉ bằng nước sạch. Thân thiện với môi trường, dọn dẹp cực nhanh.",
+      highlight: true,
     },
   ];
+
   return (
     <section className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
-        <p className={LABEL_CLS} style={{ color: ORANGE }}>GIẢI PHÁP LOTUS</p>
-        <h2
-          className="mt-4 max-w-3xl font-display font-bold text-balance"
-          style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
-        >
-          Một bộ sản phẩm. Ba lựa chọn rõ ràng.
-        </h2>
-        <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600">
-          Gốc nước hoàn toàn — pha nước, rửa nước, không xăng dung môi. Chọn đúng hệ theo hạng mục là xong.
-        </p>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {lines.map((l, i) => (
-            <div
-              key={l.name}
-              className="rounded-xl border border-[#E8E4DC] bg-white p-8"
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+          {/* Left info box */}
+          <div className="lg:col-span-4 lg:sticky lg:top-24">
+            <p className={LABEL_CLS} style={{ color: ORANGE }}>GIẢI PHÁP ĐỘT PHÁ</p>
+            <h2
+              className="mt-4 font-display font-bold text-balance text-[#1C2B2B]"
+              style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
             >
-              <div className="flex items-baseline gap-4">
-                <span
-                  className="font-display text-3xl font-bold tabular-nums text-[#1C2B2B]"
-                >
-                  0{i + 1}
-                </span>
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
-                  {l.tag}
-                </span>
+              Công nghệ gốc nước xóa bỏ mọi nhược điểm sơn dầu.
+            </h2>
+            <p className="mt-5 text-[16px] leading-relaxed text-neutral-600">
+              Lotus Metal Coat giải quyết triệt để những nỗi lo lớn nhất của người thợ và chủ nhà khi sơn kim loại. Không chỉ là sơn, đây là giải pháp bảo vệ tối ưu.
+            </p>
+
+            <div className="mt-8 space-y-6 border-t border-[#E8E4DC] pt-6">
+              <div className="flex gap-4">
+                <span className="text-3xl font-extrabold text-[#2D7A3A] font-display">0%</span>
+                <div>
+                  <h4 className="text-sm font-bold text-neutral-800">Không mùi xăng dung môi</h4>
+                  <p className="text-xs text-neutral-500 mt-0.5">Sơn xong dọn dẹp nhẹ nhàng, dọn vào ở được ngay.</p>
+                </div>
               </div>
-              <h3 className="mt-4 font-display text-xl font-bold">{l.name}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">{l.desc}</p>
+              <div className="flex gap-4">
+                <span className="text-3xl font-extrabold text-[#2D7A3A] font-display">2x</span>
+                <div>
+                  <h4 className="text-sm font-bold text-neutral-800">Bền màu & Kháng UV gấp đôi</h4>
+                  <p className="text-xs text-neutral-500 mt-0.5">Không giòn nứt hay ố vàng dưới nắng nóng khắc nghiệt.</p>
+                </div>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Right comparison box */}
+          <div className="lg:col-span-8">
+            <div className="overflow-hidden rounded-2xl border border-[#E8E4DC] bg-white shadow-xs">
+              <div className="grid grid-cols-12 bg-[#1C2B2B] p-4 text-xs font-bold uppercase tracking-wider text-white">
+                <div className="col-span-3">TIÊU CHÍ</div>
+                <div className="col-span-4 pl-2 text-neutral-400">SƠN DẦU TRUYỀN THỐNG</div>
+                <div className="col-span-5 pl-4 text-emerald-400 flex items-center gap-1">
+                  <Sparkles className="size-3.5 fill-emerald-400" /> SƠN GỐC NƯỚC LOTUS
+                </div>
+              </div>
+
+              <div className="divide-y divide-[#E8E4DC]">
+                {comparison.map((row) => (
+                  <div key={row.criteria} className="grid grid-cols-12 p-5 text-sm items-start transition hover:bg-neutral-50/50">
+                    {/* Criteria */}
+                    <div className="col-span-3 font-bold text-neutral-800 pr-2">
+                      {row.criteria}
+                    </div>
+                    {/* Oil Paint */}
+                    <div className="col-span-4 text-neutral-500 text-xs pr-4 pl-2 leading-relaxed border-l border-neutral-100">
+                      {row.oil}
+                    </div>
+                    {/* Lotus Paint */}
+                    <div className="col-span-5 text-neutral-800 text-xs pl-4 leading-relaxed font-medium border-l-2 border-emerald-500/30 bg-emerald-50/10 py-1 rounded-r-lg">
+                      <div className="flex items-start gap-1.5">
+                        <Check className="size-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="text-[#1C2B2B]">{row.lotus}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <p className="mt-4 text-center text-xs text-neutral-400 font-medium">
+              * Khảo sát thực tế dựa trên phản hồi của thợ thi công và chủ hộ gia đình tại Việt Nam.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -343,71 +400,127 @@ function Products() {
     {
       name: "Lotus Metal Coat Primer",
       tag: "SƠN LÓT CHỐNG GỈ",
-      desc: "Lót gốc nước bám chắc trên sắt, thép, nhôm, mạ kẽm — ngay cả bề mặt khó bám mà sơn dầu thường trượt.",
-      uses: "Bước đầu tiên của hệ chuẩn 2 lớp — cổng, lan can, hàng rào cần độ bền cao.",
+      desc: "Lót gốc nước chuyên dụng bám dính chắc chắn trên sắt, thép, mạ kẽm, nhôm — tạo liên kết bền vững ngăn chặn ăn mòn và gỉ sét từ lõi kim loại.",
+      uses: "Lớp sơn đầu tiên bắt buộc cho hệ sơn 2 lớp tiêu chuẩn. Cực kỳ khuyên dùng cho cửa cổng ngoài trời, hàng rào, giàn sắt chịu nắng mưa liên tục.",
+      color: "Xám (Grey)",
+      dilution: "Nước sạch (5 - 10%)",
+      coverage: "5 - 6 m²/kg/lớp",
+      time: "30-60 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Mờ (Matt)",
+      icon: Shield,
     },
     {
       name: "Lotus Metal Coat Finish",
-      tag: "SƠN PHỦ MÀU",
-      desc: "Màu hoàn thiện đẹp, đều, không loang — sơn lên sau lớp lót khi khô. Rửa cọ bằng nước, không mùi, thi công trong nhà được.",
-      uses: "Đi cùng Primer tạo hệ 2 lớp chuẩn — cho cổng, cửa sắt, lan can, khung thép.",
+      tag: "SƠN PHỦ MÀU HOÀN THIỆN",
+      desc: "Sơn màu cao cấp phủ bảo vệ và trang trí. Tạo màng sơn mịn đẹp vượt trội, bóng nhẹ sang trọng, giữ màu tối ưu dưới thời tiết nắng nóng khắc nghiệt.",
+      uses: "Sơn phủ màu trang trí (lớp thứ 2) sau khi đã lót Primer. Thích hợp cho tất cả bề mặt kim loại nội và ngoại thất cần độ thẩm mỹ và độ bền màu cao.",
+      color: "28 mã màu chính hãng",
+      dilution: "Nước sạch (5 - 10%)",
+      coverage: "6 - 7 m²/kg/lớp",
+      time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Bóng nhẹ (Satin / Semi-gloss)",
+      icon: Paintbrush,
     },
     {
       name: "Lotus Metal Coat 2in1 / DTM",
-      tag: "ĐA NĂNG — KHUYÊN DÙNG",
-      desc: "Sơn trực tiếp lên sắt mạ kẽm, nhôm, sắt hộp — không cần lót. Một bước, tiết kiệm thời gian, vẫn chống gỉ và bám dính đạt yêu cầu.",
-      uses: "Thi công nhanh, hạng mục không quá khắc nghiệt — cổng, hàng rào, nội thất sắt trong nhà.",
+      tag: "SƠN ĐA NĂNG ĐỒNG THỜI (2-TRONG-1)",
+      desc: "Sản phẩm đột phá tích hợp lót chống gỉ và phủ màu trong cùng một bước sơn. Bám dính trực tiếp cực mạnh lên sắt mạ kẽm, sắt hộp không cần sơn lót.",
+      uses: "Giải pháp thi công siêu tốc cho các công trình sắt mạ kẽm, nhôm, inox trong nhà và ngoài trời ít chịu tác động ăn mòn trực tiếp từ thời tiết.",
+      color: "28 mã màu chính hãng",
+      dilution: "Nước sạch (tối đa 5%)",
+      coverage: "5 - 6 m²/kg/lớp",
+      time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
+      finish: "Bóng nhẹ sang trọng",
       featured: true,
+      icon: Layers,
     },
   ];
+
   return (
     <section id="san-pham" className="bg-white py-[72px]">
       <div className="container-x">
-        <p className={LABEL_CLS} style={{ color: ORANGE }}>SẢN PHẨM</p>
+        <p className={LABEL_CLS} style={{ color: ORANGE }}>CHI TIẾT SẢN PHẨM</p>
         <h2
-          className="mt-4 max-w-3xl font-display font-bold text-balance"
+          className="mt-4 max-w-3xl font-display font-bold text-balance text-[#1C2B2B]"
           style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
         >
-          Chọn đúng sản phẩm cho hạng mục của bạn.
+          Thông số kỹ thuật & Hướng dẫn sử dụng chi tiết.
         </h2>
         <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600">
-          Mỗi sản phẩm phục vụ một bước khác nhau trong quy trình — hoặc gộp làm một nếu chọn 2in1.
+          Mỗi dòng sản phẩm được Lotus thiết kế chuyên biệt để mang lại hiệu quả bảo vệ bền vững nhất cho từng loại công trình.
         </p>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {products.map((p) => (
-            <div
-              key={p.name}
-              className="relative flex flex-col rounded-xl border bg-white p-8"
-              style={{
-                borderColor: "#E8E4DC",
-              }}
-            >
-              {p.featured && (
-                <div
-                  className="absolute -top-3 left-6 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
-                  style={{ background: ORANGE }}
-                >
-                  Khuyên dùng
-                </div>
-              )}
-              <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
-                {p.tag}
-              </div>
-              <h3 className="mt-3 font-display text-xl font-bold">{p.name}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">{p.desc}</p>
-              <div className="mt-4 text-[14px] leading-relaxed text-neutral-700">
-                <span className="font-semibold">Phù hợp: </span>
-                {p.uses}
-              </div>
-              <a
-                href="#form"
-                className="mt-6 inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#E8541A]/90"
-                style={{ background: ORANGE }}
+
+        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          {products.map((p) => {
+            const IconComp = p.icon;
+            return (
+              <div
+                key={p.name}
+                className={`relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  p.featured
+                    ? "border-[#2D7A3A] ring-2 ring-[#2D7A3A]/10 bg-emerald-50/5"
+                    : "border-[#E8E4DC]"
+                }`}
               >
-                Chọn sản phẩm này →
-              </a>
-            </div>
-          ))}
+                {p.featured && (
+                  <div className="absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs">
+                    KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN
+                  </div>
+                )}
+                
+                {/* Product Icon & Badge */}
+                <div className="flex items-center justify-between mb-5">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded">
+                    {p.tag}
+                  </span>
+                  <div className={`p-2.5 rounded-xl ${p.featured ? "bg-[#E8F5E9] text-[#2D7A3A]" : "bg-[#FDFBF7] text-[#E8541A]"}`}>
+                    <IconComp className="size-5" />
+                  </div>
+                </div>
+
+                <h3 className="font-display text-xl font-extrabold text-neutral-900 tracking-tight">{p.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-neutral-600 min-h-[72px]">{p.desc}</p>
+                
+                <div className="mt-4 rounded-xl bg-neutral-50 p-4 border border-neutral-100/50 space-y-2.5 text-xs text-neutral-700">
+                  <div className="flex justify-between py-1 border-b border-neutral-200/40">
+                    <span className="font-semibold text-neutral-400 uppercase tracking-wide">Màu sơn:</span>
+                    <span className="font-bold text-neutral-800">{p.color}</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-neutral-200/40">
+                    <span className="font-semibold text-neutral-400 uppercase tracking-wide">Định mức phủ:</span>
+                    <span className="font-bold text-neutral-800">{p.coverage}</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-neutral-200/40">
+                    <span className="font-semibold text-neutral-400 uppercase tracking-wide">Thời gian khô:</span>
+                    <span className="font-bold text-neutral-800">{p.time}</span>
+                  </div>
+                  <div className="flex justify-between py-1 border-b border-neutral-200/40">
+                    <span className="font-semibold text-neutral-400 uppercase tracking-wide">Pha loãng:</span>
+                    <span className="font-bold text-neutral-800">{p.dilution}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold text-neutral-400 uppercase tracking-wide">Bề mặt màng sơn:</span>
+                    <span className="font-bold text-neutral-800">{p.finish}</span>
+                  </div>
+                </div>
+
+                <div className="mt-5 text-[13px] leading-relaxed text-neutral-600 flex-1">
+                  <span className="font-bold text-neutral-800">Ứng dụng phù hợp: </span>
+                  {p.uses}
+                </div>
+
+                <a
+                  href="#combo"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-bold text-white transition duration-200 hover:opacity-95"
+                  style={{
+                    background: p.featured ? "#2D7A3A" : ORANGE,
+                  }}
+                >
+                  Chọn mua combo có dòng này <ArrowRight className="size-4" />
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
