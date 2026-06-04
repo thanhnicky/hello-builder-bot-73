@@ -2,7 +2,7 @@ import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, R as RefreshCw, D as Droplets, M as MessageCircle, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
+import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, R as RefreshCw, D as Droplets, b as ShoppingCart, c as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -52,42 +52,18 @@ const AccordionContent = reactExports.forwardRef(({ className, children, ...prop
   }
 ));
 AccordionContent.displayName = Content2.displayName;
-const HOTLINE = "0943 966 662";
-const HOTLINE_TEL = "0943966662";
-const ZALO_NUMBER = "0943966662";
-const ZALO_URL = `https://zalo.me/${ZALO_NUMBER}`;
-const BRAND = "Lotus Paint";
-const PRODUCT_LINE = "Lotus Metal Coat";
-const COMPANY_NAME = "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG";
-const COMPANY_TAX_ID = "0313351528";
-const COMPANY_ADDRESS = "99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM";
 function StickyBar() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-3 py-2 backdrop-blur md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "a",
-      {
-        href: ZALO_URL,
-        target: "_blank",
-        rel: "noopener noreferrer",
-        className: "flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] px-4 py-3 text-sm font-semibold text-white active:scale-[0.98]",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "size-4" }),
-          "Nhắn Zalo"
-        ]
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "a",
-      {
-        href: `tel:${HOTLINE_TEL}`,
-        className: "flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground active:scale-[0.98]",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "size-4" }),
-          "Đặt hàng"
-        ]
-      }
-    )
-  ] }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-3 py-2 backdrop-blur md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "a",
+    {
+      href: "#combo",
+      className: "flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#E8541A] px-4 py-3 text-sm font-semibold text-white active:scale-[0.98]",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(ShoppingCart, { className: "size-4" }),
+        "Đặt hàng ngay"
+      ]
+    }
+  ) }) });
 }
 const COLORS = [
   { code: "LDTM-208", name: "Black", hex: "#0b0b0d" },
@@ -156,29 +132,21 @@ function ColorChart() {
         c.code
       )) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-5 sm:p-6 text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl font-bold sm:text-2xl text-[#1C2B2B]", children: "Cần xem mã màu thật trước khi đặt hàng?" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base", children: [
-          "Nhắn Zalo gửi mã màu (ví dụ ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-foreground", children: "LDTM-201" }),
-          ") — Lotus sẽ gửi ảnh thực tế, báo giá và tư vấn lượng sơn cần dùng."
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: ZALO_URL,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] hover:bg-[#1C2B2B]/90 px-5 py-3 text-sm font-semibold text-white transition",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "size-4" }),
-              " Nhắn Zalo xem mã màu thật"
-            ]
-          }
-        )
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl font-bold sm:text-2xl text-[#1C2B2B]", children: "28 mã màu chính hãng Lotus Metal Coat" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base", children: "Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc." })
       ] })
     ] })
   ] }) });
 }
+const HOTLINE = "0943 966 662";
+const HOTLINE_TEL = "0943966662";
+const ZALO_NUMBER = "0943966662";
+const ZALO_URL = `https://zalo.me/${ZALO_NUMBER}`;
+const BRAND = "Lotus Paint";
+const PRODUCT_LINE = "Lotus Metal Coat";
+const COMPANY_NAME = "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG";
+const COMPANY_TAX_ID = "0313351528";
+const COMPANY_ADDRESS = "99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM";
 const logoImg = "/assets/lotus-logo-C0CbJd0t.png";
 const heroImg = "/assets/lotus-hero-C2qi7crC.jpg";
 const appRailing = "/assets/app-railing-DOpXdMKv.jpg";
@@ -189,7 +157,6 @@ const project1 = "/assets/project-1-CERSa3Z3.jpg";
 const project2 = "/assets/project-2-DJJnqbfh.jpg";
 const ORANGE = "#E8541A";
 const OFFWHITE = "#F7F5F2";
-const DARK = "#1C2B2B";
 const TEXT = "#1A1A1A";
 const LABEL_CLS = "text-[12px] font-semibold uppercase tracking-[0.12em]";
 function LotusLanding() {
@@ -369,28 +336,15 @@ function Hero() {
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-[17px] leading-relaxed text-neutral-600 sm:text-[18px]", children: "Gốc nước hoàn toàn · Thi công sạch, an toàn trong nhà · Giao hàng toàn quốc" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-col gap-3 sm:flex-row", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: ZALO_URL,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "inline-flex items-center justify-center rounded-lg px-7 py-4 text-base font-semibold text-white transition hover:opacity-95",
-            style: { background: ORANGE },
-            children: "Nhắn Zalo để chọn đúng hệ sơn →"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: "#san-pham",
-            className: "inline-flex items-center justify-center rounded-lg border-2 px-7 py-4 text-base font-semibold transition hover:bg-[#1C2B2B] hover:text-white",
-            style: { borderColor: DARK, color: DARK },
-            children: "Xem sản phẩm & đặt hàng"
-          }
-        )
-      ] })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 flex flex-col gap-3 sm:flex-row", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: "#san-pham",
+          className: "inline-flex items-center justify-center rounded-lg px-7 py-4 text-base font-semibold text-white transition hover:opacity-95",
+          style: { background: ORANGE },
+          children: "Xem sản phẩm & đặt hàng"
+        }
+      ) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "img",
@@ -854,25 +808,7 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
       }) })
-    ] }) }) : null }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 rounded-2xl border border-[#2D7A3A]/20 bg-gradient-to-br from-emerald-50/10 via-[#FDFBF7] to-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xs", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1 text-center md:text-left", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-[#2D7A3A] bg-[#E8F5E9] px-2.5 py-1 rounded", children: "TƯ VẤN MIỄN PHÍ" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-display text-lg font-extrabold text-neutral-900 mt-2.5", children: "Bạn phân vân chưa biết chọn hệ sơn nào phù hợp?" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-neutral-600 max-w-xl leading-relaxed", children: "Nhắn tin Zalo gửi ảnh hiện trạng hạng mục cổng/lan can của bạn, đội ngũ kỹ thuật của Lotus sẽ phản hồi chính xác hệ sơn cần dùng chỉ trong 3 phút!" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: ZALO_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition hover:opacity-95 shadow-md shrink-0 w-full md:w-auto",
-          style: { background: "#2D7A3A" },
-          children: "Nhắn Zalo Nhận Tư Vấn Ngay →"
-        }
-      )
-    ] })
+    ] }) }) : null })
   ] }) });
 }
 function Applications() {
@@ -1765,18 +1701,7 @@ function FAQ() {
           children: "Câu hỏi hay gặp khi chuyển từ sơn dầu sang sơn gốc nước."
         }
       ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-neutral-600", children: "Còn thắc mắc khác? Nhắn Zalo để được giải đáp trực tiếp." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: ZALO_URL,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition",
-          style: { background: DARK },
-          children: "Hỏi nhanh qua Zalo →"
-        }
-      )
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-neutral-600", children: "Câu hỏi thường gặp về sơn Lotus Metal Coat." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Accordion, { type: "single", collapsible: true, className: "space-y-3", children: qa.map((item, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       AccordionItem,

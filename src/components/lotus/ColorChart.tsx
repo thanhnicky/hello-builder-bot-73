@@ -78,20 +78,11 @@ export function ColorChart() {
 
           <div className="mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-5 sm:p-6 text-center">
             <h3 className="font-display text-xl font-bold sm:text-2xl text-[#1C2B2B]">
-              Cần xem mã màu thật trước khi đặt hàng?
+              28 mã màu chính hãng Lotus Metal Coat
             </h3>
             <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
-              Nhắn Zalo gửi mã màu (ví dụ <span className="font-semibold text-foreground">LDTM-201</span>)
-              — Lotus sẽ gửi ảnh thực tế, báo giá và tư vấn lượng sơn cần dùng.
+              Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc.
             </p>
-            <a
-              href={ZALO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] hover:bg-[#1C2B2B]/90 px-5 py-3 text-sm font-semibold text-white transition"
-            >
-              <MessageCircle className="size-4" /> Nhắn Zalo xem mã màu thật
-            </a>
           </div>
         </div>
       </div>

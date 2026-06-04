@@ -208,18 +208,9 @@ function Hero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href={ZALO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#san-pham"
               className="inline-flex items-center justify-center rounded-lg px-7 py-4 text-base font-semibold text-white transition hover:opacity-95"
               style={{ background: ORANGE }}
-            >
-              Nhắn Zalo để chọn đúng hệ sơn →
-            </a>
-            <a
-              href="#san-pham"
-              className="inline-flex items-center justify-center rounded-lg border-2 px-7 py-4 text-base font-semibold transition hover:bg-[#1C2B2B] hover:text-white"
-              style={{ borderColor: DARK, color: DARK }}
             >
               Xem sản phẩm & đặt hàng
             </a>
@@ -803,30 +794,6 @@ function Decision() {
               </div>
             </div>
           ) : null}
-        </div>
-
-        {/* Bottom Consultation Banner */}
-        <div className="mt-10 rounded-2xl border border-[#2D7A3A]/20 bg-gradient-to-br from-emerald-50/10 via-[#FDFBF7] to-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xs">
-          <div className="space-y-1 text-center md:text-left">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2D7A3A] bg-[#E8F5E9] px-2.5 py-1 rounded">
-              TƯ VẤN MIỄN PHÍ
-            </span>
-            <h4 className="font-display text-lg font-extrabold text-neutral-900 mt-2.5">
-              Bạn phân vân chưa biết chọn hệ sơn nào phù hợp?
-            </h4>
-            <p className="text-sm text-neutral-600 max-w-xl leading-relaxed">
-              Nhắn tin Zalo gửi ảnh hiện trạng hạng mục cổng/lan can của bạn, đội ngũ kỹ thuật của Lotus sẽ phản hồi chính xác hệ sơn cần dùng chỉ trong 3 phút!
-            </p>
-          </div>
-          <a
-            href={ZALO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition hover:opacity-95 shadow-md shrink-0 w-full md:w-auto"
-            style={{ background: "#2D7A3A" }}
-          >
-            Nhắn Zalo Nhận Tư Vấn Ngay →
-          </a>
         </div>
       </div>
     </section>
@@ -1881,17 +1848,8 @@ function FAQ() {
             Câu hỏi hay gặp khi chuyển từ sơn dầu sang sơn gốc nước.
           </h2>
           <p className="mt-4 text-neutral-600">
-            Còn thắc mắc khác? Nhắn Zalo để được giải đáp trực tiếp.
+            Câu hỏi thường gặp về sơn Lotus Metal Coat.
           </p>
-          <a
-            href={ZALO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
-            style={{ background: DARK }}
-          >
-            Hỏi nhanh qua Zalo →
-          </a>
         </div>
         <div className="lg:col-span-2">
           <Accordion type="single" collapsible className="space-y-3">

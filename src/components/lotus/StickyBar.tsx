@@ -1,25 +1,15 @@
-import { MessageCircle, Phone } from "lucide-react";
-import { HOTLINE_TEL, ZALO_URL } from "./constants";
+import { ShoppingCart } from "lucide-react";
 
 export function StickyBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 px-3 py-2 backdrop-blur md:hidden">
       <div className="flex items-center gap-2">
         <a
-          href={ZALO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#1C2B2B] px-4 py-3 text-sm font-semibold text-white active:scale-[0.98]"
+          href="#combo"
+          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#E8541A] px-4 py-3 text-sm font-semibold text-white active:scale-[0.98]"
         >
-          <MessageCircle className="size-4" />
-          Nhắn Zalo
-        </a>
-        <a
-          href={`tel:${HOTLINE_TEL}`}
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground active:scale-[0.98]"
-        >
-          <Phone className="size-4" />
-          Đặt hàng
+          <ShoppingCart className="size-4" />
+          Đặt hàng ngay
         </a>
       </div>
     </div>

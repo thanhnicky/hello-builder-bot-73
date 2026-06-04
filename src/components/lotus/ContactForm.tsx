@@ -42,17 +42,8 @@ export function ContactForm() {
         <CheckCircle2 className="mx-auto size-12 text-[#1C2B2B]" />
         <h3 className="mt-4 text-xl font-semibold">Đã gửi yêu cầu!</h3>
         <p className="mt-2 text-sm text-neutral-600">
-          Lotus sẽ liên hệ lại trong giờ làm việc. Để được tư vấn nhanh, bạn có thể nhắn Zalo kèm ảnh hạng mục.
+          Lotus sẽ liên hệ lại trong giờ làm việc để hỗ trợ bạn.
         </p>
-        <a
-          href={ZALO_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-5 inline-flex items-center rounded-lg px-5 py-3 text-sm font-semibold text-white hover:bg-[#1C2B2B]/90 transition"
-          style={{ background: "#1C2B2B" }}
-        >
-          Gửi ảnh qua Zalo ngay →
-        </a>
       </div>
     );
   }
