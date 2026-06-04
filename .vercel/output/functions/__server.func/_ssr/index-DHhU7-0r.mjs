@@ -520,7 +520,6 @@ function Products() {
       coverage: "5 - 6 m²/kg/lớp",
       time: "30 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng nhẹ sang trọng",
-      featured: true,
       icon: Layers,
       image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
     }
@@ -541,9 +540,8 @@ function Products() {
       return /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
-          className: `relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${p.featured ? "border-[#E8541A] ring-2 ring-[#E8541A]/10 bg-orange-50/5" : "border-[#E8E4DC]"}`,
+          className: "relative flex flex-col rounded-xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-[#E8E4DC]",
           children: [
-            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#E8541A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10", children: "KHUYÊN DÙNG" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
@@ -555,7 +553,7 @@ function Products() {
             ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-5", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `p-2.5 rounded-xl ${p.featured ? "bg-[#FFF4ED] text-[#E8541A]" : "bg-[#FDFBF7] text-[#E8541A]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-2.5 rounded-xl bg-[#FDFBF7] text-[#E8541A]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl font-extrabold text-neutral-900 tracking-tight", children: p.name }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm leading-relaxed text-neutral-600 min-h-[72px]", children: p.desc }),
