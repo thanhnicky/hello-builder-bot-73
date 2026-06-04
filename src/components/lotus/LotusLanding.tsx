@@ -1845,16 +1845,16 @@ function Projects() {
       system: "Primer + Finish",
       area: "TP.HCM",
       quote:
-        "Trước giờ toàn dùng sơn dầu, lần này thử Lotus thấy khác hẳn — không có mùi xăng, sơn xong ở nhà luôn được. Bề mặt ra đẹp, mịn không thua gì.",
+        "Trước giờ toàn dùng sơn dầu, lần này thử Lotus thấy khác hẳn — không có mùi xăng, sơn xong ở nhà luôn được. Bề mặt ra đẹp, mịn không thua gì sơn dầu.",
       author: "Anh Hùng — Chủ nhà",
     },
     {
       img: project1,
-      item: "Hàng rào sắt + lan can",
-      system: "2in1 / DTM",
+      item: "Lan can + cầu thang sắt",
+      system: "Primer + Finish",
       area: "Bình Dương",
       quote:
-        "Dùng 2in1 cho hàng rào mạ kẽm, không cần lót riêng mà vẫn bám chắc. Tiết kiệm được một bước, thi công nhanh hơn rõ ràng. Sau mưa vẫn ổn.",
+        "Dùng hệ Primer + Finish cho lan can cầu thang sắt — bám dính cực tốt, bền bỉ ngoài trời. Thi công nhanh hơn sơn dầu, không mùi xăng, sơn xong ở nhà luôn được.",
       author: "Anh Tâm — Nhà thầu",
     },
     {
