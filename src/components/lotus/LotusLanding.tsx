@@ -710,35 +710,47 @@ function Decision() {
         <div className="mt-10 flex flex-wrap gap-3 border-b border-[#E8E4DC] pb-4">
           <button
             onClick={() => setActiveTab("standard")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${
               activeTab === "standard"
-                ? "bg-[#1C2B2B] text-white shadow-sm"
-                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+                ? "bg-[#E8541A] text-white shadow-md"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"
             }`}
           >
-            <span className="inline-block w-8 h-8 rounded-lg bg-[#1C2B2B]/10 text-[#1C2B2B] text-[16px] font-extrabold leading-8 text-center mr-2">01</span>
+            <span className={`inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${
+              activeTab === "standard"
+                ? "bg-white/20 text-white"
+                : "bg-[#E8541A]/10 text-[#E8541A]"
+            }`}>01</span>
             Hệ chuẩn Bền Bỉ (Lót + Phủ)
           </button>
           <button
             onClick={() => setActiveTab("dtm")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${
               activeTab === "dtm"
-                ? "bg-[#2D7A3A] text-white shadow-sm"
-                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+                ? "bg-[#E8541A] text-white shadow-md"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"
             }`}
           >
-            <span className="inline-block w-8 h-8 rounded-lg bg-[#2D7A3A]/10 text-[#2D7A3A] text-[16px] font-extrabold leading-8 text-center mr-2">02</span>
+            <span className={`inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${
+              activeTab === "dtm"
+                ? "bg-white/20 text-white"
+                : "bg-[#E8541A]/10 text-[#E8541A]"
+            }`}>02</span>
             Hệ 2in1 Siêu Tốc (DTM trực tiếp)
           </button>
           <button
             onClick={() => setActiveTab("premium")}
-            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${
               activeTab === "premium"
-                ? "bg-[#E8541A] text-white shadow-sm"
-                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+                ? "bg-[#E8541A] text-white shadow-md"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"
             }`}
           >
-            <span className="inline-block w-8 h-8 rounded-lg bg-[#E8541A]/10 text-[#E8541A] text-[16px] font-extrabold leading-8 text-center mr-2">03</span>
+            <span className={`inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${
+              activeTab === "premium"
+                ? "bg-white/20 text-white"
+                : "bg-[#E8541A]/10 text-[#E8541A]"
+            }`}>03</span>
             Hệ cao cấp (Lót + Phủ + Bóng)
           </button>
         </div>

@@ -782,9 +782,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("standard"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "standard" ? "bg-[#1C2B2B] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "standard" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#1C2B2B]/10 text-[#1C2B2B] text-[16px] font-extrabold leading-8 text-center mr-2", children: "01" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "standard" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "01" }),
             "Hệ chuẩn Bền Bỉ (Lót + Phủ)"
           ]
         }
@@ -793,9 +793,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("dtm"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "dtm" ? "bg-[#2D7A3A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "dtm" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#2D7A3A]/10 text-[#2D7A3A] text-[16px] font-extrabold leading-8 text-center mr-2", children: "02" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "dtm" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "02" }),
             "Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
           ]
         }
@@ -804,9 +804,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("premium"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block w-8 h-8 rounded-lg bg-[#E8541A]/10 text-[#E8541A] text-[16px] font-extrabold leading-8 text-center mr-2", children: "03" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "premium" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "03" }),
             "Hệ cao cấp (Lót + Phủ + Bóng)"
           ]
         }
