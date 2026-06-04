@@ -76,16 +76,22 @@ export function LotusLanding() {
         <Combos
           c1q1={c1q1} setC1q1={setC1q1}
           c1q1Color={c1q1Color} setC1q1Color={setC1q1Color}
+          c1q1Custom={c1q1Custom} setC1q1Custom={setC1q1Custom}
           c1q2={c1q2} setC1q2={setC1q2}
           c1q2Color={c1q2Color} setC1q2Color={setC1q2Color}
+          c1q2Custom={c1q2Custom} setC1q2Custom={setC1q2Custom}
           c2q1={c2q1} setC2q1={setC2q1}
           c2q1Color={c2q1Color} setC2q1Color={setC2q1Color}
+          c2q1Custom={c2q1Custom} setC2q1Custom={setC2q1Custom}
           c2q2={c2q2} setC2q2={setC2q2}
           c2q2Color={c2q2Color} setC2q2Color={setC2q2Color}
+          c2q2Custom={c2q2Custom} setC2q2Custom={setC2q2Custom}
           c3q1={c3q1} setC3q1={setC3q1}
           c3q1Color={c3q1Color} setC3q1Color={setC3q1Color}
+          c3q1Custom={c3q1Custom} setC3q1Custom={setC3q1Custom}
           c3q2={c3q2} setC3q2={setC3q2}
           c3q2Color={c3q2Color} setC3q2Color={setC3q2Color}
+          c3q2Custom={c3q2Custom} setC3q2Custom={setC3q2Custom}
           paymentMethod={paymentMethod}
         />
         <FormSection
@@ -783,64 +789,55 @@ function Applications() {
 }
 
 const COLOR_OPTIONS = [
-  "LDTM-208 Black",
-  "LDTM-209 Black Knight",
-  "LDTM-201 Midnight Navy",
-  "LDTM-204 Blue Lagoon",
-  "LDTM-216 Velvet Wine",
-  "LDTM-223 Exotic Red",
-  "LDTM-219 Ancient Fern",
-  "LDTM-220 Buffet Green",
-  "LDTM-210 Charcoal",
-  "LDTM-211 Dark Slate",
-  "LDTM-202 Steel Blue",
-  "LDTM-205 Sky Breeze",
-  "LDTM-217 Burgundy",
-  "LDTM-224 Sunset Orange",
-  "LDTM-221 Forest Green",
-  "LDTM-222 Olive Branch",
-  "LDTM-212 Ash Gray",
-  "LDTM-213 Silver Mist",
-  "LDTM-203 Royal Blue",
-  "LDTM-206 Arctic Blue",
-  "LDTM-218 Rose Taupe",
-  "LDTM-225 Amber Gold",
-  "LDTM-226 Mustard Yellow",
-  "LDTM-214 Pearl White",
-  "LDTM-215 Ivory Cream",
-  "LDTM-207 Denim Blue",
-  "LDTM-227 Terracotta",
-  "LDTM-228 Copper Rust",
+  "Đen tuyền",
+  "Xám đậm",
+  "Xám ánh bạc",
+  "Xanh navy",
+  "Nâu đồng",
+  "Trắng kem",
+  "Tùy chỉnh"
 ];
 
 /* ---------------- COMBOS ---------------- */
 function Combos({
   c1q1, setC1q1,
   c1q1Color, setC1q1Color,
+  c1q1Custom, setC1q1Custom,
   c1q2, setC1q2,
   c1q2Color, setC1q2Color,
+  c1q2Custom, setC1q2Custom,
   c2q1, setC2q1,
   c2q1Color, setC2q1Color,
+  c2q1Custom, setC2q1Custom,
   c2q2, setC2q2,
   c2q2Color, setC2q2Color,
+  c2q2Custom, setC2q2Custom,
   c3q1, setC3q1,
   c3q1Color, setC3q1Color,
+  c3q1Custom, setC3q1Custom,
   c3q2, setC3q2,
   c3q2Color, setC3q2Color,
+  c3q2Custom, setC3q2Custom,
   paymentMethod,
 }: {
   c1q1: number; setC1q1: (v: number) => void;
   c1q1Color: string; setC1q1Color: (v: string) => void;
+  c1q1Custom: string; setC1q1Custom: (v: string) => void;
   c1q2: number; setC1q2: (v: number) => void;
   c1q2Color: string; setC1q2Color: (v: string) => void;
+  c1q2Custom: string; setC1q2Custom: (v: string) => void;
   c2q1: number; setC2q1: (v: number) => void;
   c2q1Color: string; setC2q1Color: (v: string) => void;
+  c2q1Custom: string; setC2q1Custom: (v: string) => void;
   c2q2: number; setC2q2: (v: number) => void;
   c2q2Color: string; setC2q2Color: (v: string) => void;
+  c2q2Custom: string; setC2q2Custom: (v: string) => void;
   c3q1: number; setC3q1: (v: number) => void;
   c3q1Color: string; setC3q1Color: (v: string) => void;
+  c3q1Custom: string; setC3q1Custom: (v: string) => void;
   c3q2: number; setC3q2: (v: number) => void;
   c3q2Color: string; setC3q2Color: (v: string) => void;
+  c3q2Custom: string; setC3q2Custom: (v: string) => void;
   paymentMethod: string;
 }) {
 
@@ -936,6 +933,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c1q1Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c1q1Custom}
+                        onChange={(e) => setC1q1Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -963,6 +969,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c1q2Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c1q2Custom}
+                        onChange={(e) => setC1q2Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -1021,6 +1036,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c2q1Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c2q1Custom}
+                        onChange={(e) => setC2q1Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -1048,6 +1072,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c2q2Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c2q2Custom}
+                        onChange={(e) => setC2q2Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -1098,6 +1131,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c3q1Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c3q1Custom}
+                        onChange={(e) => setC3q1Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -1125,6 +1167,15 @@ function Combos({
                         </option>
                       ))}
                     </select>
+                    {c3q2Color === "Tùy chỉnh" && (
+                      <input
+                        type="text"
+                        value={c3q2Custom}
+                        onChange={(e) => setC3q2Custom(e.target.value)}
+                        placeholder="Mô tả màu bạn muốn..."
+                        className="mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                      />
+                    )}
                   </div>
                 )}
               </div>
@@ -1428,79 +1479,16 @@ function FormSection({
               <div className="mt-3 space-y-3.5 text-sm text-neutral-800">
                 {activeItems.length > 0 ? (
                   activeItems.map((it) => {
-                    let colorVal = "";
-                    let setColorVal: (v: string) => void = () => {};
-                    let customVal = "";
-                    let setCustomVal: (v: string) => void = () => {};
-
-                    if (it.name === "Combo tiết kiệm nhỏ") {
-                      colorVal = c1q1Color;
-                      setColorVal = setC1q1Color;
-                      customVal = c1q1Custom;
-                      setCustomVal = setC1q1Custom;
-                    } else if (it.name === "Combo tiết kiệm lớn") {
-                      colorVal = c1q2Color;
-                      setColorVal = setC1q2Color;
-                      customVal = c1q2Custom;
-                      setCustomVal = setC1q2Custom;
-                    } else if (it.name === "Combo thông dụng nhỏ") {
-                      colorVal = c2q1Color;
-                      setColorVal = setC2q1Color;
-                      customVal = c2q1Custom;
-                      setCustomVal = setC2q1Custom;
-                    } else if (it.name === "Combo thông dụng lớn") {
-                      colorVal = c2q2Color;
-                      setColorVal = setC2q2Color;
-                      customVal = c2q2Custom;
-                      setCustomVal = setC2q2Custom;
-                    } else if (it.name === "Hũ 1kg 2in1") {
-                      colorVal = c3q1Color;
-                      setColorVal = setC3q1Color;
-                      customVal = c3q1Custom;
-                      setCustomVal = setC3q1Custom;
-                    } else if (it.name === "Thùng 5kg 2in1") {
-                      colorVal = c3q2Color;
-                      setColorVal = setC3q2Color;
-                      customVal = c3q2Custom;
-                      setCustomVal = setC3q2Custom;
-                    }
-
+                    const displayColor = it.color === "Tùy chỉnh" ? (it.custom || "Màu tùy chỉnh chưa ghi chú") : (it.color || "Chưa chọn");
                     return (
-                      <div key={it.name} className="py-2.5 border-b border-neutral-100/50 last:border-none">
-                        <div className="flex items-center justify-between text-sm font-semibold text-neutral-800">
-                          <span>— {it.name} x{it.qty}: {formatVND(it.qty * it.price)}</span>
+                      <div key={it.name} className="py-2 px-1 border-b border-neutral-100/50 last:border-none flex justify-between items-center text-sm">
+                        <div className="flex flex-col leading-snug">
+                          <span className="font-semibold text-neutral-800">— {it.name} x{it.qty}</span>
+                          <span className="text-xs text-neutral-500 font-medium">
+                            Màu sơn: <span className="font-bold text-[#2D7A3A]">{displayColor}</span>
+                          </span>
                         </div>
-                        
-                        {/* Dropdown màu sơn */}
-                        <div className="mt-2.5 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between bg-white p-2 rounded-lg border border-neutral-100 shadow-2xs">
-                          <span className="text-xs text-neutral-500 font-medium">Chọn màu sơn:</span>
-                          <select
-                            value={colorVal}
-                            onChange={(e) => setColorVal(e.target.value)}
-                            className="rounded-md border border-[#E8E4DC] bg-white px-2 py-1 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A] min-w-[160px] font-medium cursor-pointer"
-                          >
-                            <option value="">Chưa chọn màu</option>
-                            <option value="Đen tuyền">Đen tuyền</option>
-                            <option value="Xám đậm">Xám đậm</option>
-                            <option value="Xám ánh bạc">Xám ánh bạc</option>
-                            <option value="Xanh navy">Xanh navy</option>
-                            <option value="Nâu đồng">Nâu đồng</option>
-                            <option value="Trắng kem">Trắng kem</option>
-                            <option value="Tùy chỉnh">Tùy chỉnh (ghi chú)</option>
-                          </select>
-                        </div>
-
-                        {colorVal === "Tùy chỉnh" && (
-                          <div className="mt-2 pl-1">
-                            <input
-                              type="text"
-                              value={customVal}
-                              onChange={(e) => setCustomVal(e.target.value)}
-                              placeholder="Mô tả màu bạn muốn..."
-                              className="w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
-                            />
-                          </div>
-                        )}
+                        <span className="font-bold text-neutral-900">{formatVND(it.qty * it.price)}</span>
                       </div>
                     );
                   })

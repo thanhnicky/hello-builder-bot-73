@@ -229,26 +229,38 @@ function LotusLanding() {
           setC1q1,
           c1q1Color,
           setC1q1Color,
+          c1q1Custom,
+          setC1q1Custom,
           c1q2,
           setC1q2,
           c1q2Color,
           setC1q2Color,
+          c1q2Custom,
+          setC1q2Custom,
           c2q1,
           setC2q1,
           c2q1Color,
           setC2q1Color,
+          c2q1Custom,
+          setC2q1Custom,
           c2q2,
           setC2q2,
           c2q2Color,
           setC2q2Color,
+          c2q2Custom,
+          setC2q2Custom,
           c3q1,
           setC3q1,
           c3q1Color,
           setC3q1Color,
+          c3q1Custom,
+          setC3q1Custom,
           c3q2,
           setC3q2,
           c3q2Color,
           setC3q2Color,
+          c3q2Custom,
+          setC3q2Custom,
           paymentMethod
         }
       ),
@@ -826,60 +838,51 @@ function Applications() {
   ] }) });
 }
 const COLOR_OPTIONS = [
-  "LDTM-208 Black",
-  "LDTM-209 Black Knight",
-  "LDTM-201 Midnight Navy",
-  "LDTM-204 Blue Lagoon",
-  "LDTM-216 Velvet Wine",
-  "LDTM-223 Exotic Red",
-  "LDTM-219 Ancient Fern",
-  "LDTM-220 Buffet Green",
-  "LDTM-210 Charcoal",
-  "LDTM-211 Dark Slate",
-  "LDTM-202 Steel Blue",
-  "LDTM-205 Sky Breeze",
-  "LDTM-217 Burgundy",
-  "LDTM-224 Sunset Orange",
-  "LDTM-221 Forest Green",
-  "LDTM-222 Olive Branch",
-  "LDTM-212 Ash Gray",
-  "LDTM-213 Silver Mist",
-  "LDTM-203 Royal Blue",
-  "LDTM-206 Arctic Blue",
-  "LDTM-218 Rose Taupe",
-  "LDTM-225 Amber Gold",
-  "LDTM-226 Mustard Yellow",
-  "LDTM-214 Pearl White",
-  "LDTM-215 Ivory Cream",
-  "LDTM-207 Denim Blue",
-  "LDTM-227 Terracotta",
-  "LDTM-228 Copper Rust"
+  "Đen tuyền",
+  "Xám đậm",
+  "Xám ánh bạc",
+  "Xanh navy",
+  "Nâu đồng",
+  "Trắng kem",
+  "Tùy chỉnh"
 ];
 function Combos({
   c1q1,
   setC1q1,
   c1q1Color,
   setC1q1Color,
+  c1q1Custom,
+  setC1q1Custom,
   c1q2,
   setC1q2,
   c1q2Color,
   setC1q2Color,
+  c1q2Custom,
+  setC1q2Custom,
   c2q1,
   setC2q1,
   c2q1Color,
   setC2q1Color,
+  c2q1Custom,
+  setC2q1Custom,
   c2q2,
   setC2q2,
   c2q2Color,
   setC2q2Color,
+  c2q2Custom,
+  setC2q2Custom,
   c3q1,
   setC3q1,
   c3q1Color,
   setC3q1Color,
+  c3q1Custom,
+  setC3q1Custom,
   c3q2,
   setC3q2,
   c3q2Color,
   setC3q2Color,
+  c3q2Custom,
+  setC3q2Custom,
   paymentMethod
 }) {
   const total1 = c1q1 * 375e3 + c1q2 * 168e4;
@@ -961,6 +964,16 @@ function Combos({
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
                     }
+                  ),
+                  c1q1Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c1q1Custom,
+                      onChange: (e) => setC1q1Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                    }
                   )
                 ] })
               ] }),
@@ -984,6 +997,16 @@ function Combos({
                         /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
+                    }
+                  ),
+                  c1q2Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c1q2Custom,
+                      onChange: (e) => setC1q2Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
                     }
                   )
                 ] })
@@ -1043,6 +1066,16 @@ function Combos({
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
                     }
+                  ),
+                  c2q1Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c2q1Custom,
+                      onChange: (e) => setC2q1Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                    }
                   )
                 ] })
               ] }),
@@ -1066,6 +1099,16 @@ function Combos({
                         /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
+                    }
+                  ),
+                  c2q2Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c2q2Custom,
+                      onChange: (e) => setC2q2Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
                     }
                   )
                 ] })
@@ -1113,6 +1156,16 @@ function Combos({
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
                     }
+                  ),
+                  c3q1Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c3q1Custom,
+                      onChange: (e) => setC3q1Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
+                    }
                   )
                 ] })
               ] }),
@@ -1136,6 +1189,16 @@ function Combos({
                         /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
                         COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
                       ]
+                    }
+                  ),
+                  c3q2Color === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "input",
+                    {
+                      type: "text",
+                      value: c3q2Custom,
+                      onChange: (e) => setC3q2Custom(e.target.value),
+                      placeholder: "Mô tả màu bạn muốn...",
+                      className: "mt-2 w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
                     }
                   )
                 ] })
@@ -1351,83 +1414,21 @@ function FormSection({
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold uppercase tracking-wide", style: { color: ORANGE }, children: "Thông tin đơn hàng" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-3 space-y-3.5 text-sm text-neutral-800", children: [
             activeItems.length > 0 ? activeItems.map((it) => {
-              let colorVal = "";
-              let setColorVal = () => {
-              };
-              let customVal = "";
-              let setCustomVal = () => {
-              };
-              if (it.name === "Combo tiết kiệm nhỏ") {
-                colorVal = c1q1Color;
-                setColorVal = setC1q1Color;
-                customVal = c1q1Custom;
-                setCustomVal = setC1q1Custom;
-              } else if (it.name === "Combo tiết kiệm lớn") {
-                colorVal = c1q2Color;
-                setColorVal = setC1q2Color;
-                customVal = c1q2Custom;
-                setCustomVal = setC1q2Custom;
-              } else if (it.name === "Combo thông dụng nhỏ") {
-                colorVal = c2q1Color;
-                setColorVal = setC2q1Color;
-                customVal = c2q1Custom;
-                setCustomVal = setC2q1Custom;
-              } else if (it.name === "Combo thông dụng lớn") {
-                colorVal = c2q2Color;
-                setColorVal = setC2q2Color;
-                customVal = c2q2Custom;
-                setCustomVal = setC2q2Custom;
-              } else if (it.name === "Hũ 1kg 2in1") {
-                colorVal = c3q1Color;
-                setColorVal = setC3q1Color;
-                customVal = c3q1Custom;
-                setCustomVal = setC3q1Custom;
-              } else if (it.name === "Thùng 5kg 2in1") {
-                colorVal = c3q2Color;
-                setColorVal = setC3q2Color;
-                customVal = c3q2Custom;
-                setCustomVal = setC3q2Custom;
-              }
-              return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-2.5 border-b border-neutral-100/50 last:border-none", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-between text-sm font-semibold text-neutral-800", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
-                  "— ",
-                  it.name,
-                  " x",
-                  it.qty,
-                  ": ",
-                  formatVND(it.qty * it.price)
-                ] }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-2.5 flex flex-col gap-1.5 sm:flex-row sm:items-center sm:justify-between bg-white p-2 rounded-lg border border-neutral-100 shadow-2xs", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-neutral-500 font-medium", children: "Chọn màu sơn:" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "select",
-                    {
-                      value: colorVal,
-                      onChange: (e) => setColorVal(e.target.value),
-                      className: "rounded-md border border-[#E8E4DC] bg-white px-2 py-1 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A] min-w-[160px] font-medium cursor-pointer",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Đen tuyền", children: "Đen tuyền" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xám đậm", children: "Xám đậm" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xám ánh bạc", children: "Xám ánh bạc" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Xanh navy", children: "Xanh navy" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Nâu đồng", children: "Nâu đồng" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Trắng kem", children: "Trắng kem" }),
-                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "Tùy chỉnh", children: "Tùy chỉnh (ghi chú)" })
-                      ]
-                    }
-                  )
+              const displayColor = it.color === "Tùy chỉnh" ? it.custom || "Màu tùy chỉnh chưa ghi chú" : it.color || "Chưa chọn";
+              return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "py-2 px-1 border-b border-neutral-100/50 last:border-none flex justify-between items-center text-sm", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col leading-snug", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-semibold text-neutral-800", children: [
+                    "— ",
+                    it.name,
+                    " x",
+                    it.qty
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs text-neutral-500 font-medium", children: [
+                    "Màu sơn: ",
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-[#2D7A3A]", children: displayColor })
+                  ] })
                 ] }),
-                colorVal === "Tùy chỉnh" && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2 pl-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "input",
-                  {
-                    type: "text",
-                    value: customVal,
-                    onChange: (e) => setCustomVal(e.target.value),
-                    placeholder: "Mô tả màu bạn muốn...",
-                    className: "w-full rounded-md border border-[#E8E4DC] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#2D7A3A]"
-                  }
-                ) })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-neutral-900", children: formatVND(it.qty * it.price) })
               ] }, it.name);
             }) : /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-neutral-500", children: "Chưa chọn sản phẩm — vui lòng chọn combo ở trên." }),
             paymentMethod === "online" && grandTotal > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[#2D7A3A] font-semibold text-sm pt-2.5 border-t border-dashed border-neutral-200", children: [
