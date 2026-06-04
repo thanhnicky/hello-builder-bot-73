@@ -1029,7 +1029,7 @@ function Combos({
           style: { borderColor: "#E8E4DC" },
           children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "CƠ BẢN" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo tiết kiệm" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo thông dụng (khuyên dùng)" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót chống gỉ + Sơn phủ màu hoàn thiện" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex flex-wrap gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat Primer" }),
@@ -1129,8 +1129,8 @@ function Combos({
                 children: "Khuyên dùng"
               }
             ),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "PHỔ BIẾN NHẤT" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo thông dụng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "CHUYÊN NGHIỆP" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Combo cao cấp" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 flex flex-wrap gap-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Primer" }),
@@ -1224,7 +1224,7 @@ function Combos({
           style: { borderColor: "#E8E4DC" },
           children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500", children: "THI CÔNG NHANH" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Gói 2in1 / DTM" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-3 font-display text-xl font-bold", children: "Tiết kiệm lót và phủ màu chung 2in1" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng." }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat 2in1 / DTM" }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
@@ -1374,10 +1374,10 @@ function FormSection({
   const [note, setNote] = reactExports.useState("");
   const [errors, setErrors] = reactExports.useState({});
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3, color: c1q1Color, custom: c1q1Custom },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4, color: c1q2Color, custom: c1q2Custom },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 61e4, color: c2q1Color, custom: c2q1Custom },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 2745e3, color: c2q2Color, custom: c2q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c1q1, price: 375e3, color: c1q1Color, custom: c1q1Custom },
+    { name: "Combo thông dụng lớn", qty: c1q2, price: 168e4, color: c1q2Color, custom: c1q2Custom },
+    { name: "Combo cao cấp nhỏ", qty: c2q1, price: 61e4, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo cao cấp lớn", qty: c2q2, price: 2745e3, color: c2q2Color, custom: c2q2Custom },
     { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4, color: c3q1Color, custom: c3q1Custom },
     { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4, color: c3q2Color, custom: c3q2Custom }
   ];

@@ -1008,7 +1008,7 @@ function Combos({
             <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
               CƠ BẢN
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Combo tiết kiệm</h3>
+            <h3 className="mt-3 font-display text-xl font-bold">Combo thông dụng (khuyên dùng)</h3>
             <p className="mt-1 text-sm text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện</p>
             
             <div className="mt-4 flex flex-wrap gap-2">
@@ -1108,9 +1108,9 @@ function Combos({
               Khuyên dùng
             </div>
             <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
-              PHỔ BIẾN NHẤT
+              CHUYÊN NGHIỆP
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Combo thông dụng</h3>
+            <h3 className="mt-3 font-display text-xl font-bold">Combo cao cấp</h3>
             <p className="mt-1 text-sm text-neutral-600">Sơn lót + Sơn phủ màu + Sơn phủ trong suốt bảo vệ ngoài trời</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -1207,7 +1207,7 @@ function Combos({
             <div className="text-xs font-semibold uppercase tracking-[0.12em] text-neutral-500">
               THI CÔNG NHANH
             </div>
-            <h3 className="mt-3 font-display text-xl font-bold">Gói 2in1 / DTM</h3>
+            <h3 className="mt-3 font-display text-xl font-bold">Tiết kiệm lót và phủ màu chung 2in1</h3>
             <p className="mt-1 text-sm text-neutral-600">Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng.</p>
 
             <div className="mt-4 flex flex-wrap gap-2">
@@ -1416,10 +1416,10 @@ function FormSection({
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000, color: c1q1Color, custom: c1q1Custom },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 610000, color: c2q1Color, custom: c2q1Custom },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 2745000, color: c2q2Color, custom: c2q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c1q1, price: 375000, color: c1q1Color, custom: c1q1Custom },
+    { name: "Combo thông dụng lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
+    { name: "Combo cao cấp nhỏ", qty: c2q1, price: 610000, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo cao cấp lớn", qty: c2q2, price: 2745000, color: c2q2Color, custom: c2q2Custom },
     { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color, custom: c3q1Custom },
     { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color, custom: c3q2Custom },
   ];
