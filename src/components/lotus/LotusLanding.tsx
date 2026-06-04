@@ -908,7 +908,7 @@ function Applications() {
     { img: appGate, label: "Cổng sắt" },
     { img: appFence, label: "Vỏ container" },
     { img: appRailing, label: "Cầu thang sắt" },
-    { img: appDoor, label: "Cửa sắt" },
+    { img: appDoor, label: "Thép hộp mạ kẽm" },
     { img: appSteel, label: "Khung thép, kết cấu" },
     { img: appAluminum, label: "Đường ống PCCC" },
   ];
