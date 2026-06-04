@@ -1525,7 +1525,7 @@ function FormSection({
               rows: 3,
               value: note,
               onChange: (e) => setNote(e.target.value),
-              placeholder: "Màu sơn muốn chọn, yêu cầu kỹ thuật đặc biệt...",
+              placeholder: 'Ghi yêu cầu bề mặt "Bóng - Bóng 50% - Mờ"',
               className: inputCls
             }
           )
