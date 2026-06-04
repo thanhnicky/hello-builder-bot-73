@@ -313,9 +313,11 @@ function Hero() {
         <div className="lg:col-span-5">
           <img
             src={heroImg}
-            alt="Cổng kim loại sơn bằng Lotus Metal Coat — bề mặt mịn, bóng đẹp"
+            alt="Cổng sắt sơn bằng Lotus Metal Coat gốc nước — bề mặt mịn bóng đẹp"
             width={1536}
             height={1024}
+            loading="eager"
+            fetchPriority="high"
             className="aspect-[4/5] w-full rounded-2xl object-cover"
           />
         </div>
@@ -549,8 +551,10 @@ function Products() {
                 <div className="overflow-hidden rounded-xl mb-5 aspect-[16/10] flex items-center justify-center bg-[#F7F5F2] border border-[#E8E4DC]/30">
                   <img
                     src={p.image}
-                    alt={p.name}
+                    alt={p.name === "Lotus Metal Coat Primer" ? "Lotus Metal Coat Primer — sơn lót chống gỉ gốc nước cho sắt thép" : p.name === "Lotus Metal Coat Finish" ? "Lotus Metal Coat Finish — sơn phủ màu hoàn thiện gốc nước 28 màu" : "Lotus Metal Coat 2in1 DTM — sơn thẳng lên mạ kẽm không cần lót riêng"}
                     loading="lazy"
+                    width={400}
+                    height={250}
                     className="max-w-[85%] max-h-[85%] object-contain transition duration-300 hover:scale-105"
                   />
                 </div>
@@ -919,8 +923,10 @@ function Applications() {
               <div className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]">
                 <img
                   src={a.img}
-                  alt={a.label}
+                  alt={a.label === "Cổng sắt" ? "Cổng sắt thi công sơn Lotus Metal Coat tại TP.HCM" : a.label === "Hàng rào" ? "Hàng rào sắt mạ kẽm sơn 2in1 DTM Lotus — không cần lót riêng" : a.label === "Lan can ban công" ? "Lan can ban công sơn Lotus Metal Coat chống gỉ ngoài trời" : a.label === "Cửa sắt" ? "Cửa sắt sơn hệ Primer + Finish Lotus Metal Coat" : a.label === "Khung thép, kết cấu" ? "Khung thép kết cấu công trình sơn Lotus Metal Coat" : "Mạ kẽm sơn Lotus Metal Coat 2in1 không cần lót"}
                   loading="lazy"
+                  width={800}
+                  height={600}
                   className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
@@ -1868,7 +1874,14 @@ function Projects() {
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {items.map((it) => (
             <article key={it.item} className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-white">
-              <img src={it.img} alt={it.item} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+              <img 
+                src={it.img} 
+                alt={it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An"} 
+                loading="lazy" 
+                width={800}
+                height={600}
+                className="aspect-[4/3] w-full object-cover" 
+              />
               <div className="p-6">
                 <div className="flex flex-wrap gap-1.5">
                   <Chip>Hạng mục: {it.item}</Chip>
@@ -1987,6 +2000,7 @@ function Footer() {
             <div className="font-semibold">{COMPANY_NAME}</div>
             <div className="text-neutral-600">MST: <span className="text-black">{COMPANY_TAX_ID}</span></div>
             <div className="text-neutral-600">Đ/c: <span className="text-black">{COMPANY_ADDRESS}</span></div>
+            <div className="text-neutral-600">Phục vụ khu vực: TP.HCM · Bình Dương · Đồng Nai · Long An · Tây Ninh</div>
           </div>
         </div>
 

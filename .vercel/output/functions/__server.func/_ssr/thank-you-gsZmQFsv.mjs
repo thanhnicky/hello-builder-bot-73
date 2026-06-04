@@ -28,6 +28,18 @@ function ThankYouPage() {
       setLoading(false);
     }
   }, []);
+  reactExports.useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "Đặt Hàng Thành Công | Lotus Metal Coat";
+    const metaRobots = document.createElement("meta");
+    metaRobots.name = "robots";
+    metaRobots.content = "noindex, nofollow";
+    document.head.appendChild(metaRobots);
+    return () => {
+      document.title = prevTitle;
+      document.head.removeChild(metaRobots);
+    };
+  }, []);
   function formatVND(val) {
     return val.toLocaleString("vi-VN") + "đ";
   }
