@@ -766,7 +766,7 @@ function Decision() {
                       Bền bỉ tối đa
                     </span>
                     <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
-                      Quy trình Hệ Chuẩn (Primer + Finish)
+                      Quy trình Hệ Chuẩn (Sơn lót + Sơn phủ màu)
                     </h3>
                     <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
                       Khuyên dùng tuyệt đối cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Lót chống gỉ trước giúp màng sơn màu bền bỉ gấp hai lần.
@@ -809,7 +809,7 @@ function Decision() {
                       Thi công siêu tốc
                     </span>
                     <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
-                      Quy trình Hệ 2in1 (Direct to Metal)
+                      Quy trình Hệ 2in1 (Sơn 1 lớp không cần sơn lót)
                     </h3>
                     <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
                       Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, cấu kiện nhôm kính, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng.
@@ -852,7 +852,7 @@ function Decision() {
                       Bảo vệ tối đa
                     </span>
                     <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
-                      Quy trình Hệ Cao Cấp (Primer + Finish + Phủ bóng)
+                      Quy trình Hệ Cao Cấp (Sơn lót + Sơn phủ màu + Phủ bóng bảo vệ)
                     </h3>
                     <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
                       Giải pháp hoàn hảo cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Thêm lớp phủ bóng bảo vệ giúp màng sơn bền vững gấp ba lần.

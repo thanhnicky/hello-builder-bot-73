@@ -816,7 +816,7 @@ function Decision() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Bền bỉ tối đa" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Chuẩn (Primer + Finish)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Chuẩn (Sơn lót + Sơn phủ màu)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Khuyên dùng tuyệt đối cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Lót chống gỉ trước giúp màng sơn màu bền bỉ gấp hai lần." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -845,7 +845,7 @@ function Decision() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Thi công siêu tốc" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ 2in1 (Direct to Metal)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ 2in1 (Sơn 1 lớp không cần sơn lót)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, cấu kiện nhôm kính, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -874,7 +874,7 @@ function Decision() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Bảo vệ tối đa" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Cao Cấp (Primer + Finish + Phủ bóng)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Cao Cấp (Sơn lót + Sơn phủ màu + Phủ bóng bảo vệ)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Giải pháp hoàn hảo cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Thêm lớp phủ bóng bảo vệ giúp màng sơn bền vững gấp ba lần." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
