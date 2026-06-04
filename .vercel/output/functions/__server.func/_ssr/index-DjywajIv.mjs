@@ -908,7 +908,7 @@ function Combos({
   paymentMethod
 }) {
   const total1 = c1q1 * 375e3 + c1q2 * 168e4;
-  const total2 = c2q1 * 751e3 + c2q2 * 342e4;
+  const total2 = c2q1 * 61e4 + c2q2 * 2745e3;
   const total3 = c3q1 * 21e4 + c3q2 * 89e4;
   const grandTotal = total1 + total2 + total3;
   function formatVND(val) {
@@ -1071,7 +1071,7 @@ function Combos({
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 3 hũ 1kg" }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "751.000đ" })
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "610.000đ" })
                   ] }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q1, onChange: setC2q1 })
                 ] }),
@@ -1105,7 +1105,7 @@ function Combos({
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 3 thùng 5kg" }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "3.420.000đ" })
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "2.745.000đ" })
                   ] }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q2, onChange: setC2q2 })
                 ] }),
@@ -1305,8 +1305,8 @@ function FormSection({
   const orderItems = [
     { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3, color: c1q1Color, custom: c1q1Custom },
     { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4, color: c1q2Color, custom: c1q2Custom },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3, color: c2q1Color, custom: c2q1Custom },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4, color: c2q2Color, custom: c2q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 61e4, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 2745e3, color: c2q2Color, custom: c2q2Custom },
     { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4, color: c3q1Color, custom: c3q1Custom },
     { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4, color: c3q2Color, custom: c3q2Custom }
   ];

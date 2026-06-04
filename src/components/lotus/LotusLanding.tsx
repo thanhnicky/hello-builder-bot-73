@@ -864,7 +864,7 @@ function Combos({
 }) {
 
   const total1 = c1q1 * 375000 + c1q2 * 1680000;
-  const total2 = c2q1 * 751000 + c2q2 * 3420000;
+  const total2 = c2q1 * 610000 + c2q2 * 2745000;
   const total3 = c3q1 * 210000 + c3q2 * 890000;
   const grandTotal = total1 + total2 + total3;
 
@@ -1039,7 +1039,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 3 hũ 1kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>751.000đ</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>610.000đ</p>
                   </div>
                   <Stepper value={c2q1} onChange={setC2q1} />
                 </div>
@@ -1075,7 +1075,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-neutral-800">Combo lớn — 3 thùng 5kg</p>
-                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>3.420.000đ</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>2.745.000đ</p>
                   </div>
                   <Stepper value={c2q2} onChange={setC2q2} />
                 </div>
@@ -1333,8 +1333,8 @@ function FormSection({
   const orderItems = [
     { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000, color: c1q1Color, custom: c1q1Custom },
     { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000, color: c2q1Color, custom: c2q1Custom },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000, color: c2q2Color, custom: c2q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 610000, color: c2q1Color, custom: c2q1Custom },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 2745000, color: c2q2Color, custom: c2q2Custom },
     { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color, custom: c3q1Custom },
     { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color, custom: c3q2Custom },
   ];
