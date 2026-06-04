@@ -2,7 +2,7 @@ import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, M as MessageCircle, A as ArrowRight, R as RefreshCw, D as Droplets, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
+import { S as Sparkles, C as Check, a as Shield, P as Paintbrush, L as Layers, A as ArrowRight, R as RefreshCw, D as Droplets, M as MessageCircle, b as Phone, c as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-context.mjs";
 import "../_libs/radix-ui__react-collection.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
@@ -219,9 +219,9 @@ function LotusLanding() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Problem, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Solution, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Products, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ColorChart, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Decision, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Applications, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ColorChart, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         Combos,
         {

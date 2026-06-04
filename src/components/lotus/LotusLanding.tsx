@@ -70,9 +70,9 @@ export function LotusLanding() {
         <Problem />
         <Solution />
         <Products />
-        <ColorChart />
         <Decision />
         <Applications />
+        <ColorChart />
         <Combos
           c1q1={c1q1} setC1q1={setC1q1}
           c1q1Color={c1q1Color} setC1q1Color={setC1q1Color}
