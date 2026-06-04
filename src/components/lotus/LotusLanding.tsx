@@ -28,7 +28,7 @@ import appSteel from "@/assets/son-ket-cau-thep-lotus.jpg";
 import appAluminum from "@/assets/son-duong-ong-cuu-hoa-lotus.jpg";
 import appGate from "@/assets/son-cong-sat-son-lotus-kim-loai.jpg";
 import appDoor from "@/assets/son-thep-ma-kem-lotus.jpg";
-import project1 from "@/assets/project-1.jpg";
+import project1 from "@/assets/son-cau-thang-lan-can-lotus.jpg";
 import project2 from "@/assets/son-cua-sat-khong-mui.jpg";
 import primerImg from "@/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer.png";
 import finishImg from "@/assets/son-phu-mau-kim-loai-lotus-meta-coat-finish.png";
