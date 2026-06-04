@@ -156,9 +156,9 @@ function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-7 text-sm font-medium text-neutral-600 md:flex">
           <a href="#san-pham" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Sản phẩm</a>
-          <a href="#bang-mau" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Bảng màu</a>
           <a href="#chon-he-son" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Chọn hệ sơn</a>
           <a href="#hang-muc" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Hạng mục</a>
+          <a href="#bang-mau" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Bảng màu</a>
           <a href="#combo" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Combo</a>
           <a href="#order-form" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Đặt Hàng</a>
           <a href="#du-an" className="hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full">Dự án</a>
@@ -205,13 +205,6 @@ function Header() {
               Sản phẩm
             </a>
             <a
-              href="#bang-mau"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
-            >
-              Bảng màu
-            </a>
-            <a
               href="#chon-he-son"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
@@ -224,6 +217,13 @@ function Header() {
               className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
             >
               Hạng mục
+            </a>
+            <a
+              href="#bang-mau"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block py-2 text-sm font-medium text-neutral-600 hover:text-black relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-[#E8541A] after:transition-all hover:after:w-full"
+            >
+              Bảng màu
             </a>
             <a
               href="#combo"
