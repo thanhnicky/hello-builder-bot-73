@@ -1877,28 +1877,28 @@ function Projects() {
         >
           Một số hạng mục đã thi công với hệ sơn Lotus Metal Coat.
         </h2>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 lg:grid-cols-3 sm:grid-cols-2">
           {items.map((it) => (
-            <article key={it.item} className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group">
+            <article key={it.item} className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
                   src={it.img} 
-                  alt={it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An"} 
+                  alt={it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Lan can + cầu thang sắt" ? "Dự án lan can và cầu thang sắt sơn Lotus Metal Coat Primer + Finish tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An"} 
                   loading="lazy" 
                   width={800}
                   height={600}
                   className="relative aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" 
                 />
               </div>
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <div className="flex flex-wrap gap-1.5">
                   <Chip>Hạng mục: {it.item}</Chip>
                   <Chip>Hệ sơn: {it.system}</Chip>
                   <Chip>Khu vực: {it.area}</Chip>
                 </div>
-                <p className="mt-4 text-[15px] italic leading-relaxed text-neutral-800">"{it.quote}"</p>
-                <p className="mt-2 text-sm font-medium text-neutral-500">— {it.author}</p>
+                <p className="mt-4 text-[14px] sm:text-[15px] italic leading-relaxed text-neutral-800">"{it.quote}"</p>
+                <p className="mt-2 text-xs sm:text-sm font-medium text-neutral-500">— {it.author}</p>
               </div>
             </article>
           ))}

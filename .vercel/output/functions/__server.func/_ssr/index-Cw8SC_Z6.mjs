@@ -1727,14 +1727,14 @@ function Projects() {
         children: "Một số hạng mục đã thi công với hệ sơn Lotus Metal Coat."
       }
     ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3", children: items.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid gap-6 lg:grid-cols-3 sm:grid-cols-2", children: items.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-white group shadow-sm hover:shadow-lg transition-shadow duration-300", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "img",
           {
             src: it.img,
-            alt: it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Hàng rào + lan can" ? "Dự án hàng rào sắt và lan can sơn 2in1 DTM tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An",
+            alt: it.item === "Cổng sắt 2 cánh" ? "Dự án cổng sắt 2 cánh thi công Lotus Metal Coat Primer + Finish tại TP.HCM" : it.item === "Lan can + cầu thang sắt" ? "Dự án lan can và cầu thang sắt sơn Lotus Metal Coat Primer + Finish tại Bình Dương" : "Dự án khung thép xưởng sơn Lotus Metal Coat Primer + Finish tại Long An",
             loading: "lazy",
             width: 800,
             height: 600,
@@ -1742,7 +1742,7 @@ function Projects() {
           }
         )
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-5 sm:p-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-1.5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(Chip, { children: [
             "Hạng mục: ",
@@ -1757,12 +1757,12 @@ function Projects() {
             it.area
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-4 text-[15px] italic leading-relaxed text-neutral-800", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-4 text-[14px] sm:text-[15px] italic leading-relaxed text-neutral-800", children: [
           '"',
           it.quote,
           '"'
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-2 text-sm font-medium text-neutral-500", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-2 text-xs sm:text-sm font-medium text-neutral-500", children: [
           "— ",
           it.author
         ] })
