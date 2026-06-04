@@ -587,9 +587,9 @@ function Products() {
       return /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
-          className: `relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${p.featured ? "border-[#2D7A3A] ring-2 ring-[#2D7A3A]/10 bg-emerald-50/5" : "border-[#E8E4DC]"}`,
+          className: `relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${p.featured ? "border-[#E8541A] ring-2 ring-[#E8541A]/10 bg-orange-50/5" : "border-[#E8E4DC]"}`,
           children: [
-            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10", children: "KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN" }),
+            p.featured && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-3.5 left-6 rounded-full bg-[#E8541A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10", children: "KHUYÊN DÙNG" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl mb-5 aspect-[16/10] bg-neutral-100 border border-neutral-100/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "img",
               {
@@ -601,7 +601,7 @@ function Products() {
             ) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-5", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded", children: p.tag }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `p-2.5 rounded-xl ${p.featured ? "bg-[#E8F5E9] text-[#2D7A3A]" : "bg-[#FDFBF7] text-[#E8541A]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `p-2.5 rounded-xl ${p.featured ? "bg-[#FFF4ED] text-[#E8541A]" : "bg-[#FDFBF7] text-[#E8541A]"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsx(IconComp, { className: "size-5" }) })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-display text-xl font-extrabold text-neutral-900 tracking-tight", children: p.name }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm leading-relaxed text-neutral-600 min-h-[72px]", children: p.desc }),
@@ -692,6 +692,38 @@ function Decision() {
       icon: Droplets
     }
   ];
+  const premiumSteps = [
+    {
+      step: 1,
+      title: "Vệ sinh bề mặt kim loại",
+      desc: "Chà nhám sạch các vết gỉ sét cũ, bụi bẩn, dầu mỡ bám dính. Lau khô hoàn toàn bằng khăn sạch để đảm bảo lực bám dính tốt nhất.",
+      icon: RefreshCw
+    },
+    {
+      step: 2,
+      title: "Sơn 1 lớp lót Primer chống gỉ",
+      desc: "Sơn đều 1 lớp lót chống gỉ Lotus Metal Coat Primer. Đây là lớp bảo vệ cốt lõi giúp ngăn chặn oxy hóa ăn mòn sắt thép từ sâu bên trong.",
+      icon: Shield
+    },
+    {
+      step: 3,
+      title: "Sơn 2 lớp màu phủ hoàn thiện",
+      desc: "Sơn tiếp 2 lớp phủ màu Lotus Metal Coat Finish sau khi lớp lót đã khô (khoảng 2 giờ). Đảm bảo bề mặt lên màu chuẩn xác, mịn bóng và kháng tia UV.",
+      icon: Paintbrush
+    },
+    {
+      step: 4,
+      title: "Sơn 1 lớp phủ bóng bảo vệ ngoài trời",
+      desc: "Sơn thêm 1 lớp sơn phủ bóng trong suốt bảo vệ ngoài trời. Tạo lớp màng chắn tia UV, chịu mưa nắng kéo dài, giữ màu bền vững.",
+      icon: Sparkles
+    },
+    {
+      step: 5,
+      title: "Rửa sạch dụng cụ bằng nước",
+      desc: "Sơn gốc nước khô nhanh, không dính két. Chỉ cần đưa cọ vẽ, rulo dưới vòi nước sạch xả nhẹ là sạch bóng, không cần xăng dầu hôi hôi.",
+      icon: Droplets
+    }
+  ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "chon-he-son", className: "py-[72px]", style: { background: OFFWHITE }, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "HỆ SƠN & THI CÔNG" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -725,6 +757,17 @@ function Decision() {
             " Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
           ]
         }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "button",
+        {
+          onClick: () => setActiveTab("premium"),
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Sparkles, { className: "size-4" }),
+            " Hệ cao cấp (Lót + Phủ + Bóng)"
+          ]
+        }
       )
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: activeTab === "standard" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
@@ -755,7 +798,7 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
       }) })
-    ] }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
+    ] }) }) : activeTab === "dtm" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-amber-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-amber-700 border border-amber-200/30", children: "Thi công siêu tốc" }),
@@ -783,7 +826,35 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
       }) })
-    ] }) }) }),
+    ] }) }) : activeTab === "premium" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-orange-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#E8541A] border border-orange-200/30", children: "Bảo vệ tối đa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Cao Cấp (Primer + Finish + Phủ bóng)" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Giải pháp hoàn hảo cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Thêm lớp phủ bóng bảo vệ giúp màng sơn bền vững gấp ba lần." })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "a",
+          {
+            href: "#combo",
+            className: "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            children: [
+              "Xem Combo Hệ cao cấp ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5", children: premiumSteps.map((s) => {
+        const StepIcon = s.icon;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#E8541A] text-xs font-bold text-white font-display", children: s.step }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit", children: /* @__PURE__ */ jsxRuntimeExports.jsx(StepIcon, { className: "size-4" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
+        ] }, s.step);
+      }) })
+    ] }) }) : null }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 rounded-2xl border border-[#2D7A3A]/20 bg-gradient-to-br from-emerald-50/10 via-[#FDFBF7] to-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xs", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1 text-center md:text-left", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[10px] font-extrabold uppercase tracking-wider text-[#2D7A3A] bg-[#E8F5E9] px-2.5 py-1 rounded", children: "TƯ VẤN MIỄN PHÍ" }),

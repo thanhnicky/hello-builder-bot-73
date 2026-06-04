@@ -466,13 +466,13 @@ function Products() {
                 key={p.name}
                 className={`relative flex flex-col rounded-2xl border bg-white p-6 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                   p.featured
-                    ? "border-[#2D7A3A] ring-2 ring-[#2D7A3A]/10 bg-emerald-50/5"
+                    ? "border-[#E8541A] ring-2 ring-[#E8541A]/10 bg-orange-50/5"
                     : "border-[#E8E4DC]"
                 }`}
               >
                 {p.featured && (
-                  <div className="absolute -top-3.5 left-6 rounded-full bg-[#2D7A3A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10">
-                    KHUYÊN DÙNG KHÁCH HÀNG & THỢ SƠN
+                  <div className="absolute -top-3.5 left-6 rounded-full bg-[#E8541A] px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-white shadow-xs z-10">
+                    KHUYÊN DÙNG
                   </div>
                 )}
 
@@ -491,7 +491,7 @@ function Products() {
                   <span className="text-[10px] font-extrabold uppercase tracking-wider text-neutral-400 bg-neutral-100 px-2.5 py-1 rounded">
                     {p.tag}
                   </span>
-                  <div className={`p-2.5 rounded-xl ${p.featured ? "bg-[#E8F5E9] text-[#2D7A3A]" : "bg-[#FDFBF7] text-[#E8541A]"}`}>
+                  <div className={`p-2.5 rounded-xl ${p.featured ? "bg-[#FFF4ED] text-[#E8541A]" : "bg-[#FDFBF7] text-[#E8541A]"}`}>
                     <IconComp className="size-5" />
                   </div>
                 </div>
@@ -537,7 +537,7 @@ function Products() {
 
 /* ---------------- DECISION ---------------- */
 function Decision() {
-  const [activeTab, setActiveTab] = useState<"standard" | "dtm">("standard");
+  const [activeTab, setActiveTab] = useState<"standard" | "dtm" | "premium">("standard");
 
   const standardSteps = [
     {
@@ -593,6 +593,39 @@ function Decision() {
     },
   ];
 
+  const premiumSteps = [
+    {
+      step: 1,
+      title: "Vệ sinh bề mặt kim loại",
+      desc: "Chà nhám sạch các vết gỉ sét cũ, bụi bẩn, dầu mỡ bám dính. Lau khô hoàn toàn bằng khăn sạch để đảm bảo lực bám dính tốt nhất.",
+      icon: RefreshCw,
+    },
+    {
+      step: 2,
+      title: "Sơn 1 lớp lót Primer chống gỉ",
+      desc: "Sơn đều 1 lớp lót chống gỉ Lotus Metal Coat Primer. Đây là lớp bảo vệ cốt lõi giúp ngăn chặn oxy hóa ăn mòn sắt thép từ sâu bên trong.",
+      icon: Shield,
+    },
+    {
+      step: 3,
+      title: "Sơn 2 lớp màu phủ hoàn thiện",
+      desc: "Sơn tiếp 2 lớp phủ màu Lotus Metal Coat Finish sau khi lớp lót đã khô (khoảng 2 giờ). Đảm bảo bề mặt lên màu chuẩn xác, mịn bóng và kháng tia UV.",
+      icon: Paintbrush,
+    },
+    {
+      step: 4,
+      title: "Sơn 1 lớp phủ bóng bảo vệ ngoài trời",
+      desc: "Sơn thêm 1 lớp sơn phủ bóng trong suốt bảo vệ ngoài trời. Tạo lớp màng chắn tia UV, chịu mưa nắng kéo dài, giữ màu bền vững.",
+      icon: Sparkles,
+    },
+    {
+      step: 5,
+      title: "Rửa sạch dụng cụ bằng nước",
+      desc: "Sơn gốc nước khô nhanh, không dính két. Chỉ cần đưa cọ vẽ, rulo dưới vòi nước sạch xả nhẹ là sạch bóng, không cần xăng dầu hôi hôi.",
+      icon: Droplets,
+    },
+  ];
+
   return (
     <section id="chon-he-son" className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
@@ -628,6 +661,16 @@ function Decision() {
             }`}
           >
             <Layers className="size-4" /> Hệ 2in1 Siêu Tốc (DTM trực tiếp)
+          </button>
+          <button
+            onClick={() => setActiveTab("premium")}
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+              activeTab === "premium"
+                ? "bg-[#E8541A] text-white shadow-sm"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            <Sparkles className="size-4" /> Hệ cao cấp (Lót + Phủ + Bóng)
           </button>
         </div>
 
@@ -675,7 +718,7 @@ function Decision() {
                 </div>
               </div>
             </div>
-          ) : (
+          ) : activeTab === "dtm" ? (
             <div>
               <div className="rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -717,7 +760,49 @@ function Decision() {
                 </div>
               </div>
             </div>
-          )}
+          ) : activeTab === "premium" ? (
+            <div>
+              <div className="rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <span className="rounded bg-orange-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#E8541A] border border-orange-200/30">
+                      Bảo vệ tối đa
+                    </span>
+                    <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
+                      Quy trình Hệ Cao Cấp (Primer + Finish + Phủ bóng)
+                    </h3>
+                    <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
+                      Giải pháp hoàn hảo cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Thêm lớp phủ bóng bảo vệ giúp màng sơn bền vững gấp ba lần.
+                    </p>
+                  </div>
+                  <a
+                    href="#combo"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  >
+                    Xem Combo Hệ cao cấp <ArrowRight className="size-3.5" />
+                  </a>
+                </div>
+
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                  {premiumSteps.map((s) => {
+                    const StepIcon = s.icon;
+                    return (
+                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#E8541A] text-xs font-bold text-white font-display">
+                          {s.step}
+                        </span>
+                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
+                          <StepIcon className="size-4" />
+                        </div>
+                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          ) : null}
         </div>
 
         {/* Bottom Consultation Banner */}
