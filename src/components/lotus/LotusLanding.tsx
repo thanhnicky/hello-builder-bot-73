@@ -1755,7 +1755,7 @@ function FormSection({
                         Tiết kiệm 10%
                       </span>
                     </div>
-                    <p className="text-xs text-[#2D7A3A] font-semibold mt-0.5">Giảm ngay 10%</p>
+                    <p className="text-xs text-[#2D7A3A] font-semibold mt-0.5">Giảm ngay 10% và miễn phí giao hàng</p>
                   </div>
                 </div>
               </div>

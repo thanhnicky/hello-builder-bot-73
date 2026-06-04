@@ -1622,7 +1622,7 @@ function FormSection({
                       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-bold text-neutral-800", children: "Chuyển khoản Online" }),
                       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#E8F5E9] px-2 py-0.5 text-[10px] font-bold text-[#2D7A3A]", children: "Tiết kiệm 10%" })
                     ] }),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-[#2D7A3A] font-semibold mt-0.5", children: "Giảm ngay 10%" })
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-[#2D7A3A] font-semibold mt-0.5", children: "Giảm ngay 10% và miễn phí giao hàng" })
                   ] })
                 ]
               }
