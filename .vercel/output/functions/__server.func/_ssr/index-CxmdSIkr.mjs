@@ -697,7 +697,7 @@ function Decision() {
     },
     {
       step: 3,
-      title: "Sơn 2 lớp màu phủ hoàn thiện",
+      title: "Sơn 1 lớp màu phủ hoàn thiện",
       desc: "Sơn tiếp 2 lớp phủ màu Lotus Metal Coat Finish sau khi lớp lót đã khô (khoảng 2 giờ). Đảm bảo bề mặt lên màu chuẩn xác, mịn bóng và kháng tia UV.",
       icon: Paintbrush
     },
@@ -749,7 +749,7 @@ function Decision() {
     },
     {
       step: 3,
-      title: "Sơn 2 lớp màu phủ hoàn thiện",
+      title: "Sơn 1 lớp màu phủ hoàn thiện",
       desc: "Sơn tiếp 2 lớp phủ màu Lotus Metal Coat Finish sau khi lớp lót đã khô (khoảng 2 giờ). Đảm bảo bề mặt lên màu chuẩn xác, mịn bóng và kháng tia UV.",
       icon: Paintbrush
     },
