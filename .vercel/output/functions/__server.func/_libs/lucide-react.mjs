@@ -75,16 +75,33 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$8 = [
+const __iconNode$a = [
   ["path", { d: "M5 12h14", key: "1ays0h" }],
   ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$8);
-const __iconNode$7 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$7);
-const __iconNode$6 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$6);
-const __iconNode$5 = [
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$a);
+const __iconNode$9 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$9);
+const __iconNode$8 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$8);
+const __iconNode$7 = [
+  [
+    "path",
+    {
+      d: "M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z",
+      key: "1ptgy4"
+    }
+  ],
+  [
+    "path",
+    {
+      d: "M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97",
+      key: "1sl1rz"
+    }
+  ]
+];
+const Droplets = createLucideIcon("droplets", __iconNode$7);
+const __iconNode$6 = [
   [
     "path",
     {
@@ -107,8 +124,8 @@ const __iconNode$5 = [
     }
   ]
 ];
-const Layers = createLucideIcon("layers", __iconNode$5);
-const __iconNode$4 = [
+const Layers = createLucideIcon("layers", __iconNode$6);
+const __iconNode$5 = [
   [
     "path",
     {
@@ -117,8 +134,8 @@ const __iconNode$4 = [
     }
   ]
 ];
-const MessageCircle = createLucideIcon("message-circle", __iconNode$4);
-const __iconNode$3 = [
+const MessageCircle = createLucideIcon("message-circle", __iconNode$5);
+const __iconNode$4 = [
   ["path", { d: "m14.622 17.897-10.68-2.913", key: "vj2p1u" }],
   [
     "path",
@@ -135,8 +152,8 @@ const __iconNode$3 = [
     }
   ]
 ];
-const Paintbrush = createLucideIcon("paintbrush", __iconNode$3);
-const __iconNode$2 = [
+const Paintbrush = createLucideIcon("paintbrush", __iconNode$4);
+const __iconNode$3 = [
   [
     "path",
     {
@@ -145,7 +162,14 @@ const __iconNode$2 = [
     }
   ]
 ];
-const Phone = createLucideIcon("phone", __iconNode$2);
+const Phone = createLucideIcon("phone", __iconNode$3);
+const __iconNode$2 = [
+  ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
+  ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
+  ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
+  ["path", { d: "M8 16H3v5", key: "1cv678" }]
+];
+const RefreshCw = createLucideIcon("refresh-cw", __iconNode$2);
 const __iconNode$1 = [
   [
     "path",
@@ -172,9 +196,11 @@ const Sparkles = createLucideIcon("sparkles", __iconNode);
 export {
   ArrowRight as A,
   Check as C,
+  Droplets as D,
   Layers as L,
   MessageCircle as M,
   Paintbrush as P,
+  RefreshCw as R,
   Sparkles as S,
   Shield as a,
   Phone as b,

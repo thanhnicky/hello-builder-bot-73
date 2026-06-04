@@ -73,7 +73,6 @@ export function LotusLanding() {
         <ColorChart />
         <Decision />
         <Applications />
-        <Process />
         <Combos
           c1q1={c1q1} setC1q1={setC1q1}
           c1q1Color={c1q1Color} setC1q1Color={setC1q1Color}
@@ -529,61 +528,211 @@ function Products() {
 
 /* ---------------- DECISION ---------------- */
 function Decision() {
-  const rows = [
+  const [activeTab, setActiveTab] = useState<"standard" | "dtm">("standard");
+
+  const standardSteps = [
     {
-      title: "Hệ chuẩn Primer + Finish",
-      desc: "Chọn khi hạng mục ngoài trời, tiếp xúc thời tiết, hoặc cần bề mặt thật đẹp. Hai lớp — lót trước, phủ màu sau. Bền hơn đáng kể so với chỉ sơn phủ đơn.",
-      tag: "BỀN LÂU",
+      step: 1,
+      title: "Vệ sinh bề mặt kim loại",
+      desc: "Chà nhám sạch các vết gỉ sét cũ, bụi bẩn, dầu mỡ bám dính. Lau khô hoàn toàn bằng khăn sạch để đảm bảo lực bám dính tốt nhất.",
+      icon: RefreshCw,
     },
     {
-      title: "Hệ 2in1 / DTM",
-      desc: "Chọn khi sơn sắt hộp mạ kẽm, nhôm, hoặc hạng mục trong nhà không cần quá nhiều lớp. Một sản phẩm làm cả hai việc — không cần lót riêng.",
-      tag: "THI CÔNG NHANH",
+      step: 2,
+      title: "Sơn 1 lớp lót Primer chống gỉ",
+      desc: "Sơn đều 1 lớp lót chống gỉ Lotus Metal Coat Primer. Đây là lớp bảo vệ cốt lõi giúp ngăn chặn oxy hóa ăn mòn sắt thép từ sâu bên trong.",
+      icon: Shield,
     },
     {
-      title: "Chưa chắc nên chọn loại nào?",
-      desc: "Nhắn Zalo gửi ảnh hạng mục thực tế — Lotus tư vấn đúng hệ sơn trong vài phút, miễn phí, không ép mua.",
-      tag: "TƯ VẤN MIỄN PHÍ",
-      zalo: true,
+      step: 3,
+      title: "Sơn 2 lớp màu phủ hoàn thiện",
+      desc: "Sơn tiếp 2 lớp phủ màu Lotus Metal Coat Finish sau khi lớp lót đã khô (khoảng 2 giờ). Đảm bảo bề mặt lên màu chuẩn xác, mịn bóng và kháng tia UV.",
+      icon: Paintbrush,
+    },
+    {
+      step: 4,
+      title: "Rửa sạch dụng cụ bằng nước",
+      desc: "Sơn gốc nước khô nhanh, không dính két. Chỉ cần đưa cọ vẽ, rulo dưới vòi nước sạch xả nhẹ là sạch bóng, không cần xăng dầu hôi hôi.",
+      icon: Droplets,
     },
   ];
+
+  const dtmSteps = [
+    {
+      step: 1,
+      title: "Vệ sinh bề mặt sắt hộp",
+      desc: "Lau sạch dầu mỡ phủ chống gỉ trên bề mặt sắt hộp mạ kẽm hoặc nhôm. Đảm bảo bề mặt khô ráo hoàn toàn trước khi lăn sơn.",
+      icon: RefreshCw,
+    },
+    {
+      step: 2,
+      title: "Sơn trực tiếp lớp thứ nhất",
+      desc: "Sơn trực tiếp 1 lớp Lotus Metal Coat 2in1 lên kim loại mà không cần lót. Màng sơn tự liên kết bám dính siêu chắc chắn.",
+      icon: Paintbrush,
+    },
+    {
+      step: 3,
+      title: "Sơn lớp thứ hai để lên màu đều",
+      desc: "Chờ 2 giờ cho lớp thứ nhất khô bề mặt, tiến hành sơn tiếp lớp thứ hai. Giúp màng sơn đạt độ dày bảo vệ tối ưu và bóng đẹp đồng màu.",
+      icon: Layers,
+    },
+    {
+      step: 4,
+      title: "Rửa cọ lăn bằng nước sạch",
+      desc: "Không mùi khó chịu, không dính tay. Vệ sinh toàn bộ dụng cụ thi công cực kỳ nhanh gọn và thân thiện với môi trường chỉ bằng nước máy.",
+      icon: Droplets,
+    },
+  ];
+
   return (
     <section id="chon-he-son" className="py-[72px]" style={{ background: OFFWHITE }}>
       <div className="container-x">
-        <p className={LABEL_CLS} style={{ color: ORANGE }}>CHỌN HỆ SƠN</p>
+        <p className={LABEL_CLS} style={{ color: ORANGE }}>HỆ SƠN & THI CÔNG</p>
         <h2
           className="mt-4 max-w-3xl font-display font-bold text-balance text-[#1C2B2B]"
           style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
         >
-          Hai hệ sơn — chọn theo hạng mục, không phải theo thói quen.
+          Chọn đúng hệ sơn — Thi công đúng quy trình.
         </h2>
         <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-neutral-600">
-          Hệ chuẩn cho độ bền tối ưu. Hệ 2in1 cho thi công nhanh. Cả hai đều gốc nước — không xăng dung môi.
+          Lotus mang đến quy trình thi công tối giản, tiết kiệm thời gian mà vẫn đảm bảo độ bền tối ưu nhất cho từng hạng mục công trình.
         </p>
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {rows.map((r) => (
-            <div
-              key={r.title}
-              className="rounded-xl border border-[#E8E4DC] bg-white p-8 ring-soft"
-            >
-              <div className="text-xs font-semibold uppercase tracking-[0.12em]" style={{ color: ORANGE }}>
-                {r.tag}
+
+        {/* Tab Selector buttons */}
+        <div className="mt-10 flex flex-wrap gap-3 border-b border-[#E8E4DC] pb-4">
+          <button
+            onClick={() => setActiveTab("standard")}
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+              activeTab === "standard"
+                ? "bg-[#1C2B2B] text-white shadow-sm"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            <Shield className="size-4" /> Hệ chuẩn Bền Bỉ (Lót + Phủ)
+          </button>
+          <button
+            onClick={() => setActiveTab("dtm")}
+            className={`rounded-xl px-5 py-3 text-sm font-bold transition duration-200 flex items-center gap-2 ${
+              activeTab === "dtm"
+                ? "bg-[#2D7A3A] text-white shadow-sm"
+                : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
+            }`}
+          >
+            <Layers className="size-4" /> Hệ 2in1 Siêu Tốc (DTM trực tiếp)
+          </button>
+        </div>
+
+        {/* Dynamic Tab Content */}
+        <div className="mt-8">
+          {activeTab === "standard" ? (
+            <div>
+              <div className="rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <span className="rounded bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#2D7A3A]">
+                      Bền bỉ tối đa
+                    </span>
+                    <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
+                      Quy trình Hệ Chuẩn (Primer + Finish)
+                    </h3>
+                    <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
+                      Khuyên dùng tuyệt đối cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Lót chống gỉ trước giúp màng sơn màu bền bỉ gấp hai lần.
+                    </p>
+                  </div>
+                  <a
+                    href="#combo"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  >
+                    Xem Combo Hệ chuẩn <ArrowRight className="size-3.5" />
+                  </a>
+                </div>
+
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {standardSteps.map((s) => {
+                    const StepIcon = s.icon;
+                    return (
+                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#1C2B2B] text-xs font-bold text-white font-display">
+                          {s.step}
+                        </span>
+                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
+                          <StepIcon className="size-4" />
+                        </div>
+                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-              <h3 className="mt-3 font-display text-xl font-bold text-[#1C2B2B]">{r.title}</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-neutral-600">{r.desc}</p>
-              {r.zalo && (
-                <a
-                  href={ZALO_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#E8541A]/90 transition"
-                  style={{ background: ORANGE }}
-                >
-                  Gửi ảnh hạng mục qua Zalo →
-                </a>
-              )}
             </div>
-          ))}
+          ) : (
+            <div>
+              <div className="rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <span className="rounded bg-amber-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-amber-700 border border-amber-200/30">
+                      Thi công siêu tốc
+                    </span>
+                    <h3 className="mt-2 font-display text-xl font-extrabold text-neutral-900">
+                      Quy trình Hệ 2in1 (Direct to Metal)
+                    </h3>
+                    <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl">
+                      Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, cấu kiện nhôm kính, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng.
+                    </p>
+                  </div>
+                  <a
+                    href="#combo"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                  >
+                    Xem Combo Hệ 2in1 <ArrowRight className="size-3.5" />
+                  </a>
+                </div>
+
+                <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                  {dtmSteps.map((s) => {
+                    const StepIcon = s.icon;
+                    return (
+                      <div key={s.step} className="relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition">
+                        <span className="absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#2D7A3A] text-xs font-bold text-white font-display">
+                          {s.step}
+                        </span>
+                        <div className="p-2.5 rounded-lg bg-neutral-50 text-neutral-800 w-fit">
+                          <StepIcon className="size-4" />
+                        </div>
+                        <h4 className="mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug">{s.title}</h4>
+                        <p className="mt-2 text-xs leading-relaxed text-neutral-500">{s.desc}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Bottom Consultation Banner */}
+        <div className="mt-10 rounded-2xl border border-[#2D7A3A]/20 bg-gradient-to-br from-emerald-50/10 via-[#FDFBF7] to-white p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xs">
+          <div className="space-y-1 text-center md:text-left">
+            <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#2D7A3A] bg-[#E8F5E9] px-2.5 py-1 rounded">
+              TƯ VẤN MIỄN PHÍ
+            </span>
+            <h4 className="font-display text-lg font-extrabold text-neutral-900 mt-2.5">
+              Bạn phân vân chưa biết chọn hệ sơn nào phù hợp?
+            </h4>
+            <p className="text-sm text-neutral-600 max-w-xl leading-relaxed">
+              Nhắn tin Zalo gửi ảnh hiện trạng hạng mục cổng/lan can của bạn, đội ngũ kỹ thuật của Lotus sẽ phản hồi chính xác hệ sơn cần dùng chỉ trong 3 phút!
+            </p>
+          </div>
+          <a
+            href={ZALO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition hover:opacity-95 shadow-md shrink-0 w-full md:w-auto"
+            style={{ background: "#2D7A3A" }}
+          >
+            Nhắn Zalo Nhận Tư Vấn Ngay →
+          </a>
         </div>
       </div>
     </section>
@@ -627,78 +776,6 @@ function Applications() {
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---------------- PROCESS ---------------- */
-function Process() {
-  const A = [
-    "Vệ sinh bề mặt — tẩy gỉ, lau sạch dầu mỡ và bụi bẩn.",
-    "Sơn lớp lót Primer — chống gỉ, tăng bám dính. Khô sau 1–2 giờ (không cần chờ qua đêm như sơn dầu).",
-    "Sơn lớp phủ Finish — màu hoàn thiện đẹp, đều.",
-    "Rửa cọ bằng nước — không cần xăng, sạch tay, xong việc.",
-  ];
-  const B = [
-    "Vệ sinh bề mặt — tẩy gỉ, lau sạch.",
-    "Sơn lớp 1 Lotus 2in1 / DTM trực tiếp lên kim loại — không cần lót riêng.",
-    "Khô sau 1–2 giờ, sơn lớp 2 để màu đều và chắc hơn.",
-    "Rửa cọ bằng nước. Gọn, nhanh, không mùi.",
-  ];
-  return (
-    <section className="py-[72px]" style={{ background: OFFWHITE }}>
-      <div className="container-x">
-        <p className={LABEL_CLS} style={{ color: ORANGE }}>QUY TRÌNH THI CÔNG</p>
-        <h2
-          className="mt-4 max-w-3xl font-display font-bold text-balance"
-          style={{ fontSize: "clamp(28px, 4.8vw, 52px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
-        >
-          Hai cách thi công — đơn giản hơn sơn dầu nhiều.
-        </h2>
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          <ProcessCard title="Hệ chuẩn Primer + Finish" tag="BỀN TỐI ƯU" steps={A} />
-          <ProcessCard title="Hệ 2in1 / DTM" tag="THI CÔNG NHANH" steps={B} accent />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ProcessCard({
-  title,
-  tag,
-  steps,
-  accent = false,
-}: {
-  title: string;
-  tag: string;
-  steps: string[];
-  accent?: boolean;
-}) {
-  return (
-    <div className="rounded-xl border border-[#E8E4DC] bg-white">
-      <div className="flex items-center justify-between border-b border-[#E8E4DC] px-6 py-4">
-        <h3 className="font-display text-lg font-bold">{title}</h3>
-        <span
-          className="rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
-          style={{ background: DARK }}
-        >
-          {tag}
-        </span>
-      </div>
-      <ol className="divide-y divide-[#E8E4DC]">
-        {steps.map((s, i) => (
-          <li key={i} className="flex gap-4 px-6 py-5">
-            <span
-              className="font-display text-base font-bold tabular-nums"
-              style={{ color: TEXT, minWidth: 22 }}
-            >
-              {i + 1}.
-            </span>
-            <p className="text-[15px] leading-relaxed text-neutral-800">{s}</p>
-          </li>
-        ))}
-      </ol>
-    </div>
   );
 }
 
