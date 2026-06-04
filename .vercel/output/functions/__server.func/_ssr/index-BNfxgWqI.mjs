@@ -782,9 +782,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("standard"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "standard" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "standard" ? "bg-[#1C2B2B] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#1C2B2B]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "standard" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "01" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "standard" ? "bg-white/20 text-white" : "bg-[#1C2B2B]/10 text-[#1C2B2B]"}`, children: "01" }),
             "Hệ chuẩn Bền Bỉ (Lót + Phủ)"
           ]
         }
@@ -793,9 +793,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("dtm"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "dtm" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "dtm" ? "bg-[#1C2B2B] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#1C2B2B]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "dtm" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "02" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "dtm" ? "bg-white/20 text-white" : "bg-[#1C2B2B]/10 text-[#1C2B2B]"}`, children: "02" }),
             "Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
           ]
         }
@@ -804,9 +804,9 @@ function Decision() {
         "button",
         {
           onClick: () => setActiveTab("premium"),
-          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#E8541A]/30"}`,
+          className: `rounded-xl px-5 py-3 text-sm font-bold transition-all duration-300 ease-out ${activeTab === "premium" ? "bg-[#1C2B2B] text-white shadow-md" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-[#F7F5F2] hover:border-[#1C2B2B]/30"}`,
           children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "premium" ? "bg-white/20 text-white" : "bg-[#E8541A]/10 text-[#E8541A]"}`, children: "03" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `inline-block w-8 h-8 rounded-lg text-[16px] font-extrabold leading-8 text-center mr-2 transition-all duration-300 ${activeTab === "premium" ? "bg-white/20 text-white" : "bg-[#1C2B2B]/10 text-[#1C2B2B]"}`, children: "03" }),
             "Hệ cao cấp (Lót + Phủ + Bóng)"
           ]
         }
@@ -815,7 +815,7 @@ function Decision() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8", children: activeTab === "standard" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#E8F5E9] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#2D7A3A]", children: "Bền bỉ tối đa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Bền bỉ tối đa" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Chuẩn (Primer + Finish)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Khuyên dùng tuyệt đối cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Lót chống gỉ trước giúp màng sơn màu bền bỉ gấp hai lần." })
         ] }),
@@ -844,7 +844,7 @@ function Decision() {
     ] }) }) : activeTab === "dtm" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-amber-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-amber-700 border border-amber-200/30", children: "Thi công siêu tốc" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Thi công siêu tốc" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ 2in1 (Direct to Metal)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Giải pháp tiết kiệm 50% thời gian thi công cho sắt hộp mạ kẽm, cấu kiện nhôm kính, vật dụng sắt mỹ thuật trong nhà. Sơn trực tiếp không cần sơn lót riêng." })
         ] }),
@@ -852,13 +852,13 @@ function Decision() {
           "a",
           {
             href: "#combo",
-            className: "hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            className: "hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
             children: "Xem Combo Hệ 2in1"
           }
         )
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4", children: dtmSteps.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#2D7A3A] text-xs font-bold text-white font-display", children: s.step }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#1C2B2B] text-xs font-bold text-white font-display", children: s.step }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-neutral-600", children: s.desc })
       ] }, s.step)) }),
@@ -873,7 +873,7 @@ function Decision() {
     ] }) }) : activeTab === "premium" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-orange-50 px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#E8541A] border border-orange-200/30", children: "Bảo vệ tối đa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-[#F7F5F2] px-2.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#1C2B2B] border border-[#E8E4DC]/30", children: "Bảo vệ tối đa" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-2 font-display text-xl font-extrabold text-neutral-900", children: "Quy trình Hệ Cao Cấp (Primer + Finish + Phủ bóng)" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm text-neutral-600 leading-relaxed max-w-2xl", children: "Giải pháp hoàn hảo cho cổng sắt ngoài trời, lan can ban công, hàng rào sắt chịu nắng mưa trực tiếp. Thêm lớp phủ bóng bảo vệ giúp màng sơn bền vững gấp ba lần." })
         ] }),
@@ -881,13 +881,13 @@ function Decision() {
           "a",
           {
             href: "#combo",
-            className: "hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            className: "hidden md:inline-flex shrink-0 items-center justify-center rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
             children: "Xem Combo Hệ cao cấp"
           }
         )
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5", children: premiumSteps.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-xl border border-neutral-200 bg-white p-6 shadow-2xs hover:shadow-sm transition", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#E8541A] text-xs font-bold text-white font-display", children: s.step }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute -top-3 right-4 flex size-7 items-center justify-center rounded-full bg-[#1C2B2B] text-xs font-bold text-white font-display", children: s.step }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-neutral-600", children: s.desc })
       ] }, s.step)) }),
