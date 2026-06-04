@@ -103,7 +103,7 @@ function ThankYouPage() {
               Đặt hàng thành công!
             </h1>
             <p className="mt-3 text-base text-neutral-600 font-medium">
-              Cảm ơn {order.name}, Lotus sẽ liên hệ xác nhận trong vòng 15 phút.
+              Cảm ơn {order.name} đã lựa chọn sản phẩm Sơn Lotus
             </p>
           </div>
 
@@ -206,7 +206,7 @@ function ThankYouPage() {
                   </div>
                   <div>
                     <span className="text-neutral-500 block text-xs uppercase font-bold tracking-wider">Chủ tài khoản</span>
-                    <span className="font-semibold text-neutral-800 text-base">CÔNG TY TNHH SƠN LOTUS VIỆT NAM</span>
+                    <span className="font-semibold text-neutral-800 text-base">CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG</span>
                   </div>
                   <div>
                     <span className="text-neutral-500 block text-xs uppercase font-bold tracking-wider">Nội dung chuyển khoản</span>
@@ -234,16 +234,16 @@ function ThankYouPage() {
           {/* SECTION 3 — BƯỚC TIẾP THEO */}
           <div className="p-8 sm:p-10 space-y-4">
             <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-500">
-              Các bước tiếp theo
+              Ghi chú:
             </h2>
             <div className="space-y-4 text-sm text-neutral-700 font-medium mt-4">
               <div className="flex gap-3">
                 <span className="text-base select-none">📦</span>
-                <p>Lotus sẽ gọi điện hoặc nhắn tin Zalo xác nhận đơn hàng trong vòng 15 phút.</p>
+                <p>Lotus có thể liên hệ lại với bạn khi cần thiết để xác nhận khi thông tin chưa rõ</p>
               </div>
               <div className="flex gap-3">
                 <span className="text-base select-none">🚚</span>
-                <p>Hàng được đóng gói và giao nhanh 24–48h tại TP.HCM và khu vực lân cận.</p>
+                <p>Hàng được đóng gói và giao nhanh 24–48h tại TP.HCM và khu vực lân cận. Các tỉnh thành khác thời gian giao từ 3-5 ngày theo lịch của đơn vị Giao Hàng Nhanh.</p>
               </div>
               <div className="flex gap-3">
                 <span className="text-base select-none">📞</span>

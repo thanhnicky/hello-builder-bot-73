@@ -55,7 +55,7 @@ function ThankYouPage() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-3 text-base text-neutral-600 font-medium", children: [
           "Cảm ơn ",
           order.name,
-          ", Lotus sẽ liên hệ xác nhận trong vòng 15 phút."
+          " đã lựa chọn sản phẩm Sơn Lotus"
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-8 sm:p-10 border-b border-[#E8E4DC]", children: [
@@ -141,7 +141,7 @@ function ThankYouPage() {
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-neutral-500 block text-xs uppercase font-bold tracking-wider", children: "Chủ tài khoản" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-800 text-base", children: "CÔNG TY TNHH SƠN LOTUS VIỆT NAM" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-neutral-800 text-base", children: "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-neutral-500 block text-xs uppercase font-bold tracking-wider", children: "Nội dung chuyển khoản" }),
@@ -158,15 +158,15 @@ function ThankYouPage() {
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-8 sm:p-10 space-y-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-sm font-bold uppercase tracking-wider text-neutral-500", children: "Các bước tiếp theo" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-sm font-bold uppercase tracking-wider text-neutral-500", children: "Ghi chú:" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4 text-sm text-neutral-700 font-medium mt-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base select-none", children: "📦" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Lotus sẽ gọi điện hoặc nhắn tin Zalo xác nhận đơn hàng trong vòng 15 phút." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Lotus có thể liên hệ lại với bạn khi cần thiết để xác nhận khi thông tin chưa rõ" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base select-none", children: "🚚" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Hàng được đóng gói và giao nhanh 24–48h tại TP.HCM và khu vực lân cận." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Hàng được đóng gói và giao nhanh 24–48h tại TP.HCM và khu vực lân cận. Các tỉnh thành khác thời gian giao từ 3-5 ngày theo lịch của đơn vị Giao Hàng Nhanh." })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base select-none", children: "📞" }),
