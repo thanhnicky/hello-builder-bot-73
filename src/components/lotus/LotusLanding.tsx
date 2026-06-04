@@ -716,7 +716,7 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            Hệ chuẩn Bền Bỉ (Lót + Phủ)
+            01. Hệ chuẩn Bền Bỉ (Lót + Phủ)
           </button>
           <button
             onClick={() => setActiveTab("dtm")}
@@ -726,7 +726,7 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            Hệ 2in1 Siêu Tốc (DTM trực tiếp)
+            02. Hệ 2in1 Siêu Tốc (DTM trực tiếp)
           </button>
           <button
             onClick={() => setActiveTab("premium")}
@@ -736,7 +736,7 @@ function Decision() {
                 : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"
             }`}
           >
-            Hệ cao cấp (Lót + Phủ + Bóng)
+            03. Hệ cao cấp (Lót + Phủ + Bóng)
           </button>
         </div>
 

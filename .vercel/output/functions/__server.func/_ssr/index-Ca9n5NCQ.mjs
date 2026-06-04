@@ -783,7 +783,7 @@ function Decision() {
         {
           onClick: () => setActiveTab("standard"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "standard" ? "bg-[#1C2B2B] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "Hệ chuẩn Bền Bỉ (Lót + Phủ)"
+          children: "01. Hệ chuẩn Bền Bỉ (Lót + Phủ)"
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -791,7 +791,7 @@ function Decision() {
         {
           onClick: () => setActiveTab("dtm"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "dtm" ? "bg-[#2D7A3A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
+          children: "02. Hệ 2in1 Siêu Tốc (DTM trực tiếp)"
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -799,7 +799,7 @@ function Decision() {
         {
           onClick: () => setActiveTab("premium"),
           className: `rounded-xl px-5 py-3 text-sm font-bold transition duration-200 ${activeTab === "premium" ? "bg-[#E8541A] text-white shadow-sm" : "bg-white border border-[#E8E4DC] text-neutral-600 hover:bg-neutral-50"}`,
-          children: "Hệ cao cấp (Lót + Phủ + Bóng)"
+          children: "03. Hệ cao cấp (Lót + Phủ + Bóng)"
         }
       )
     ] }),
