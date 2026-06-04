@@ -906,11 +906,11 @@ function Decision() {
 function Applications() {
   const apps = [
     { img: appGate, label: "Cổng sắt" },
-    { img: appFence, label: "Hàng rào" },
-    { img: appRailing, label: "Lan can ban công" },
+    { img: appFence, label: "Vỏ container" },
+    { img: appRailing, label: "Cầu thang sắt" },
     { img: appDoor, label: "Cửa sắt" },
     { img: appSteel, label: "Khung thép, kết cấu" },
-    { img: appAluminum, label: "Mạ kẽm" },
+    { img: appAluminum, label: "Đường ống PCCC" },
   ];
   return (
     <section id="hang-muc" className="bg-white py-[72px]">

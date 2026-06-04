@@ -914,11 +914,11 @@ function Decision() {
 function Applications() {
   const apps = [
     { img: appGate, label: "Cổng sắt" },
-    { img: appFence, label: "Hàng rào" },
-    { img: appRailing, label: "Lan can ban công" },
+    { img: appFence, label: "Vỏ container" },
+    { img: appRailing, label: "Cầu thang sắt" },
     { img: appDoor, label: "Cửa sắt" },
     { img: appSteel, label: "Khung thép, kết cấu" },
-    { img: appAluminum, label: "Mạ kẽm" }
+    { img: appAluminum, label: "Đường ống PCCC" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "hang-muc", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "HẠNG MỤC ỨNG DỤNG" }),
