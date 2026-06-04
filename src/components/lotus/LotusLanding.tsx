@@ -1863,7 +1863,7 @@ function Projects() {
       system: "Primer + Finish",
       area: "Long An",
       quote:
-        "Chuyển từ sơn dầu sang Lotus cho khung thép xưởng — thợ làm dễ hơn vì không mùi, rửa cọ bằng nước là xong. Chống gỉ tốt, bám chắc trên thép cũ.",
+        "Chuyển từ sơn dầu sang Lotus cho khung thép xưởng — thợ làm dễ hơn vì không mùi, rửa cọ bằng nước là xong. Nhà máy được an toàn, không còn mùi hôi khó chịu nữa.",
       author: "Anh Phong — Chủ xưởng",
     },
   ];
