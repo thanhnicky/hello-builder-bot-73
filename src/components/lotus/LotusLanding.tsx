@@ -21,7 +21,7 @@ import {
 } from "./constants";
 
 import logoImg from "@/assets/lotus-logo.png";
-import heroImg from "@/assets/lotus-hero.jpg";
+import heroImg from "@/assets/son-kim-loai-lotus-hero.jpg";
 import appRailing from "@/assets/app-railing.jpg";
 import appFence from "@/assets/app-fence.jpg";
 import appSteel from "@/assets/app-steel.jpg";
@@ -311,15 +311,18 @@ function Hero() {
         </div>
 
         <div className="lg:col-span-5">
-          <img
-            src={heroImg}
-            alt="Cổng sắt sơn bằng Lotus Metal Coat gốc nước — bề mặt mịn bóng đẹp"
-            width={1536}
-            height={1024}
-            loading="eager"
-            fetchPriority="high"
-            className="aspect-[4/5] w-full rounded-2xl object-cover"
-          />
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-to-br from-orange-100/50 to-transparent rounded-3xl blur-2xl opacity-60"></div>
+            <img
+              src={heroImg}
+              alt="Cổng sắt sơn bằng Lotus Metal Coat gốc nước — bề mặt mịn bóng đẹp"
+              width={1536}
+              height={1024}
+              loading="eager"
+              fetchPriority="high"
+              className="relative aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl shadow-orange-900/10"
+            />
+          </div>
         </div>
       </div>
     </section>

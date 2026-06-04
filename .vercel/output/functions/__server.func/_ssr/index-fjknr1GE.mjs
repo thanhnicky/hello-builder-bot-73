@@ -148,7 +148,7 @@ const COMPANY_NAME = "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍC
 const COMPANY_TAX_ID = "0313351528";
 const COMPANY_ADDRESS = "99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM";
 const logoImg = "/assets/lotus-logo-C0CbJd0t.png";
-const heroImg = "/assets/lotus-hero-C2qi7crC.jpg";
+const heroImg = "/assets/son-kim-loai-lotus-hero-Ckt9od2u.jpg";
 const appRailing = "/assets/app-railing-DOpXdMKv.jpg";
 const appFence = "/assets/app-fence-CZQjZICG.jpg";
 const appSteel = "/assets/app-steel-CWccN3Pg.jpg";
@@ -446,18 +446,21 @@ function Hero() {
         }
       ) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "img",
-      {
-        src: heroImg,
-        alt: "Cổng sắt sơn bằng Lotus Metal Coat gốc nước — bề mặt mịn bóng đẹp",
-        width: 1536,
-        height: 1024,
-        loading: "eager",
-        fetchPriority: "high",
-        className: "aspect-[4/5] w-full rounded-2xl object-cover"
-      }
-    ) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-4 bg-gradient-to-br from-orange-100/50 to-transparent rounded-3xl blur-2xl opacity-60" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "img",
+        {
+          src: heroImg,
+          alt: "Cổng sắt sơn bằng Lotus Metal Coat gốc nước — bề mặt mịn bóng đẹp",
+          width: 1536,
+          height: 1024,
+          loading: "eager",
+          fetchPriority: "high",
+          className: "relative aspect-[4/5] w-full rounded-2xl object-cover shadow-2xl shadow-orange-900/10"
+        }
+      )
+    ] }) })
   ] }) });
 }
 function Problem() {
