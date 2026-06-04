@@ -22,7 +22,7 @@ import {
 
 import logoImg from "@/assets/lotus-logo.png";
 import heroImg from "@/assets/son-kim-loai-lotus-hero.jpg";
-import appRailing from "@/assets/app-railing.jpg";
+import appRailing from "@/assets/son-cau-thang-sat-lotus.jpg";
 import appFence from "@/assets/app-fence.jpg";
 import appSteel from "@/assets/app-steel.jpg";
 import appAluminum from "@/assets/app-aluminum.jpg";
