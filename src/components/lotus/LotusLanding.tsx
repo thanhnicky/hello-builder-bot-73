@@ -23,9 +23,9 @@ import {
 import logoImg from "@/assets/lotus-logo.png";
 import heroImg from "@/assets/son-kim-loai-lotus-hero.jpg";
 import appRailing from "@/assets/son-cau-thang-sat-lotus.jpg";
-import appFence from "@/assets/app-fence.jpg";
-import appSteel from "@/assets/app-steel.jpg";
-import appAluminum from "@/assets/app-aluminum.jpg";
+import appFence from "@/assets/son-container-lotus.jpg";
+import appSteel from "@/assets/son-ket-cau-thep-lotus.jpg";
+import appAluminum from "@/assets/son-duong-ong-cuu-hoa-lotus.jpg";
 import appGate from "@/assets/son-cong-sat-son-lotus-kim-loai.jpg";
 import appDoor from "@/assets/son-cua-sat-son-lotus-kim-loai.jpg";
 import project1 from "@/assets/project-1.jpg";
