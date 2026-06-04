@@ -26,6 +26,8 @@ import appRailing from "@/assets/app-railing.jpg";
 import appFence from "@/assets/app-fence.jpg";
 import appSteel from "@/assets/app-steel.jpg";
 import appAluminum from "@/assets/app-aluminum.jpg";
+import appGate from "@/assets/son-cong-sat-son-lotus-kim-loai.jpg";
+import appDoor from "@/assets/son-cua-sat-son-lotus-kim-loai.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import primerImg from "@/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer.png";
@@ -903,10 +905,10 @@ function Decision() {
 /* ---------------- APPLICATIONS ---------------- */
 function Applications() {
   const apps = [
-    { img: heroImg, label: "Cổng sắt" },
+    { img: appGate, label: "Cổng sắt" },
     { img: appFence, label: "Hàng rào" },
     { img: appRailing, label: "Lan can ban công" },
-    { img: project2, label: "Cửa sắt" },
+    { img: appDoor, label: "Cửa sắt" },
     { img: appSteel, label: "Khung thép, kết cấu" },
     { img: appAluminum, label: "Mạ kẽm" },
   ];
@@ -923,14 +925,15 @@ function Applications() {
         <div className="mt-14 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-3">
           {apps.map((a) => (
             <figure key={a.label} className="group">
-              <div className="overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]">
+              <div className="relative overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img
                   src={a.img}
                   alt={a.label === "Cổng sắt" ? "Cổng sắt thi công sơn Lotus Metal Coat tại TP.HCM" : a.label === "Hàng rào" ? "Hàng rào sắt mạ kẽm sơn 2in1 DTM Lotus — không cần lót riêng" : a.label === "Lan can ban công" ? "Lan can ban công sơn Lotus Metal Coat chống gỉ ngoài trời" : a.label === "Cửa sắt" ? "Cửa sắt sơn hệ Primer + Finish Lotus Metal Coat" : a.label === "Khung thép, kết cấu" ? "Khung thép kết cấu công trình sơn Lotus Metal Coat" : "Mạ kẽm sơn Lotus Metal Coat 2in1 không cần lót"}
                   loading="lazy"
                   width={800}
                   height={600}
-                  className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="relative aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
               <figcaption className="mt-3 text-center">

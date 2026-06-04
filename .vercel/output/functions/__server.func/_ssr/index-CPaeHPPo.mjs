@@ -153,6 +153,8 @@ const appRailing = "/assets/app-railing-DOpXdMKv.jpg";
 const appFence = "/assets/app-fence-CZQjZICG.jpg";
 const appSteel = "/assets/app-steel-CWccN3Pg.jpg";
 const appAluminum = "/assets/app-aluminum-AwgzTVTa.jpg";
+const appGate = "/assets/son-cong-sat-son-lotus-kim-loai-Rq5H45Zx.jpg";
+const appDoor = "/assets/son-cua-sat-son-lotus-kim-loai-CDtEVr1M.jpg";
 const project1 = "/assets/project-1-CERSa3Z3.jpg";
 const project2 = "/assets/project-2-DJJnqbfh.jpg";
 const primerImg = "/assets/son-lot-cho-kim-loai-lotus-metal-coat-primer-CvlkzFGr.png";
@@ -911,10 +913,10 @@ function Decision() {
 }
 function Applications() {
   const apps = [
-    { img: heroImg, label: "Cổng sắt" },
+    { img: appGate, label: "Cổng sắt" },
     { img: appFence, label: "Hàng rào" },
     { img: appRailing, label: "Lan can ban công" },
-    { img: project2, label: "Cửa sắt" },
+    { img: appDoor, label: "Cửa sắt" },
     { img: appSteel, label: "Khung thép, kết cấu" },
     { img: appAluminum, label: "Mạ kẽm" }
   ];
@@ -929,17 +931,20 @@ function Applications() {
       }
     ),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-3", children: apps.map((a) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "img",
-        {
-          src: a.img,
-          alt: a.label === "Cổng sắt" ? "Cổng sắt thi công sơn Lotus Metal Coat tại TP.HCM" : a.label === "Hàng rào" ? "Hàng rào sắt mạ kẽm sơn 2in1 DTM Lotus — không cần lót riêng" : a.label === "Lan can ban công" ? "Lan can ban công sơn Lotus Metal Coat chống gỉ ngoài trời" : a.label === "Cửa sắt" ? "Cửa sắt sơn hệ Primer + Finish Lotus Metal Coat" : a.label === "Khung thép, kết cấu" ? "Khung thép kết cấu công trình sơn Lotus Metal Coat" : "Mạ kẽm sơn Lotus Metal Coat 2in1 không cần lót",
-          loading: "lazy",
-          width: 800,
-          height: 600,
-          className: "aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-        }
-      ) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden rounded-xl border border-[#E8E4DC] bg-[#F7F5F2]", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-orange-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: a.img,
+            alt: a.label === "Cổng sắt" ? "Cổng sắt thi công sơn Lotus Metal Coat tại TP.HCM" : a.label === "Hàng rào" ? "Hàng rào sắt mạ kẽm sơn 2in1 DTM Lotus — không cần lót riêng" : a.label === "Lan can ban công" ? "Lan can ban công sơn Lotus Metal Coat chống gỉ ngoài trời" : a.label === "Cửa sắt" ? "Cửa sắt sơn hệ Primer + Finish Lotus Metal Coat" : a.label === "Khung thép, kết cấu" ? "Khung thép kết cấu công trình sơn Lotus Metal Coat" : "Mạ kẽm sơn Lotus Metal Coat 2in1 không cần lót",
+            loading: "lazy",
+            width: 800,
+            height: 600,
+            className: "relative aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+          }
+        )
+      ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("figcaption", { className: "mt-3 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[15px] sm:text-[16px] font-semibold text-[#1C2B2B]", children: a.label }) })
     ] }, a.label)) })
   ] }) });
