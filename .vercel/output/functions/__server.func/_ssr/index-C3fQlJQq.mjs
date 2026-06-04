@@ -199,6 +199,13 @@ function LotusLanding() {
   const [c2q2, setC2q2] = reactExports.useState(0);
   const [c3q1, setC3q1] = reactExports.useState(0);
   const [c3q2, setC3q2] = reactExports.useState(0);
+  const [c1q1Color, setC1q1Color] = reactExports.useState("");
+  const [c1q2Color, setC1q2Color] = reactExports.useState("");
+  const [c2q1Color, setC2q1Color] = reactExports.useState("");
+  const [c2q2Color, setC2q2Color] = reactExports.useState("");
+  const [c3q1Color, setC3q1Color] = reactExports.useState("");
+  const [c3q2Color, setC3q2Color] = reactExports.useState("");
+  const [paymentMethod, setPaymentMethod] = reactExports.useState("cod");
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-white pb-20 md:pb-0", style: { color: TEXT }, children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
@@ -215,27 +222,48 @@ function LotusLanding() {
         {
           c1q1,
           setC1q1,
+          c1q1Color,
+          setC1q1Color,
           c1q2,
           setC1q2,
+          c1q2Color,
+          setC1q2Color,
           c2q1,
           setC2q1,
+          c2q1Color,
+          setC2q1Color,
           c2q2,
           setC2q2,
+          c2q2Color,
+          setC2q2Color,
           c3q1,
           setC3q1,
+          c3q1Color,
+          setC3q1Color,
           c3q2,
-          setC3q2
+          setC3q2,
+          c3q2Color,
+          setC3q2Color,
+          paymentMethod
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         FormSection,
         {
           c1q1,
+          c1q1Color,
           c1q2,
+          c1q2Color,
           c2q1,
+          c2q1Color,
           c2q2,
+          c2q2Color,
           c3q1,
-          c3q2
+          c3q1Color,
+          c3q2,
+          c3q2Color,
+          paymentMethod,
+          setPaymentMethod
         }
       ),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Projects, {}),
@@ -657,19 +685,62 @@ function ProcessCard({
     ] }, i)) })
   ] });
 }
+const COLOR_OPTIONS = [
+  "LDTM-208 Black",
+  "LDTM-209 Black Knight",
+  "LDTM-201 Midnight Navy",
+  "LDTM-204 Blue Lagoon",
+  "LDTM-216 Velvet Wine",
+  "LDTM-223 Exotic Red",
+  "LDTM-219 Ancient Fern",
+  "LDTM-220 Buffet Green",
+  "LDTM-210 Charcoal",
+  "LDTM-211 Dark Slate",
+  "LDTM-202 Steel Blue",
+  "LDTM-205 Sky Breeze",
+  "LDTM-217 Burgundy",
+  "LDTM-224 Sunset Orange",
+  "LDTM-221 Forest Green",
+  "LDTM-222 Olive Branch",
+  "LDTM-212 Ash Gray",
+  "LDTM-213 Silver Mist",
+  "LDTM-203 Royal Blue",
+  "LDTM-206 Arctic Blue",
+  "LDTM-218 Rose Taupe",
+  "LDTM-225 Amber Gold",
+  "LDTM-226 Mustard Yellow",
+  "LDTM-214 Pearl White",
+  "LDTM-215 Ivory Cream",
+  "LDTM-207 Denim Blue",
+  "LDTM-227 Terracotta",
+  "LDTM-228 Copper Rust"
+];
 function Combos({
   c1q1,
   setC1q1,
+  c1q1Color,
+  setC1q1Color,
   c1q2,
   setC1q2,
+  c1q2Color,
+  setC1q2Color,
   c2q1,
   setC2q1,
+  c2q1Color,
+  setC2q1Color,
   c2q2,
   setC2q2,
+  c2q2Color,
+  setC2q2Color,
   c3q1,
   setC3q1,
+  c3q1Color,
+  setC3q1Color,
   c3q2,
-  setC3q2
+  setC3q2,
+  c3q2Color,
+  setC3q2Color,
+  paymentMethod
 }) {
   const total1 = c1q1 * 375e3 + c1q2 * 168e4;
   const total2 = c2q1 * 751e3 + c2q2 * 342e4;
@@ -702,6 +773,7 @@ function Combos({
       )
     ] });
   }
+  const selectCls = "w-full rounded-md border border-[#E8E4DC] bg-[#FDFBF7] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#E8541A] focus:ring-1 focus:ring-[#E8541A]/20 cursor-pointer font-medium";
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "combo", className: "bg-white py-[72px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: LABEL_CLS, style: { color: ORANGE }, children: "COMBO SẢN PHẨM" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -728,19 +800,53 @@ function Combos({
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat Finish" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 2 hũ 1kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "375.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 2 hũ 1kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "375.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q1, onChange: setC1q1 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q1, onChange: setC1q1 })
+                c1q1 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c1q1Color,
+                      onChange: (e) => setC1q1Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 2 thùng 5kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "1.680.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 pt-3 border-t border-neutral-100", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 2 thùng 5kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "1.680.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q2, onChange: setC1q2 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c1q2, onChange: setC1q2 })
+                c1q2 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c1q2Color,
+                      onChange: (e) => setC1q2Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
@@ -776,19 +882,53 @@ function Combos({
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Sơn phủ trong suốt bảo vệ ngoài trời" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 3 hũ 1kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "751.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo nhỏ — 3 hũ 1kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "751.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q1, onChange: setC2q1 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q1, onChange: setC2q1 })
+                c2q1 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c2q1Color,
+                      onChange: (e) => setC2q1Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 3 thùng 5kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "3.420.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 pt-3 border-t border-neutral-100", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Combo lớn — 3 thùng 5kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "3.420.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q2, onChange: setC2q2 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c2q2, onChange: setC2q2 })
+                c2q2 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c2q2Color,
+                      onChange: (e) => setC2q2Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
@@ -812,19 +952,53 @@ function Combos({
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-sm text-neutral-600", children: "Sơn thẳng lên mạ kẽm, nhôm, sắt hộp — không cần lót riêng." }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 flex flex-wrap gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "rounded bg-neutral-100 px-2 py-1 text-xs text-neutral-700", children: "✓ Lotus Metal Coat 2in1 / DTM" }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Hũ 1kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "210.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Hũ 1kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "210.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q1, onChange: setC3q1 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q1, onChange: setC3q1 })
+                c3q1 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c3q1Color,
+                      onChange: (e) => setC3q1Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Thùng 5kg" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "890.000đ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 pt-3 border-t border-neutral-100", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between gap-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-neutral-800", children: "Thùng 5kg" }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold mt-0.5", style: { color: ORANGE }, children: "890.000đ" })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q2, onChange: setC3q2 })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(Stepper, { value: c3q2, onChange: setC3q2 })
+                c3q2 > 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 pl-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] font-semibold text-neutral-500 uppercase tracking-wider", children: "Mã màu sơn:" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "select",
+                    {
+                      value: c3q2Color,
+                      onChange: (e) => setC3q2Color(e.target.value),
+                      className: selectCls,
+                      children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: "", children: "Chưa chọn màu" }),
+                        COLOR_OPTIONS.map((opt) => /* @__PURE__ */ jsxRuntimeExports.jsx("option", { value: opt, children: opt }, opt))
+                      ]
+                    }
+                  )
+                ] })
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex items-center justify-between border-t border-[#E8E4DC] border-dashed pt-4", children: [
@@ -843,7 +1017,10 @@ function Combos({
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-bold text-neutral-900", children: "Tổng giá trị đơn hàng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-neutral-500 mt-1", children: "Định mức: hũ 1kg ~ 5m²; thùng 5kg ~ 25m²" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:text-right", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-3xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "md:text-right", children: paymentMethod === "online" ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:items-end", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-neutral-400 line-through font-medium", children: formatVND(grandTotal) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-3xl font-extrabold", style: { color: ORANGE }, children: formatVND(Math.round(grandTotal * 0.9)) })
+      ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-3xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "a",
@@ -863,26 +1040,33 @@ function Combos({
 }
 function FormSection({
   c1q1,
+  c1q1Color,
   c1q2,
+  c1q2Color,
   c2q1,
+  c2q1Color,
   c2q2,
+  c2q2Color,
   c3q1,
-  c3q2
+  c3q1Color,
+  c3q2,
+  c3q2Color,
+  paymentMethod,
+  setPaymentMethod
 }) {
   const [name, setName] = reactExports.useState("");
   const [phone, setPhone] = reactExports.useState("");
   const [address, setAddress] = reactExports.useState("");
   const [note, setNote] = reactExports.useState("");
-  const [paymentMethod, setPaymentMethod] = reactExports.useState("cod");
   const [submitted, setSubmitted] = reactExports.useState(false);
   const [errors, setErrors] = reactExports.useState({});
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3 },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4 },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3 },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4 },
-    { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4 },
-    { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4 }
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375e3, color: c1q1Color },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 168e4, color: c1q2Color },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751e3, color: c2q1Color },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 342e4, color: c2q2Color },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 21e4, color: c3q1Color },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 89e4, color: c3q2Color }
   ];
   const activeItems = orderItems.filter((it) => it.qty > 0);
   const grandTotal = orderItems.reduce((sum, it) => sum + it.qty * it.price, 0);
@@ -1011,12 +1195,17 @@ function FormSection({
             " x",
             it.qty,
             ": ",
-            formatVND(it.qty * it.price)
+            formatVND(it.qty * it.price),
+            " — Màu: ",
+            it.color || "Chưa chọn"
           ] }, it.name)) : /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm italic text-neutral-500", children: "Chưa chọn sản phẩm — vui lòng chọn combo ở trên." }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "my-4 border-t border-[#E8E4DC]" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold text-neutral-700", children: "Thành tiền:" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) })
+            paymentMethod === "online" ? /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-neutral-400 line-through font-medium", children: formatVND(grandTotal) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(Math.round(grandTotal * 0.9)) })
+            ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-xl font-extrabold", style: { color: ORANGE }, children: formatVND(grandTotal) })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[11px] leading-relaxed text-neutral-400", children: "* Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-1 text-[11px] leading-relaxed text-neutral-400", children: "Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²" })

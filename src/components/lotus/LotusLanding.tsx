@@ -45,6 +45,15 @@ export function LotusLanding() {
   const [c3q1, setC3q1] = useState(0); // Hũ 1kg 2in1
   const [c3q2, setC3q2] = useState(0); // Thùng 5kg 2in1
 
+  const [c1q1Color, setC1q1Color] = useState("");
+  const [c1q2Color, setC1q2Color] = useState("");
+  const [c2q1Color, setC2q1Color] = useState("");
+  const [c2q2Color, setC2q2Color] = useState("");
+  const [c3q1Color, setC3q1Color] = useState("");
+  const [c3q2Color, setC3q2Color] = useState("");
+
+  const [paymentMethod, setPaymentMethod] = useState("cod");
+
   return (
     <div className="min-h-screen bg-white pb-20 md:pb-0" style={{ color: TEXT }}>
       <Header />
@@ -59,19 +68,34 @@ export function LotusLanding() {
         <Process />
         <Combos
           c1q1={c1q1} setC1q1={setC1q1}
+          c1q1Color={c1q1Color} setC1q1Color={setC1q1Color}
           c1q2={c1q2} setC1q2={setC1q2}
+          c1q2Color={c1q2Color} setC1q2Color={setC1q2Color}
           c2q1={c2q1} setC2q1={setC2q1}
+          c2q1Color={c2q1Color} setC2q1Color={setC2q1Color}
           c2q2={c2q2} setC2q2={setC2q2}
+          c2q2Color={c2q2Color} setC2q2Color={setC2q2Color}
           c3q1={c3q1} setC3q1={setC3q1}
+          c3q1Color={c3q1Color} setC3q1Color={setC3q1Color}
           c3q2={c3q2} setC3q2={setC3q2}
+          c3q2Color={c3q2Color} setC3q2Color={setC3q2Color}
+          paymentMethod={paymentMethod}
         />
         <FormSection
           c1q1={c1q1}
+          c1q1Color={c1q1Color}
           c1q2={c1q2}
+          c1q2Color={c1q2Color}
           c2q1={c2q1}
+          c2q1Color={c2q1Color}
           c2q2={c2q2}
+          c2q2Color={c2q2Color}
           c3q1={c3q1}
+          c3q1Color={c3q1Color}
           c3q2={c3q2}
+          c3q2Color={c3q2Color}
+          paymentMethod={paymentMethod}
+          setPaymentMethod={setPaymentMethod}
         />
         <Projects />
         <FAQ />
@@ -540,21 +564,66 @@ function ProcessCard({
   );
 }
 
+const COLOR_OPTIONS = [
+  "LDTM-208 Black",
+  "LDTM-209 Black Knight",
+  "LDTM-201 Midnight Navy",
+  "LDTM-204 Blue Lagoon",
+  "LDTM-216 Velvet Wine",
+  "LDTM-223 Exotic Red",
+  "LDTM-219 Ancient Fern",
+  "LDTM-220 Buffet Green",
+  "LDTM-210 Charcoal",
+  "LDTM-211 Dark Slate",
+  "LDTM-202 Steel Blue",
+  "LDTM-205 Sky Breeze",
+  "LDTM-217 Burgundy",
+  "LDTM-224 Sunset Orange",
+  "LDTM-221 Forest Green",
+  "LDTM-222 Olive Branch",
+  "LDTM-212 Ash Gray",
+  "LDTM-213 Silver Mist",
+  "LDTM-203 Royal Blue",
+  "LDTM-206 Arctic Blue",
+  "LDTM-218 Rose Taupe",
+  "LDTM-225 Amber Gold",
+  "LDTM-226 Mustard Yellow",
+  "LDTM-214 Pearl White",
+  "LDTM-215 Ivory Cream",
+  "LDTM-207 Denim Blue",
+  "LDTM-227 Terracotta",
+  "LDTM-228 Copper Rust",
+];
+
 /* ---------------- COMBOS ---------------- */
 function Combos({
   c1q1, setC1q1,
+  c1q1Color, setC1q1Color,
   c1q2, setC1q2,
+  c1q2Color, setC1q2Color,
   c2q1, setC2q1,
+  c2q1Color, setC2q1Color,
   c2q2, setC2q2,
+  c2q2Color, setC2q2Color,
   c3q1, setC3q1,
+  c3q1Color, setC3q1Color,
   c3q2, setC3q2,
+  c3q2Color, setC3q2Color,
+  paymentMethod,
 }: {
   c1q1: number; setC1q1: (v: number) => void;
+  c1q1Color: string; setC1q1Color: (v: string) => void;
   c1q2: number; setC1q2: (v: number) => void;
+  c1q2Color: string; setC1q2Color: (v: string) => void;
   c2q1: number; setC2q1: (v: number) => void;
+  c2q1Color: string; setC2q1Color: (v: string) => void;
   c2q2: number; setC2q2: (v: number) => void;
+  c2q2Color: string; setC2q2Color: (v: string) => void;
   c3q1: number; setC3q1: (v: number) => void;
+  c3q1Color: string; setC3q1Color: (v: string) => void;
   c3q2: number; setC3q2: (v: number) => void;
+  c3q2Color: string; setC3q2Color: (v: string) => void;
+  paymentMethod: string;
 }) {
 
   const total1 = c1q1 * 375000 + c1q2 * 1680000;
@@ -591,6 +660,9 @@ function Combos({
     );
   }
 
+  const selectCls =
+    "w-full rounded-md border border-[#E8E4DC] bg-[#FDFBF7] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#E8541A] focus:ring-1 focus:ring-[#E8541A]/20 cursor-pointer font-medium";
+
   return (
     <section id="combo" className="bg-white py-[72px]">
       <div className="container-x">
@@ -623,20 +695,58 @@ function Combos({
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>375.000đ</p>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>375.000đ</p>
+                  </div>
+                  <Stepper value={c1q1} onChange={setC1q1} />
                 </div>
-                <Stepper value={c1q1} onChange={setC1q1} />
+                {c1q1 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c1q1Color}
+                      onChange={(e) => setC1q1Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
 
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Combo lớn — 2 thùng 5kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>1.680.000đ</p>
+              <div className="space-y-3 pt-3 border-t border-neutral-100">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Combo lớn — 2 thùng 5kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>1.680.000đ</p>
+                  </div>
+                  <Stepper value={c1q2} onChange={setC1q2} />
                 </div>
-                <Stepper value={c1q2} onChange={setC1q2} />
+                {c1q2 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c1q2Color}
+                      onChange={(e) => setC1q2Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -670,20 +780,58 @@ function Combos({
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 3 hũ 1kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>751.000đ</p>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Combo nhỏ — 3 hũ 1kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>751.000đ</p>
+                  </div>
+                  <Stepper value={c2q1} onChange={setC2q1} />
                 </div>
-                <Stepper value={c2q1} onChange={setC2q1} />
+                {c2q1 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c2q1Color}
+                      onChange={(e) => setC2q1Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
 
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Combo lớn — 3 thùng 5kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>3.420.000đ</p>
+              <div className="space-y-3 pt-3 border-t border-neutral-100">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Combo lớn — 3 thùng 5kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>3.420.000đ</p>
+                  </div>
+                  <Stepper value={c2q2} onChange={setC2q2} />
                 </div>
-                <Stepper value={c2q2} onChange={setC2q2} />
+                {c2q2 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c2q2Color}
+                      onChange={(e) => setC2q2Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -709,20 +857,58 @@ function Combos({
             </div>
 
             <div className="mt-8 flex-1 space-y-5 border-t border-[#E8E4DC] pt-6">
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Hũ 1kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>210.000đ</p>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Hũ 1kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>210.000đ</p>
+                  </div>
+                  <Stepper value={c3q1} onChange={setC3q1} />
                 </div>
-                <Stepper value={c3q1} onChange={setC3q1} />
+                {c3q1 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c3q1Color}
+                      onChange={(e) => setC3q1Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
 
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <p className="text-sm font-semibold text-neutral-800">Thùng 5kg</p>
-                  <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>890.000đ</p>
+              <div className="space-y-3 pt-3 border-t border-neutral-100">
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex-1">
+                    <p className="text-sm font-semibold text-neutral-800">Thùng 5kg</p>
+                    <p className="text-sm font-semibold mt-0.5" style={{ color: ORANGE }}>890.000đ</p>
+                  </div>
+                  <Stepper value={c3q2} onChange={setC3q2} />
                 </div>
-                <Stepper value={c3q2} onChange={setC3q2} />
+                {c3q2 > 0 && (
+                  <div className="flex flex-col gap-1 pl-1">
+                    <span className="text-[11px] font-semibold text-neutral-500 uppercase tracking-wider">Mã màu sơn:</span>
+                    <select
+                      value={c3q2Color}
+                      onChange={(e) => setC3q2Color(e.target.value)}
+                      className={selectCls}
+                    >
+                      <option value="">Chưa chọn màu</option>
+                      {COLOR_OPTIONS.map((opt) => (
+                        <option key={opt} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -740,9 +926,20 @@ function Combos({
             <p className="text-sm text-neutral-500 mt-1">Định mức: hũ 1kg ~ 5m²; thùng 5kg ~ 25m²</p>
           </div>
           <div className="md:text-right">
-            <span className="font-display text-3xl font-extrabold" style={{ color: ORANGE }}>
-              {formatVND(grandTotal)}
-            </span>
+            {paymentMethod === "online" ? (
+              <div className="flex flex-col md:items-end">
+                <span className="text-sm text-neutral-400 line-through font-medium">
+                  {formatVND(grandTotal)}
+                </span>
+                <span className="font-display text-3xl font-extrabold" style={{ color: ORANGE }}>
+                  {formatVND(Math.round(grandTotal * 0.9))}
+                </span>
+              </div>
+            ) : (
+              <span className="font-display text-3xl font-extrabold" style={{ color: ORANGE }}>
+                {formatVND(grandTotal)}
+              </span>
+            )}
           </div>
         </div>
 
@@ -771,34 +968,49 @@ function Combos({
 /* ---------------- FORM SECTION ---------------- */
 function FormSection({
   c1q1,
+  c1q1Color,
   c1q2,
+  c1q2Color,
   c2q1,
+  c2q1Color,
   c2q2,
+  c2q2Color,
   c3q1,
+  c3q1Color,
   c3q2,
+  c3q2Color,
+  paymentMethod,
+  setPaymentMethod,
 }: {
   c1q1: number;
+  c1q1Color: string;
   c1q2: number;
+  c1q2Color: string;
   c2q1: number;
+  c2q1Color: string;
   c2q2: number;
+  c2q2Color: string;
   c3q1: number;
+  c3q1Color: string;
   c3q2: number;
+  c3q2Color: string;
+  paymentMethod: string;
+  setPaymentMethod: (v: string) => void;
 }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [note, setNote] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("cod");
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const orderItems = [
-    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000 },
-    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000 },
-    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000 },
-    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000 },
-    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000 },
-    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000 },
+    { name: "Combo tiết kiệm nhỏ", qty: c1q1, price: 375000, color: c1q1Color },
+    { name: "Combo tiết kiệm lớn", qty: c1q2, price: 1680000, color: c1q2Color },
+    { name: "Combo thông dụng nhỏ", qty: c2q1, price: 751000, color: c2q1Color },
+    { name: "Combo thông dụng lớn", qty: c2q2, price: 3420000, color: c2q2Color },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color },
   ];
 
   const activeItems = orderItems.filter((it) => it.qty > 0);
@@ -943,7 +1155,7 @@ function FormSection({
                 {activeItems.length > 0 ? (
                   activeItems.map((it) => (
                     <p key={it.name}>
-                      — {it.name} x{it.qty}: {formatVND(it.qty * it.price)}
+                      — {it.name} x{it.qty}: {formatVND(it.qty * it.price)} — Màu: {it.color || "Chưa chọn"}
                     </p>
                   ))
                 ) : (
@@ -955,9 +1167,20 @@ function FormSection({
               <div className="my-4 border-t border-[#E8E4DC]" />
               <div className="flex items-center justify-between">
                 <span className="text-sm font-semibold text-neutral-700">Thành tiền:</span>
-                <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
-                  {formatVND(grandTotal)}
-                </span>
+                {paymentMethod === "online" ? (
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-neutral-400 line-through font-medium">
+                      {formatVND(grandTotal)}
+                    </span>
+                    <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
+                      {formatVND(Math.round(grandTotal * 0.9))}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="font-display text-xl font-extrabold" style={{ color: ORANGE }}>
+                    {formatVND(grandTotal)}
+                  </span>
+                )}
               </div>
               <p className="mt-3 text-[11px] leading-relaxed text-neutral-400">
                 * Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế.
