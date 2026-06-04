@@ -733,7 +733,7 @@ function Decision() {
           "a",
           {
             href: "#combo",
-            className: "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            className: "hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
             children: [
               "Xem Combo Hệ chuẩn ",
               /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
@@ -749,7 +749,18 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
-      }) })
+      }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "a",
+        {
+          href: "#combo",
+          className: "md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+          children: [
+            "Xem Combo Hệ chuẩn ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
+          ]
+        }
+      )
     ] }) }) : activeTab === "dtm" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -761,7 +772,7 @@ function Decision() {
           "a",
           {
             href: "#combo",
-            className: "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            className: "hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
             children: [
               "Xem Combo Hệ 2in1 ",
               /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
@@ -777,7 +788,18 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
-      }) })
+      }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "a",
+        {
+          href: "#combo",
+          className: "md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+          children: [
+            "Xem Combo Hệ 2in1 ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
+          ]
+        }
+      )
     ] }) }) : activeTab === "premium" ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-2xl border border-neutral-200/60 bg-[#FDFBF7] p-6 sm:p-8", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center justify-between gap-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -789,7 +811,7 @@ function Decision() {
           "a",
           {
             href: "#combo",
-            className: "inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+            className: "hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
             children: [
               "Xem Combo Hệ cao cấp ",
               /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
@@ -805,7 +827,18 @@ function Decision() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "mt-4 font-display text-sm font-extrabold text-neutral-900 leading-snug", children: s.title }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs leading-relaxed text-neutral-500", children: s.desc })
         ] }, s.step);
-      }) })
+      }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "a",
+        {
+          href: "#combo",
+          className: "md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95",
+          children: [
+            "Xem Combo Hệ cao cấp ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "size-3.5" })
+          ]
+        }
+      )
     ] }) }) : null })
   ] }) });
 }

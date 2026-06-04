@@ -673,7 +673,7 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
                     Xem Combo Hệ chuẩn <ArrowRight className="size-3.5" />
                   </a>
@@ -696,6 +696,13 @@ function Decision() {
                     );
                   })}
                 </div>
+
+                <a
+                  href="#combo"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#1C2B2B] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                >
+                  Xem Combo Hệ chuẩn <ArrowRight className="size-3.5" />
+                </a>
               </div>
             </div>
           ) : activeTab === "dtm" ? (
@@ -715,7 +722,7 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
                     Xem Combo Hệ 2in1 <ArrowRight className="size-3.5" />
                   </a>
@@ -738,6 +745,13 @@ function Decision() {
                     );
                   })}
                 </div>
+
+                <a
+                  href="#combo"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#2D7A3A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                >
+                  Xem Combo Hệ 2in1 <ArrowRight className="size-3.5" />
+                </a>
               </div>
             </div>
           ) : activeTab === "premium" ? (
@@ -757,7 +771,7 @@ function Decision() {
                   </div>
                   <a
                     href="#combo"
-                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                    className="hidden md:inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
                   >
                     Xem Combo Hệ cao cấp <ArrowRight className="size-3.5" />
                   </a>
@@ -780,6 +794,13 @@ function Decision() {
                     );
                   })}
                 </div>
+
+                <a
+                  href="#combo"
+                  className="md:hidden mt-8 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#E8541A] px-5 py-3 text-xs font-bold text-white transition hover:opacity-95"
+                >
+                  Xem Combo Hệ cao cấp <ArrowRight className="size-3.5" />
+                </a>
               </div>
             </div>
           ) : null}
