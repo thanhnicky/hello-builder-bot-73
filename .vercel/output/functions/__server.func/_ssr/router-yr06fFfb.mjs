@@ -266,7 +266,7 @@ const $$splitComponentImporter$1 = () => import("./thank-you-gsZmQFsv.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-Cw8SC_Z6.mjs");
+const $$splitComponentImporter = () => import("./index-BBCfOZ5C.mjs");
 const Route = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component"),
   head: () => ({

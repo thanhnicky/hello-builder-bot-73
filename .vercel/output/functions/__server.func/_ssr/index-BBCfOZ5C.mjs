@@ -614,7 +614,7 @@ function Products() {
     {
       name: "Lotus Metal Coat 2in1 / DTM",
       tag: "SƠN ĐA NĂNG ĐỒNG THỜI (2-TRONG-1)",
-      desc: "Sản phẩm đột phá tích hợp lót chống gỉ và phủ màu trong cùng một bước sơn. Bâm dính trực tiếp cực mạnh lên sắt mạ kẽm, sắt hộp không cần sơn lót.",
+      desc: "Sản phẩm đột phá tích hợp lót chống gỉ và phủ màu trong cùng một bước sơn. Bám dính trực tiếp cực mạnh lên sắt mạ kẽm, sắt hộp không cần sơn lót.",
       uses: "Giải pháp thi công siêu tốc cho các công trình sắt mạ kẽm trong nhà và ngoài trời ít chịu tác động ăn mòn trực tiếp từ thời tiết.",
       color: "28 mã màu chính hãng",
       dilution: "Nước sạch ~ 10% (nếu cần thiết)",
