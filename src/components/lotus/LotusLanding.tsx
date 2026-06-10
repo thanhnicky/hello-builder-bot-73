@@ -750,38 +750,6 @@ function Applications() {
   );
 }
 
-const COLOR_OPTIONS = [
-  "LDTM-208 Black",
-  "LDTM-201 Midnight Navy",
-  "LDTM-216 Velvet Wine",
-  "LDTM-219 Ancient Fern",
-  "LDTM-209 Black Knight",
-  "LDTM-204 Blue Lagoon",
-  "LDTM-223 Exotic Red",
-  "LDTM-220 Buffet Green",
-  "LDTM-210 Black Horizon",
-  "LDTM-205 Tropical Mint",
-  "LDTM-225 Solar Orange",
-  "LDTM-221 Herb Garden",
-  "LDTM-211 Whale Gray",
-  "LDTM-202 Tech Blue",
-  "LDTM-224 Peach Blush",
-  "LDTM-222 Hunter Green",
-  "LDTM-212 Ash Mist",
-  "LDTM-203 Blue Sky",
-  "LDTM-217 Burnt Walnut",
-  "LDTM-215 Earthwood",
-  "LDTM-213 Silken Fog",
-  "LDTM-206 River Valley",
-  "LDTM-218 Chocolate Noir",
-  "LDTM-227 Sun Porch",
-  "LDTM-214 White",
-  "LDTM-207 Stone Beige",
-  "LDTM-226 Burnt Caramel",
-  "LDTM-228 Lemon Twist",
-  "Tùy chỉnh"
-];
-
 /* ---------------- COMBOS ---------------- */
 function Combos({
   c1q1, setC1q1,
@@ -824,6 +792,37 @@ function Combos({
   c3q2Custom: string; setC3q2Custom: (v: string) => void;
   paymentMethod: string;
 }) {
+  const COLOR_OPTIONS = [
+    "LDTM-208 Black",
+    "LDTM-201 Midnight Navy",
+    "LDTM-216 Velvet Wine",
+    "LDTM-219 Ancient Fern",
+    "LDTM-209 Black Knight",
+    "LDTM-204 Blue Lagoon",
+    "LDTM-223 Exotic Red",
+    "LDTM-220 Buffet Green",
+    "LDTM-210 Black Horizon",
+    "LDTM-205 Tropical Mint",
+    "LDTM-225 Solar Orange",
+    "LDTM-221 Herb Garden",
+    "LDTM-211 Whale Gray",
+    "LDTM-202 Tech Blue",
+    "LDTM-224 Peach Blush",
+    "LDTM-222 Hunter Green",
+    "LDTM-212 Ash Mist",
+    "LDTM-203 Blue Sky",
+    "LDTM-217 Burnt Walnut",
+    "LDTM-215 Earthwood",
+    "LDTM-213 Silken Fog",
+    "LDTM-206 River Valley",
+    "LDTM-218 Chocolate Noir",
+    "LDTM-227 Sun Porch",
+    "LDTM-214 White",
+    "LDTM-207 Stone Beige",
+    "LDTM-226 Burnt Caramel",
+    "LDTM-228 Lemon Twist",
+    "Tùy chỉnh"
+  ];
 
   const total1 = c1q1 * 375000 + c1q2 * 1680000;
   const total2 = c2q1 * 610000 + c2q2 * 2745000;
@@ -858,9 +857,6 @@ function Combos({
       </div>
     );
   }
-
-  const selectCls =
-    "w-full rounded-md border border-[#E8E4DC] bg-[#FDFBF7] px-2.5 py-1.5 text-xs text-neutral-800 outline-none transition focus:border-[#E8541A] focus:ring-1 focus:ring-[#E8541A]/20 cursor-pointer font-medium";
 
   return (
     <section id="combo" className="bg-white py-24">
@@ -970,7 +966,6 @@ function Combos({
                 <span className="font-display text-lg font-bold text-neutral-900">Tổng: {formatVND(total1)}</span>
               </div>
             )}
-          </div>
 
           {/* Combo 2 - Premium */}
           <div className="space-y-8">
@@ -1063,7 +1058,6 @@ function Combos({
                 <span className="font-display text-lg font-bold text-neutral-900">Tổng: {formatVND(total2)}</span>
               </div>
             )}
-          </div>
 
           {/* Combo 3 - DTM */}
           <div className="space-y-8">
@@ -1154,7 +1148,6 @@ function Combos({
                 <span className="font-display text-lg font-bold text-neutral-900">Tổng: {formatVND(total3)}</span>
               </div>
             )}
-          </div>
         </div>
 
         <div className="mt-16 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border border-neutral-200">
