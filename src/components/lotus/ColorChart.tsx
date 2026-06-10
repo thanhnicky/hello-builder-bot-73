@@ -36,53 +36,61 @@ const COLORS: Swatch[] = [
 
 export function ColorChart() {
   return (
-    <section id="bang-mau" className="bg-[#F7F5F2] py-[72px]">
+    <section id="bang-mau" className="bg-white py-20">
       <div className="container-x">
         <div className="max-w-3xl">
-          <div className="mb-3 block text-[12px] font-semibold uppercase tracking-[0.12em] text-[#E8541A]">
-            BẢNG MÀU
+          <div className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+            Bảng màu
           </div>
-          <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-[#1C2B2B]">
+          <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-neutral-900">
             Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn
           </h2>
-          <p className="mt-4 text-base text-muted-foreground sm:text-lg">
-            Mỗi mã màu đều có sẵn cho hệ <strong className="text-[#1C2B2B]">2in1 / DTM</strong> và{" "}
-            <strong className="text-[#1C2B2B]">Finish</strong>. Màu hiển thị trên màn hình có thể
+          <p className="mt-4 text-base text-neutral-600 sm:text-lg">
+            Mỗi mã màu đều có sẵn cho hệ <strong className="text-neutral-900">2in1 / DTM</strong> và{" "}
+            <strong className="text-neutral-900">Finish</strong>. Màu hiển thị trên màn hình có thể
             chênh lệch nhẹ so với thực tế — vui lòng yêu cầu mẫu màu thật trước khi đặt số lượng lớn.
           </p>
         </div>
 
-        <div className="mt-10">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+        <div className="mt-12">
+          <div className="grid grid-cols-4 gap-4 sm:grid-cols-6 sm:gap-5 lg:grid-cols-7">
             {COLORS.map((c) => (
               <div
                 key={c.code}
-                className="group overflow-hidden rounded-xl border border-border bg-white ring-soft transition hover:-translate-y-0.5 hover:ring-glow"
+                className="group"
               >
                 <div
-                  className="aspect-[5/3] w-full"
+                  className="aspect-square w-full border border-neutral-200 transition hover:border-neutral-900"
                   style={{ backgroundColor: c.hex }}
                   aria-label={`${c.code} ${c.name}`}
                 />
-                <div className="flex items-center justify-between gap-2 px-3 py-2.5">
-                  <div className="min-w-0">
-                    <div className="truncate font-display text-sm font-bold text-foreground">
-                      {c.code}
-                    </div>
-                    <div className="truncate text-xs text-muted-foreground">{c.name}</div>
+                <div className="mt-2">
+                  <div className="font-display text-xs font-bold text-neutral-900">
+                    {c.code}
                   </div>
+                  <div className="text-xs text-neutral-500 mt-0.5">{c.name}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-[#E8E4DC] bg-white p-5 sm:p-6 text-center">
-            <h3 className="font-display text-xl font-bold sm:text-2xl text-[#1C2B2B]">
-              28 mã màu chính hãng Lotus Metal Coat
-            </h3>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-muted-foreground sm:text-base">
-              Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc.
-            </p>
+          <div className="mt-12 border-t border-neutral-200 pt-8">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h3 className="font-display text-xl font-bold text-neutral-900">
+                  28 mã màu chính hãng Lotus Metal Coat
+                </h3>
+                <p className="mt-1 text-sm text-neutral-600">
+                  Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc.
+                </p>
+              </div>
+              <a
+                href="#combo"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-neutral-900 hover:bg-neutral-800 transition-colors"
+              >
+                Đặt hàng ngay
+              </a>
+            </div>
           </div>
         </div>
       </div>
