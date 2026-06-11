@@ -60,7 +60,7 @@ export function ColorChart() {
                 className="group"
               >
                 <div
-                  className="aspect-square w-full rounded-sm shadow-sm transition hover:scale-105 hover:shadow-md"
+                  className="aspect-square w-full rounded-sm shadow-sm transition hover:scale-105"
                   style={{ backgroundColor: c.hex }}
                   aria-label={`${c.code} ${c.name}`}
                 />
@@ -86,7 +86,7 @@ export function ColorChart() {
               </div>
               <a
                 href="#combo"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 transition-colors"
               >
                 Đặt hàng ngay
               </a>

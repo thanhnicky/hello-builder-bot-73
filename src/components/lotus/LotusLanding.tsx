@@ -365,7 +365,7 @@ function Solution() {
     {
       criteria: "Mùi sơn & An toàn",
       oil: "Hôi nồng nặc mùi xăng dung môi, chứa hàm lượng chất hữu cơ dễ bay hơi (VOCs) độc hại kéo dài.",
-      lotus: "Không mùi, dung môi hoàn toàn từ nước sạch. Thi công dễ chịu, an toàn tuyệt đối cho thợ và gia đình.",
+      lotus: "Không mùi, dung môi hoàn toàn từ nước sạch. Thi công dễ chịu, an toàn cho thợ và gia đình.",
       highlight: true,
     },
     {
@@ -377,7 +377,7 @@ function Solution() {
     {
       criteria: "Thời gian thi công",
       oil: "Khô rất chậm (8-12 tiếng), phải chờ qua ngày mới phủ lớp tiếp theo. Dễ bám bụi bẩn khi màng sơn chưa khô.",
-      lotus: "Khô siêu tốc chỉ trong 30 phút, sơn phủ lớp kế tiếp sau 2 giờ. Hoàn thành toàn bộ công trình trong ngày.",
+      lotus: "Khô nhanh chỉ trong 30 phút, sơn phủ lớp kế tiếp sau 2 giờ. Hoàn thành toàn bộ công trình trong ngày.",
       highlight: true,
     },
     {
@@ -407,10 +407,10 @@ function Solution() {
               className="mt-6 font-display font-bold text-balance text-neutral-900"
               style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
             >
-              Công nghệ gốc nước xóa bỏ mọi nhược điểm sơn dầu.
+              Công nghệ gốc nước giảm thiểu nhược điểm sơn dầu.
             </h2>
             <p className="mt-8 text-[17px] leading-relaxed text-neutral-600">
-              Lotus Metal Coat giải quyết triệt để những nỗi lo lớn nhất của người thợ và chủ nhà khi sơn kim loại. Không chỉ là sơn, đây là giải pháp bảo vệ tối ưu.
+              Lotus Metal Coat giải quyết hiệu quả những nỗi lo lớn nhất của người thợ và chủ nhà khi sơn kim loại. Không chỉ là sơn, đây là giải pháp bảo vệ.
             </p>
 
             <div className="mt-16 space-y-10">
@@ -876,7 +876,7 @@ function Combos({
 
         <div className="mt-24 space-y-32">
           {/* Combo 1 - Standard */}
-          <div className="space-y-10 border border-neutral-200 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-900">
                 Khuyên dùng
@@ -968,7 +968,7 @@ function Combos({
             )}
 
           {/* Combo 2 - Premium */}
-          <div className="space-y-10 border border-neutral-200 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
                 Cao cấp
@@ -1060,7 +1060,7 @@ function Combos({
             )}
 
           {/* Combo 3 - DTM */}
-          <div className="space-y-10 border border-neutral-200 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
                 2in1 / DTM
@@ -1150,7 +1150,7 @@ function Combos({
             )}
         </div>
 
-        <div className="mt-20 p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border border-neutral-200">
+        <div className="mt-20 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border border-neutral-100">
           <div>
             <p className="text-[18px] sm:text-[20px] font-bold text-neutral-900">Tổng giá trị đơn hàng</p>
             <p className="text-[15px] text-neutral-500 mt-1">Định mức: hũ 1kg ~ 5m2; thùng 5kg ~ 25m2</p>
@@ -1582,7 +1582,7 @@ function FormSection({
 
         {/* RIGHT COLUMN — ZALO CARD */}
         <div className="lg:col-span-5">
-          <div className="p-10 lg:sticky lg:top-24">
+          <div className="p-8 lg:sticky lg:top-24">
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
               TƯ VẤN NHANH NHẤT
             </p>
