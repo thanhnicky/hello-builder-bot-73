@@ -36,51 +36,51 @@ const COLORS: Swatch[] = [
 
 export function ColorChart() {
   return (
-    <section id="bang-mau" className="bg-neutral-50 py-24">
+    <section id="bang-mau" className="bg-neutral-50 py-32">
       <div className="container-x">
         <div className="max-w-3xl">
-          <div className="mb-3 block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+          <div className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
             Bảng màu
           </div>
           <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-neutral-900">
             Bảng màu Lotus Metal Coat — 28 mã màu tiêu chuẩn
           </h2>
-          <p className="mt-5 text-[17px] leading-relaxed text-neutral-600">
+          <p className="mt-6 text-[17px] leading-relaxed text-neutral-600">
             Mỗi mã màu đều có sẵn cho hệ <strong className="text-neutral-900">2in1 / DTM</strong> và{" "}
             <strong className="text-neutral-900">Finish</strong>. Màu hiển thị trên màn hình có thể
             chênh lệch nhẹ so với thực tế — vui lòng yêu cầu mẫu màu thật trước khi đặt số lượng lớn.
           </p>
         </div>
 
-        <div className="mt-16">
-          <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 sm:gap-4 lg:grid-cols-7">
+        <div className="mt-20">
+          <div className="grid grid-cols-4 gap-5 sm:grid-cols-6 sm:gap-6 lg:grid-cols-7">
             {COLORS.map((c) => (
               <div
                 key={c.code}
                 className="group"
               >
                 <div
-                  className="aspect-square w-full transition hover:scale-105"
+                  className="aspect-square w-full rounded-sm shadow-sm transition hover:scale-105 hover:shadow-md"
                   style={{ backgroundColor: c.hex }}
                   aria-label={`${c.code} ${c.name}`}
                 />
-                <div className="mt-3">
+                <div className="mt-4">
                   <div className="font-display text-xs font-bold text-neutral-900">
                     {c.code}
                   </div>
-                  <div className="text-xs text-neutral-500 mt-0.5">{c.name}</div>
+                  <div className="text-xs text-neutral-500 mt-1">{c.name}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-16 border-t border-neutral-200 pt-12">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+          <div className="mt-20 border-t border-neutral-200 pt-16">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
               <div>
                 <h3 className="font-display text-xl font-bold text-neutral-900">
                   28 mã màu chính hãng Lotus Metal Coat
                 </h3>
-                <p className="mt-2 text-[16px] leading-relaxed text-neutral-600">
+                <p className="mt-3 text-[16px] leading-relaxed text-neutral-600">
                   Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc.
                 </p>
               </div>
