@@ -265,7 +265,7 @@ function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-white">
       <div className="container-x">
-        <div className="grid items-center gap-16 py-32 lg:grid-cols-12 lg:gap-20 lg:py-40">
+        <div className="grid items-center gap-16 py-20 lg:grid-cols-12 lg:gap-20 lg:py-40">
           <div className="lg:col-span-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
               Sơn kim loại gốc nước
@@ -330,7 +330,7 @@ function Problem() {
     "Vệ sinh cọ, rulo phải dùng xăng — hôi tay, hại da, khó rửa sạch",
   ];
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-20 lg:py-32">
       <div className="container-x max-w-3xl">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Vấn đề thường gặp
@@ -347,7 +347,7 @@ function Problem() {
         <div className="mt-20 space-y-10">
           {pains.map((p, i) => (
             <div key={p} className="flex gap-6">
-              <span className="font-display text-sm font-semibold tabular-nums text-neutral-200 w-6 shrink-0">
+              <span className="font-display text-sm font-semibold tabular-nums text-neutral-400 w-6 shrink-0">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p className="text-[17px] leading-relaxed text-neutral-700">{p}</p>
@@ -395,7 +395,7 @@ function Solution() {
   ];
 
   return (
-    <section className="py-32 bg-neutral-50">
+    <section className="py-20 lg:py-32 bg-neutral-50">
       <div className="container-x">
         <div className="grid gap-24 lg:grid-cols-12 lg:items-start">
           {/* Left info */}
@@ -439,11 +439,11 @@ function Solution() {
                   <h3 className="text-sm font-bold text-neutral-900">{row.criteria}</h3>
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="text-sm text-neutral-600 leading-relaxed">
-                      <span className="text-neutral-400 block text-xs mb-1">Sơn dầu truyền thống</span>
+                      <span className="text-neutral-500 block text-xs mb-1">Sơn dầu truyền thống</span>
                       {row.oil}
                     </div>
                     <div className="text-sm text-neutral-900 leading-relaxed font-medium">
-                      <span className="text-neutral-400 block text-xs mb-1">Sơn gốc nước Lotus</span>
+                      <span className="text-neutral-500 block text-xs mb-1">Sơn gốc nước Lotus</span>
                       {row.lotus}
                     </div>
                   </div>
@@ -452,7 +452,7 @@ function Solution() {
               ))}
             </div>
             
-            <p className="mt-10 text-xs text-neutral-400">
+            <p className="mt-10 text-xs text-neutral-500">
               * Khảo sát thực tế dựa trên phản hồi của thợ thi công và chủ hộ gia đình tại Việt Nam.
             </p>
           </div>
@@ -504,7 +504,7 @@ function Products() {
   ];
 
   return (
-    <section id="san-pham" className="bg-white py-32">
+    <section id="san-pham" className="bg-white py-20 lg:py-32">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Chi tiết sản phẩm
@@ -544,19 +544,19 @@ function Products() {
               
               <div className="mt-10 grid grid-cols-2 gap-8 text-sm">
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Màu sơn</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Màu sơn</span>
                   <p className="mt-2 font-medium text-neutral-900">{products[0].color}</p>
                 </div>
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Định mức phủ</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Định mức phủ</span>
                   <p className="mt-2 font-medium text-neutral-900">{products[0].coverage}</p>
                 </div>
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Thời gian khô</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Thời gian khô</span>
                   <p className="mt-2 font-medium text-neutral-900">{products[0].time}</p>
                 </div>
                 <div>
-                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Bề mặt màng sơn</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Bề mặt màng sơn</span>
                   <p className="mt-2 font-medium text-neutral-900">{products[0].finish}</p>
                 </div>
               </div>
@@ -587,19 +587,19 @@ function Products() {
                   
                   <div className="mt-8 grid grid-cols-2 gap-6 text-sm">
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Màu sơn</span>
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Màu sơn</span>
                       <p className="mt-2 font-medium text-neutral-900">{p.color}</p>
                     </div>
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Định mức phủ</span>
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Định mức phủ</span>
                       <p className="mt-2 font-medium text-neutral-900">{p.coverage}</p>
                     </div>
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Thời gian khô</span>
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Thời gian khô</span>
                       <p className="mt-2 font-medium text-neutral-900">{p.time}</p>
                     </div>
                     <div>
-                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">Bề mặt màng sơn</span>
+                      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Bề mặt màng sơn</span>
                       <p className="mt-2 font-medium text-neutral-900">{p.finish}</p>
                     </div>
                   </div>
@@ -645,7 +645,7 @@ function Decision() {
   ];
 
   return (
-    <section id="chon-he-son" className="py-32 bg-neutral-50">
+    <section id="chon-he-son" className="py-20 lg:py-32 bg-neutral-50">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Hệ sơn & thi công
@@ -686,7 +686,7 @@ function Decision() {
                   <ol className="space-y-8">
                     {system.steps.map((step, i) => (
                       <li key={i} className="flex gap-6">
-                        <span className="font-display text-sm font-semibold tabular-nums text-neutral-200 w-6 shrink-0">
+                        <span className="font-display text-sm font-semibold tabular-nums text-neutral-400 w-6 shrink-0">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                         <p className="text-[16px] leading-relaxed text-neutral-700">{step}</p>
@@ -715,7 +715,7 @@ function Applications() {
     { img: appAluminum, label: "Đường ống PCCC" },
   ];
   return (
-    <section id="hang-muc" className="bg-neutral-50 py-32">
+    <section id="hang-muc" className="bg-neutral-50 py-20 lg:py-32">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Hạng mục ứng dụng
@@ -859,7 +859,7 @@ function Combos({
   }
 
   return (
-    <section id="combo" className="bg-white py-32">
+    <section id="combo" className="bg-white py-20 lg:py-32">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Combo sản phẩm
@@ -1158,7 +1158,7 @@ function Combos({
           <div className="md:text-right">
             {paymentMethod === "online" ? (
               <div className="flex flex-col md:items-end">
-                <span className="text-sm text-neutral-400 line-through font-medium">
+                <span className="text-sm text-neutral-500 line-through font-medium">
                   {formatVND(grandTotal)}
                 </span>
                 <span className="font-display text-3xl font-extrabold text-neutral-900">
@@ -1366,7 +1366,7 @@ function FormSection({
   const errorInputCls = "border-red-500 ring-2 ring-red-500/20 focus:border-red-500";
 
   return (
-    <section id="order-form" className="py-32 bg-white">
+    <section id="order-form" className="py-20 lg:py-32 bg-white">
       <div className="container-x grid gap-16 lg:grid-cols-12 lg:gap-20">
         {/* LEFT COLUMN — ORDER FORM */}
         <div className="lg:col-span-7">
@@ -1483,7 +1483,7 @@ function FormSection({
                 <span className="text-sm font-semibold text-neutral-700">Thành tiền:</span>
                 {paymentMethod === "online" ? (
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-neutral-400 line-through font-medium">
+                    <span className="text-sm text-neutral-500 line-through font-medium">
                       {formatVND(grandTotal)}
                     </span>
                     <span className="font-display text-xl font-extrabold text-neutral-900">
@@ -1496,10 +1496,10 @@ function FormSection({
                   </span>
                 )}
               </div>
-              <p className="mt-4 text-[11px] leading-relaxed text-neutral-400">
+              <p className="mt-4 text-[11px] leading-relaxed text-neutral-500">
                 * Giá chưa bao gồm phí vận chuyển. Có thể thay đổi tùy diện tích thực tế.
               </p>
-              <p className="mt-2 text-[11px] leading-relaxed text-neutral-400">
+              <p className="mt-2 text-[11px] leading-relaxed text-neutral-500">
                 Định mức: Combo nhỏ 1kg ~ 5m²; Combo lớn 5kg ~ 25m²
               </p>
             </div>
@@ -1660,7 +1660,7 @@ function Projects() {
     },
   ];
   return (
-    <section id="du-an" className="bg-white py-32">
+    <section id="du-an" className="bg-white py-20 lg:py-32">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Dự án thực tế
@@ -1751,7 +1751,7 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="bg-neutral-50 py-32">
+    <section id="faq" className="bg-neutral-50 py-20 lg:py-32">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           FAQ

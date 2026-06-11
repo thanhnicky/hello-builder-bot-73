@@ -36,7 +36,7 @@ const COLORS: Swatch[] = [
 
 export function ColorChart() {
   return (
-    <section id="bang-mau" className="bg-neutral-50 py-32">
+    <section id="bang-mau" className="bg-neutral-50 py-20 lg:py-32">
       <div className="container-x">
         <div className="max-w-3xl">
           <div className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
