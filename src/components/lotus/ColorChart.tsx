@@ -39,7 +39,7 @@ export function ColorChart() {
     <section id="bang-mau" className="bg-neutral-50 py-20 lg:py-32">
       <div className="container-x">
         <div className="max-w-3xl">
-          <div className="mb-4 block text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
+          <div className="mb-4 block text-[12px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
             Bảng màu
           </div>
           <h2 className="font-display text-3xl font-bold text-balance sm:text-4xl lg:text-[42px] lg:leading-[1.1] text-neutral-900">
