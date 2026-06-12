@@ -1321,7 +1321,15 @@ function FormSection({
       };
     });
 
-    // Format items as readable string
+    // Format items for thank-you page
+    const itemsArray = activeItemsData.map(item => ({
+      name: item.name,
+      quantity: item.quantity,
+      unitPrice: item.price,
+      color: item.color,
+    }));
+
+    // Format items as readable string for Google Sheet
     const itemsStr = activeItemsData.map(item =>
       `${item.name} x${item.quantity} (${item.color})`
     ).join("; ");
@@ -1333,7 +1341,7 @@ function FormSection({
       address: address.trim(),
       note: note.trim(),
       paymentMethod,
-      items: itemsStr,
+      items: itemsArray,
       subtotal: grandTotal,
       discount,
       total: finalTotal,
