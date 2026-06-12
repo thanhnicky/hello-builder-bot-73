@@ -1536,7 +1536,6 @@ function FormSection({
                   />
                   <div className="leading-tight">
                     <p className="text-sm font-medium text-neutral-800">Thanh toán khi nhận hàng (COD)</p>
-                    <p className="text-xs text-neutral-500 mt-0.5">Không giảm giá</p>
                   </div>
                 </div>
 
