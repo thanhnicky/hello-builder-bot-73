@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://hello-builder-bot-73.vercel.app/" },
       { property: "og:title", content: "Sơn Kim Loại Gốc Nước Lotus Metal Coat | Không Mùi, Chống Gỉ Tốt" },
       { property: "og:description", content: "Sơn gốc nước chuyên dụng cho sắt, kẽm, nhôm. Không mùi xăng, khô 30 phút, bám cực chắc. Giao hàng 24h TP.HCM." },
-      { property: "og:image", content: "https://hello-builder-bot-73.vercel.app/og-image.jpg" },
+      { property: "og:image", content: "https://hello-builder-bot-73.vercel.app/project-1.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:locale", content: "vi_VN" },
