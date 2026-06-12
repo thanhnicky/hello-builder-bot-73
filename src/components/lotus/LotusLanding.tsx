@@ -1187,7 +1187,7 @@ function Combos({
         </div>
 
         <p className="mt-6 text-center text-[13px] text-neutral-500">
-          Hơn 500+ đơn hàng đã giao thành công
+          Hơn 500+ đơn hàng đã giao thành công trong 2 tháng gần nhất. Nhận hàng kiểm tra & thanh toán sau khi nhận hàng
         </p>
       </div>
     </section>
