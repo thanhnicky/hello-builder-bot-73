@@ -484,7 +484,7 @@ function Products() {
       uses: "Sơn phủ màu trang trí (lớp thứ 2) sau khi đã lót Primer. Thích hợp cho tất cả bề mặt kim loại nội và ngoại thất cần độ thẩm mỹ và độ bền màu cao.",
       color: "28 mã màu chính hãng",
       dilution: "Nước sạch ~ 10% (nếu cần thiết)",
-      coverage: "6 - 7 m²/kg/lớp",
+      coverage: "5 - 6 m²/kg/lớp",
       time: "30-45 phút (khô bề mặt) · 2 giờ (lớp kế)",
       finish: "Bóng - Bóng 50% - Mờ",
       image: finishImg,
