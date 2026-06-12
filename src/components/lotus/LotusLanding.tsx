@@ -876,7 +876,7 @@ function Combos({
 
         <div className="mt-24 space-y-32">
           {/* Combo 1 - Standard */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-neutral-50">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-900">
                 Khuyên dùng
@@ -968,7 +968,7 @@ function Combos({
             )}
 
           {/* Combo 2 - Premium */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-orange-50/30">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
                 Cao cấp
@@ -1060,7 +1060,7 @@ function Combos({
             )}
 
           {/* Combo 3 - DTM */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8">
+          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-stone-50">
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">
                 2in1 / DTM
@@ -1325,7 +1325,7 @@ function FormSection({
     const itemsArray = activeItemsData.map(item => ({
       name: item.name,
       quantity: item.quantity,
-      unitPrice: item.price,
+      unitPrice: item.unitPrice,
       color: item.color,
     }));
 
@@ -1389,7 +1389,7 @@ function FormSection({
             Đặt ngay hôm nay — Nhận sơn tại nhà, bắt đầu thi công cuối tuần này. Giao hàng 24–48h tại TP.HCM và các tỉnh lân cận.
           </p>
 
-          <form onSubmit={handleSubmit} noValidate className="mt-12 space-y-8">
+          <form onSubmit={handleSubmit} noValidate className="mt-12 space-y-8 border border-neutral-200 rounded-lg p-6 bg-neutral-50/30">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="block relative">
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
