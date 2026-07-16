@@ -69,54 +69,41 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sơn Kim Loại Gốc Nước Lotus Metal Coat | Chống Gỉ, Không Mùi, Giao Hàng TP.HCM" },
-      { name: "description", content: "Sơn kim loại gốc nước Lotus Metal Coat — không mùi xăng, bám dính kẽm cực chắc, khô 30 phút. Combo sẵn có, giao hàng 24–48h tại TP.HCM và các tỉnh lân cận. Đặt hàng ngay." },
-      { name: "keywords", content: "sơn kim loại gốc nước, sơn sắt không mùi, sơn chống gỉ gốc nước, Lotus Metal Coat, sơn mạ kẽm, sơn 2in1 DTM, sơn sắt TP.HCM" },
-      { name: "robots", content: "index, follow" },
-      { name: "author", content: "Lotus Paint — Công ty TNHH SX TM DV Bích Trang" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://hello-builder-bot-73.vercel.app/" },
-      { property: "og:title", content: "Sơn Kim Loại Gốc Nước Lotus Metal Coat | Không Mùi, Chống Gỉ Tốt" },
-      { property: "og:description", content: "Sơn gốc nước chuyên dụng cho sắt, kẽm, nhôm. Không mùi xăng, khô 30 phút, bám cực chắc. Giao hàng 24h TP.HCM." },
-      { property: "og:image", content: "https://hello-builder-bot-73.vercel.app/project-1.jpg" },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:locale", content: "vi_VN" },
-      { property: "og:site_name", content: "Lotus Paint Metal Coat" },
-    ],
-    links: [
-      {
-        rel: "icon",
-        type: "image/png",
-        href: "/favicon.png",
-      },
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "preconnect",
-        href: "https://img.vietqr.io",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "preconnect",
-        href: "https://zalo.me",
-      },
-      {
-        rel: "preload",
-        href: "/lotus-hero.jpg",
-        as: "image",
-        fetchPriority: "high",
-      },
-    ],
     scripts: [
+      {
+        innerHTML: `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KVTQ7QXN');</script>
+<!-- End Google Tag Manager -->`,
+        type: "text/javascript",
+      },
+      {
+        innerHTML: `<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q278QPKQG2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q278QPKQG2');
+</script>
+<!-- End Google Analytics 4 -->`,
+        type: "text/javascript",
+      },
+      {
+        innerHTML: `<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16701011893"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16701011893');
+</script>
+<!-- End Google Ads -->`,
+        type: "text/javascript",
+      },
       {
         type: "application/ld+json",
         innerHTML: JSON.stringify({
@@ -255,6 +242,53 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         })
       }
     ],
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Sơn Kim Loại Gốc Nước Lotus Metal Coat | Chống Gỉ, Không Mùi, Giao Hàng TP.HCM" },
+      { name: "description", content: "Sơn kim loại gốc nước Lotus Metal Coat — không mùi xăng, bám dính kẽm cực chắc, khô 30 phút. Combo sẵn có, giao hàng 24–48h tại TP.HCM và các tỉnh lân cận. Đặt hàng ngay." },
+      { name: "keywords", content: "sơn kim loại gốc nước, sơn sắt không mùi, sơn chống gỉ gốc nước, Lotus Metal Coat, sơn mạ kẽm, sơn 2in1 DTM, sơn sắt TP.HCM" },
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "Lotus Paint — Công ty TNHH SX TM DV Bích Trang" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://hello-builder-bot-73.vercel.app/" },
+      { property: "og:title", content: "Sơn Kim Loại Gốc Nước Lotus Metal Coat | Không Mùi, Chống Gỉ Tốt" },
+      { property: "og:description", content: "Sơn gốc nước chuyên dụng cho sắt, kẽm, nhôm. Không mùi xăng, khô 30 phút, bám cực chắc. Giao hàng 24h TP.HCM." },
+      { property: "og:image", content: "https://hello-builder-bot-73.vercel.app/project-1.jpg" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:locale", content: "vi_VN" },
+      { property: "og:site_name", content: "Lotus Paint Metal Coat" },
+    ],
+    links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/favicon.png",
+      },
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://img.vietqr.io",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://zalo.me",
+      },
+      {
+        rel: "preload",
+        href: "/lotus-hero.jpg",
+        as: "image",
+        fetchPriority: "high",
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -269,6 +303,16 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KVTQ7QXN"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
