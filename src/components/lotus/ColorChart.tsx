@@ -73,25 +73,6 @@ export function ColorChart() {
               </div>
             ))}
           </div>
-
-          <div className="mt-20 border-t border-neutral-200 pt-16">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
-              <div>
-                <h3 className="font-display text-xl font-bold text-neutral-900">
-                  28 mã màu chính hãng Lotus Metal Coat
-                </h3>
-                <p className="mt-3 text-[16px] leading-relaxed text-neutral-600">
-                  Chọn màu ưng ý và đặt hàng ngay — Lotus giao hàng tận nơi trên toàn quốc.
-                </p>
-              </div>
-              <a
-                href="#combo"
-                className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 transition-colors"
-              >
-                Đặt hàng ngay
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

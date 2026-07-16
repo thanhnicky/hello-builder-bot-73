@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers, Menu, X } from "lucide-react";
+import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers, Menu, X, MessageCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -187,13 +187,24 @@ function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex items-center justify-center p-2 text-neutral-600 hover:bg-neutral-50 md:hidden"
-        >
-          {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        {/* Mobile Menu Button & Zalo */}
+        <div className="flex items-center gap-2 md:hidden">
+          <a
+            href={ZALO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-neutral-600 hover:bg-neutral-50 rounded-lg"
+          >
+            <MessageCircle className="size-5" />
+            <span>Zalo</span>
+          </a>
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="flex items-center justify-center p-2 text-neutral-600 hover:bg-neutral-50"
+          >
+            {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Dropdown */}
@@ -265,13 +276,13 @@ function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-white">
       <div className="container-x">
-        <div className="grid items-center gap-16 py-20 lg:grid-cols-12 lg:gap-20 lg:py-40">
+        <div className="grid items-center gap-8 py-12 lg:grid-cols-12 lg:gap-12 lg:py-20">
           <div className="lg:col-span-5">
             <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
               Sơn kim loại gốc nước
             </p>
             <h1
-              className="mt-10 font-display font-bold tracking-tight text-balance text-neutral-900"
+              className="mt-6 font-display font-bold tracking-tight text-balance text-neutral-900"
               style={{
                 fontSize: "clamp(40px, 6.5vw, 72px)",
                 lineHeight: 1.05,
@@ -280,11 +291,11 @@ function Hero() {
             >
               Không mùi xăng. Không cần pha dung môi. Sơn sắt đẹp và bền hơn.
             </h1>
-            <p className="mt-10 max-w-md text-[17px] leading-relaxed text-neutral-600">
+            <p className="mt-6 max-w-md text-[17px] leading-relaxed text-neutral-600">
               Gốc nước hoàn toàn · Thi công sạch, an toàn trong nhà · Giao hàng toàn quốc
             </p>
 
-            <div className="mt-16 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div className="mt-10 hidden flex-col gap-3 sm:flex sm:flex-row sm:gap-4">
               <a
                 href="#san-pham"
                 className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-neutral-900 bg-neutral-100 hover:bg-neutral-200 transition-colors"
@@ -293,11 +304,16 @@ function Hero() {
               </a>
               <a
                 href="#order-form"
-                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3.5 text-sm font-medium text-white transition hover:opacity-90"
+                style={{ backgroundColor: ORANGE }}
               >
                 Đặt hàng ngay
               </a>
             </div>
+
+            <p className="mt-6 text-[14px] text-neutral-500">
+              Hơn 500+ đơn hàng đã giao thành công trong 2 tháng gần nhất. Nhận hàng kiểm tra & thanh toán sau khi nhận hàng
+            </p>
           </div>
 
           <div className="lg:col-span-7">
@@ -330,7 +346,7 @@ function Problem() {
     "Vệ sinh cọ, rulo phải dùng xăng — hôi tay, hại da, khó rửa sạch",
   ];
   return (
-    <section className="bg-white py-20 lg:py-32">
+    <section className="bg-white py-12 lg:py-16">
       <div className="container-x max-w-3xl">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Vấn đề thường gặp
@@ -344,7 +360,7 @@ function Problem() {
         <p className="mt-8 text-[17px] leading-relaxed text-neutral-600">
           Nhiều người chuyển sang sơn gốc nước rồi mới nhận ra mình đã chịu đựng những vấn đề không đáng có.
         </p>
-        <div className="mt-20 space-y-10">
+        <div className="mt-12 space-y-6">
           {pains.map((p, i) => (
             <div key={p} className="flex gap-6">
               <span className="font-display text-sm font-semibold tabular-nums text-neutral-400 w-6 shrink-0">
@@ -395,9 +411,9 @@ function Solution() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-neutral-50">
+    <section className="py-12 lg:py-16 bg-neutral-50">
       <div className="container-x">
-        <div className="grid gap-16 lg:gap-24 lg:grid-cols-12 lg:items-start">
+        <div className="grid gap-8 lg:gap-12 lg:grid-cols-12 lg:items-start">
           {/* Left info */}
           <div className="lg:col-span-4">
             <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
@@ -413,7 +429,7 @@ function Solution() {
               Lotus Metal Coat giải quyết hiệu quả những nỗi lo lớn nhất của người thợ và chủ nhà khi sơn kim loại. Không chỉ là sơn, đây là giải pháp bảo vệ.
             </p>
 
-            <div className="mt-16 space-y-10">
+            <div className="mt-10 space-y-6">
               <div className="flex gap-5">
                 <span className="text-4xl font-extrabold text-neutral-900 font-display">0%</span>
                 <div>
@@ -433,7 +449,7 @@ function Solution() {
 
           {/* Right comparison */}
           <div className="lg:col-span-8">
-            <div className="space-y-8">
+            <div className="space-y-5">
               {comparison.map((row, i) => (
                 <div key={row.criteria} className="space-y-4">
                   <h3 className="text-sm font-bold text-neutral-900">{row.criteria}</h3>
@@ -504,7 +520,7 @@ function Products() {
   ];
 
   return (
-    <section id="san-pham" className="bg-white py-20 lg:py-32">
+    <section id="san-pham" className="bg-white py-12 lg:py-16">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Chi tiết sản phẩm
@@ -519,11 +535,11 @@ function Products() {
           Mỗi dòng sản phẩm được Lotus thiết kế chuyên biệt để mang lại hiệu quả bảo vệ bền vững nhất cho từng loại công trình.
         </p>
 
-        <div className="mt-16 space-y-20 lg:mt-24 lg:space-y-32">
+        <div className="mt-10 space-y-10 lg:mt-12 lg:space-y-12">
           {/* Featured Product - Primer */}
-          <div className="grid gap-20 lg:grid-cols-12 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
-              <div className="aspect-[4/3] bg-neutral-50 flex items-center justify-center p-16">
+              <div className="aspect-[4/3] bg-neutral-50 flex items-center justify-center p-8">
                 <img
                   src={primerImg}
                   alt="Lotus Metal Coat Primer — sơn lót chống gỉ gốc nước cho sắt thép"
@@ -542,7 +558,7 @@ function Products() {
               <p className="mt-6 text-[17px] leading-relaxed text-neutral-600">{products[0].desc}</p>
               <p className="mt-5 text-[16px] leading-relaxed text-neutral-700">{products[0].uses}</p>
               
-              <div className="mt-10 grid grid-cols-2 gap-8 text-sm">
+              <div className="mt-8 grid grid-cols-2 gap-5 text-sm">
                 <div>
                   <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">Màu sơn</span>
                   <p className="mt-2 font-medium text-neutral-900">{products[0].color}</p>
@@ -564,10 +580,10 @@ function Products() {
           </div>
 
           {/* Finish & DTM - Side by side */}
-          <div className="grid gap-16 lg:gap-24 lg:grid-cols-2">
+          <div className="grid gap-8 lg:gap-12 lg:grid-cols-2">
             {products.slice(1).map((p) => (
-              <div key={p.name} className="space-y-8">
-                <div className="aspect-[4/3] bg-neutral-50 flex items-center justify-center p-12">
+              <div key={p.name} className="space-y-6">
+                <div className="aspect-[4/3] bg-neutral-50 flex items-center justify-center p-8">
                   <img
                     src={p.image}
                     alt={p.name === "Lotus Metal Coat Finish" ? "Lotus Metal Coat Finish — sơn phủ màu hoàn thiện gốc nước 28 màu" : "Lotus Metal Coat 2in1 DTM — sơn thẳng lên mạ kẽm không cần lót riêng"}
@@ -645,7 +661,7 @@ function Decision() {
   ];
 
   return (
-    <section id="chon-he-son" className="py-20 lg:py-32 bg-neutral-50">
+    <section id="chon-he-son" className="py-12 lg:py-16 bg-neutral-50">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Hệ sơn & thi công
@@ -660,9 +676,9 @@ function Decision() {
           Lotus mang đến quy trình thi công tối giản, tiết kiệm thời gian mà vẫn đảm bảo độ bền tối ưu nhất cho từng hạng mục công trình.
         </p>
 
-        <div className="mt-16 space-y-16 lg:mt-24 lg:space-y-24">
+        <div className="mt-10 space-y-10 lg:mt-12 lg:space-y-12">
           {systems.map((system) => (
-            <div key={system.id} className="space-y-10">
+            <div key={system.id} className="space-y-6">
               {system.recommended && (
                 <div>
                   <span className="text-[12px] font-semibold uppercase tracking-wider text-neutral-900">
@@ -670,7 +686,7 @@ function Decision() {
                   </span>
                 </div>
               )}
-              <div className="grid gap-16 lg:grid-cols-12 lg:items-start">
+              <div className="grid gap-6 lg:grid-cols-12 lg:items-start">
                 <div className="lg:col-span-5">
                   <h3 className="font-display text-2xl font-bold text-neutral-900">{system.name}</h3>
                   <p className="mt-4 text-sm font-medium text-neutral-500">{system.subtitle}</p>
@@ -683,7 +699,7 @@ function Decision() {
                   </a>
                 </div>
                 <div className="lg:col-span-7">
-                  <ol className="space-y-8">
+                  <ol className="space-y-6">
                     {system.steps.map((step, i) => (
                       <li key={i} className="flex gap-6">
                         <span className="font-display text-sm font-semibold tabular-nums text-neutral-400 w-6 shrink-0">
@@ -715,7 +731,7 @@ function Applications() {
     { img: appAluminum, label: "Đường ống PCCC" },
   ];
   return (
-    <section id="hang-muc" className="bg-neutral-50 py-20 lg:py-32">
+    <section id="hang-muc" className="bg-neutral-50 py-12 lg:py-16">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Hạng mục ứng dụng
@@ -726,7 +742,7 @@ function Applications() {
         >
           Dùng được cho nhiều hạng mục — trong nhà và ngoài trời.
         </h2>
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {apps.map((a) => (
             <figure key={a.label} className="group">
               <div className="relative overflow-hidden bg-white border border-neutral-200">
@@ -859,7 +875,7 @@ function Combos({
   }
 
   return (
-    <section id="combo" className="bg-white py-20 lg:py-32">
+    <section id="combo" className="bg-white py-12 lg:py-16">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Combo sản phẩm
@@ -874,9 +890,9 @@ function Combos({
           Thi công được bằng chổi quét, rulo lăn hoặc súng phun — tùy hạng mục và sở thích.
         </p>
 
-        <div className="mt-16 space-y-20 lg:mt-24 lg:space-y-32">
+        <div className="mt-10 space-y-10 lg:mt-12 lg:space-y-12">
           {/* Combo 1 - Standard */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-neutral-50">
+          <div className="space-y-6 border border-neutral-100 rounded-lg p-5 bg-neutral-50">
             <div>
               <span className="text-[12px] font-semibold uppercase tracking-wider text-neutral-900">
                 Khuyên dùng
@@ -891,7 +907,7 @@ function Combos({
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4 pb-4 border-b border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
@@ -968,7 +984,7 @@ function Combos({
             )}
 
           {/* Combo 2 - Premium */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-orange-50/30">
+          <div className="space-y-6 border border-neutral-100 rounded-lg p-5 bg-orange-50/30">
             <div>
               <span className="text-[12px] font-semibold uppercase tracking-wider text-neutral-500">
                 Cao cấp
@@ -983,7 +999,7 @@ function Combos({
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4 pb-4 border-b border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
@@ -1060,7 +1076,7 @@ function Combos({
             )}
 
           {/* Combo 3 - DTM */}
-          <div className="space-y-10 border border-neutral-100 rounded-lg p-8 bg-stone-50">
+          <div className="space-y-6 border border-neutral-100 rounded-lg p-5 bg-stone-50">
             <div>
               <span className="text-[12px] font-semibold uppercase tracking-wider text-neutral-500">
                 2in1 / DTM
@@ -1073,7 +1089,7 @@ function Combos({
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-5">
                 <div className="flex items-center justify-between gap-4 pb-4 border-b border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Hũ 1kg</p>
@@ -1150,7 +1166,7 @@ function Combos({
             )}
         </div>
 
-        <div className="mt-20 p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border border-neutral-100">
+        <div className="mt-12 p-4 md:p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6 border border-neutral-100">
           <div>
             <p className="text-[18px] sm:text-[20px] font-bold text-neutral-900">Tổng giá trị đơn hàng</p>
             <p className="text-[15px] text-neutral-500 mt-1">Định mức: hũ 1kg ~ 5m2; thùng 5kg ~ 25m2</p>
@@ -1180,15 +1196,12 @@ function Combos({
               e.preventDefault();
               document.getElementById("order-form")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex w-full items-center justify-center py-4 text-[17px] sm:text-[18px] font-medium text-white transition hover:opacity-90 bg-neutral-900"
+            className="inline-flex w-full items-center justify-center py-4 text-[17px] sm:text-[18px] font-medium text-white transition hover:opacity-90"
+            style={{ backgroundColor: ORANGE }}
           >
             Tiếp tục điền thông tin đặt hàng
           </a>
         </div>
-
-        <p className="mt-6 text-center text-[14px] text-neutral-500">
-          Hơn 500+ đơn hàng đã giao thành công trong 2 tháng gần nhất. Nhận hàng kiểm tra & thanh toán sau khi nhận hàng
-        </p>
       </div>
     </section>
   );
@@ -1374,8 +1387,8 @@ function FormSection({
   const errorInputCls = "border-red-500 ring-2 ring-red-500/20 focus:border-red-500";
 
   return (
-    <section id="order-form" className="py-20 lg:py-32 bg-white">
-      <div className="container-x grid gap-16 lg:grid-cols-12 lg:gap-20">
+    <section id="order-form" className="py-12 lg:py-16 bg-white">
+      <div className="container-x grid gap-8 lg:grid-cols-12 lg:gap-12">
         {/* LEFT COLUMN — ORDER FORM */}
         <div className="lg:col-span-7">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">ĐẶT HÀNG NGAY</p>
@@ -1389,7 +1402,7 @@ function FormSection({
             Đặt ngay hôm nay — Nhận sơn tại nhà, bắt đầu thi công cuối tuần này. Giao hàng 24–48h tại TP.HCM và các tỉnh lân cận.
           </p>
 
-          <form onSubmit={handleSubmit} noValidate className="mt-12 space-y-8 border border-neutral-200 rounded-lg p-6 bg-neutral-50/30">
+          <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-6 border border-neutral-200 rounded-lg p-4 md:p-6 bg-neutral-50/30">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="block relative">
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
@@ -1454,7 +1467,7 @@ function FormSection({
             </label>
 
             {/* ORDER SUMMARY BOX */}
-            <div className="mt-10 pt-10 border-t border-neutral-200">
+            <div className="mt-8 pt-6 border-t border-neutral-200">
               <p className="text-sm font-semibold uppercase tracking-wide text-neutral-900">
                 Thông tin đơn hàng
               </p>
@@ -1513,7 +1526,7 @@ function FormSection({
             </div>
 
             {/* PAYMENT METHOD SECTION */}
-            <div className="mt-10 pt-10 border-t border-neutral-200">
+            <div className="mt-8 pt-6 border-t border-neutral-200">
               <span className="mb-3 block text-xs font-semibold uppercase tracking-wide text-neutral-500">
                 Phương thức thanh toán
               </span>
@@ -1562,7 +1575,7 @@ function FormSection({
                         Tiết kiệm 10%
                       </span>
                     </div>
-                    <p className="text-xs text-neutral-600 font-medium mt-0.5">Giảm ngay 10% và miễn phí giao hàng</p>
+                    <p className="text-xs font-bold mt-0.5" style={{ color: ORANGE }}>Giảm ngay 10% và miễn phí giao hàng</p>
                   </div>
                 </div>
               </div>
@@ -1576,7 +1589,8 @@ function FormSection({
 
             <button
               type="submit"
-              className="mt-6 flex w-full items-center justify-center py-4 text-base font-medium text-white transition hover:opacity-90 bg-neutral-900"
+              className="mt-6 flex w-full items-center justify-center py-4 text-base font-medium text-white transition hover:opacity-90"
+              style={{ backgroundColor: ORANGE }}
             >
               Xác nhận đặt hàng →
             </button>
@@ -1617,12 +1631,13 @@ function FormSection({
               href="https://zalo.me/0943966662"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 flex w-full items-center justify-center py-4 text-base font-medium text-white transition hover:opacity-90 bg-neutral-900"
+              className="mt-8 flex w-full items-center justify-center py-4 text-base font-medium text-white transition hover:opacity-90"
+              style={{ backgroundColor: ORANGE }}
             >
               Gửi ảnh qua Zalo →
             </a>
 
-            <div className="my-8 border-t border-neutral-200" />
+            <div className="my-6 border-t border-neutral-200" />
 
             <div className="leading-tight">
               <p className="font-bold text-neutral-900 text-lg">Hotline: 0943 966 662</p>
@@ -1667,7 +1682,7 @@ function Projects() {
     },
   ];
   return (
-    <section id="du-an" className="bg-white py-20 lg:py-32">
+    <section id="du-an" className="bg-white py-12 lg:py-16">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           Dự án thực tế
@@ -1678,9 +1693,9 @@ function Projects() {
         >
           Một số hạng mục đã thi công với hệ sơn Lotus Metal Coat.
         </h2>
-        <div className="mt-16 space-y-20">
+        <div className="mt-12 space-y-12">
           {items.map((it) => (
-            <article key={it.item} className="grid gap-12 lg:grid-cols-12 lg:items-center">
+            <article key={it.item} className="grid gap-8 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-7">
                 <div className="aspect-[4/3] bg-neutral-100 overflow-hidden">
                   <img 
@@ -1707,7 +1722,7 @@ function Projects() {
                     <span className="text-xs font-medium text-neutral-500">Khu vực</span>
                     <p className="text-sm text-neutral-800">{it.area}</p>
                   </div>
-                  <blockquote className="mt-8 border-l-2 border-neutral-200 pl-5">
+                  <blockquote className="mt-5 border-l-2 border-neutral-200 pl-5">
                     <p className="text-[16px] italic leading-relaxed text-neutral-700">"{it.quote}"</p>
                     <p className="mt-3 text-sm font-medium text-neutral-600">— {it.author}</p>
                   </blockquote>
@@ -1758,7 +1773,7 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="bg-neutral-50 py-20 lg:py-32">
+    <section id="faq" className="bg-neutral-50 py-12 lg:py-16">
       <div className="container-x">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-400">
           FAQ
@@ -1773,9 +1788,9 @@ function FAQ() {
           Câu hỏi thường gặp về sơn Lotus Metal Coat.
         </p>
 
-        <div className="mt-16 space-y-10">
+        <div className="mt-12 space-y-6">
           {qa.map((item, i) => (
-            <div key={i} className="border-b border-neutral-200 pb-10 last:border-0">
+            <div key={i} className="border-b border-neutral-200 pb-6 last:border-0">
               <h3 className="font-display text-lg font-semibold text-neutral-900">{item.q}</h3>
               <p className="mt-3 text-[16px] leading-relaxed text-neutral-600">{item.a}</p>
             </div>
@@ -1789,9 +1804,9 @@ function FAQ() {
 /* ---------------- FOOTER ---------------- */
 function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-white py-16">
+    <footer className="border-t border-neutral-200 bg-white py-12">
       <div className="container-x">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
               <img src={logoImg} alt={`${BRAND} logo`} className="h-10 w-auto" />
@@ -1829,7 +1844,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-neutral-200 pt-8">
+        <div className="mt-8 border-t border-neutral-200 pt-6">
           <div className="flex flex-col items-start justify-between gap-4 text-xs text-neutral-500 sm:flex-row sm:items-center">
             <span>© {new Date().getFullYear()} {BRAND} — Lotus Metal Coat. Mọi quyền được bảo lưu.</span>
             <span>Sơn kim loại gốc nước · Chống gỉ · Bền màu · Dễ thi công</span>
