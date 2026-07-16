@@ -1,6 +1,13 @@
 import { ShoppingCart, MessageCircle } from "lucide-react";
 import { ZALO_URL } from "./constants";
 
+// Helper function to track GA4 events
+const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, parameters);
+  }
+};
+
 export function StickyBar() {
   return (
     <>
@@ -10,6 +17,7 @@ export function StickyBar() {
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-2 rounded-full bg-[#E8541A] px-5 py-3.5 text-base font-semibold text-white shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 animate-pulse"
+        onClick={() => trackEvent('zalo_click', { method: 'floating_button' })}
       >
         <MessageCircle className="size-6" />
         <span>Chat Zalo</span>

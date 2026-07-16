@@ -27,6 +27,13 @@ declare global {
   }
 }
 
+// Helper function to track GA4 events
+const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', eventName, parameters);
+  }
+};
+
 import logoImg from "@/assets/lotus-logo.png";
 import heroImg from "@/assets/son-kim-loai-lotus-hero.jpg";
 import appRailing from "@/assets/son-cau-thang-sat-lotus.jpg";
@@ -182,6 +189,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
+            onClick={() => trackEvent('zalo_click', { method: 'header_desktop' })}
           >
             {HOTLINE}
           </a>
@@ -201,6 +209,7 @@ function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-neutral-600 hover:bg-neutral-50 rounded-lg"
+            onClick={() => trackEvent('zalo_click', { method: 'header_mobile' })}
           >
             <MessageCircle className="size-5" />
             <span>Zalo</span>
@@ -265,7 +274,10 @@ function Header() {
                 href={ZALO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  trackEvent('zalo_click', { method: 'mobile_menu' });
+                }}
                 className="block text-sm font-medium text-neutral-900"
               >
                 {HOTLINE}
@@ -1655,6 +1667,7 @@ function FormSection({
               rel="noopener noreferrer"
               className="mt-8 flex w-full items-center justify-center py-4 text-base font-medium text-white transition hover:opacity-90"
               style={{ backgroundColor: ORANGE }}
+              onClick={() => trackEvent('zalo_click', { method: 'form_section' })}
             >
               Gửi ảnh qua Zalo →
             </a>
@@ -1860,8 +1873,8 @@ function Footer() {
           <div className="lg:col-span-4">
             <h4 className="text-[12px] font-semibold uppercase tracking-wider text-neutral-400">Liên hệ</h4>
             <ul className="mt-4 space-y-3 text-sm">
-              <li><a href={`tel:${HOTLINE_TEL}`} className="font-semibold text-neutral-900 hover:text-neutral-600 transition-colors">Hotline: {HOTLINE}</a></li>
-              <li><a href={ZALO_URL} target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-neutral-900 transition-colors">Zalo: {HOTLINE}</a></li>
+              <li><a href={`tel:${HOTLINE_TEL}`} className="font-semibold text-neutral-900 hover:text-neutral-600 transition-colors" onClick={() => trackEvent('phone_call', { method: 'footer' })}>Hotline: {HOTLINE}</a></li>
+              <li><a href={ZALO_URL} target="_blank" rel="noopener noreferrer" className="text-neutral-600 hover:text-neutral-900 transition-colors" onClick={() => trackEvent('zalo_click', { method: 'footer' })}>Zalo: {HOTLINE}</a></li>
               <li className="text-neutral-500">Giờ làm việc: 8:00 – 18:00 (T2 – T7)</li>
             </ul>
           </div>
