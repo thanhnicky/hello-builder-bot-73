@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 import appCss from "../styles.css?url";
 
@@ -78,30 +79,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KVTQ7QXN');</script>
 <!-- End Google Tag Manager -->`,
-        type: "text/javascript",
-      },
-      {
-        innerHTML: `<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q278QPKQG2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Q278QPKQG2');
-</script>
-<!-- End Google Analytics 4 -->`,
-        type: "text/javascript",
-      },
-      {
-        innerHTML: `<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16701011893"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-16701011893');
-</script>
-<!-- End Google Ads -->`,
         type: "text/javascript",
       },
       {
@@ -297,6 +274,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Google Analytics 4
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q278QPKQG2';
+    document.head.appendChild(gtagScript);
+
+    const gtagConfigScript = document.createElement('script');
+    gtagConfigScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q278QPKQG2');
+    `;
+    document.head.appendChild(gtagConfigScript);
+
+    // Google Ads
+    const gadsScript = document.createElement('script');
+    gadsScript.async = true;
+    gadsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16701011893';
+    document.head.appendChild(gadsScript);
+
+    const gadsConfigScript = document.createElement('script');
+    gadsConfigScript.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16701011893');
+    `;
+    document.head.appendChild(gadsConfigScript);
+  }, []);
+
   return (
     <html lang="vi">
       <head>
