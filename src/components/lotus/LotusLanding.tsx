@@ -20,6 +20,13 @@ import {
   COMPANY_ADDRESS,
 } from "./constants";
 
+// Type declaration for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 import logoImg from "@/assets/lotus-logo.png";
 import heroImg from "@/assets/son-kim-loai-lotus-hero.jpg";
 import appRailing from "@/assets/son-cau-thang-sat-lotus.jpg";
@@ -1373,6 +1380,21 @@ function FormSection({
       });
     } catch (error) {
       console.error("Error sending data to Google Sheet:", error);
+    }
+
+    // Send GA4 purchase event for Google Ads conversion tracking
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'purchase', {
+        transaction_id: `order-${Date.now()}`,
+        value: finalTotal,
+        currency: 'VND',
+        items: activeItemsData.map(item => ({
+          item_name: item.name,
+          quantity: item.quantity,
+          price: item.unitPrice,
+          item_variant: item.color,
+        })),
+      });
     }
 
     sessionStorage.setItem("lotusOrder", JSON.stringify(orderData));
