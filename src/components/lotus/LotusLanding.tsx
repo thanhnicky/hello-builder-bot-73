@@ -1411,8 +1411,8 @@ function FormSection({
 
     sessionStorage.setItem("lotusOrder", JSON.stringify(orderData));
 
-    // Redirect to /thank-you?phone={phone}
-    window.location.href = `/thank-you?phone=${encodeURIComponent(phone.trim())}`;
+    // Redirect to /thank-you-son-kim-loai?phone={phone}
+    window.location.href = `/thank-you-son-kim-loai?phone=${encodeURIComponent(phone.trim())}`;
   };
 
   const inputCls =
