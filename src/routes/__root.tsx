@@ -72,16 +72,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   head: () => ({
     scripts: [
       {
-        innerHTML: `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KVTQ7QXN');</script>
-<!-- End Google Tag Manager -->`,
-        type: "text/javascript",
-      },
-      {
         type: "application/ld+json",
         innerHTML: JSON.stringify({
           "@context": "https://schema.org",
@@ -274,54 +264,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    // Google Analytics 4
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q278QPKQG2';
-    document.head.appendChild(gtagScript);
-
-    const gtagConfigScript = document.createElement('script');
-    gtagConfigScript.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Q278QPKQG2');
-    `;
-    document.head.appendChild(gtagConfigScript);
-
-    // Google Ads
-    const gadsScript = document.createElement('script');
-    gadsScript.async = true;
-    gadsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-16701011893';
-    document.head.appendChild(gadsScript);
-
-    const gadsConfigScript = document.createElement('script');
-    gadsConfigScript.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16701011893');
-    `;
-    document.head.appendChild(gadsConfigScript);
-  }, []);
-
   return (
     <html lang="vi">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5PGMZ8D');</script>
+<!-- End Google Tag Manager -->`,
+          }}
+        />
         <HeadContent />
       </head>
       <body>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KVTQ7QXN"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T5PGMZ8D"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
