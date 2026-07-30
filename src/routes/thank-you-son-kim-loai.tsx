@@ -33,7 +33,20 @@ function ThankYouPage() {
     try {
       const dataStr = sessionStorage.getItem("lotusOrder");
       if (dataStr) {
-        setOrder(JSON.parse(dataStr));
+        const data = JSON.parse(dataStr);
+        setOrder(data);
+
+        // Push conversion event to GTM dataLayer
+        if (typeof window !== "undefined") {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push({
+            event: "purchase",
+            transaction_id: data.phone || "",
+            value: data.total || 0,
+            currency: "VND",
+            payment_method: data.paymentMethod || "cod",
+          });
+        }
       }
     } catch (e) {
       console.error("Error reading order from sessionStorage", e);
