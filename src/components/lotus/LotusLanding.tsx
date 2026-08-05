@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers, Menu, X, MessageCircle } from "lucide-react";
+import { Shield, Sparkles, Droplets, Zap, Check, Trees, Paintbrush, ArrowRight, Star, Heart, Flame, ShieldAlert, Award, RefreshCw, Layers, Menu, X, MessageCircle, ChevronDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -1807,6 +1807,7 @@ function FAQ() {
       a: "Rất đơn giản. Bạn chỉ cần điền form liên hệ hoặc nhắn Zalo. Lotus hỗ trợ tư vấn miễn phí, giao hàng tận nơi trên toàn quốc, thanh toán khi nhận hàng.",
     },
   ];
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <section id="faq" className="bg-neutral-50 py-12 lg:py-16">
       <div className="container-x">
@@ -1823,13 +1824,30 @@ function FAQ() {
           Câu hỏi thường gặp về sơn Lotus Metal Coat.
         </p>
 
-        <div className="mt-12 space-y-6">
-          {qa.map((item, i) => (
-            <div key={i} className="border-b border-neutral-200 pb-6 last:border-0">
-              <h3 className="font-display text-lg font-semibold text-neutral-900">{item.q}</h3>
-              <p className="mt-3 text-[16px] leading-relaxed text-neutral-600">{item.a}</p>
-            </div>
-          ))}
+        <div className="mt-12 space-y-2">
+          {qa.map((item, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div key={i} className="border-b border-neutral-200 last:border-0">
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  aria-expanded={isOpen}
+                  className="flex w-full items-center justify-between gap-4 py-6 text-left"
+                >
+                  <h3 className="font-display text-lg font-semibold text-neutral-900">{item.q}</h3>
+                  <ChevronDown
+                    className={`h-5 w-5 flex-shrink-0 text-neutral-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+                >
+                  <p className="pb-6 text-[16px] leading-relaxed text-neutral-600">{item.a}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
