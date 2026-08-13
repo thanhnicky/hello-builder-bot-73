@@ -1008,13 +1008,13 @@ function Combos({
               <span className="text-[12px] font-semibold uppercase tracking-wider text-neutral-500">
                 Cao cấp
               </span>
-              <h3 className="mt-4 font-display text-2xl font-bold text-neutral-900">Combo cao cấp</h3>
-              <p className="mt-3 text-[17px] text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện</p>
+              <h3 className="mt-4 font-display text-2xl font-bold text-neutral-900">Combo cao cấp 2K</h3>
+              <p className="mt-3 text-[17px] text-neutral-600">Sơn lót chống gỉ + Sơn phủ màu hoàn thiện 2K</p>
               
               <div className="mt-5 flex flex-wrap gap-2">
                 <span className="text-sm text-neutral-700">Lotus Metal Coat Primer</span>
                 <span className="text-neutral-300">·</span>
-                <span className="text-sm text-neutral-700">Lotus Metal Coat Finish</span>
+                <span className="text-sm text-neutral-700">Lotus Metal Coat Finish 2K</span>
               </div>
             </div>
 
