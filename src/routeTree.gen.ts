@@ -9,17 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ThankYouSonKimLoaiRouteImport } from './routes/thank-you-son-kim-loai'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ThankYouSonKimLoaiRouteImport } from './routes/thank-you-son-kim-loai'
 
-const ThankYouSonKimLoaiRoute = ThankYouSonKimLoaiRouteImport.update({
-  id: '/thank-you-son-kim-loai',
-  path: '/thank-you-son-kim-loai',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankYouSonKimLoaiRoute = ThankYouSonKimLoaiRouteImport.update({
+  id: '/thank-you-son-kim-loai',
+  path: '/thank-you-son-kim-loai',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -51,18 +51,18 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/thank-you-son-kim-loai': {
-      id: '/thank-you-son-kim-loai'
-      path: '/thank-you-son-kim-loai'
-      fullPath: '/thank-you-son-kim-loai'
-      preLoaderRoute: typeof ThankYouSonKimLoaiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thank-you-son-kim-loai': {
+      id: '/thank-you-son-kim-loai'
+      path: '/thank-you-son-kim-loai'
+      fullPath: '/thank-you-son-kim-loai'
+      preLoaderRoute: typeof ThankYouSonKimLoaiRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
