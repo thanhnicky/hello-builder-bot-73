@@ -859,7 +859,7 @@ function Combos({
     "Tùy chỉnh"
   ];
 
-  const total1 = c1q1 * 375000 + c1q2 * 1680000;
+  const total1 = c1q1 * 454000 + c1q2 * 2079000;
   const total2 = c2q1 * 610000 + c2q2 * 2745000;
   const total3 = c3q1 * 254880 + c3q2 * 1188000;
   const grandTotal = total1 + total2 + total3;
@@ -930,7 +930,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4 pb-4 border-b border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Combo nhỏ — 2 hũ 1kg</p>
-                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">375.000đ</p>
+                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">454.000đ</p>
                   </div>
                   <Stepper value={c1q1} onChange={setC1q1} />
                 </div>
@@ -964,7 +964,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4 pt-4 border-t border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Combo lớn — 2 thùng 5kg</p>
-                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">1.680.000đ</p>
+                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">2.079.000đ</p>
                   </div>
                   <Stepper value={c1q2} onChange={setC1q2} />
                 </div>
@@ -1301,8 +1301,8 @@ function FormSection({
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const orderItems = [
-    { name: "Combo thông dụng nhỏ", qty: c1q1, price: 375000, color: c1q1Color, custom: c1q1Custom },
-    { name: "Combo thông dụng lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
+    { name: "Combo thông dụng nhỏ", qty: c1q1, price: 454000, color: c1q1Color, custom: c1q1Custom },
+    { name: "Combo thông dụng lớn", qty: c1q2, price: 2079000, color: c1q2Color, custom: c1q2Custom },
     { name: "Combo cao cấp nhỏ", qty: c2q1, price: 610000, color: c2q1Color, custom: c2q1Custom },
     { name: "Combo cao cấp lớn", qty: c2q2, price: 2745000, color: c2q2Color, custom: c2q2Custom },
     { name: "Hũ 1kg 2in1", qty: c3q1, price: 254880, color: c3q1Color, custom: c3q1Custom },
