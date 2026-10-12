@@ -861,7 +861,7 @@ function Combos({
 
   const total1 = c1q1 * 375000 + c1q2 * 1680000;
   const total2 = c2q1 * 610000 + c2q2 * 2745000;
-  const total3 = c3q1 * 210000 + c3q2 * 890000;
+  const total3 = c3q1 * 254880 + c3q2 * 1188000;
   const grandTotal = total1 + total2 + total3;
 
   function formatVND(val: number) {
@@ -1112,7 +1112,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4 pb-4 border-b border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Hũ 1kg</p>
-                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">210.000đ</p>
+                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">254.880đ</p>
                   </div>
                   <Stepper value={c3q1} onChange={setC3q1} />
                 </div>
@@ -1146,7 +1146,7 @@ function Combos({
                 <div className="flex items-center justify-between gap-4 pt-4 border-t border-neutral-200">
                   <div>
                     <p className="text-[15px] font-semibold text-neutral-800">Thùng 5kg</p>
-                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">890.000đ</p>
+                    <p className="text-[15px] font-semibold mt-0.5 text-neutral-900">1.188.000đ</p>
                   </div>
                   <Stepper value={c3q2} onChange={setC3q2} />
                 </div>
@@ -1305,8 +1305,8 @@ function FormSection({
     { name: "Combo thông dụng lớn", qty: c1q2, price: 1680000, color: c1q2Color, custom: c1q2Custom },
     { name: "Combo cao cấp nhỏ", qty: c2q1, price: 610000, color: c2q1Color, custom: c2q1Custom },
     { name: "Combo cao cấp lớn", qty: c2q2, price: 2745000, color: c2q2Color, custom: c2q2Custom },
-    { name: "Hũ 1kg 2in1", qty: c3q1, price: 210000, color: c3q1Color, custom: c3q1Custom },
-    { name: "Thùng 5kg 2in1", qty: c3q2, price: 890000, color: c3q2Color, custom: c3q2Custom },
+    { name: "Hũ 1kg 2in1", qty: c3q1, price: 254880, color: c3q1Color, custom: c3q1Custom },
+    { name: "Thùng 5kg 2in1", qty: c3q2, price: 1188000, color: c3q2Color, custom: c3q2Custom },
   ];
 
   const activeItems = orderItems.filter((it) => it.qty > 0);
